@@ -1,0 +1,105 @@
+
+include _parts.pug
+include _header.pug
+
++part('breadcrumbs', [
+    {href: '#', title: 'Товары'},
+    {href: '#', title: 'Телефоны и гаджеты'},
+    {href: '#', title: 'Смартфоны'} 
+])
+
+.main_wrapper
+  .site_width
+    .side_block
+      .categories
+        .title Категории
+        ul
+          each x in ['Медицина', 'Образование', 'Товары', 'Услуги', 'Красота', 'Авто']
+            li
+              a(href='#')= x
+
+      .price_filter
+        .title Цена
+        .price_range
+          .from
+            span.text от
+            span.num 5 498
+          .to
+            span.text до
+            span.num 84 982
+
+        .range_controller
+          .inner
+          .pin.from
+          .pin.to
+
+      .filter
+        .title Производитель
+        .list
+          each x in ['Apple', 'Samsung', 'Google', 'Microsoft']
+            +part('checkbox', { title: x })
+
+
+    .main_block
+      .sorting_block
+        .sorting
+          .sort_by Сортировать по:
+          .item.active Дешевле
+          .item Дороже
+          .item Заказы
+          .item Новинки
+          .item Рейтинг
+          .item А-Я
+
+        .rating_more
+          span.text Рейтинг более
+          +part('rating', 4)
+
+        .view_switch
+          i.material-icons._toggle_view_list view_list
+          i.material-icons._toggle_view_cards view_comfy
+
+      -
+        var product = {
+          href: '/product.html',
+          sale: 50,
+          rating: 4.9,
+          img: 'img/products/2.jpg',
+          title: 'Apple iPhone S 64Gb Space Gray',
+          old_price: '1 330 000',
+          price: '230 000',
+          desc: 'Тип: классический<br>\
+            ОС: iOS 11<br>\
+            Диагональ: 4.7"<br>\
+            ОЗУ: 2048 Мб<br>\
+            Встроенная память: 64 Гб',
+          store: 'Белый ветер'
+        }
+
+      .product_container
+        - for (var i = 0; i < 8; i++)
+          +part('product_card', product)
+
+
++part_coffee('checkbox')
+script.
+  parts.checkbox({
+    checkbox: u('.part_checkbox')
+  });
+
++part_coffee('product_card')
+script.
+  parts.product_card({
+    items: u('.part_product_card'),
+    hearts: u('.part_product_card .material-icons.heart')
+  });
+
+script(src='coffee/toggle_view.js')
+script.
+  uToggleView({
+    list: u('._toggle_view_list'),
+    cards: u('._toggle_view_cards'),
+    products: u('.part_product_card')
+  });
+
+include _footer.pug

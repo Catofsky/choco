@@ -1,0 +1,255 @@
+
+.store_banner
+  height: 125px
+  margin-top: 24px
+
+.header_block
+  background: #fff
+  margin-top: 24px
+
+  .store_top
+    height: 160px
+    display: flex
+
+    .store_info
+      width: 400px
+      display: inline-flex
+
+      .title
+        color: #434343
+        font-size: 20px
+        margin-bottom: 8px
+
+      .type
+        color: #434343
+        font-size: 15px
+
+      .rating
+        font-size: 17px
+        color: #fff
+        width: 42px
+        height: 42px
+        line-height: 42px
+        text-align: center
+        background: #2db573
+        margin: 24px
+        margin-left: auto
+        border-radius: 5px
+
+      & > div
+        display: inline-block
+
+    .title_info
+      margin: 24px 0
+
+    .avatar
+      margin: 24px
+      background: #2b294f
+      width: 100px
+      height: 100px
+      border-radius: 50px
+
+    .subs
+      color: $sad_gray
+      font-size: 15px
+      margin-top: 24px
+
+    .sub_btn
+      background: $store_color
+      width: 170px
+      height: 24px
+      border-radius: 12px
+      line-height: 24px
+      text-align: center
+      color: #fff
+      text-transform: uppercase
+      font-size: 12px
+      margin-top: 8px
+      cursor: pointer
+
+      &:hover
+        background: $store_color_hover
+
+      &:active
+        background: $store_color_active
+
+  .store_statistic
+    display: flex
+    
+    div
+      color: $sad_gray
+      cursor: default
+    
+    .item
+      height: 60px
+      width: 200px
+      margin-top: 24px
+      box-sizing: border-box
+      border-left: $gray_border solid 1px
+
+      &.btns
+        .button
+          cursor: pointer
+
+          &.active i
+            color: $main_orange
+            animation: heart .15s ease
+
+        span
+          color: $sad_gray
+
+        i
+          color: #ccc
+          margin: 0 8px
+          position: relative
+          top: 5px
+
+      div
+        text-align: center
+
+      .num
+        font-size: 20px
+        line-height: 28px
+
+      .text
+        font-size: 14px
+
+  .store_bottom
+    display: flex
+
+    .menu
+      margin-left: auto
+      margin-right: 24px
+
+      .item
+        display: inline-block
+        font-size: 15px
+        cursor: pointer
+        margin: 24px 0
+        padding: 0 12px
+        height: 28px
+        line-height: 28px
+
+        &:hover
+          color: $main_orange
+
+    .search
+      display: flex
+      margin: 24px
+      height: 28px
+      align-content: stretch
+
+    .list
+      border: $gray_border solid 1px
+      line-height: 26px
+      width: 110px
+      text-align: center
+      font-size: 13px
+      text-transform: uppercase
+      border-top-left-radius: 14px
+      border-bottom-left-radius: 14px
+
+      &:after
+        content: '▼'
+        font-size: 8px
+        position: relative
+        top: -2px
+        left: 4px
+
+    .input
+      width: 278px
+      height: 28px
+      border-top: $gray_border solid 1px
+      border-bottom: $gray_border solid 1px
+      display: flex
+      box-sizing: border-box
+
+      input
+        border: none
+
+        &:placeholder
+          color: #d9d9d9
+
+      i
+        font-size: 21px
+        color: #888686
+        margin: 0 8px
+        position: relative
+        top: 2px
+
+    .submit
+      border: $gray_border solid 1px
+      line-height: 26px
+      width: 110px
+      text-align: center
+      font-size: 13px
+      text-transform: uppercase
+      border-top-right-radius: 14px
+      border-bottom-right-radius: 14px
+      cursor: pointer
+      
+      &:hover
+        background: #f3f3f3
+
+.sorting_block
+  .tabs
+    margin: 0
+
+.main_block
+  .tab_content
+    background: none
+
+.tab_content
+  .product_container
+    display: flex
+    width: 948px
+
+
+.side_block
+  .news_title
+    padding: 24px
+    padding-bottom: 12px
+    font-size: 15px
+    color: $gray_font
+    font-weight: bold
+
+  .news_item
+    padding: 12px 0
+    margin: 0 24px
+    color: #54a8d2
+    cursor: pointer
+    border-bottom: $gray_border solid 1px
+
+    &:hover
+      text-decoration: underline
+
+  .news_container
+    padding-bottom: 24px
+
+  .title
+    margin-top: 24px
+    padding: 24px
+    padding-bottom: 12px
+    font-size: 15px
+    color: $gray_font
+    font-weight: bold
+
+  .stores_container
+    padding-bottom: 24px
+
+    .item
+      margin: 12px 24px
+      border-bottom: $gray_border solid 1px
+      display: flex
+
+    .avatar
+      height: 50px
+      width: 50px
+
+    .store_title
+      color: #54a8d2
+      cursor: pointer
+      min-height: 60px
+
+      &:hover
+        text-decoration: underline

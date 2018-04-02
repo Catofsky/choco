@@ -1,0 +1,12 @@
+
+mixin part_review_card(args)
+	.part_review_card
+		.avatar(style="background-image: url('" + args.avatar + "');")
+		.title= args.title
+		.text= args.text
+		.product
+			.sale - #{args.product.sale} %
+			.price= args.product.price
+			.rating= args.product.rating
+			.product_title= args.product.title
+

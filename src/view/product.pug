@@ -1,0 +1,303 @@
+
+include _parts.pug
+
+include _header.pug
+
++part('breadcrumbs', [
+    {href: '#', title: 'Товары'},
+    {href: '#', title: 'Телефоны и гаджеты'},
+    {href: '#', title: 'Смартфоны'} 
+  ])
+
+#product
+  .site_width
+    #product_slider
+      .slider
+        .preview._preview
+          
+      .magnifier_wrapper._magnifier
+        img.magnifier
+        .selector
+        
+      .slides_wrapper._slides_wrapper
+        .arrow.left._left_arrow
+          i.material-icons chevron_left
+        .arrow.right._right_arrow
+          i.material-icons chevron_right
+        .slides._slides
+          each i in [1, 2, 3, 4, 5, 6, 7]
+            .slide(
+              data-min='/img/slide/' + i + '_min.png'
+              data-ref='/img/slide/' + i + '.png'
+              data-full='/img/slide/' + i + '_full.jpg'
+            )
+      
+    #product_data
+      .title Смартфон Apple iPhone X, 256Gb,<br>Space gray
+      .container
+        .product_info
+          .info
+            .rating Рейтинг 4.9
+            .sale Скидка 30 %
+            
+          .data
+            .data_item
+              .label Цена со скидкой
+              .price 377 990
+              
+            .data_item
+              .label.gray Цена
+              .old_price 539 900
+              
+            .data_item
+              .label Вы экономите
+              .keep_price 161 910
+              
+            .data_item
+              .label До окончания скидки
+              .timer._timer
+                span 15:32:10
+                
+            .data_item
+              .label Вариант
+              .variants._variants
+                .variant(style='background-image: url(img/vars/1.jpg)')
+                .variant(style='background-image: url(img/vars/2.jpg)')
+                  
+            .data_item
+              .label Количество
+              .count._count(data-min='1' data-max='6')
+                span.sub._sub -
+                span.num._num 1
+                span.add._add +
+            
+        .store_info
+          .store_avatar(style='background-image: url(img/store_avatar.jpg)')
+          .rating 4.8
+          .name_wrapper
+            .name Белый ветер
+            .type Магазин электроники
+            
+          .subs 2 560 подписчиков
+          .btn_store Подписаться
+          .reviews
+            label Положительных отзывов
+            p 95 %
+            
+          .actions
+            .act Написать продавцу
+            .act Другие товары магазина
+        
+      .actions
+        .cart
+          .btn В корзину
+        .favorite._favorite
+          .btn.btn_white
+            i.material-icons favorite_outline
+            span В избранное
+            
+        .share
+          .btn.btn_white
+            i.material-icons share
+            span Поделиться
+        
+#other
+  .site_width
+    .tabs._tabs(data-tabs='other')
+      span._tab(data-tab='1') Описание
+      span._tab(data-tab='2') Характеристики
+      span._tab(data-tab='3')
+        .text Отзывы
+        .num 51
+        
+    .tabs_container._tabs_container(data-tabs='other')
+      .tab_content._tab_content(data-tab='1')
+        p.
+          iPhone X — новый смартфон от Apple c 5,8-дюймовым экраном, без кнопки Home, но с системой распознавания лиц.
+          Устройство имеет OLED-дисплей без рамок, беспроводную зарядку, а также интерактивную сенсорную поверхность.
+          Главная особенность новинки — система Face ID, включающая в себя камеру высокого разрешения и систему датчиков TrueDepth, которая сканирует лицо пользователя и использует его для биометрической идентификации.
+          Двойная тыльная камера смартфона расположена вертикально и призвана расширить функциональность устройства в сфере дополненной реальности.
+
+      .tab_content._tab_content(data-tab='2')
+        mixin column_content(type, name)
+          .column_content
+            .column_type
+              li= type
+            .column_name
+              li= name
+          hr(noshade)
+
+        p Характеристики
+        +column_content('Производитель','Apple')
+        +column_content('Модель','iPhone X')
+        +column_content('Размер экрана, дюйм','5.8')
+        +column_content('Разрешение экрана','2436 x 1125')
+        +column_content('Тип экрана','Сенсорный, Ёмкостной Super')
+        +column_content('Стекло экрана','Стекло с олеофобным покрытием')
+        +column_content('Объем оперативной памяти','3 Гб')
+        +column_content('Объем встроенной памяти','256 Гб')
+        +column_content('Поддержка карт памяти','Не поддерживает')
+        +column_content('Модель процессора','Apple')
+        +column_content('Производитель','A11 Bionik')
+        +column_content('Количество ядер','6 Ядер')
+        +column_content('Наличие камеры','на задней панели, фронтальная')
+        +column_content('Разрешение основной камеры','Двойная камера, Автофокус')
+        +column_content('Особенности основной камеры','7 Мп')
+        +column_content('Разрешение фронтальной камеры','A11 Bionic')
+        +column_content('Разрешение видео','3840 x 2160 пикселей, 30 кадров в')
+        +column_content('Мобильный интернет','3G, 4G')
+        +column_content('Поддержка частоты','2G')
+        +column_content('Производитель','2G GSM/EDGE:850, 900, 1800, 1900 МГц 3G UMTS/HSPA+/DC-HSDPA: 850, 900, 1700/2100, 1900, 2100 МГц')
+        
+      .tab_content._tab_content(data-tab='3')
+        .sorting
+          .sort_by Сортировать по:
+          .item Новым
+          .item Старым
+          .item Положительным
+          .item Отрицательным
+
+        .comments
+          .comment
+            .rating
+              span Оценка:
+              .score.five 5
+
+            .avatar_container
+              .avatar(style='background-image: url(img/avatar.jpg)')
+
+            .text_contatiner
+              .name Серсея Ланистер
+              .text.
+                Очень хороший девайс, привыкнуть к горбику можно почти сразу.
+                Стекло очень легко царапается, потому лучше покупать чехол сразу вместе с телефоном.
+
+              .date 18 июня 2018 14:21
+
+          .comment
+            .rating
+              span Оценка:
+              .score.four 4
+
+            .avatar_container
+              .avatar(style='background-image: url(img/avatar.jpg)')
+
+            .text_contatiner
+              .name Дейенерис Таргариен
+              .text.
+                Сразу скажу, что телефон мне подарили. Ходил последние 2 года с Xiaomi Redmi 2 и меня все устраивало до тех пор пока я не взял Х и настроил все.
+                Трепета и дрожи в коленках нет, перемешанного с предыханием, был уже опыт использования разных устройств от Apple. Просто все удобно и приятно использовать.
+                За текущую цену среднестатистическому работнику в Москве я бы не советовал брать этот телефон. Не говоря уже о людях, живущих за пределами Москвы.
+                Это просто лишено всякого смысла. На эти деньги можно съездить в путешествие или купить б/у машину (типа Нексии или ВАЗа).
+                Кому-то покажется нелепым такое сравнение. Но поездка на отдых запомнится на всю жизнь, а телефон перестанет радовать через 2 года. Живите и приобретайте опыт, а не вещи.
+                Опыт - навсегда, а вещи ломаются, их крадут, а ещё они вызывают зависть. 
+              .read_more Читать дальше
+
+              .date 18 июня 2018 14:21
+
+          .comment.answer
+            .avatar_container
+              .avatar(style='background-image: url(img/avatar.jpg)')
+
+            .text_contatiner
+              .name Белый ветер
+              .text.
+                Сразу скажу, что телефон мне подарили.
+                Ходил последние 2 года с Xiaomi Redmi 2 и меня все устраивало до тех пор пока я не взял Х и настроил все.
+                Трепета и дрожи в коленках нет, перемешанного с предыханием, был уже опыт использования разных устройств от Apple. Просто все удобно и приятно использовать.
+                За текущую цену среднестатистическому
+
+              .date 18 июня 2018 14:21
+
+          .comment
+            .rating
+              span Оценка:
+              .score.one 1
+
+            .avatar_container
+              .avatar(style='background-image: url(img/avatar.jpg)')
+
+            .text_contatiner
+              .name Джон Сноу
+              .text.
+                Телефон не стоит своих денег.
+                Apple просто наживается на фанатах своей продукции готовых жрать любое г*вно что они производят!
+                Теперь продаю телефон.
+
+              .date 18 июня 2018 14:21
+
+        .leave_comment
+          .title Пожалуйста, оцените этот товар
+          .rate
+            .one 1
+            .two 2
+            .three 3
+            .four 4
+            .five 5
+
+          textarea(placeholder='Оставить отзыв' rows='5')
+          .btn оставить отзыв
+
+      +part('rating_statistic', [30, 20, 3, 30, 10])
+
+script(src='js/slider.min.js')
+script.
+  uSlider({
+    preview: u('._preview'),
+    slides: u('._slides'),
+    wrapper: u('._slides_wrapper'),
+    left_arrow: u('._left_arrow'),
+    right_arrow: u('._right_arrow'),
+    magnifier: u('._magnifier')
+  });
+  
+script(src='coffee/tabs.js')
+script.
+  uTabs({
+    tabs: u('._tabs'),
+    container: u('._tabs_container')
+  });
+  
+script(src='coffee/timer.js')
+script.
+  uTimer({
+    timer: u('._timer')
+  });
+  
+script(src='coffee/variants.js')
+script.
+  uVariants({
+    variants: u('._variants')
+  });
+  
+script(src='coffee/counter.js')
+script.
+  uCounter({
+    count: u('._count'),
+    num: u('._num'),
+    add: u('._add'),
+    sub: u('._sub')
+  });
+  
+script(src='coffee/magnifier.js')
+script.
+  uMagnifier({
+    magnifier: u('._magnifier')
+  });
+  
+script(src='coffee/favorite.js')
+script.
+  uFavorite({
+    favorite: u('._favorite')
+  });
+
+script(src='coffee/comment.js')
+script.
+  uComment({
+    rating: u('.leave_comment .rate'),
+    textarea: u('.leave_comment textarea'),
+    btn: u('.leave_comment .btn'),
+    container: u('.leave_comment')
+  });
+
+include _footer.pug

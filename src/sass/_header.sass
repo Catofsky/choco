@@ -1,0 +1,264 @@
+
+#header_keeper
+	width: 0
+
+#header_fix
+	width: 100%
+	top: 0
+	z-index: 100
+
+#header_fix.fixed
+	position: fixed
+
+header
+
+	.top
+		background: #f5f5f5
+		height: 34px
+		border-bottom: $gray_border solid 1px
+
+		.site_width
+			display: flex
+			justify-content: flex-end
+
+		a
+			color: #808080
+			line-height: 34px
+			padding: 0 24px
+			position: relative
+
+			&:hover
+				color: $main_bright_orange
+
+			&:not(:last-child):after
+				content: ''
+				height: 26px
+				width: 1px
+				background: $gray_border
+				position: absolute
+				top: 4px
+				right: 0
+
+	.center
+		min-height: 62px
+		border-bottom: $gray_border solid 1px
+		background: #ffffff
+
+		.site_width
+			display: flex
+			min-height: 62px
+			align-items: center
+			justify-content: space-between
+			flex-wrap: wrap
+
+	.profile
+		flex-basis: 285px
+		align-items: center
+		height: 62px
+		cursor: pointer
+		display: flex
+		justify-content: flex-end
+
+	.balance
+		margin: 12px 8px
+		display: inline-block
+
+		&::after
+			content: ' ₸'
+			font-size: 12px
+
+		&:hover
+			color: $main_orange
+
+	.username
+		color: inherit
+		display: inline-block
+		margin: 12px 8px
+		max-width: 120px
+		font-size: 14px
+		text-align: right
+		min-width: 90px
+
+		&:hover
+			color: $main_orange
+
+	.user_avatar
+		width: 40px
+		height: 40px
+		border-radius: 20px
+		background-image: url('../img/user.jpg')
+		cursor: pointer
+
+		&:hover
+			color: $main_orange
+
+	.menu
+		margin: 12px 0
+		height: 36px
+		display: flex
+		align-items: center
+		flex-basis: 80px
+
+		.cart
+			margin-right: 0
+
+		a
+			height: 24px
+			margin: 0 12px 0 34px
+			color: $gray_font
+			font-size: 14px
+			position: relative
+			line-height: 24px
+
+			&:hover
+				color: $main_orange
+
+		span
+			width: 20px
+			height: 14px
+			background: $main_orange
+			color: #fff
+			font-size: 10px
+			text-align: center
+			font-weight: bold
+			position: absolute
+			line-height: 12px
+			border-radius: 7px
+			left: -18px
+			top: -4px
+
+		i
+			color: #cccccc
+			margin: 0 6px
+			position: absolute
+			top: 0
+			left: -38px
+
+	.site_logo
+		width: 218px
+		height: 42px
+		background-image: url('../img/logo.jpg')
+		background-size: contain
+		background-repeat: no-repeat
+		background-position: center
+		margin: 8px 12px
+
+	.search
+		height: 28px
+		flex-basis: 430px
+		margin: 0 12px
+		position: relative
+		border: $main_orange solid 1px
+		box-sizing: border-box
+		border-radius: 14px
+		display: flex
+		padding-left: 24px
+
+		input
+			height: 100%
+			flex-basis: 220px
+			padding-left: 12px
+			border: none
+
+			&::placeholder
+				color: #d9d9d9
+				font-size: 14px
+				line-height: 24px
+
+		div
+			cursor: pointer
+
+		.material-icons
+			position: absolute
+			top: 4px
+			left: 8px
+			color: #888686
+			font-size: 21px
+
+		.list
+			height: 100%
+			line-height: 24px
+			flex-basis: 100px
+			text-align: center
+			font-size: 12px
+			text-transform: uppercase
+
+		.btn
+			border-top-left-radius: 0
+			border-bottom-left-radius: 0
+			height: 100%
+			top: -1px
+			flex-basis: 78px
+			padding: 0 10px 0 6px
+			font-size: 12px
+			line-height: 24px
+
+	.bottom
+		min-height: 44px
+		background: #ffffff
+		position: relative
+
+		&::after
+			content: ''
+			position: absolute
+			bottom: -1px
+			height: 1px
+			width: 100%
+			background: $gray_border
+
+		.site_width
+			display: flex
+			align-items: center
+			justify-content: center
+			flex-wrap: wrap
+
+			a
+				color: $sad_gray
+				min-height: 44px
+				line-height: 44px
+				width: 160px
+				text-align: center
+
+				&:hover
+					color: $main_orange
+
+	.site_full_width
+		display: flex
+		position: relative
+
+	.cat_menu
+		position: absolute
+		left: 0
+		top: 0
+		height: 250px
+		width: 100%
+		background: #fff
+		z-index: 99
+		display: none
+		justify-content: center
+		border-top: $gray_border solid 1px
+		box-sizing: border-box
+
+	.cat_menu.active
+		display: flex
+
+		.cat_menu_item
+			flex-basis: 120px
+			margin: 12px 24px
+
+			.title
+				color: #5a5a5a
+				font-weight: bold
+				padding-bottom: 8px
+				border-bottom: $gray_border solid 1px
+				margin-bottom: 10px
+
+			.item
+				color: #808080
+				height: 26px
+
+			a
+				display: block
+
+				&:hover
+					color: $main_orange

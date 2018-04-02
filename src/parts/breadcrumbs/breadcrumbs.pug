@@ -1,0 +1,8 @@
+
+mixin part_breadcrumbs(params)
+	.part_breadcrumbs
+		.site_width
+			- for(var i = 0; i < params.length; i++)
+				a(href=params[i].href)= params[i].title
+				- if (i < params.length - 1)
+					i.material-icons chevron_right

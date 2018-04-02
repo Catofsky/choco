@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible' content='ie=edge')
+    title Chocokiller
+    link(rel='stylesheet' href='css/style.min.css')
+    link(rel='stylesheet' href='font/material-icons.css')
+    script(src='js/umbrella.min.js')
+    script window.parts = {};
+
+<body>
+
+  header
+    .top
+      .site_width
+        a(href='#') Открыть магазин
+        a(href='#') Помощь
+
+    #header_keeper
+    #header_fix
+      .center
+        .site_width
+          .site_logo
+          .search
+            i.material-icons search
+            input(type='text' placeholder='Я ищу...')
+            .list Категории
+            .btn Найти
+
+          .menu
+            a(href='#')
+              i.material-icons favorite
+              | Желания
+            
+            a.cart(href='#')
+              i.material-icons shopping_cart
+              span 12
+              | Корзина
+
+          .profile
+            .balance 120 000
+            .username Tirion
+            .user_avatar
+
+      .bottom
+        .site_width
+          each title, i in ['Товары', 'Услуги', 'Акции', 'Магазины', 'Новости']
+            a(href='#' data-item=i)= title
+
+      .site_full_width
+        each count, i in [5, 4, 3, 4, 5]
+          .cat_menu(data-item=i)
+            - for (var j = 0; j < count; j++)
+              .cat_menu_item
+                a.title(href='#') Одежда
+                a.item(href='#') Обувь
+                a.item(href='#') Куртки
+                a.item(href='#') Рубашки
+                a.item(href='#') Футболки
+                a.item(href='#') Майки
+                a.item(href='#') Блузки

@@ -1,0 +1,194 @@
+
+include _parts.pug
+include _header.pug
+
++part('breadcrumbs', [
+    {href: '#', title: 'Магазины'},
+    {href: '#', title: 'Салоны'},
+    {href: '#', title: 'Этуаль'} 
+])
+
+.site_width
+  .store_banner(style='background-image: url("img/banner.jpg")')
+
+  .header_block
+    .store_top
+      .store_info
+        .avatar(style='background-image: url("img/store_avatar_100x100.jpg")')
+        .title_info
+          .title Этуаль
+          .type Салон красоты
+          .subs Подписчиков: 11 256
+          .sub_btn Подписаться
+
+        .rating 4.8
+
+      .store_statistic
+        .item
+          .num 94
+          .text Товаров продано
+
+        .item
+          .num 12 623
+          .text Услуг предоставлено
+
+        .item
+          .num 89 048
+          .text Действующие акции
+
+        .item.btns
+          .button._favorite
+            span В избранное
+            i.material-icons favorite
+
+          .button
+            span Поделиться
+            i.material-icons share
+        
+    .store_bottom
+      .search
+        .list Категории
+        .input
+          i.material-icons search
+          input(placeholder='Искать в магазине')
+        .submit Найти
+
+      .menu
+        .item Товары
+        .item Услуги
+        .item Видео
+        .item Контакты
+        .item О магазине
+
+
+.main_wrapper
+  .site_width
+    .side_block
+      .block
+        .categories
+          .title Категории
+          ul
+            each x in ['Медицина', 'Образование', 'Товары', 'Услуги', 'Красота', 'Авто']
+              li
+                a(href='#')= x
+
+        .price_filter
+          .title Цена
+          .price_range
+            .from
+              span.text от
+              span.num 5 498
+            .to
+              span.text до
+              span.num 84 982
+
+          .range_controller
+            .inner
+            .pin.from
+            .pin.to
+
+      .block
+        .news_title Новости
+        .news_container
+          .news_item Открытие нового магазина в ТЦ Батырмол
+          .news_item Наурыз вместе с Белым Ветром
+          .news_item Акция на ваш День рождения!
+
+      .block
+        .title Наши компании
+        .stores_container
+          .item
+            .avatar(style='background-image: url("img/store_avatar.jpg")')
+            .store_title Белый ветер
+          .item
+            .avatar(style='background-image: url("img/store_avatar.jpg")')
+            .store_title Белый ветер
+          
+
+    .main_block
+      .sorting_block
+        .tabs._tabs
+          span._tab(data-tab='1') Топ
+          span._tab(data-tab='2') Акции
+          span._tab(data-tab='3') Горящие
+
+        .sorting
+          .sort_by Сортировать по:
+          .item.active Дешевле
+          .item Дороже
+          .item Заказы
+          .item Новинки
+          .item А-Я
+
+        .view_switch
+          i.material-icons._toggle_view_list view_list
+          i.material-icons._toggle_view_cards view_comfy
+
+      -
+        var product = {
+          href: '/product.html',
+          sale: 50,
+          rating: 4.9,
+          img: 'img/products/2.jpg',
+          title: 'Apple iPhone S 64Gb Space Gray',
+          old_price: '1 330 000',
+          price: '230 000',
+          desc: 'Тип: классический<br>\
+            ОС: iOS 11<br>\
+            Диагональ: 4.7"<br>\
+            ОЗУ: 2048 Мб<br>\
+            Встроенная память: 64 Гб',
+          store: 'Белый ветер'
+        }
+
+      .tabs_container._tabs_container
+        .tab_content._tab_content(data-tab='1')
+          .product_container
+            - for (var i = 0; i < 8; i++)
+              +part('product_card', product)
+
+        - product.img = 'img/products/1.jpg';
+
+        .tab_content._tab_content(data-tab='2')
+          .product_container
+            - for (var i = 0; i < 8; i++)
+              +part('product_card', product)
+
+            
+        - product.img = 'img/products/2.jpg';
+
+        .tab_content._tab_content(data-tab='3')
+          .product_container
+            - for (var i = 0; i < 8; i++)
+              +part('product_card', product)
+
+
+script(src='coffee/tabs.js')
+script.
+  uTabs({
+    tabs: u('._tabs'),
+    container: u('._tabs_container')
+  });
+
++part_coffee('product_card')
+script.
+  parts.product_card({
+    items: u('.part_product_card'),
+    hearts: u('.part_product_card .material-icons.heart')
+  });
+
+script(src='coffee/favorite.js')
+script.
+  uFavorite({
+    favorite: u('._favorite')
+  });
+
+script(src='coffee/toggle_view.js')
+script.
+  uToggleView({
+    list: u('._toggle_view_list'),
+    cards: u('._toggle_view_cards'),
+    products: u('.part_product_card')
+  });
+
+include _footer.pug

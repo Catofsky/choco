@@ -1,0 +1,19 @@
+
+mixin part_product_card(args)
+  .part_product_card
+    .wrapper
+      i.material-icons.heart favorite_outline
+      i.material-icons.share share
+      .sale - #{args.sale} %
+      .rating= args.rating
+      img(src=args.img)
+      .title(onclick='location.href = "' + args.href + '";')= args.title
+      .old_price= args.old_price
+      .price= args.price
+      .desc_title Описание:
+      .desc!= args.desc
+
+      .store Магазин:
+        a(href='#')= args.store
+
+      .btn В корзину

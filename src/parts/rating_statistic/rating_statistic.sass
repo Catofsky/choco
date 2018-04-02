@@ -1,0 +1,109 @@
+
+.part_rating_statistic
+  flex-basis: 300px
+  max-height: 540px
+  background: #fff
+
+  .title
+    margin: 18px 24px
+    color: #404040
+    font-size: 23px
+
+  .total_text
+    color: #404040
+    font-size: 20px
+    margin: 44px 24px
+    position: relative
+
+    .total_rating
+      position: absolute
+      right: 16px
+      top: -8px
+      background: #2db573
+      width: 42px
+      height: 42px
+      line-height: 42px
+      text-align: center
+      color: #fff
+      font-size: 18px
+      border-radius: 5px
+
+  .rates
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    height: 200px
+    margin: 24px
+
+    .rate_item
+      &.four
+        .score, .inner
+          background: #76c14d
+
+        .inner
+          width: 44%
+
+      &.three
+        .score, .inner
+          background: #eec513
+
+        .inner
+          width: 30%
+
+      &.two
+        .score, .inner
+          background: #eea815
+
+        .inner
+          width: 20%
+
+      &.one
+        .score, .inner
+          background: #e14539
+
+        .inner
+          width: 12%
+
+      div
+        display: inline-block
+
+    .score
+      width: 34px
+      height: 34px
+      background: #2db573
+      border-radius: 5px
+      color: #fff
+      font-size: 17px
+      line-height: 34px
+      text-align: center
+
+    .progress
+      width: 122px
+      height: 12px
+      background: #dadada
+      margin: 0 12px
+      position: relative
+      top: -1px
+      overflow: hidden
+
+      .inner
+        background: #2db573
+        width: 70%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        transition: width .5s ease
+
+    .num
+      width: 44px
+      height: 20px
+      text-align: center
+      line-height: 20px
+      color: $sad_gray
+      font-size: 15px
+      border: $gray_border solid 1px
+      border-radius: 3px
+      margin: 12px 0
+      position: relative
+      top: -1px

@@ -1,0 +1,9 @@
+
+include _parts_includes.pug
+
+mixin part(name, params)
+    +#{'part_' + name}(params)
+
+
+mixin part_coffee(name)
+    script(src='coffee/parts/' + name + '/' + name + '.js')

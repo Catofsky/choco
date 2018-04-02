@@ -1,0 +1,8 @@
+
+mixin part_checkbox(params)
+	- params.name = params.name || ''
+	.part_checkbox
+		label
+			input(type='checkbox' name=params.name)
+			i.material-icons check_box_outline
+			span= params.title

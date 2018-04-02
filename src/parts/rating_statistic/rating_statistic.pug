@@ -1,0 +1,62 @@
+
+mixin part_rating_statistic(rating, statistic)
+
+	-	var c = 5, max = 0, ratingPercent = [];
+	- var percent = rating.reduce((a, b) => a + b * c--, 0) / rating.reduce((a, b) => a + b, 0);
+	- for (var i = 0; i < rating.length; i++) {
+	-	if (rating[i] > max) {
+	-		max = rating[i]; 
+	-		}		
+	-	}
+	- for (var i = 0; i < rating.length; i++) {
+	- ratingPercent[i] = ((rating[i] / max) * 100).toFixed(0); 
+	- } 
+	.part_rating_statistic
+		.title Статистика отзывов
+		.rates
+			.rate_item
+				.score 5
+				.progress
+					.inner(style='width: ' + ratingPercent[0] + '%')
+				.num= rating[0]
+			.rate_item.four
+				.score 4
+				.progress
+					.inner(style='width: ' + ratingPercent[1] + '%')
+				.num= rating[1]
+			.rate_item.three
+				.score 3
+				.progress
+					.inner(style='width: ' + ratingPercent[2] + '%')
+				.num= rating[2]
+			.rate_item.two
+				.score 2
+				.progress
+					.inner(style='width: ' + ratingPercent[3] + '%')
+				.num= rating[3]
+			.rate_item.one
+				.score 1
+				.progress
+					.inner(style='width: ' + ratingPercent[4] + '%')
+				.num= rating[4]
+				
+
+		.total_text Средний рейтинг
+			.total_rating #{percent.toFixed(1)}
+
+		- var sum = rating.reduce((a, b) => a + b);
+		- var favorites = 12;
+		- var coefficient = sum / (rating[0] + rating[1]);
+		- var positive = 100 / coefficient;
+		
+		.additional_statistic
+			hr(noshade)
+			.total_sells
+				li Купили
+				li #{sum}
+			.total_favorites
+				li Добавили в избранное
+				li #{favorites}
+			.percent_positive
+				li Положительных отзывов
+				li #{positive.toFixed(1)}%

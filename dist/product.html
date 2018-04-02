@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>Chocokiller</title>
+  <link rel="stylesheet" href="css/style.min.css"/>
+  <link rel="stylesheet" href="font/material-icons.css"/>
+  <script src="js/umbrella.min.js"></script>
+  <script>window.parts = {};</script>
+</head><body>
+<header>
+  <div class="top">
+    <div class="site_width"><a href="#">Открыть магазин</a><a href="#">Помощь</a></div>
+  </div>
+  <div id="header_keeper"></div>
+  <div id="header_fix">
+    <div class="center">
+      <div class="site_width">
+        <div class="site_logo"></div>
+        <div class="search"><i class="material-icons">search</i>
+          <input type="text" placeholder="Я ищу..."/>
+          <div class="list">Категории</div>
+          <div class="btn">Найти</div>
+        </div>
+        <div class="menu"><a href="#"><i class="material-icons">favorite</i>Желания</a><a class="cart" href="#"><i class="material-icons">shopping_cart</i><span>12</span>Корзина</a></div>
+        <div class="profile">
+          <div class="balance">120 000</div>
+          <div class="username">Tirion</div>
+          <div class="user_avatar"></div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom">
+      <div class="site_width"><a href="#" data-item="0">Товары</a><a href="#" data-item="1">Услуги</a><a href="#" data-item="2">Акции</a><a href="#" data-item="3">Магазины</a><a href="#" data-item="4">Новости</a>
+      </div>
+    </div>
+    <div class="site_full_width">
+      <div class="cat_menu" data-item="0">
+        <div class="cat_menu_item"><a class="title" href="#">Одежда</a><a class="item" href="#">Обувь</a><a class="item" href="#">Куртки</a><a class="item" href="#">Рубашки</a><a class="item" href="#">Футболки</a><a class="item" href="#">Майки</a><a class="item" href="#">Блузки</a></div>
+        <div class="cat_menu_item"><a class="title" href="#">Одежда</a><a class="item" href="#">Обувь</a><a class="item" href="#">Куртки</a><a class="item" href="#">Рубашки</a><a class="item" href="#">Футболки</a><a class="item" href="#">Майки</a><a class="item" href="#">Блузки</a></div>
+        <div class="cat_menu_item"><a class="title" href="#">Одежда</a><a class="item" href="#">Обувь</a><a class="item" href="#">Куртки</a><a class="item" href="#">Рубашки</a><a class="item" href="#">Футболки</a><a class="item" href="#">Майки</a><a class="item" href="#">Блузки</a></div>
+        <div class="cat_menu_item"><a class="title" href="#">Одежда</a><a class="item" href="#">Обувь</a><a class="item" href="#">Куртки</a><a class="item" href="#">Рубашки</a><a class="item" href="#">Футболки</a><a class="item" href="#">Майки</a><a class="item" href="#">Блузки</a></div>
+        <div class="cat_menu_item"><a class="title" href="#">Одежда</a><a class="item" href="#">Обувь</a><a class="item" href="#">Куртки</a><a class="item" href="#">Рубашки</a><a class="item" href="#">Футболки</a><a class="item" href="#">Майки</a><a class="item" href="#">Блузки</a></div>
+      </div>
+      <div class="cat_menu" data-item="1">
+        <div class="cat_menu_item"><a class="title" href="#">Одежда</a><a class="item" href="#">Обувь</a><a class="item" href="#">Куртки</a><a class="item" href="#">Рубашки</a><a class="item" href="#">Футболки</a><a class="item" href="#">Майки</a><a class="item" href="#">Блузки</a></div>
+        <div class="cat_menu_item"><a class="title" href="#">Одежда</a><a class="item" href="#">Обувь</a><a class="item" href="#">Куртки</a><a class="item" href="#">Рубашки</a><a class="item" href="#">Футболки</a><a class="item" href="#">Майки</a><a class="item" href="#">Блузки</a></div>
+        <div class="cat_menu_item"><a class="title" href="#">Одежда</a><a class="item" href="#">Обувь</a><a class="item" href="#">Куртки</a><a class="item" href="#">Рубашки</a><a class="item" href="#">Футболки</a><a class="item" href="#">Майки</a><a class="item" href="#">Блузки</a></div>
+        <div class="cat_menu_item"><a class="title" href="#">Одежда</a><a class="item" href="#">Обувь</a><a class="item" href="#">Куртки</a><a class="item" href="#">Рубашки</a><a class="item" href="#">Футболки</a><a class="item" href="#">Майки</a><a class="item" href="#">Блузки</a></div>
+      </div>
+      <div class="cat_menu" data-item="2">
+        <div class="cat_menu_item"><a class="title" href="#">Одежда</a><a class="item" href="#">Обувь</a><a class="item" href="#">Куртки</a><a class="item" href="#">Рубашки</a><a class="item" href="#">Футболки</a><a class="item" href="#">Майки</a><a class="item" href="#">Блузки</a></div>
+        <div class="cat_menu_item"><a class="title" href="#">Одежда</a><a class="item" href="#">Обувь</a><a class="item" href="#">Куртки</a><a class="item" href="#">Рубашки</a><a class="item" href="#">Футболки</a><a class="item" href="#">Майки</a><a class="item" href="#">Блузки</a></div>
+        <div class="cat_menu_item"><a class="title" href="#">Одежда</a><a class="item" href="#">Обувь</a><a class="item" href="#">Куртки</a><a class="item" href="#">Рубашки</a><a class="item" href="#">Футболки</a><a class="item" href="#">Майки</a><a class="item" href="#">Блузки</a></div>
+      </div>
+      <div class="cat_menu" data-item="3">
+        <div class="cat_menu_item"><a class="title" href="#">Одежда</a><a class="item" href="#">Обувь</a><a class="item" href="#">Куртки</a><a class="item" href="#">Рубашки</a><a class="item" href="#">Футболки</a><a class="item" href="#">Майки</a><a class="item" href="#">Блузки</a></div>
+        <div class="cat_menu_item"><a class="title" href="#">Одежда</a><a class="item" href="#">Обувь</a><a class="item" href="#">Куртки</a><a class="item" href="#">Рубашки</a><a class="item" href="#">Футболки</a><a class="item" href="#">Майки</a><a class="item" href="#">Блузки</a></div>
+        <div class="cat_menu_item"><a class="title" href="#">Одежда</a><a class="item" href="#">Обувь</a><a class="item" href="#">Куртки</a><a class="item" href="#">Рубашки</a><a class="item" href="#">Футболки</a><a class="item" href="#">Майки</a><a class="item" href="#">Блузки</a></div>
+        <div class="cat_menu_item"><a class="title" href="#">Одежда</a><a class="item" href="#">Обувь</a><a class="item" href="#">Куртки</a><a class="item" href="#">Рубашки</a><a class="item" href="#">Футболки</a><a class="item" href="#">Майки</a><a class="item" href="#">Блузки</a></div>
+      </div>
+      <div class="cat_menu" data-item="4">
+        <div class="cat_menu_item"><a class="title" href="#">Одежда</a><a class="item" href="#">Обувь</a><a class="item" href="#">Куртки</a><a class="item" href="#">Рубашки</a><a class="item" href="#">Футболки</a><a class="item" href="#">Майки</a><a class="item" href="#">Блузки</a></div>
+        <div class="cat_menu_item"><a class="title" href="#">Одежда</a><a class="item" href="#">Обувь</a><a class="item" href="#">Куртки</a><a class="item" href="#">Рубашки</a><a class="item" href="#">Футболки</a><a class="item" href="#">Майки</a><a class="item" href="#">Блузки</a></div>
+        <div class="cat_menu_item"><a class="title" href="#">Одежда</a><a class="item" href="#">Обувь</a><a class="item" href="#">Куртки</a><a class="item" href="#">Рубашки</a><a class="item" href="#">Футболки</a><a class="item" href="#">Майки</a><a class="item" href="#">Блузки</a></div>
+        <div class="cat_menu_item"><a class="title" href="#">Одежда</a><a class="item" href="#">Обувь</a><a class="item" href="#">Куртки</a><a class="item" href="#">Рубашки</a><a class="item" href="#">Футболки</a><a class="item" href="#">Майки</a><a class="item" href="#">Блузки</a></div>
+        <div class="cat_menu_item"><a class="title" href="#">Одежда</a><a class="item" href="#">Обувь</a><a class="item" href="#">Куртки</a><a class="item" href="#">Рубашки</a><a class="item" href="#">Футболки</a><a class="item" href="#">Майки</a><a class="item" href="#">Блузки</a></div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="part_breadcrumbs">
+  <div class="site_width"><a href="#">Товары</a><i class="material-icons">chevron_right</i><a href="#">Телефоны и гаджеты</a><i class="material-icons">chevron_right</i><a href="#">Смартфоны</a>
+  </div>
+</div>
+<div id="product">
+  <div class="site_width">
+    <div id="product_slider">
+      <div class="slider">
+        <div class="preview _preview"></div>
+      </div>
+      <div class="magnifier_wrapper _magnifier"><img class="magnifier"/>
+        <div class="selector"></div>
+      </div>
+      <div class="slides_wrapper _slides_wrapper">
+        <div class="arrow left _left_arrow"><i class="material-icons">chevron_left</i></div>
+        <div class="arrow right _right_arrow"><i class="material-icons">chevron_right</i></div>
+        <div class="slides _slides">
+          <div class="slide" data-min="/img/slide/1_min.png" data-ref="/img/slide/1.png" data-full="/img/slide/1_full.jpg"></div>
+          <div class="slide" data-min="/img/slide/2_min.png" data-ref="/img/slide/2.png" data-full="/img/slide/2_full.jpg"></div>
+          <div class="slide" data-min="/img/slide/3_min.png" data-ref="/img/slide/3.png" data-full="/img/slide/3_full.jpg"></div>
+          <div class="slide" data-min="/img/slide/4_min.png" data-ref="/img/slide/4.png" data-full="/img/slide/4_full.jpg"></div>
+          <div class="slide" data-min="/img/slide/5_min.png" data-ref="/img/slide/5.png" data-full="/img/slide/5_full.jpg"></div>
+          <div class="slide" data-min="/img/slide/6_min.png" data-ref="/img/slide/6.png" data-full="/img/slide/6_full.jpg"></div>
+          <div class="slide" data-min="/img/slide/7_min.png" data-ref="/img/slide/7.png" data-full="/img/slide/7_full.jpg"></div>
+        </div>
+      </div>
+    </div>
+    <div id="product_data">
+      <div class="title">Смартфон Apple iPhone X, 256Gb,<br>Space gray</div>
+      <div class="container">
+        <div class="product_info">
+          <div class="info">
+            <div class="rating">Рейтинг 4.9</div>
+            <div class="sale">Скидка 30 %</div>
+          </div>
+          <div class="data">
+            <div class="data_item">
+              <div class="label">Цена со скидкой</div>
+              <div class="price">377 990</div>
+            </div>
+            <div class="data_item">
+              <div class="label gray">Цена</div>
+              <div class="old_price">539 900</div>
+            </div>
+            <div class="data_item">
+              <div class="label">Вы экономите</div>
+              <div class="keep_price">161 910</div>
+            </div>
+            <div class="data_item">
+              <div class="label">До окончания скидки</div>
+              <div class="timer _timer"><span>15:32:10</span></div>
+            </div>
+            <div class="data_item">
+              <div class="label">Вариант</div>
+              <div class="variants _variants">
+                <div class="variant" style="background-image: url(img/vars/1.jpg)"></div>
+                <div class="variant" style="background-image: url(img/vars/2.jpg)"></div>
+              </div>
+            </div>
+            <div class="data_item">
+              <div class="label">Количество</div>
+              <div class="count _count" data-min="1" data-max="6"><span class="sub _sub">-</span><span class="num _num">1</span><span class="add _add">+</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="store_info">
+          <div class="store_avatar" style="background-image: url(img/store_avatar.jpg)"></div>
+          <div class="rating">4.8</div>
+          <div class="name_wrapper">
+            <div class="name">Белый ветер</div>
+            <div class="type">Магазин электроники</div>
+          </div>
+          <div class="subs">2 560 подписчиков</div>
+          <div class="btn_store">Подписаться</div>
+          <div class="reviews">
+            <label>Положительных отзывов</label>
+            <p>95 %</p>
+          </div>
+          <div class="actions">
+            <div class="act">Написать продавцу</div>
+            <div class="act">Другие товары магазина</div>
+          </div>
+        </div>
+      </div>
+      <div class="actions">
+        <div class="cart">
+          <div class="btn">В корзину</div>
+        </div>
+        <div class="favorite _favorite">
+          <div class="btn btn_white"><i class="material-icons">favorite_outline</i><span>В избранное</span></div>
+        </div>
+        <div class="share">
+          <div class="btn btn_white"><i class="material-icons">share</i><span>Поделиться</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="other">
+  <div class="site_width">
+    <div class="tabs _tabs" data-tabs="other"><span class="_tab" data-tab="1">Описание</span><span class="_tab" data-tab="2">Характеристики</span><span class="_tab" data-tab="3">
+        <div class="text">Отзывы</div>
+        <div class="num">51</div></span></div>
+    <div class="tabs_container _tabs_container" data-tabs="other">
+      <div class="tab_content _tab_content" data-tab="1">
+        <p>
+          iPhone X — новый смартфон от Apple c 5,8-дюймовым экраном, без кнопки Home, но с системой распознавания лиц.
+          Устройство имеет OLED-дисплей без рамок, беспроводную зарядку, а также интерактивную сенсорную поверхность.
+          Главная особенность новинки — система Face ID, включающая в себя камеру высокого разрешения и систему датчиков TrueDepth, которая сканирует лицо пользователя и использует его для биометрической идентификации.
+          Двойная тыльная камера смартфона расположена вертикально и призвана расширить функциональность устройства в сфере дополненной реальности.
+          
+        </p>
+      </div>
+      <div class="tab_content _tab_content" data-tab="2">
+        <p>Характеристики</p>
+                <div class="column_content">
+                  <div class="column_type">
+                    <li>Производитель</li>
+                  </div>
+                  <div class="column_name">
+                    <li>Apple</li>
+                  </div>
+                </div>
+                <hr noshade="noshade"/>
+                <div class="column_content">
+                  <div class="column_type">
+                    <li>Модель</li>
+                  </div>
+                  <div class="column_name">
+                    <li>iPhone X</li>
+                  </div>
+                </div>
+                <hr noshade="noshade"/>
+                <div class="column_content">
+                  <div class="column_type">
+                    <li>Размер экрана, дюйм</li>
+                  </div>
+                  <div class="column_name">
+                    <li>5.8</li>
+                  </div>
+                </div>
+                <hr noshade="noshade"/>
+                <div class="column_content">
+                  <div class="column_type">
+                    <li>Разрешение экрана</li>
+                  </div>
+                  <div class="column_name">
+                    <li>2436 x 1125</li>
+                  </div>
+                </div>
+                <hr noshade="noshade"/>
+                <div class="column_content">
+                  <div class="column_type">
+                    <li>Тип экрана</li>
+                  </div>
+                  <div class="column_name">
+                    <li>Сенсорный, Ёмкостной Super</li>
+                  </div>
+                </div>
+                <hr noshade="noshade"/>
+                <div class="column_content">
+                  <div class="column_type">
+                    <li>Стекло экрана</li>
+                  </div>
+                  <div class="column_name">
+                    <li>Стекло с олеофобным покрытием</li>
+                  </div>
+                </div>
+                <hr noshade="noshade"/>
+                <div class="column_content">
+                  <div class="column_type">
+                    <li>Объем оперативной памяти</li>
+                  </div>
+                  <div class="column_name">
+                    <li>3 Гб</li>
+                  </div>
+                </div>
+                <hr noshade="noshade"/>
+                <div class="column_content">
+                  <div class="column_type">
+                    <li>Объем встроенной памяти</li>
+                  </div>
+                  <div class="column_name">
+                    <li>256 Гб</li>
+                  </div>
+                </div>
+                <hr noshade="noshade"/>
+                <div class="column_content">
+                  <div class="column_type">
+                    <li>Поддержка карт памяти</li>
+                  </div>
+                  <div class="column_name">
+                    <li>Не поддерживает</li>
+                  </div>
+                </div>
+                <hr noshade="noshade"/>
+                <div class="column_content">
+                  <div class="column_type">
+                    <li>Модель процессора</li>
+                  </div>
+                  <div class="column_name">
+                    <li>Apple</li>
+                  </div>
+                </div>
+                <hr noshade="noshade"/>
+                <div class="column_content">
+                  <div class="column_type">
+                    <li>Производитель</li>
+                  </div>
+                  <div class="column_name">
+                    <li>A11 Bionik</li>
+                  </div>
+                </div>
+                <hr noshade="noshade"/>
+                <div class="column_content">
+                  <div class="column_type">
+                    <li>Количество ядер</li>
+                  </div>
+                  <div class="column_name">
+                    <li>6 Ядер</li>
+                  </div>
+                </div>
+                <hr noshade="noshade"/>
+                <div class="column_content">
+                  <div class="column_type">
+                    <li>Наличие камеры</li>
+                  </div>
+                  <div class="column_name">
+                    <li>на задней панели, фронтальная</li>
+                  </div>
+                </div>
+                <hr noshade="noshade"/>
+                <div class="column_content">
+                  <div class="column_type">
+                    <li>Разрешение основной камеры</li>
+                  </div>
+                  <div class="column_name">
+                    <li>Двойная камера, Автофокус</li>
+                  </div>
+                </div>
+                <hr noshade="noshade"/>
+                <div class="column_content">
+                  <div class="column_type">
+                    <li>Особенности основной камеры</li>
+                  </div>
+                  <div class="column_name">
+                    <li>7 Мп</li>
+                  </div>
+                </div>
+                <hr noshade="noshade"/>
+                <div class="column_content">
+                  <div class="column_type">
+                    <li>Разрешение фронтальной камеры</li>
+                  </div>
+                  <div class="column_name">
+                    <li>A11 Bionic</li>
+                  </div>
+                </div>
+                <hr noshade="noshade"/>
+                <div class="column_content">
+                  <div class="column_type">
+                    <li>Разрешение видео</li>
+                  </div>
+                  <div class="column_name">
+                    <li>3840 x 2160 пикселей, 30 кадров в</li>
+                  </div>
+                </div>
+                <hr noshade="noshade"/>
+                <div class="column_content">
+                  <div class="column_type">
+                    <li>Мобильный интернет</li>
+                  </div>
+                  <div class="column_name">
+                    <li>3G, 4G</li>
+                  </div>
+                </div>
+                <hr noshade="noshade"/>
+                <div class="column_content">
+                  <div class="column_type">
+                    <li>Поддержка частоты</li>
+                  </div>
+                  <div class="column_name">
+                    <li>2G</li>
+                  </div>
+                </div>
+                <hr noshade="noshade"/>
+                <div class="column_content">
+                  <div class="column_type">
+                    <li>Производитель</li>
+                  </div>
+                  <div class="column_name">
+                    <li>2G GSM/EDGE:850, 900, 1800, 1900 МГц 3G UMTS/HSPA+/DC-HSDPA: 850, 900, 1700/2100, 1900, 2100 МГц</li>
+                  </div>
+                </div>
+                <hr noshade="noshade"/>
+      </div>
+      <div class="tab_content _tab_content" data-tab="3">
+        <div class="sorting">
+          <div class="sort_by">Сортировать по:</div>
+          <div class="item">Новым</div>
+          <div class="item">Старым</div>
+          <div class="item">Положительным</div>
+          <div class="item">Отрицательным</div>
+        </div>
+        <div class="comments">
+          <div class="comment">
+            <div class="rating"><span>Оценка:</span>
+              <div class="score five">5</div>
+            </div>
+            <div class="avatar_container">
+              <div class="avatar" style="background-image: url(img/avatar.jpg)"></div>
+            </div>
+            <div class="text_contatiner">
+              <div class="name">Серсея Ланистер</div>
+              <div class="text">
+                Очень хороший девайс, привыкнуть к горбику можно почти сразу.
+                Стекло очень легко царапается, потому лучше покупать чехол сразу вместе с телефоном.
+                
+              </div>
+              <div class="date">18 июня 2018 14:21</div>
+            </div>
+          </div>
+          <div class="comment">
+            <div class="rating"><span>Оценка:</span>
+              <div class="score four">4</div>
+            </div>
+            <div class="avatar_container">
+              <div class="avatar" style="background-image: url(img/avatar.jpg)"></div>
+            </div>
+            <div class="text_contatiner">
+              <div class="name">Дейенерис Таргариен</div>
+              <div class="text">
+                Сразу скажу, что телефон мне подарили. Ходил последние 2 года с Xiaomi Redmi 2 и меня все устраивало до тех пор пока я не взял Х и настроил все.
+                Трепета и дрожи в коленках нет, перемешанного с предыханием, был уже опыт использования разных устройств от Apple. Просто все удобно и приятно использовать.
+                За текущую цену среднестатистическому работнику в Москве я бы не советовал брать этот телефон. Не говоря уже о людях, живущих за пределами Москвы.
+                Это просто лишено всякого смысла. На эти деньги можно съездить в путешествие или купить б/у машину (типа Нексии или ВАЗа).
+                Кому-то покажется нелепым такое сравнение. Но поездка на отдых запомнится на всю жизнь, а телефон перестанет радовать через 2 года. Живите и приобретайте опыт, а не вещи.
+                Опыт - навсегда, а вещи ломаются, их крадут, а ещё они вызывают зависть. 
+              </div>
+              <div class="read_more">Читать дальше</div>
+              <div class="date">18 июня 2018 14:21</div>
+            </div>
+          </div>
+          <div class="comment answer">
+            <div class="avatar_container">
+              <div class="avatar" style="background-image: url(img/avatar.jpg)"></div>
+            </div>
+            <div class="text_contatiner">
+              <div class="name">Белый ветер</div>
+              <div class="text">
+                Сразу скажу, что телефон мне подарили.
+                Ходил последние 2 года с Xiaomi Redmi 2 и меня все устраивало до тех пор пока я не взял Х и настроил все.
+                Трепета и дрожи в коленках нет, перемешанного с предыханием, был уже опыт использования разных устройств от Apple. Просто все удобно и приятно использовать.
+                За текущую цену среднестатистическому
+                
+              </div>
+              <div class="date">18 июня 2018 14:21</div>
+            </div>
+          </div>
+          <div class="comment">
+            <div class="rating"><span>Оценка:</span>
+              <div class="score one">1</div>
+            </div>
+            <div class="avatar_container">
+              <div class="avatar" style="background-image: url(img/avatar.jpg)"></div>
+            </div>
+            <div class="text_contatiner">
+              <div class="name">Джон Сноу</div>
+              <div class="text">
+                Телефон не стоит своих денег.
+                Apple просто наживается на фанатах своей продукции готовых жрать любое г*вно что они производят!
+                Теперь продаю телефон.
+                
+              </div>
+              <div class="date">18 июня 2018 14:21</div>
+            </div>
+          </div>
+        </div>
+        <div class="leave_comment">
+          <div class="title">Пожалуйста, оцените этот товар</div>
+          <div class="rate">
+            <div class="one">1</div>
+            <div class="two">2</div>
+            <div class="three">3</div>
+            <div class="four">4</div>
+            <div class="five">5</div>
+          </div>
+          <textarea placeholder="Оставить отзыв" rows="5"></textarea>
+          <div class="btn">оставить отзыв</div>
+        </div>
+      </div>
+      <div class="part_rating_statistic">
+        <div class="title">Статистика отзывов</div>
+        <div class="rates">
+          <div class="rate_item">
+            <div class="score">5</div>
+            <div class="progress">
+              <div class="inner" style="width: 100%"></div>
+            </div>
+            <div class="num">30</div>
+          </div>
+          <div class="rate_item four">
+            <div class="score">4</div>
+            <div class="progress">
+              <div class="inner" style="width: 67%"></div>
+            </div>
+            <div class="num">20</div>
+          </div>
+          <div class="rate_item three">
+            <div class="score">3</div>
+            <div class="progress">
+              <div class="inner" style="width: 10%"></div>
+            </div>
+            <div class="num">3</div>
+          </div>
+          <div class="rate_item two">
+            <div class="score">2</div>
+            <div class="progress">
+              <div class="inner" style="width: 100%"></div>
+            </div>
+            <div class="num">30</div>
+          </div>
+          <div class="rate_item one">
+            <div class="score">1</div>
+            <div class="progress">
+              <div class="inner" style="width: 33%"></div>
+            </div>
+            <div class="num">10</div>
+          </div>
+        </div>
+        <div class="total_text">Средний рейтинг
+          <div class="total_rating">3.3</div>
+        </div>
+        <div class="additional_statistic">
+          <hr noshade="noshade"/>
+          <div class="total_sells">
+            <li>Купили</li>
+            <li>93</li>
+          </div>
+          <div class="total_favorites">
+            <li>Добавили в избранное</li>
+            <li>12</li>
+          </div>
+          <div class="percent_positive">
+            <li>Положительных отзывов</li>
+            <li>53.8%</li>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/slider.min.js"></script>
+<script>
+  uSlider({
+    preview: u('._preview'),
+    slides: u('._slides'),
+    wrapper: u('._slides_wrapper'),
+    left_arrow: u('._left_arrow'),
+    right_arrow: u('._right_arrow'),
+    magnifier: u('._magnifier')
+  });
+  
+</script>
+<script src="coffee/tabs.js"></script>
+<script>
+  uTabs({
+    tabs: u('._tabs'),
+    container: u('._tabs_container')
+  });
+  
+</script>
+<script src="coffee/timer.js"></script>
+<script>
+  uTimer({
+    timer: u('._timer')
+  });
+  
+</script>
+<script src="coffee/variants.js"></script>
+<script>
+  uVariants({
+    variants: u('._variants')
+  });
+  
+</script>
+<script src="coffee/counter.js"></script>
+<script>
+  uCounter({
+    count: u('._count'),
+    num: u('._num'),
+    add: u('._add'),
+    sub: u('._sub')
+  });
+  
+</script>
+<script src="coffee/magnifier.js"></script>
+<script>
+  uMagnifier({
+    magnifier: u('._magnifier')
+  });
+  
+</script>
+<script src="coffee/favorite.js"></script>
+<script>
+  uFavorite({
+    favorite: u('._favorite')
+  });
+  
+</script>
+<script src="coffee/comment.js"></script>
+<script>
+  uComment({
+    rating: u('.leave_comment .rate'),
+    textarea: u('.leave_comment textarea'),
+    btn: u('.leave_comment .btn'),
+    container: u('.leave_comment')
+  });
+  
+</script>
+<footer>
+  <div class="wrapper">
+    <div class="inner">
+      <div class="title">Клиентам</div><a href="#">Вопросы и ответы</a><a href="#">Как это работает</a><a href="#">Способы оплаты</a><a href="#">Помощь</a>
+    </div>
+    <div class="inner">
+      <div class="title">Бизнесу</div><a href="#">Предолжения</a><a href="#">Стать партнером</a><a href="#">Специальные условия</a>
+    </div>
+    <div class="inner">
+      <div class="title">Оплата</div><a href="#">VISA / MasterCard</a><a href="#">Qiwi</a><a href="#">Яндекс Деньги</a><a href="#">PayPal</a>
+    </div>
+    <div class="inner contacts">
+      <div class="phone">+7 707 2707027</div>
+      <div class="email">chocokiller@gmail.com</div>
+      <div class="soc"><a href="#" style="background-image: url(&quot;img/soc/vk.png&quot;)"></a><a href="#" style="background-image: url(&quot;img/soc/wa.png&quot;)"></a><a href="#" style="background-image: url(&quot;img/soc/insta.png&quot;)"></a><a href="#" style="background-image: url(&quot;img/soc/yt.png&quot;)"></a><a href="#" style="background-image: url(&quot;img/soc/tg.png&quot;)"></a></div>
+    </div>
+  </div>
+  <div class="bottom">
+    <div class="inner">© Chocokiller 2018</div>
+  </div>
+</footer>
+<script src="js/common.min.js"></script></body>
+</html>

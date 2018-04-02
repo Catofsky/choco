@@ -1,0 +1,684 @@
+
+
+#product
+  .site_width
+    display: flex
+
+#product_slider
+  background: #fff
+  width: 590px
+  position: relative
+
+  .selector
+    height: 450px
+    width: 590px
+    z-index: 2
+    position: absolute
+    top: 0
+    left: 0
+
+  .magnifier_wrapper
+    height: 450px
+    width: 590px
+    position: absolute
+    top: 0
+    left: 0
+    cursor: zoom-in
+    overflow: hidden
+
+  .magnifier
+    display: none
+
+  .magnifier.active
+    display: block
+    position: relative
+
+  .preview
+    height: 100%
+
+  .slider
+    height: 450px
+
+  .slides_wrapper
+    height: 114px
+    overflow: hidden
+    white-space: nowrap
+    position: relative
+
+  .arrow
+    position: absolute
+    width: 40px
+    height: inherit
+    top: 0
+    z-index: 1
+    cursor: pointer
+    text-align: center
+    padding-top: 46px
+    box-sizing: border-box
+
+    &.hidden
+      display: none
+
+    &.left
+      left: 0
+      background: linear-gradient(to right, #fff, rgba(1, 1, 1, 0))
+
+    &.right
+      right: 0
+      background: linear-gradient(to left, #fff, rgba(1, 1, 1, 0))
+
+  .slides
+    position: relative
+    left: 0
+    transition: left .5s ease
+
+  .slide
+    margin-top: 8px
+    margin-right: 8px
+    display: inline-block
+    width: 140px
+    height: 105px
+    cursor: pointer
+
+    &:last-child
+      margin-right: 0
+
+#product_data
+  flex-grow: 1
+  background: #fff
+
+  .title
+    color: $gray_font
+    font-size: 24px
+    margin: 24px
+
+  .container
+    display: flex
+    min-height: 370px
+
+  .product_info
+    flex-basis: 360px
+    margin: 0 12px 0 24px
+
+    .info
+      display: flex
+      height: 30px
+      line-height: 30px
+      width: 100%
+      cursor: default
+
+    div
+      flex-basis: 120px
+      text-align: center
+
+    .rating
+      background: #2db573
+      color: #fff
+
+    .sale
+      background: $main_orange
+      color: #fff
+
+  .data_item
+    min-height: 50px
+    width: 100%
+
+  .data
+    height: 300px
+    padding: 24px 0
+
+    div
+      display: inline-block
+      line-height: 40px
+      float: right
+
+      .label
+        float: left
+
+    .price
+      font-size: 33px
+      color: $main_orange
+
+      &::after
+        content: ' ₸'
+        font-size: 23px
+        color: $gray_font
+
+    .old_price
+      color: #888
+      text-decoration: line-through
+      font-size: 20px
+
+      &::after
+        content: ' ₸'
+        font-size: 15px
+        color: #888
+
+    .keep_price
+      font-size: 20px
+      color: #6e6e6e
+
+      &::after
+        content: ' ₸'
+        font-size: 15px
+
+  .store_info
+    background: #f9f9f9
+    position: relative
+    padding: 0 24px
+    box-sizing: border-box
+    width: 200px
+    margin: 0 12px
+
+    .rating
+      position: absolute
+      width: 40px
+      height: 40px
+      color: #fff
+      border-radius: 5px
+      background: #2db573
+      font-size: 17px
+      line-height: 40px
+      text-align: center
+      right: 16px
+      top: 16px
+
+    .store_avatar
+      width: 50px
+      height: 50px
+      border-radius: 25px
+      margin: 12px 0
+
+    .name_wrapper
+      height: 64px
+      color: $gray_font
+
+      .name
+        color: #54a8d2
+        cursor: pointer
+        font-size: 16px
+
+        &:hover
+          text-decoration: underline
+
+    .type
+      color: $sad_gray
+      font-size: 13px
+
+    .subs
+      text-align: center
+      font-size: 13px
+
+    .btn_store
+      background: $store_color
+      text-align: center
+      text-transform: uppercase
+      font-size: 12px
+      color: #fff
+      height: 30px
+      border-radius: 15px
+      line-height: 30px
+      cursor: pointer
+      margin: 8px 0
+
+      &:hover
+        background: #347dd6
+
+    .reviews
+      margin: 30px 0
+
+      label
+        float: left
+        font-size: 13px
+        width: 60%
+
+      p
+        font-size: 14px
+        text-align: right
+        line-height: 30px
+
+    .actions
+      margin: 60px 0 0 0
+      display: block
+      height: 80px
+
+    .act
+      color: $store_color
+      font-size: 13px
+      cursor: pointer
+      margin: 12px 0
+
+      &:hover
+        text-decoration: underline
+
+  .favorite.active span, .favorite.active i
+    color: $main_orange !important
+    animation: heart .15s ease
+
+  .actions
+    display: flex
+    height: 120px
+    align-items: center
+    justify-content: center
+
+    .btn
+      height: 42px
+      line-height: 42px
+      border-radius: 21px
+      margin: 0 8px
+
+    .cart .btn
+      width: 180px
+
+    .btn_white
+      text-transform: none
+      background: #fff
+      width: 124px
+
+      &:hover
+        background: #faf5f5
+
+      span
+        color: $sad_gray
+        font-size: 15px
+
+      i
+        color: #ccc
+        font-size: 25px
+        position: relative
+        top: 6px
+        margin-right: 6px
+
+  .timer span
+    display: inline-block
+    width: 110px
+    height: 24px
+    border: $main_orange solid 1px
+    box-sizing: border-box
+    border-radius: 12px
+    vertical-align: middle
+    font-size: 20px
+    text-align: center
+    color: $main_orange
+    line-height: 20px
+
+  .variants
+    max-width: 80%
+    margin-bottom: 12px
+
+  .variant
+    display: inline-block
+    width: 42px
+    height: 42px
+    border-radius: 5px
+    border: $gray_border solid 1px
+    box-sizing: border-box
+    margin: 6px
+    cursor: pointer
+
+    &:hover
+      border: #888 solid 1px
+
+    &.active
+      border: $main_orange solid 1px
+
+    &.active:hover
+      border: $main_orange solid 1px
+
+  .count
+    display: inline-block
+    width: 110px
+    height: 24px
+    border: $main_orange solid 1px
+    box-sizing: border-box
+    border-radius: 12px
+    vertical-align: middle
+    position: relative
+    top: 8px
+
+    span
+      text-align: center
+      line-height: 20px
+      color: $main_orange
+      font-size: 24px
+      position: relative
+      top: -8px
+
+    .sub
+      left: 14px
+      cursor: pointer
+      position: absolute
+      top: -1px
+
+    .num
+      font-size: 20px
+
+    .add
+      right: 14px
+      cursor: pointer
+      position: absolute
+      top: -1px
+
+#other
+  .statistic
+    flex-basis: 300px
+    background: #fff
+
+    .title
+      margin: 18px 24px
+      color: #404040
+      font-size: 23px
+
+    .rates
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      height: 200px
+      margin: 24px
+
+      .rate_item
+
+        div
+          display: inline-block
+
+      .score
+        width: 34px
+        height: 34px
+        background: #2db573
+        border-radius: 5px
+        color: #fff
+        font-size: 17px
+        line-height: 34px
+        text-align: center
+
+      .progress
+        width: 122px
+        height: 12px
+        background: #dadada
+        border-radius: 6px
+        margin: 0 12px
+        position: relative
+        top: -1px
+        overflow: hidden
+
+        .inner
+          background: #2db573
+          width: 70%
+          height: 100%
+          position: absolute
+          top: 0
+          left: 0
+
+      .num
+        width: 44px
+        height: 20px
+        text-align: center
+        line-height: 20px
+        color: $sad_gray
+        font-size: 15px
+        border: $gray_border solid 1px
+        border-radius: 3px
+        margin: 12px 0
+        position: relative
+        top: -1px
+
+    .total_text
+      color: #404040
+      font-size: 20px
+      margin: 44px 24px
+      position: relative
+
+      .total_rating
+        position: absolute
+        right: 16px
+        top: -8px
+        background: #2db573
+        width: 42px
+        height: 42px
+        line-height: 42px
+        text-align: center
+        color: #fff
+        font-size: 18px
+        border-radius: 5px
+
+  .tab_content
+    .column_content
+      list-style-type: none
+      .column_type
+        width: 329px
+        li
+          float: left
+          margin-left: 25px
+          margin-bottom: 6px
+      .column_name
+        width: 487px
+        li
+          margin-left: 329px
+          margin-right: -329px
+    hr
+      width: 817px
+      margin: 0px 24px 18px 24px
+      border: none
+      background-color: #d9d9d9
+      height: 1px
+
+  .additional_statistic
+    list-style-type: none
+    hr
+      width: 280px
+      margin: 0 10px
+      border: none
+      background-color: #d9d9d9
+      height: 1px
+    .total_sells
+      margin: 22px 20px 22px
+      display: flex
+      justify-content: space-between
+    .total_favorites
+      margin: 22px 20px 22px
+      display: flex
+      justify-content: space-between
+    .percent_positive
+      margin: 22px 20px 22px
+      display: flex
+      justify-content: space-between
+
+    .rate_item.four
+      .score, .inner
+        background: #76c14d
+
+      .inner
+        width: 44%
+
+    .rate_item.three
+      .score, .inner
+        background: #eec513
+
+      .inner
+        width: 30%
+
+    .rate_item.two
+      .score, .inner
+        background: #eea815
+
+      .inner
+        width: 20%
+
+    .rate_item.one
+      .score, .inner
+        background: #e14539
+
+      .inner
+        width: 12%
+
+  .sorting
+    height: 34px
+    display: inline-flex
+    align-items: center
+    border-radius: 5px
+    border: $gray_border solid 1px
+    box-sizing: border-box
+    margin: 24px
+    margin-bottom: 12px
+
+    .sort_by
+      font-size: 15px
+      color: #686868
+      margin: 0 24px
+
+    .item
+      font-size: 15px
+      color: #404040
+      padding: 0 12px
+      box-sizing: border-box
+      cursor: pointer
+
+      &:hover
+        color: $main_orange
+
+      &:first-child
+        color: $main_orange
+
+      &:not(:last-child)
+        border-right: $gray_border solid 1px
+
+  .comment
+    display: flex
+    position: relative
+    margin: 12px 24px
+
+    &.answer
+      margin-left: 74px
+
+    .rating
+      position: absolute
+      top: 12px
+      right: 12px
+
+      span
+        color: $sad_gray
+        font-size: 13px
+        margin-right: 8px
+
+      .score
+        display: inline-block
+        background: #2db573
+        border-radius: 5px
+        width: 20px
+        height: 20px
+        color: #fff
+        line-height: 20px
+        text-align: center
+
+      .four
+        background: #76c14d
+
+      .three
+        background: #eec513
+
+      .two
+        background: #eea815
+
+      .one
+        background: #e14539
+
+    .avatar_container
+      flex-grow: 1
+      margin: 12px
+
+    .avatar
+      width: 50px
+      height: 50px
+      border-radius: 25px
+      background: #171c30
+
+    .text_contatiner
+      border-top: $gray_border solid 1px
+      flex-grow: 12
+      width: 100%
+
+    .name
+      font-size: 15px
+      color: #404040
+      margin: 12px
+
+    .text, .date, .read_more
+      font-size: 13px
+      color: $sad_gray
+      margin: 12px
+
+    .read_more
+      font-weight: bold
+      cursor: pointer
+
+      &:hover
+        text-decoration: underline
+
+
+  .leave_comment
+    margin-top: 24px
+    background: #fff
+    box-shadow: 7px 0 32px rgba(0, 0, 0, .16)
+    padding: 24px
+    box-sizing: border-box
+
+    .btn
+      margin-top: 24px
+      font-size: 12px
+
+    textarea
+      margin-top: 24px
+      width: 100%
+      resize: none
+      border-radius: 10px
+      border: $gray_border solid 1px
+      padding: 12px
+      box-sizing: border-box
+
+    .title
+      color: $sad_gray
+
+    .rate
+      margin-top: 12px
+
+    .rate div
+      width: 20px
+      height: 20px
+      font-size: 15px
+      color: #fff
+      line-height: 20px
+      border-radius: 5px
+      text-align: center
+      cursor: pointer
+      display: inline-block
+      margin-right: 8px
+
+    .one
+      background: #f0a29c
+
+      &:hover, &.active
+        background: #e14539
+
+    .two
+      background: #f6d38a
+
+      &:hover, &.active
+        background: #eea815
+
+    .three
+      background: #f6e289
+
+      &:hover, &.active
+        background: #eec513
+
+    .four
+      background: #a4c293
+
+      &:hover, &.active
+        background: #76c14d
+
+    .five
+      background: #96dab9
+
+      &:hover, &.active
+        background: #2db573

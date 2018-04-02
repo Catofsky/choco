@@ -1,0 +1,136 @@
+include _parts.pug
+include _header.pug
+
+#main
+  .site_width
+    .banner(style='background-image: url("img/banner.jpg")')
+    .fast_register
+      .title Впервый раз на Chocokiller ?
+      form(action='#')
+        p Email
+        input(type='text' name='email' placeholder='e-mail@gmail.ru')
+        p Телефон
+        input(type='text' name='phone' placeholder='+7')
+        .btn Регистрация
+
+#main_content
+  .site_width
+    .tabs._tabs
+      - var tabs = ['Лучшая скидка', 'Новое', 'Горящие', 'Куда сходить']
+      each title, i in tabs
+        - var act = i === 0 ? 'active' : '';
+        span(class=act data-tab=i)= title
+      .see_all Смотреть все товары
+
+    .main_products._tabs_container
+      -
+        var product = {
+          href: '/product.html',
+          sale: 50,
+          rating: 4.9,
+          img: 'img/products/1.jpg',
+          title: 'Apple iPhone S 64Gb Space Gray',
+          old_price: '1 330 000',
+          price: '230 000',
+          desc: 'Тип: классический<br>\
+            ОС: iOS 11<br>\
+            Диагональ: 4.7"<br>\
+            ОЗУ: 2048 Мб<br>\
+            Встроенная память: 64 Гб',
+          store: 'Белый ветер'
+        }
+
+      - for (var i = 0; i < tabs.length; i++)
+        - var cl = i === 0 ? 'product_container _tab_content active' : 'product_container _tab_content';
+        div(class=cl data-tab=i)
+          - product.img = i % 2 === 0 ? 'img/products/1.jpg' : 'img/products/2.jpg';
+          - for (var j = 0; j < 10; j++)
+            +part('product_card', product)
+
+  - product.img = 'img/products/1.jpg';
+  .marker
+    .site_width
+      .cat_title
+        .title Вам может быть интересно
+
+      .main_products
+        .product_container_static
+          - for (var i = 0; i < 5; i++)
+            +part('product_card', product)
+
+  .marker.light
+    .site_width
+      .cat_title
+        .title В Тренде
+        .see_all Смотреть все товары
+
+      .main_products
+        .product_container_static
+          - for (var i = 0; i < 5; i++)
+            +part('product_card', product)
+
+
+  .informed
+    .site_width
+      .text.
+        Будь в курсе!
+        Подпишись на Chocokiller
+
+      form(action='#')
+        input(type='phone' placeholder='+7')
+        .btn Подписаться
+
+
+  .marker.light
+    .site_width
+      .cat_title
+        .title Куда сходить
+        .see_all Смотреть все товары
+
+      .main_products
+        .product_container_static
+          - for (var i = 0; i < 5; i++)
+            +part('product_card', product)
+          
+
+  .marker.light
+    .site_width
+      .cat_title
+        .title Покупатели говорят
+        .see_all Смотреть все отзывы
+
+      -
+        var review = {
+          title: 'Eldan',
+          avatar: 'img/user.jpg',
+          text: 'Задача организации, в особенности же сложившаяся структура организации требуют определения и уточнения соответствующий условий активизации',
+          product: {
+            sale: '10',
+            price: '18 000',
+            rating: '4.9',
+            title: '"Fitness Park" Тренажерный зал'
+          }
+        };
+
+      .main_products
+        .review_container
+          - for (var i = 0; i < 5; i++)
+            +part('review_card', review)
+
+
+script(src='coffee/tabs.js')
+script.
+  uTabs({
+    tabs: u('._tabs'),
+    container: u('._tabs_container')
+  });
+
++part_coffee('product_card')
+script.
+  parts.product_card({
+    items: u('.part_product_card'),
+    hearts: u('.part_product_card .material-icons.heart')
+  });
+
+
+include _footer.pug

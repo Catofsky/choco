@@ -1,0 +1,239 @@
+
+.part_product_card
+	width: 220px
+	height: 342px
+	margin: 12px 0
+
+	.wrapper
+		width: 220px
+		height: 342px
+		background: #fff
+		box-shadow: 0 2px 2px rgba(0, 0, 0, .23)
+		cursor: pointer
+		position: relative
+
+		.material-icons
+			color: #cccccc
+			position: absolute
+
+			&:hover
+				color: $main_orange
+
+		.heart
+			left: 8px
+			top: 8px
+
+			&.active
+				color: $main_orange
+				animation: heart .15s ease
+
+		.share
+			left: 8px
+			top: 34px
+
+		.sale
+			width: 64px
+			height: 28px
+			background: $main_orange
+			color: #fff
+			font-size: 17px
+			text-align: center
+			line-height: 28px
+			position: absolute
+			top: 12px
+			right: 0
+
+		.rating
+			width: 32px
+			height: 32px
+			border-radius: 5px
+			background: #2db573
+			font-size: 16px
+			line-height: 32px
+			text-align: center
+			color: #fff
+			position: absolute
+			left: 14px
+			bottom: 14px
+
+		.title
+			width: 180px
+			height: 63px
+			border-bottom: $gray_border solid 1px
+			color: #54a8d2
+			font-size: 16px
+			text-align: center
+			padding-top: 8px
+			box-sizing: border-box
+			margin: 0 auto
+
+			&:hover
+				text-decoration: underline
+
+		.old_price
+			font-size: 15px
+			color: #949494
+			text-align: right
+			text-decoration: line-through
+			position: absolute
+			right: 18px
+			bottom: 40px
+
+			&::after
+				content: ' ₸'
+				font-size: 11px
+
+		.price
+			font-size: 27px
+			color: #5a5a5a
+			line-height: 20px
+			text-align: right
+			position: absolute
+			right: 18px
+			bottom: 14px
+
+			&::after
+				content: ' ₸'
+				font-size: 20px
+
+		.desc
+			height: 0
+			overflow: hidden
+
+		.desc_title, .store
+			overflow: hidden
+			height: 0
+
+		.store
+			height: 0
+			overflow: hidden
+
+		.btn
+			display: none
+
+
+	&.open .wrapper
+		z-index: 2
+		height: 560px
+		box-shadow: 0 3px 20px rgba(0, 0, 0, .2)
+
+		.desc
+			height: 110px
+			color: #404040
+			margin: 0 20px
+			font-size: 14px
+			line-height: 20px
+
+		.desc_title, .store
+			height: auto
+			color: #949494
+			margin: 8px 0 8px 20px
+			font-size: 14px
+
+		.store a
+			height: auto
+			color: #54a8d2
+			font-size: 14px
+			margin-right: 20px
+			float: right
+
+			&:hover
+				text-decoration: underline
+
+		$product_button_height: 42px
+
+		.old_price
+			bottom: 40px + $product_button_height
+
+		.price
+			bottom: 14px + $product_button_height
+
+		.rating
+			bottom: 14px + $product_button_height
+
+		.btn
+			display: block
+			width: 180px
+			position: absolute
+			bottom: 14px
+			box-sizing: border-box
+			left: 220px / 2 - 180px / 2
+
+	&.horizontal
+		width: 940px
+		height: 240px
+
+		.wrapper
+			width: 940px
+			height: 212px
+
+			.title
+				position: absolute
+				left: 244px
+				top: 24px
+				width: auto
+				border: none
+				padding: 0
+				margin: 0
+				line-height: 12px
+
+			.sale
+				top: 24px
+
+			.rating
+				left: auto
+				right: 64px
+				top: 24px
+				border-radius: 0
+				width: 64px
+				height: 28px
+				line-height: 28px
+
+			.price
+				bottom: 64px
+				right: 28px
+
+			.old_price
+				bottom: 94px
+				right: 28px
+
+			.btn
+				display: block
+				left: auto
+				right: 24px
+				bottom: 24px
+				width: 180px
+				position: absolute
+				box-sizing: border-box
+
+			.desc
+				height: 110px
+				position: absolute
+				color: #404040
+				font-size: 14px
+				line-height: 20px
+				left: 244px
+				top: 74px
+				margin: 0
+
+			.desc_title, .store
+				height: auto
+				position: absolute
+				color: #949494
+				font-size: 14px
+				left: 244px
+				top: 50px
+				margin: 0
+
+			.store
+				left: 544px
+
+			.store a
+				color: #54a8d2
+				font-size: 14px
+				margin-right: 20px
+				display: block
+				float: none
+
+				&:hover
+					text-decoration: underline

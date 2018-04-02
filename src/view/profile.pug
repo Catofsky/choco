@@ -1,0 +1,67 @@
+include _parts.pug
+include _header.pug
+
+.page_title
+  .site_width
+    .title Профиль
+
+.profile_block
+  .site_width
+    .block
+      .avatar(style='background: url("img/user_150x150.jpg")')
+      .info
+        .username Тирион Ланистер
+        .stat
+          .item
+            .num 94
+            .text Заказов
+          .item
+            .num 12 623
+            .text Кешбэк
+          .item
+            .num 89 048
+            .text Вы сэкономили
+          .item
+            .num 1 000 000
+            .text Баланс
+          .item
+            .num 1 520
+            .text Бонус
+
+
+    .content_block
+      .side_block
+        .menu
+          .item.active
+            i.material-icons dehaze
+            .text Главная
+          .item
+            i.material-icons turned_in
+            .text Мои заказы
+          .item
+            i.material-icons local_play
+            .text Мои купоны
+          .item
+            i.material-icons favorite
+            .text Избранное
+          .item
+            i.material-icons people
+            .text Подписки
+            .num 7
+          .item
+            i.material-icons notifications
+            .text Уведомления
+            .num 4
+          .item
+            i.material-icons mail
+            .text Сообщения
+            .num 12
+          .item
+            i.material-icons settings
+            .text Настройки
+
+      .main_block
+
+
+
+include _footer.pug

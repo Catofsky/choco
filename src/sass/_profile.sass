@@ -1,0 +1,116 @@
+
+.page_title
+  .title
+    height: 64px
+    line-height: 64px
+    font-size: 20px
+    color: #686868
+    margin-left: 24px
+
+.page_title
+  background: #fff
+
+.profile_block
+  margin-top: 24px
+
+  .block
+    background: #fff
+    overflow: hidden
+    display: flex
+
+  .avatar
+    height: 150px
+    width: 150px
+    margin: 24px
+    border-radius: 75px
+    display: inline-block
+
+  .info
+    display: inline-block
+
+    .item
+      display: inline-block
+      width: 150px
+      height: 60px
+      box-sizing: border-box
+      border-left: $gray_border solid 1px
+
+      &:last-child
+        border-right: $gray_border solid 1px
+
+      & > div
+        color: $sad_gray
+        text-align: center
+
+      .num
+        font-size: 20px
+        line-height: 30px
+
+      .text
+        font-size: 14px
+
+  .username
+    font-size: 20px
+    color: #404040
+    margin: 56px 0 24px 24px
+
+  .stat
+    margin-left: 24px
+
+.content_block
+  display: flex
+  justify-content: space-between
+  margin-top: 24px
+
+  .side_block
+    flex-basis: 240px
+
+  .main_block
+    flex-basis: 940px
+    height: 60px
+    background: #fff
+
+  .menu
+    background: #fff
+
+    .num
+      position: absolute
+      top: 13px
+      right: 24px
+      text-align: center
+      width: 34px
+      height: 24px
+      line-height: 24px
+      border-radius: 5px
+      background: $main_orange
+      font-size: 15px
+      color: #fff
+
+    .text
+      color: $sad_gray
+      font-size: 15px
+      display: inline-block
+      height: 50px
+      line-height: 50px
+
+    i
+      color: #ccc
+      display: inline-block
+      padding: 0 16px
+      position: relative
+      top: 6px
+
+    .item
+      height: 50px
+      cursor: pointer
+      position: relative
+      
+      &:hover .text, &:hover i
+        color: $main_orange
+
+      &.active
+
+        i
+          color: $main_orange
+
+    
