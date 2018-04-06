@@ -41,8 +41,8 @@ gulp.task('coffee', function() {
 
 gulp.task('coffee_parts', function() {
 	gulp.src(config.src + '/parts/**/*.coffee')
-	  .pipe(coffee(config.coffee).on('error', console.error))
-	  .pipe(gulp.dest(config.dist + '/coffee/parts'));
+		.pipe(coffee(config.coffee).on('error', console.error))
+		.pipe(gulp.dest(config.dist + '/coffee/parts'));
 });
 
 gulp.task('pug', [ 'reload' ], function () {
@@ -67,7 +67,7 @@ gulp.task('css_compress', [ 'sass' ], function () {
 		.pipe(nano())
 		.pipe(ren({ suffix: '.min' }))
 		.pipe(gulp.dest(config.dist + '/css'))
-    .pipe(sync.stream());
+    	.pipe(sync.stream());
 });
 
 gulp.task('sync', function () {
@@ -77,12 +77,12 @@ gulp.task('sync', function () {
 gulp.task('watch', function () {
 	gulp.watch(config.src + '/sass/**/*.sass', [ 'css_compress' ]);
 	gulp.watch(config.src + '/view/**/*.pug', [ 'pug' ]);
-  gulp.watch(config.src + '/view/**/*.html', [ 'pug' ]);
+  	gulp.watch(config.src + '/view/**/*.html', [ 'pug' ]);
 	gulp.watch(config.src + '/js/**/*.js', [ 'js_compress' ]);
 	gulp.watch(config.src + '/coffee/**/*.coffee', [ 'coffee' ]);
 
 	gulp.watch(config.src + '/parts/**/*.coffee', [ 'coffee_parts' ]);
-  gulp.watch(config.src + '/parts/**/*.pug', [ 'pug' ]);
+  	gulp.watch(config.src + '/parts/**/*.pug', [ 'pug' ]);
 	gulp.watch(config.src + '/parts/**/*.sass', [ 'css_compress' ]);
 });
 

@@ -1,0 +1,12 @@
+
+mixin part_date_select(params)
+	.part_date_select
+		label
+			span= params.title
+			input(type='hidden' name=params.name)
+			.container
+				select.day
+					- for (var i = 1; i <= 20; i++)
+						option= i
+				select.month
+				select.year

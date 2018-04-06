@@ -1,16 +1,16 @@
 (function() {
-  var cfg, on_click;
+  var cfg, onClick;
 
   cfg = {};
 
   window.parts.checkbox = function(config) {
     cfg = config;
     return cfg.checkbox.each(function(e) {
-      return on_click.call(e);
-    }).on('click', on_click);
+      return onClick.call(e);
+    }).on('click', onClick);
   };
 
-  on_click = function() {
+  onClick = function() {
     var cb, self;
     self = u(this);
     cb = self.find('input');

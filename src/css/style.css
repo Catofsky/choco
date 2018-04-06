@@ -1485,6 +1485,18 @@ footer {
       .content_block .menu .item.active i {
         color: #ff6e41; }
 
+#register_block .site_width {
+  background: #fff;
+  height: 1300px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  overflow: hidden; }
+
+#register_block .title {
+  color: #434343;
+  font-size: 25px;
+  margin: 24px; }
+
 .part_btn {
   height: 30px;
   display: inline-block;
@@ -1928,3 +1940,74 @@ footer {
     .part_review_card .price::after {
       content: ' ₸';
       font-size: 20px; }
+
+.part_text_input label {
+  min-height: 30px;
+  display: inline-block;
+  width: 800px;
+  position: relative;
+  margin: 12px 0; }
+
+.part_text_input span {
+  color: #434343;
+  width: auto;
+  text-align: right;
+  line-height: 30px;
+  height: 30px;
+  display: inline-block;
+  position: absolute;
+  right: 424px; }
+
+.part_text_input input {
+  width: 400px;
+  height: 30px;
+  box-sizing: border-box;
+  border: #d9d9d9 solid 1px;
+  border-radius: 15px;
+  padding: 0 24px;
+  position: absolute;
+  right: 0; }
+  .part_text_input input:placeholder {
+    color: #d9d9d9;
+    line-height: 30px; }
+
+.part_date_select label {
+  min-height: 30px;
+  display: inline-block;
+  width: 800px;
+  position: relative;
+  margin: 12px 0;
+  z-index: 1; }
+
+.part_date_select span {
+  color: #434343;
+  width: auto;
+  text-align: right;
+  line-height: 30px;
+  height: 30px;
+  display: inline-block;
+  position: absolute;
+  right: 424px; }
+
+.part_date_select select {
+  height: 30px;
+  box-sizing: border-box;
+  border: #d9d9d9 solid 1px;
+  border-radius: 15px;
+  padding: 0 24px;
+  line-height: 28px;
+  min-width: 100px;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  background: #fff; }
+
+.part_date_select .month {
+  min-width: 140px; }
+
+.part_date_select .container {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  right: 0; }
