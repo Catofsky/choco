@@ -1,0 +1,49 @@
+
+.side_menu
+    width: 240px
+    background: $dash_light
+    min-height: calc(100vh - 64px)
+    overflow: hidden
+
+    .menu
+        margin-top: 24px
+
+        ul
+            box-sizing: border-box
+            padding: 24px
+
+        li
+            height: 56px
+            cursor: pointer
+            list-style: none
+            position: relative
+
+            &:hover span
+                color: #fff
+
+            &:hover i
+                color: $dash_menu_font
+
+        i
+            color: $dash_menu_icon
+            line-height: 56px
+            position: relative
+            top: 6px
+
+        span
+            color: $dash_menu_font
+            line-height: 56px
+            margin-left: 24px
+            height: 56px
+
+        .num
+            height: 24px
+            width: 40px
+            border-radius: 5px
+            background: $dash_color
+            color: #fff
+            text-align: center
+            line-height: 24px
+            position: absolute
+            right: -6px
+            top: 22px
