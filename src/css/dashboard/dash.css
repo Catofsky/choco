@@ -1,0 +1,95 @@
+* {
+  font-family: Ubuntu, Tahoma, sans-serif;
+  font-size: 15px;
+  color: #434343;
+  text-decoration: none;
+  margin: 0;
+  padding: 0; }
+
+p {
+  font-size: 15px;
+  color: #273238; }
+
+header {
+  height: 64px; }
+  header .logo {
+    display: inline-block;
+    width: 240px;
+    height: 64px;
+    background-color: #273238;
+    background-image: url("../../img/dash/logo.jpg");
+    background-repeat: no-repeat;
+    background-position: center; }
+  header .top {
+    display: inline-block;
+    width: calc(100vw - 240px);
+    height: 64px;
+    background: #fff;
+    box-shadow: 2px 0 3px rgba(0, 0, 0, 0.3);
+    overflow: hidden; }
+  header .user {
+    margin-left: auto;
+    margin-right: 24px;
+    width: 200px;
+    cursor: pointer;
+    height: 64px; }
+    header .user:hover p {
+      color: #4b626d; }
+    header .user .name {
+      display: inline-block;
+      height: 100%;
+      width: 60%; }
+      header .user .name p {
+        font-size: 14px;
+        text-align: right;
+        line-height: 64px; }
+    header .user .avatar {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      border-radius: 20px;
+      float: right;
+      position: relative;
+      top: 12px;
+      right: 24px; }
+
+.side_menu {
+  width: 240px;
+  background: #36474f;
+  min-height: calc(100vh - 64px);
+  overflow: hidden; }
+  .side_menu .menu {
+    margin-top: 24px; }
+    .side_menu .menu ul {
+      box-sizing: border-box;
+      padding: 24px; }
+    .side_menu .menu li {
+      height: 56px;
+      cursor: pointer;
+      list-style: none;
+      position: relative; }
+      .side_menu .menu li:hover span {
+        color: #fff; }
+      .side_menu .menu li:hover i {
+        color: #b9bec6; }
+    .side_menu .menu i {
+      color: #78909c;
+      line-height: 56px;
+      position: relative;
+      top: 6px; }
+    .side_menu .menu span {
+      color: #b9bec6;
+      line-height: 56px;
+      margin-left: 24px;
+      height: 56px; }
+    .side_menu .menu .num {
+      height: 24px;
+      width: 40px;
+      border-radius: 5px;
+      background: #ff6e41;
+      color: #fff;
+      text-align: center;
+      line-height: 24px;
+      position: absolute;
+      right: -6px;
+      top: 22px; }
