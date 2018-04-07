@@ -1,3 +1,10 @@
 
 mixin part_radiobutton(params)
+	- params.name = params.name || ''
+	- params.id = params.id || ''
 	.part_radiobutton
+		label
+			input(type='radio' name=params.name checked=params.checked)
+			i.material-icons.on radio_button_checked
+			i.material-icons.off radio_button_unchecked
+			span= params.title

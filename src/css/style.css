@@ -2048,10 +2048,16 @@ footer {
   left: 0;
   font-size: 21px; }
 
+.part_checkbox .on {
+  display: none; }
+
 .part_checkbox input {
   display: none; }
-  .part_checkbox input:checked + i {
+  .part_checkbox input:checked + .on {
+    display: inline;
     color: #ff6e41; }
+  .part_checkbox input:checked ~ .off {
+    display: none; }
 
 .part_review_card {
   width: 220px;
@@ -2162,46 +2168,33 @@ footer {
     color: #d9d9d9;
     line-height: 30px; }
 
-.part_date_select label {
-  min-height: 30px;
-  display: inline-block;
-  width: 800px;
-  position: relative;
-  margin: 12px 0;
-  z-index: 1; }
-
-.part_date_select span {
-  color: #434343;
-  width: auto;
-  text-align: right;
-  line-height: 30px;
-  height: 30px;
-  display: inline-block;
-  position: absolute;
-  right: 424px; }
-
-.part_date_select select {
-  height: 30px;
-  box-sizing: border-box;
-  border: #d9d9d9 solid 1px;
-  border-radius: 15px;
-  padding: 0 24px;
-  line-height: 28px;
-  min-width: 100px;
-  text-align: center;
-  position: relative;
+.part_radiobutton label {
   cursor: pointer;
-  background: #fff; }
+  height: 24px;
+  position: relative; }
 
-.part_date_select .month {
-  min-width: 140px; }
+.part_radiobutton span {
+  font-size: 15px;
+  line-height: 24px;
+  position: relative;
+  left: 24px; }
 
-.part_date_select .container {
-  width: 400px;
-  display: flex;
-  justify-content: space-between;
+.part_radiobutton i {
   position: absolute;
-  right: 0; }
+  top: 0;
+  left: 0;
+  font-size: 21px; }
+
+.part_radiobutton .on {
+  display: none; }
+
+.part_radiobutton input {
+  display: none; }
+  .part_radiobutton input:checked + .on {
+    display: inline;
+    color: #ff6e41; }
+  .part_radiobutton input:checked ~ .off {
+    display: none; }
 
 .page_title .title {
   height: 64px;

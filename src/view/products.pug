@@ -39,7 +39,6 @@ include _header.pug
           each x in ['Apple', 'Samsung', 'Google', 'Microsoft']
             +part('checkbox', { title: x })
 
-
     .main_block
       .sorting_block
         .sorting
@@ -81,11 +80,6 @@ include _header.pug
           +part('product_card', product)
 
 
-+part_coffee('checkbox')
-script.
-  parts.checkbox({
-    checkbox: u('.part_checkbox')
-  });
 
 +part_coffee('product_card')
 script.

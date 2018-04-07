@@ -1,2 +1,31 @@
 
 .part_radiobutton
+    label
+        cursor: pointer
+        height: 24px
+        position: relative
+
+    span
+        font-size: 15px
+        line-height: 24px
+        position: relative
+        left: 24px
+
+    i
+        position: absolute
+        top: 0
+        left: 0
+        font-size: 21px
+
+    .on
+        display: none
+
+    input
+        display: none
+
+        &:checked + .on
+            display: inline
+            color: $main_orange
+
+        &:checked ~ .off
+            display: none

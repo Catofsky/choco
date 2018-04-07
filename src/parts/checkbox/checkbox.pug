@@ -3,6 +3,7 @@ mixin part_checkbox(params)
 	- params.name = params.name || ''
 	.part_checkbox
 		label
-			input(type='checkbox' name=params.name)
-			i.material-icons check_box_outline
+			input(type='checkbox' name=params.name checked=params.checked)
+			i.material-icons.on check_box_outline
+			i.material-icons.off check_box_outline_blank
 			span= params.title
