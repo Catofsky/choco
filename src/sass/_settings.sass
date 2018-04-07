@@ -1,0 +1,111 @@
+.title_settings
+	color: $sad_gray
+	padding-left: 21px
+	padding-bottom: 7px
+	& h1
+		font-size: 20px
+.profile_main_settings
+	.profile_main
+		height: 28px
+		padding: 10px 0
+		margin-right: 331px
+		display: flex
+		justify-content: flex-end  
+		.name_setting
+			margin-right: 21px
+			margin-top: 5px
+		.input_setting
+			width: 382px
+			height: 28px
+			padding-left: 18px
+			border-radius: 50px
+			border: $gray_border 1px solid
+			outline: none
+			overflow: hidden
+			&.input_triple
+				width: 100px
+				height: 28px
+				border-radius: 50px
+				border: $gray_border 1px solid
+				appearance: none;
+				-moz-appearance: none;
+				-webkit-appearance: none;
+				color: $gray_border 
+				&:not(:first-child) 
+					margin-left: 20px
+				&:nth-child(2)
+					background: url("/img/selectarrow/ic_arrow_drop_down_black_24dp_1x.png") no-repeat 70px
+					margin-left: 0 
+				&:nth-child(3)
+					background: url("/img/selectarrow/ic_arrow_drop_down_black_24dp_1x.png") no-repeat 110px
+					width: 140px
+				&:nth-child(4)
+					background: url("/img/selectarrow/ic_arrow_drop_down_black_24dp_1x.png") no-repeat 90px
+					width: 120px
+			&.input_double[type="checkbox"]
+				display: none
+		input::-webkit-input-placeholder
+			color: $gray_border
+		label
+			width: 190px
+			height: 15px 
+			border-radius: 50px
+			border: 1px solid $gray_border
+			text-align: center 
+			padding-top: 4px
+			padding-bottom: 8px
+			color: $gray_border
+			&:hover
+				border: 1px solid $main_orange
+			&:active
+				border: 1px solid $main_orange
+				background-color: $main_orange
+				color: white
+			&:last-child
+				margin-left: 20px
+			&.input_double
+				width: 190px
+				&:last-child
+					margin-left: 20px
+.title_settings_password
+	color: $sad_gray
+	padding-left: 21px
+	padding-bottom: 7px
+	& h1
+		font-size: 20px
+		margin: 42px 0
+	.profile_main
+		height: 28px
+		padding: 10px 0
+		margin-right: 331px
+		display: flex
+		justify-content: flex-end  
+		.name_setting
+			margin-right: 21px
+			margin-top: 5px
+		.input_setting
+			width: 382px
+			height: 28px
+			padding-left: 18px
+			border-radius: 50px
+			border: $gray_border 1px solid
+			outline: none
+		input::-webkit-input-placeholder
+			color: $gray_border
+	.save_settings
+		padding-left: 210px
+		& button
+			width: 200px
+			height: 42px
+			margin-top: 14px
+			background: $main_orange
+			border: $main_orange solid 1px
+			border-radius: 50px
+			color: white
+			outline: none;
+			&:hover
+				background: $super_orange
+				border: $super_orange solid 1px
+			&:active
+				background: $main_bright_orange
+				border: $main_bright_orange solid 1px

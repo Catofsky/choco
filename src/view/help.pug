@@ -1,0 +1,98 @@
+include _parts.pug
+include _header.pug
+
++part_title_page("Помощь")
+
+mixin item_help_right(title, ...text)
+	.item_help_r
+		i.material-icons &#xE5C5
+		a= title
+		.item_additionally
+			each words in text
+				p= words
+
+#wrap_help
+	.column_help_left 
+		.item_help_l
+			.content_help
+				i.material-icons &#xE8D0
+				a(href="#") Популярные вопросы
+			i.material-icons.material-icons-active.select-icon-hide &#xE315
+		.item_help_l
+			.content_help
+				i.material-icons &#xE064
+				a(href="#") Видео
+			i.material-icons.material-icons-active.select-icon-hide &#xE315
+		.item_help_l
+			.content_help
+				i.material-icons &#xE853
+				a(href="#") Регистрация
+			i.material-icons.material-icons-active.select-icon-hide &#xE315
+		.item_help_l
+			.content_help
+				i.material-icons &#xE870
+				a(href="#") Способы оплаты
+			i.material-icons.material-icons-active.select-icon-hide &#xE315
+		.item_help_l
+			.content_help
+				i.material-icons &#xE8F6
+				a(href="#") Накопления баланса
+			i.material-icons.material-icons-active.select-icon-hide &#xE315
+		.item_help_l
+			.content_help
+				i.material-icons &#xE8E8
+				a(href="#") Безопасность
+			i.material-icons.material-icons-active.select-icon-hide &#xE315
+		.item_help_l
+			.content_help
+				i.material-icons &#xE8D1
+				a(href="#") Владельцу магазина
+			i.material-icons.material-icons-active.select-icon-hide &#xE315
+		.item_help_l
+			.content_help
+				i.material-icons &#xE863
+				a(href="#") Обратная связь
+			i.material-icons.material-icons-active.select-icon-hide &#xE315
+		.item_help_l
+			.content_help
+				i.material-icons &#xE311
+				a(href="#") Сервис и поддержка
+			i.material-icons.material-icons-active.select-icon-hide &#xE315
+		.item_help_l
+			.content_help
+				i.material-icons &#xEB3F
+				a(href="#") Сотрудничество
+			i.material-icons.material-icons-active.select-icon-hide &#xE315
+
+	.column_help_right
+
+		+item_help_right("1. Можно ли проводить оплату в пользу букмекерской конторы на Kaspi.kz?")
+		+item_help_right("2. Как пополнить баланс в Chocokiller?")
+		+item_help_right("3. Есть ли возможность пополнить Qiwi Кошелек на Chocokiller?")
+		+item_help_right("4. Я могу оплатить товар с сайта AliExpress на Chocokiller?")
+		+item_help_right("5. Нужного KCK нет. Как добавить KCK?")
+		+item_help_right("6. Я могу оплатить Olx.kz на Chocokiller?")
+		+item_help_right("7. Сколько Chocokiller Бонусов я могу накапливать?")
+		+item_help_right("8. Где можно узнать номер своего договора при регистрации на Chocokiller?")
+		+item_help_right("9. Я могу узнать задолжность за телефон Казахтелеком на Chocokiller?")
+		+item_help_right("10. Нужного детского сада нет на Chocokiller. Как добавить садик ?", "Заполните форму.","Мы постараемся добавить ваш детский сад в ближайшее время.")
+
+	
+	script.
+		u('.item_help_r').on('click', function () {
+			u(this).toggleClass("active_help");		
+			if(u(this).hasClass("active_help")) {
+				u(this).children(".material-icons").html("&#xE5C7");
+				u(this).children("a").replace("<h1>"+u(this).children("a").text()+"</h1>");
+			} else {
+				u(this).children(".material-icons").html("&#xE5C5");
+				u(this).children("h1").replace("<a>"+u(this).children("h1").text()+"</a>");
+			}
+		});
+		u('.item_help_l').on('click', function () {
+			u(this).toggleClass("help_select_active");
+			u(this).children("i").toggleClass("select-icon-hide");
+			u(this).children(".content_help").toggleClass("help_select_active"); 
+		});
+
+include _footer.pug

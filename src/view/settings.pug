@@ -1,0 +1,116 @@
+include _parts.pug
+include _header.pug
+
++part_title_page("Профиль")
+
+.profile_block
+  .site_width
+    .block
+      .avatar(style='background: url("img/user_150x150.jpg")')
+      .info
+        .username Тирион Ланистер
+        .stat
+          .item
+            .num 94
+            .text Заказов
+          .item
+            .num 12 623
+            .text Кешбэк
+          .item
+            .num 89 048
+            .text Вы сэкономили
+          .item
+            .num 1 000 000
+            .text Баланс
+          .item
+            .num 1 520
+            .text Бонус
+
+
+    .content_block
+      .side_block
+        .menu
+          .item
+            i.material-icons dehaze
+            .text Главная
+          .item
+            i.material-icons turned_in
+            .text Мои заказы
+          .item
+            i.material-icons local_play
+            .text Мои купоны
+          .item
+            i.material-icons favorite
+            .text Избранное
+          .item
+            i.material-icons people
+            .text Подписки
+            .num 7
+          .item
+            i.material-icons notifications
+            .text Уведомления
+            .num 4
+          .item
+            i.material-icons mail
+            .text Сообщения
+            .num 12
+          .item.active
+            i.material-icons settings
+            .text Настройки
+
+      .main_block
+        .title_settings 
+          h1 Настройки:
+        .profile_main_settings
+          .profile_main
+            .name_setting Имя:
+            input.input_setting(placeholder="Тирион")
+          .profile_main
+            .name_setting Фамилия:
+            input.input_setting(placeholder="Ланистер")
+          .profile_main
+            .name_setting Дата рождения:
+            select.input_setting.input_triple
+              option 1
+            select.input_setting.input_triple
+              option Январь
+              option Февраль
+              option Март
+              option Апрель
+              option Май
+              option Июнь
+              option Июль
+              option Август
+              option Сентябрь
+              option Октябрь
+              option Ноябрь
+              option Декабрь
+            select.input_setting.input_triple
+              option 2018
+          .profile_main
+            .name_setting Ваш пол:
+            input.input_setting.input_double(type="checkbox")
+            label Мужчина
+            input.input_setting.input_double(type="checkbox")
+            label Женщина
+          .profile_main
+            .name_setting Логин:
+            input.input_setting(placeholder="Tirion_228")
+          .profile_main
+            .name_setting Телефон:
+            input.input_setting(placeholder="+7 123 456789")
+          .profile_main
+            .name_setting Почта:
+            input.input_setting(placeholder="example@gmail.com")
+        .title_settings_password
+          h1 Изменение пароля:
+          .profile_main
+            .name_setting Новый пароль:
+            input.input_setting(placeholder="123456")
+          .profile_main
+            .name_setting Повторите пароль:
+            input.input_setting(placeholder="123456")
+          .save_settings
+            button Сохранить
+
+include _footer.pug
