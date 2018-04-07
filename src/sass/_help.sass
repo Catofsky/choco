@@ -1,0 +1,88 @@
+#wrap_help
+	margin: 15px auto
+	width: 1200px
+	display: flex
+	justify-content: space-between
+	.column_help_left
+		width: 290px
+		background: #fff
+		margin-right: 20px
+		padding: 43px 0
+		.item_help_l
+			border-top: 1px solid $gray_border
+			margin: 0 24px
+			padding: 12px 0
+			display: flex
+			justify-content: space-between
+			cursor: pointer
+			&:last-child
+				border-bottom: 1px solid $gray_border
+			&.help_select_active /// ДОДЕЛАТЬ ТУТ
+				.content_help
+					.material-icons
+						color: $main_bright_orange
+					a
+						color: $main_bright_orange
+
+			&:hover
+				color: $main_bright_orange
+				.content_help
+					.material-icons
+						color: $main_bright_orange
+					a
+						color: $main_bright_orange
+
+			.content_help
+				display: flex
+				justify-content: space-between
+				.material-icons
+					color: $sad_gray
+					font-size: 30px;
+				a
+					color: $sad_gray
+					cursor: pointer					
+					margin-left: 23px
+					margin-top: 3px
+			.material-icons-active
+				color: $main_bright_orange
+				margin-top: 3px
+			.material-icons
+				color: $main_bright_orange
+			.select-icon-hide
+				display: none
+
+	.column_help_right
+		width: 890px
+		background: #fff
+		padding: 43px 0
+		.item_help_r
+			font-size: 16px
+			border-top: 1px solid $gray_border
+			margin: 0 24px
+			padding: 20px 0			
+			cursor: pointer
+			a
+				color: $sad_gray
+			.item_additionally
+				* 
+					display: none
+			.material-icons
+				float: right
+				color: $sad_gray
+			&:hover
+				* 
+					color: $main_bright_orange
+			&:last-child 
+				border-bottom: 1px solid $gray_border
+			color: $sad_gray		
+			h1
+				font-size: 16px
+			p
+				padding-top: 16px
+		.active_help
+			.material-icons
+				color: $main_bright_orange
+				float: right
+			.item_additionally
+				* 
+					display: block
