@@ -1,6 +1,7 @@
 
 mixin part_text_input(params)
+	- var tp = params.type || 'text'
 	.part_text_input
 		label
 			span= params.title
-			input(type='text' name=params.name placeholder=params.placeholder)
+			input(type=tp name=params.name placeholder=params.placeholder)

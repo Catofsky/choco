@@ -96,4 +96,5 @@ gulp.task('js_compress', [ 'reload' ], function() {
     	.pipe(gulp.dest(config.dist + '/js'));
 });
 
+gulp.task('build', [ 'pug', 'css_compress' ]);
 gulp.task('default', [ 'sync', 'watch' ]);
