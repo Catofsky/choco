@@ -42,31 +42,39 @@
 				&:nth-child(4)
 					background: url("/img/selectarrow/ic_arrow_drop_down_black_24dp_1x.png") no-repeat 90px
 					width: 120px
-			&.input_double[type="checkbox"]
+			&.input_double[type="radio"]
 				display: none
-		input::-webkit-input-placeholder
-			color: $gray_border
-		label
-			width: 190px
-			height: 15px 
-			border-radius: 50px
-			border: 1px solid $gray_border
-			text-align: center 
-			padding-top: 4px
-			padding-bottom: 8px
-			color: $gray_border
-			&:hover
-				border: 1px solid $main_orange
-			&:active
-				border: 1px solid $main_orange
-				background-color: $main_orange
-				color: white
-			&:last-child
-				margin-left: 20px
-			&.input_double
+				-webkit-appearance: none;
 				width: 190px
-				&:last-child
-					margin-left: 20px
+				height: 28px 
+				border-radius: 50px
+				border: 1px solid $gray_border
+				text-align: center 
+				padding-top: 4px
+				padding-bottom: 8px
+				color: $gray_border
+				&+label
+					width: 190px
+					height: 16px 
+					border-radius: 50px
+					border: 1px solid $gray_border
+					text-align: center 
+					padding-top: 4px
+					padding-bottom: 8px
+					color: $gray_border
+					&:hover
+						border: 1px solid $main_orange
+					&:last-child
+						margin-left: 20px
+					&.input_double
+						width: 190px
+						&:last-child
+							margin-left: 20px
+				&:checked+label
+					background: $main_orange
+					color: #fff
+				input::-webkit-input-placeholder
+					color: $gray_border
 .title_settings_password
 	color: $sad_gray
 	padding-left: 21px

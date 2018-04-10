@@ -57,6 +57,13 @@ include _header.pug
           .item.active
             i.material-icons settings
             .text Настройки
+        +part_profile_statistic_shop([ 
+        { title: 'Белый ветер', voted: 901 }, 
+        { title: 'Крендель', voted: 420 },
+        { title: 'Технодом', voted: 345 }, 
+        { title: 'Мечта', voted: 469 }, 
+        { title: 'Айнур', voted: 522 }, 
+        ])
 
       .main_block
         .title_settings 
@@ -72,6 +79,37 @@ include _header.pug
             .name_setting Дата рождения:
             select.input_setting.input_triple
               option 1
+              option 2
+              option 3
+              option 4
+              option 5
+              option 6
+              option 7
+              option 8
+              option 9
+              option 9
+              option 10
+              option 11
+              option 12
+              option 13
+              option 14
+              option 15
+              option 16
+              option 17
+              option 18
+              option 19
+              option 20
+              option 21
+              option 22
+              option 23
+              option 24
+              option 25
+              option 26
+              option 27
+              option 28
+              option 29
+              option 30
+              option 31
             select.input_setting.input_triple
               option Январь
               option Февраль
@@ -89,10 +127,10 @@ include _header.pug
               option 2018
           .profile_main
             .name_setting Ваш пол:
-            input.input_setting.input_double(type="checkbox")
-            label Мужчина
-            input.input_setting.input_double(type="checkbox")
-            label Женщина
+            input.input_setting.input_double(type="radio" id="man" name="gender" value="Мужчина")
+            label(for="man") Мужчина
+            input.input_setting.input_double(type="radio" id="woman" name="gender" value="Мужчина")
+            label(for="woman") Женщина 
           .profile_main
             .name_setting Логин:
             input.input_setting(placeholder="Tirion_228")

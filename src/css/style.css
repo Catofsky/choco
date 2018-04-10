@@ -1619,31 +1619,39 @@ footer {
       .profile_main_settings .profile_main .input_setting.input_triple:nth-child(4) {
         background: url("/img/selectarrow/ic_arrow_drop_down_black_24dp_1x.png") no-repeat 90px;
         width: 120px; }
-    .profile_main_settings .profile_main .input_setting.input_double[type="checkbox"] {
-      display: none; }
-  .profile_main_settings .profile_main input::-webkit-input-placeholder {
-    color: #d9d9d9; }
-  .profile_main_settings .profile_main label {
-    width: 190px;
-    height: 15px;
-    border-radius: 50px;
-    border: 1px solid #d9d9d9;
-    text-align: center;
-    padding-top: 4px;
-    padding-bottom: 8px;
-    color: #d9d9d9; }
-    .profile_main_settings .profile_main label:hover {
-      border: 1px solid #ff6e41; }
-    .profile_main_settings .profile_main label:active {
-      border: 1px solid #ff6e41;
-      background-color: #ff6e41;
-      color: white; }
-    .profile_main_settings .profile_main label:last-child {
-      margin-left: 20px; }
-    .profile_main_settings .profile_main label.input_double {
-      width: 190px; }
-      .profile_main_settings .profile_main label.input_double:last-child {
-        margin-left: 20px; }
+    .profile_main_settings .profile_main .input_setting.input_double[type="radio"] {
+      display: none;
+      -webkit-appearance: none;
+      width: 190px;
+      height: 28px;
+      border-radius: 50px;
+      border: 1px solid #d9d9d9;
+      text-align: center;
+      padding-top: 4px;
+      padding-bottom: 8px;
+      color: #d9d9d9; }
+      .profile_main_settings .profile_main .input_setting.input_double[type="radio"] + label {
+        width: 190px;
+        height: 16px;
+        border-radius: 50px;
+        border: 1px solid #d9d9d9;
+        text-align: center;
+        padding-top: 4px;
+        padding-bottom: 8px;
+        color: #d9d9d9; }
+        .profile_main_settings .profile_main .input_setting.input_double[type="radio"] + label:hover {
+          border: 1px solid #ff6e41; }
+        .profile_main_settings .profile_main .input_setting.input_double[type="radio"] + label:last-child {
+          margin-left: 20px; }
+        .profile_main_settings .profile_main .input_setting.input_double[type="radio"] + label.input_double {
+          width: 190px; }
+          .profile_main_settings .profile_main .input_setting.input_double[type="radio"] + label.input_double:last-child {
+            margin-left: 20px; }
+      .profile_main_settings .profile_main .input_setting.input_double[type="radio"]:checked + label {
+        background: #ff6e41;
+        color: #fff; }
+      .profile_main_settings .profile_main .input_setting.input_double[type="radio"] input::-webkit-input-placeholder {
+        color: #d9d9d9; }
 
 .title_settings_password {
   color: #808080;
@@ -2209,3 +2217,49 @@ footer {
   font-size: 20px;
   color: #686868;
   margin-left: 24px; }
+
+.choice_bar {
+  background: #fff;
+  padding: 24px 28px 34px 21px;
+  margin-top: 15px; }
+  .choice_bar h1 {
+    margin-bottom: 28px; }
+  .choice_bar .shop_content {
+    margin-bottom: 15px; }
+    .choice_bar .shop_content:last-child {
+      margin-bottom: 5px; }
+    .choice_bar .shop_content input {
+      margin-right: 22px; }
+      .choice_bar .shop_content input[type="radio"] {
+        width: 11px;
+        height: 11px;
+        -webkit-appearance: none;
+        border: 2px solid #d9d9d9;
+        border-radius: 3px; }
+        .choice_bar .shop_content input[type="radio"]:hover {
+          cursor: pointer; }
+        .choice_bar .shop_content input[type="radio"]:checked {
+          background: url("../img/radio/done.svg") #ff6e41 no-repeat;
+          border: 2px solid #ff6e41;
+          background-size: cover; }
+    .choice_bar .shop_content p {
+      padding-bottom: 5px;
+      display: inline-block; }
+
+.part_profile_statistic_shop {
+  background: #fff;
+  padding: 24px 28px 34px 21px;
+  margin-top: 15px; }
+  .part_profile_statistic_shop h1 {
+    margin-bottom: 14px; }
+  .part_profile_statistic_shop .shop_content {
+    margin-bottom: 18px; }
+    .part_profile_statistic_shop .shop_content:last-child {
+      margin-bottom: 0px; }
+    .part_profile_statistic_shop .shop_content .block_title {
+      display: flex;
+      justify-content: space-between; }
+    .part_profile_statistic_shop .shop_content .inner {
+      height: 2px;
+      width: 0%;
+      background-color: #4196ff; }
