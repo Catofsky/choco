@@ -26,7 +26,6 @@ include _header.pug
             .num 1 520
             .text Бонус
 
-
     .content_block
       .side_block
         .menu
@@ -75,56 +74,7 @@ include _header.pug
           .profile_main
             .name_setting Фамилия:
             input.input_setting(placeholder="Ланистер")
-          .profile_main
-            .name_setting Дата рождения:
-            select.input_setting.input_triple
-              option 1
-              option 2
-              option 3
-              option 4
-              option 5
-              option 6
-              option 7
-              option 8
-              option 9
-              option 9
-              option 10
-              option 11
-              option 12
-              option 13
-              option 14
-              option 15
-              option 16
-              option 17
-              option 18
-              option 19
-              option 20
-              option 21
-              option 22
-              option 23
-              option 24
-              option 25
-              option 26
-              option 27
-              option 28
-              option 29
-              option 30
-              option 31
-            select.input_setting.input_triple
-              option Январь
-              option Февраль
-              option Март
-              option Апрель
-              option Май
-              option Июнь
-              option Июль
-              option Август
-              option Сентябрь
-              option Октябрь
-              option Ноябрь
-              option Декабрь
-            select.input_setting.input_triple
-              option 2018
+          +part_input_date()
           .profile_main
             .name_setting Ваш пол:
             input.input_setting.input_double(type="radio" id="man" name="gender" value="Мужчина")
