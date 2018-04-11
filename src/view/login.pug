@@ -1,0 +1,17 @@
+
+include _parts.pug
+
+include _header.pug
+
+#register_block
+    .site_width
+        .title Форма входа
+        form(method='POST' action='/login')
+
+            +part('text_input', { title: 'Логин', name: 'username' })
+            +part('text_input', { title: 'Пароль', name: 'password', type: 'password' })
+
+            input.btn(type='submit' value='Войти')
+
+
+include _footer.pug
