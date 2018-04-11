@@ -7,6 +7,13 @@
 header
     .logo
     .top
+        .search
+            i.material-icons search
+            input(type='search' name='search' placeholder='Я ищу...')
+            select(name='search_cat')
+                option всё
+            input(type='button' value='Найти')
+
         .user
             .name
                 p= user.username

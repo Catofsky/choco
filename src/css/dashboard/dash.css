@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   font-family: Ubuntu, Tahoma, sans-serif;
   font-size: 15px;
@@ -11,23 +12,62 @@ p {
   color: #273238; }
 
 header {
-  height: 64px; }
+  height: 64px;
+  display: flex; }
   header .logo {
-    display: inline-block;
-    width: 240px;
+    min-width: 240px;
     height: 64px;
     background-color: #273238;
     background-image: url("../../img/dash/logo.jpg");
     background-repeat: no-repeat;
     background-position: center; }
   header .top {
-    display: inline-block;
-    width: calc(100vw - 240px);
+    flex-grow: 1;
     height: 64px;
     background: #fff;
     box-shadow: 2px 0 3px rgba(0, 0, 0, 0.3);
-    overflow: hidden; }
+    z-index: 5; }
+  header .search {
+    display: inline-flex;
+    margin-left: 120px;
+    height: 32px;
+    margin-top: 16px;
+    border: #dadada solid 1px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 16px; }
+    header .search i {
+      width: 44px;
+      text-align: center;
+      position: relative;
+      top: 4px;
+      color: #dadada;
+      font-size: 24px; }
+    header .search input, header .search select {
+      border: none;
+      height: 100%; }
+    header .search select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      width: 100px;
+      text-transform: uppercase;
+      font-size: 12px;
+      text-align: center;
+      position: relative;
+      color: #273238; }
+    header .search input[type=button] {
+      z-index: 1;
+      background: #273238;
+      width: 100px;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 12px; }
+      header .search input[type=button]:hover {
+        cursor: pointer;
+        background: #36474f; }
   header .user {
+    float: right;
     margin-left: auto;
     margin-right: 24px;
     width: 200px;
@@ -53,43 +93,240 @@ header {
       top: 12px;
       right: 24px; }
 
-.side_menu {
-  width: 240px;
-  background: #36474f;
-  min-height: calc(100vh - 64px);
-  overflow: hidden; }
-  .side_menu .menu {
+.btn {
+  font-size: 13px;
+  text-align: center;
+  color: #fff;
+  background: #ff6e41;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 0 24px;
+  box-sizing: border-box;
+  border: none;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 15px;
+  margin: 24px; }
+  .btn:hover {
+    background: #ff5b28;
+    cursor: pointer; }
+
+.main_block {
+  display: flex; }
+  .main_block .side_menu {
+    flex-basis: 240px;
+    background: #36474f;
+    min-height: calc(100vh - 64px);
+    overflow: hidden; }
+  .main_block .menu {
     margin-top: 24px; }
-    .side_menu .menu ul {
-      box-sizing: border-box;
-      padding: 24px; }
-    .side_menu .menu li {
-      height: 56px;
-      cursor: pointer;
-      list-style: none;
+    .main_block .menu a {
+      display: block;
       position: relative; }
-      .side_menu .menu li:hover span {
+      .main_block .menu a:hover span {
         color: #fff; }
-      .side_menu .menu li:hover i {
+      .main_block .menu a:hover i {
         color: #b9bec6; }
-    .side_menu .menu i {
+    .main_block .menu i {
+      margin-left: 24px;
+      width: 24px;
       color: #78909c;
       line-height: 56px;
       position: relative;
       top: 6px; }
-    .side_menu .menu span {
+    .main_block .menu span {
       color: #b9bec6;
       line-height: 56px;
       margin-left: 24px;
       height: 56px; }
-    .side_menu .menu .num {
+    .main_block .menu .num {
       height: 24px;
-      width: 40px;
+      width: 36px;
       border-radius: 5px;
       background: #ff6e41;
       color: #fff;
       text-align: center;
       line-height: 24px;
       position: absolute;
-      right: -6px;
+      right: 20px;
       top: 22px; }
+  .main_block .content {
+    flex-grow: 1;
+    overflow: hidden; }
+    .main_block .content .content_title {
+      height: 64px;
+      line-height: 64px;
+      background: #f5f5f5;
+      font-size: 18px;
+      font-weight: bold;
+      color: #36474f;
+      padding: 0 44px;
+      box-sizing: border-box; }
+    .main_block .content .wrap {
+      width: 1000px;
+      margin: 0 auto;
+      height: 300px; }
+
+.checkbox label {
+  cursor: pointer;
+  height: 24px;
+  position: relative; }
+
+.checkbox span {
+  font-size: 15px;
+  line-height: 24px;
+  position: relative;
+  left: 24px; }
+
+.checkbox i {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  font-size: 21px;
+  color: #808080; }
+
+.checkbox .on {
+  display: none; }
+
+.checkbox input {
+  display: none; }
+  .checkbox input:checked + .on {
+    display: inline;
+    color: #ff6e41; }
+  .checkbox input:checked ~ .off {
+    display: none; }
+
+.main_block .list {
+  margin: 24px;
+  position: relative; }
+  .main_block .list .eye {
+    right: 110px; }
+    .main_block .list .eye.active i {
+      color: #ff6e41; }
+  .main_block .list .edit {
+    right: 70px; }
+  .main_block .list .delete {
+    right: 30px; }
+  .main_block .list .edit, .main_block .list .delete, .main_block .list .eye {
+    position: absolute;
+    top: 48px;
+    cursor: pointer; }
+    .main_block .list .edit i, .main_block .list .delete i, .main_block .list .eye i {
+      color: #bebebe; }
+      .main_block .list .edit i:hover, .main_block .list .delete i:hover, .main_block .list .eye i:hover {
+        color: #808080; }
+  .main_block .list .check {
+    width: 36px; }
+  .main_block .list .item {
+    min-height: 30px;
+    border-bottom: #bebebe solid 1px; }
+    .main_block .list .item.product {
+      height: 60px;
+      display: flex;
+      align-items: center; }
+      .main_block .list .item.product .check {
+        position: relative;
+        top: 5px; }
+    .main_block .list .item .title a {
+      margin: 16px 24px;
+      color: #54a8d2;
+      background: #fff;
+      display: inline-block;
+      font-size: 15px; }
+      .main_block .list .item .title a:hover {
+        text-decoration: underline; }
+    .main_block .list .item .amount, .main_block .list .item .sale {
+      margin-left: 34px; }
+      .main_block .list .item .amount div, .main_block .list .item .sale div {
+        display: inline; }
+      .main_block .list .item .amount .value, .main_block .list .item .sale .value {
+        margin-left: 24px; }
+    .main_block .list .item .price {
+      margin-left: 90px;
+      position: relative;
+      top: -2px; }
+      .main_block .list .item .price div {
+        display: inline; }
+      .main_block .list .item .price .num {
+        margin: 0 24px;
+        color: #434343;
+        font-weight: bold;
+        font-size: 20px;
+        position: relative;
+        top: 0; }
+        .main_block .list .item .price .num:after {
+          content: '₸';
+          position: absolute;
+          top: 6px;
+          right: -12px;
+          font-size: 12px; }
+
+.main_block .sorting {
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  border: #bebebe solid 1px;
+  box-sizing: border-box;
+  padding: 0 24px;
+  border-radius: 15px;
+  position: relative;
+  top: 2px;
+  color: #808080;
+  margin: 0 24px; }
+  .main_block .sorting p {
+    display: inline;
+    padding-right: 24px; }
+  .main_block .sorting .item {
+    display: inline;
+    padding: 12px;
+    color: #808080;
+    cursor: pointer; }
+    .main_block .sorting .item.active {
+      color: #ff6e41; }
+
+.main_block .filter {
+  margin: 0 24px; }
+  .main_block .filter .date, .main_block .filter .active, .main_block .filter .price {
+    display: inline-block; }
+    .main_block .filter .date label, .main_block .filter .active label, .main_block .filter .price label {
+      position: relative; }
+    .main_block .filter .date p, .main_block .filter .active p, .main_block .filter .price p {
+      display: inline; }
+    .main_block .filter .date input, .main_block .filter .active input, .main_block .filter .price input {
+      width: 100px;
+      height: 24px;
+      padding: 0 12px;
+      border: #bebebe solid 1px;
+      box-sizing: border-box;
+      border-radius: 12px;
+      text-align: center;
+      margin: 0 24px; }
+    .main_block .filter .date span, .main_block .filter .active span, .main_block .filter .price span {
+      position: absolute;
+      right: 36px;
+      pointer-events: none;
+      top: 0; }
+    .main_block .filter .date select, .main_block .filter .active select, .main_block .filter .price select {
+      width: 160px;
+      height: 24px;
+      padding: 0 24px;
+      border: #bebebe solid 1px;
+      box-sizing: border-box;
+      border-radius: 12px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      text-align: center;
+      margin: 0 24px; }
+    .main_block .filter .date .tri, .main_block .filter .active .tri, .main_block .filter .price .tri {
+      display: inline;
+      position: relative;
+      font-size: 8px;
+      right: 48px;
+      top: -2px;
+      color: #808080;
+      pointer-events: none; }
+  .main_block .filter i {
+    color: #808080;
+    position: relative;
+    top: 6px; }
