@@ -1,0 +1,35 @@
+.sorting_block
+	background: #fff
+	position: relative
+	display: flex
+	justify-content: center
+	border: 1px solid $gray_border
+	border-left-style: none
+	border-bottom-style: none
+	border-right-style: none
+	padding: 11px 0px
+	height: 32px
+	.sorting
+		height: 32px
+		display: inline-flex
+		align-items: center
+		border-radius: 5px
+		border: $gray_border solid 1px
+		box-sizing: border-box
+		margin-bottom: 12px
+		.sort_by
+			font-size: 15px
+			color: #686868
+			margin: 0 24px
+		.item
+			font-size: 15px
+			color: #404040
+			padding: 0 12px
+			box-sizing: border-box
+			cursor: pointer
+			&:hover, &.active
+				color: $main_orange
+			&:first-child
+				color: $main_orange
+			&:not(:last-child)
+				border-right: $gray_border solid 1px

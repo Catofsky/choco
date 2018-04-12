@@ -1783,6 +1783,109 @@ footer {
       display: flex;
       justify-content: space-between; }
 
+.block_order {
+  height: 208px;
+  margin: 0px 10px 0px 10px;
+  padding: 20px 0px 0px 23px;
+  border: 1px solid #d9d9d9;
+  border-left-style: none;
+  border-bottom-style: none;
+  border-right-style: none;
+  display: flex;
+  justify-content: space-between; }
+  .block_order:last-child {
+    border: 1px solid #d9d9d9;
+    border-left-style: none;
+    border-right-style: none; }
+  .block_order.block_order {
+    display: flex;
+    justify-content: flex-start; }
+    .block_order.block_order .block_image {
+      height: 168px;
+      width: 220px;
+      margin-right: 15px; }
+      .block_order.block_order .block_image img {
+        height: 168px;
+        width: 220px;
+        border-radius: 5px; }
+    .block_order.block_order .block_content {
+      display: flex; }
+      .block_order.block_order .block_content .description_order .title h1 {
+        color: #54a8d2; }
+      .block_order.block_order .block_content .description_order .content .item {
+        display: flex;
+        justify-content: flex-start;
+        width: 318px;
+        height: 16px;
+        margin-bottom: 20px; }
+        .block_order.block_order .block_content .description_order .content .item i.material-icons {
+          color: #d9d9d9;
+          margin-right: 5px; }
+          .block_order.block_order .block_content .description_order .content .item i.material-icons.done {
+            color: #2db573; }
+        .block_order.block_order .block_content .description_order .content .item p {
+          width: 102px;
+          margin: 3px 25px 0px 0px; }
+        .block_order.block_order .block_content .description_order .content .item p:last-child {
+          margin-right: 35px;
+          margin-bottom: 0px; }
+        .block_order.block_order .block_content .description_order .content .item a {
+          margin: 3px 35px 0px 10px;
+          color: #6bb4d8; }
+        .block_order.block_order .block_content .description_order .content .item div {
+          display: flex;
+          justify-content: flex-start;
+          width: 172px; }
+      .block_order.block_order .block_content .interaction_oreder {
+        margin-top: 16px; }
+        .block_order.block_order .block_content .interaction_oreder .content_up {
+          display: flex;
+          justify-content: space-between;
+          height: 40px;
+          margin-bottom: 25px; }
+          .block_order.block_order .block_content .interaction_oreder .content_up .item {
+            width: 100px;
+            height: 40px;
+            margin-right: 10px; }
+            .block_order.block_order .block_content .interaction_oreder .content_up .item p {
+              margin-bottom: 21px; }
+            .block_order.block_order .block_content .interaction_oreder .content_up .item div {
+              display: flex; }
+              .block_order.block_order .block_content .interaction_oreder .content_up .item div p:first-child {
+                text-decoration: line-through; }
+              .block_order.block_order .block_content .interaction_oreder .content_up .item div p:last-child {
+                width: 40px;
+                height: 13px;
+                background: #ff6e41;
+                color: #fff;
+                font-size: 12px;
+                text-align: center;
+                margin-left: 4px;
+                margin-top: 3px; }
+            .block_order.block_order .block_content .interaction_oreder .content_up .item:last-child {
+              margin-right: 0px; }
+          .block_order.block_order .block_content .interaction_oreder .content_up .item:last-child {
+            width: 110px; }
+        .block_order.block_order .block_content .interaction_oreder .total_price {
+          display: flex;
+          justify-content: flex-end;
+          margin-top: 45px;
+          margin-bottom: 25px; }
+          .block_order.block_order .block_content .interaction_oreder .total_price p {
+            font-size: 30px; }
+        .block_order.block_order .block_content .interaction_oreder .block_use {
+          display: flex;
+          justify-content: flex-end; }
+          .block_order.block_order .block_content .interaction_oreder .block_use i.material-icons {
+            color: #d9d9d9; }
+          .block_order.block_order .block_content .interaction_oreder .block_use a {
+            margin-right: 24px;
+            font-size: 28px; }
+            .block_order.block_order .block_content .interaction_oreder .block_use a i.material-icons.active {
+              color: #ff6e41; }
+          .block_order.block_order .block_content .interaction_oreder .block_use a:last-child {
+            margin-right: 0px; }
+
 .part_btn {
   height: 30px;
   display: inline-block;
@@ -2311,6 +2414,25 @@ footer {
       width: 0%;
       background-color: #4196ff; }
 
+.profile_main {
+  height: 28px;
+  padding: 10px 0;
+  margin-right: 331px;
+  display: flex;
+  justify-content: flex-end; }
+  .profile_main .name_setting {
+    margin-right: 21px;
+    margin-top: 5px; }
+  .profile_main .input_setting {
+    width: 382px;
+    height: 28px;
+    padding-left: 18px;
+    border-radius: 50px;
+    border: #d9d9d9 1px solid;
+    outline: none; }
+  .profile_main input::-webkit-input-placeholder {
+    color: #d9d9d9; }
+
 .search_block {
   height: 30px;
   padding: 15px 0px 15px 14px;
@@ -2342,4 +2464,41 @@ footer {
     border: 1px solid #d9d9d9;
     outline: none;
     background: #fff;
-    border-left-style: none; }
+    border-left-style: none;
+    cursor: pointer; }
+
+.sorting_block {
+  background: #fff;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  border: 1px solid #d9d9d9;
+  border-left-style: none;
+  border-bottom-style: none;
+  border-right-style: none;
+  padding: 11px 0px;
+  height: 32px; }
+  .sorting_block .sorting {
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 5px;
+    border: #d9d9d9 solid 1px;
+    box-sizing: border-box;
+    margin-bottom: 12px; }
+    .sorting_block .sorting .sort_by {
+      font-size: 15px;
+      color: #686868;
+      margin: 0 24px; }
+    .sorting_block .sorting .item {
+      font-size: 15px;
+      color: #404040;
+      padding: 0 12px;
+      box-sizing: border-box;
+      cursor: pointer; }
+      .sorting_block .sorting .item:hover, .sorting_block .sorting .item.active {
+        color: #ff6e41; }
+      .sorting_block .sorting .item:first-child {
+        color: #ff6e41; }
+      .sorting_block .sorting .item:not(:last-child) {
+        border-right: #d9d9d9 solid 1px; }
