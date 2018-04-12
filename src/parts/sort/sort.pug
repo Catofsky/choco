@@ -1,11 +1,7 @@
 
-mixin part_sort()
+mixin part_sort(...items)
 	.sorting_block
 		.sorting
-			.sort_by Сортировать по:
-			.item.active Дешевле
-			.item Дороже
-			.item Заказы
-			.item Новинки
-			.item Рейтинг
-			.item А-Я
+			.sort_by= "Сортировать по:"		
+			each item in items
+				.item= item
