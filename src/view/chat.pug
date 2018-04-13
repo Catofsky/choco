@@ -3,53 +3,27 @@ include _header.pug
 
 +part_title_page("Профиль")
 
-mixin item_dialogue(image,title,number_oreder,shop_name,option,status,time_date,time)
-	.block_coupon
-		.block_image
+mixin shop_message(image,name,time,message)
+	.shop_message
+		.logo
 			img(src=image)
-		.block_content
-			.description_coupon
-				.title
-					a(href="#")
-						h1=title
-				.content
-					.item
-						p Номер заказа:
-						p= "№" + number_oreder 
-					.item
-						p Магазин:
-						div
-							i(class="material-icons") store_mall_directory
-							a(href="№")= shop_name
-					.item
-						p Вариант:
-						p= option
-					.item
-						p Статус:
-						div
-							i(class="material-icons done")= status
-							p Завершено
-					.item
-						p Время:
-						div
-							i(class="material-icons") assignment_turned_in
-							p= time_date
-							i(class="material-icons") access_time
-							p= time
-			.interaction_coupon
-				.block_use_coupon
-					a(href="#")
-						i(class="material-icons active") favorite
-					a(href="#")
-						i(class="material-icons") share
-					a(href="#")
-						i(class="material-icons") star
-					a(href="#")
-						i(class="material-icons") email
-					a(href="#")
-						i(class="material-icons") refresh
-					a(href="#")
-						i(class="material-icons") delete
+		.descriptions
+			.title
+				a= name
+				p= time
+			.text
+				p= message
+
+mixin person_massage(image,name,time,message)
+	.person_massage
+		.logo
+			img(src=image)
+		.descriptions
+			.title
+				a= name
+				p= time
+			.text
+				p= message
 
 .profile_block
 	.site_width
@@ -115,9 +89,14 @@ mixin item_dialogue(image,title,number_oreder,shop_name,option,status,time_date,
 				])
 
 			.main_block
-				+part_search("искать в заказах")
-				+item_dialogue("/img/coupons/etual.png","Салон крастоы Этуаль: Купон на скидку","016759","Этуаль","нет","check_box","12/07/18","11:32")
-				+item_dialogue("/img/coupons/etual.png","Салон крастоы Этуаль: Купон на скидку","016759","Этуаль","нет","check_box","12/07/18","11:32")
-				+item_dialogue("/img/coupons/etual.png","Салон крастоы Этуаль: Купон на скидку","016759","Этуаль","нет","check_box","12/07/18","11:32")
+				+part_search("искать в сообщениях")
+				.main_chat
+					.block_chat
+						+shop_message("img/dialogue/monkey.png","Белый ветер","20 марта 12:45","Вы можете получить сво товар в ближайшем магазине.")
+						+person_massage("img/user.jpg","Тирион Ланистер","21 марта 23:30","Спасибо за ответ.")
+						+shop_message("img/dialogue/monkey.png","Белый ветер","22 марта 12:24","Всегда пожалуйста,обращайтесь.")
+					.block_input_chat
+						textarea(placeholder="Написать сообщение")
+						button отправить
 
 include _footer.pug
