@@ -17,8 +17,15 @@
     left: 0
     font-size: 21px
 
+  .on
+    display: none
+
   input
     display: none
 
-    &:checked + i
+    &:checked + .on
+      display: inline
       color: $main_orange
+
+    &:checked ~ .off
+      display: none

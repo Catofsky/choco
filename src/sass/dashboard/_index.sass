@@ -1,1 +1,202 @@
 
+.checkbox
+    label
+        cursor: pointer
+        height: 24px
+        position: relative
+
+    span
+        font-size: 15px
+        line-height: 24px
+        position: relative
+        left: 24px
+
+    i
+        position: absolute
+        top: -2px
+        left: 0
+        font-size: 21px
+        color: $sad_gray
+
+    .on
+        display: none
+
+    input
+        display: none
+
+        &:checked + .on
+            display: inline
+            color: $dash_color
+
+        &:checked ~ .off
+            display: none
+
+.main_block
+
+    .list
+        margin: 24px
+        position: relative
+
+        .eye
+            right: 110px
+
+            &.active i
+                color: $dash_color
+
+        .edit
+            right: 70px
+
+        .delete
+            right: 30px
+
+        .edit, .delete, .eye
+            position: absolute
+            top: 48px
+            cursor: pointer
+
+            i
+                color: $border_color
+            
+                &:hover
+                    color: $sad_gray
+
+        .check
+            width: 36px
+
+        .item
+            min-height: 30px
+            border-bottom: $border_color solid 1px
+
+            &.product
+                height: 60px
+                display: flex
+                align-items: center
+
+                .check
+                    position: relative
+                    top: 5px
+
+            .title a
+                margin: 16px 24px
+                color: $link_color
+                background: #fff
+                display: inline-block
+                font-size: 15px
+
+                &:hover
+                    text-decoration: underline
+
+            .amount, .sale
+                margin-left: 34px
+
+                div
+                    display: inline
+
+                .value
+                    margin-left: 24px
+
+            .price
+                margin-left: 90px
+                position: relative
+                top: -2px
+
+                div
+                    display: inline
+
+                .num
+                    margin: 0 24px
+                    color: $dash_text
+                    font-weight: bold
+                    font-size: 20px
+                    position: relative
+                    top: 0
+
+                    &:after
+                        content: '₸'
+                        position: absolute
+                        top: 6px
+                        right: -12px
+                        font-size: 12px
+
+
+    .sorting
+        display: inline-block
+        height: 30px
+        line-height: 30px
+        border: $border_color solid 1px
+        box-sizing: border-box
+        padding: 0 24px
+        border-radius: 15px
+        position: relative
+        top: 2px
+        color: $sad_gray
+        margin: 0 24px
+
+        p
+            display: inline
+            padding-right: 24px
+        
+        .item
+            display: inline
+            padding: 12px
+            color: $sad_gray
+            cursor: pointer
+
+            &.active
+                color: $dash_color
+
+
+    .filter
+        margin: 0 24px
+
+        .date, .active, .price
+            display: inline-block
+
+            label
+                position: relative
+
+            p
+                display: inline
+
+            input
+                width: 100px
+                height: 24px
+                padding: 0 12px
+                border: $border_color solid 1px
+                box-sizing: border-box
+                border-radius: 12px
+                text-align: center
+                margin: 0 24px
+
+            span
+                position: absolute
+                right: 36px
+                pointer-events: none
+                top: 0
+
+            select
+                width: 160px
+                height: 24px
+                padding: 0 24px
+                border: $border_color solid 1px
+                box-sizing: border-box
+                border-radius: 12px
+                -webkit-appearance: none
+                -moz-appearance: none
+                appearance: none
+                text-align: center
+                margin: 0 24px
+            
+            .tri
+                display: inline
+                position: relative
+                font-size: 8px
+                right: 48px
+                top: -2px
+                color: $sad_gray
+                pointer-events: none
+        
+        i
+            color: $sad_gray
+            position: relative
+            top: 6px

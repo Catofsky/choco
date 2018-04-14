@@ -1,0 +1,87 @@
+extends dash/_layout.pug
+
+block title
+    title Chocokiller Store
+
+block content
+
+    .content_title Добавление товара
+
+    .wrap
+
+        form(action='' method='post')
+
+            .input
+                .label
+                    p Заголовок
+                .item
+                    input(type='text' name='title')
+
+            .input
+                .label
+                    p Категория
+                .item
+                    .tri ▼
+                    select(name='category')
+                        option Электроника
+                        option Одежда
+
+            .input(style='display: flex')
+                .label
+                    p Описание
+                .item
+                    textarea(name='description')
+
+            .input
+                .label
+                    p Изображения
+                .item
+                    .image_container
+                        .empty
+                            i.material-icons add_circle
+            
+            .input
+                .label
+                    p Скидка
+                .item
+                    input.onlyNumbers(type='text' name='title' value='10')
+                    span %
+
+            .input(style='display: flex')
+                .label
+                    p Варианты
+                .item
+                    .variant
+                        .image_container
+                            .empty
+                                i.material-icons add_circle
+
+                        .meta
+                            p Название
+                            input(type='text' name='variant_name')
+
+                            .meta_item
+                                span Кол-во
+                                input.onlyNumbers(type='text' name='variant_amount')
+                            
+                            .meta_item
+                                span Цена без скидки
+                                input.onlyNumbers(type='text' name='variant_amount')
+                            
+                            .meta_item
+                                span Цена со скидкой
+                                input.onlyNumbers(type='text' name='variant_amount')
+
+                    .btn Создать вариант
+
+        input.btn(type='button' value='Сохранить')
+
+    script.
+        u('.onlyNumbers').on('keydown', (e) => {
+            if (!('0123456789'.indexOf(e.key) >= 0
+                || e.code === 'Backspace'
+                || e.code === 'Enter'
+                || e.code === 'ArrowLeft'
+                || e.code === 'ArrowRight'))
+                e.preventDefault();
+        });

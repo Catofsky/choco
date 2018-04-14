@@ -1625,6 +1625,45 @@ footer {
   font-size: 25px;
   margin: 24px; }
 
+#register_block .btn {
+  margin-left: 400px;
+  margin-top: 64px;
+  border: none; }
+
+#register_block .part_checkbox {
+  position: relative; }
+  #register_block .part_checkbox label {
+    position: absolute;
+    right: 0px; }
+
+#register_block form label {
+  min-height: 30px;
+  display: inline-block;
+  width: 800px;
+  position: relative;
+  margin: 12px 0; }
+
+#register_block form span {
+  color: #434343;
+  width: auto;
+  text-align: right;
+  line-height: 30px;
+  height: 30px;
+  display: inline-block;
+  position: absolute;
+  right: 424px; }
+
+#register_block form .block {
+  display: inline-block;
+  position: absolute;
+  right: -24px; }
+
+#register_block form .part_radiobutton {
+  display: inline-block;
+  width: 180px; }
+  #register_block form .part_radiobutton label {
+    width: auto; }
+
 #wrap_help {
   margin: 15px auto;
   width: 1200px;
@@ -2533,10 +2572,16 @@ footer {
   left: 0;
   font-size: 21px; }
 
+.part_checkbox .on {
+  display: none; }
+
 .part_checkbox input {
   display: none; }
-  .part_checkbox input:checked + i {
+  .part_checkbox input:checked + .on {
+    display: inline;
     color: #ff6e41; }
+  .part_checkbox input:checked ~ .off {
+    display: none; }
 
 .part_review_card {
   width: 220px;
@@ -2646,6 +2691,34 @@ footer {
   .part_text_input input:placeholder {
     color: #d9d9d9;
     line-height: 30px; }
+
+.part_radiobutton label {
+  cursor: pointer;
+  height: 24px;
+  position: relative; }
+
+.part_radiobutton span {
+  font-size: 15px;
+  line-height: 24px;
+  position: relative;
+  left: 24px; }
+
+.part_radiobutton i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 21px; }
+
+.part_radiobutton .on {
+  display: none; }
+
+.part_radiobutton input {
+  display: none; }
+  .part_radiobutton input:checked + .on {
+    display: inline;
+    color: #ff6e41; }
+  .part_radiobutton input:checked ~ .off {
+    display: none; }
 
 .page_title .title {
   height: 64px;

@@ -4,3 +4,96 @@ block title
     title Chocokiller Store
 
 block content
+
+    .content_title Товары
+
+    .wrap
+        input.btn(type='button' value='Добавить товар')
+
+        .filter
+            .date
+                i.material-icons date_range
+                select(name='filter_date')
+                    option Всё время
+                    option За месяц
+                    option За неделю
+                    option За день
+                .tri ▼
+            
+            .active
+                i.material-icons public
+                select(name='filter_active')
+                    option Все товары
+                    option Активные
+                    option Скрытые
+                .tri ▼
+            
+            .price
+                p По цене от
+                label
+                    input.onlyNumbers(type='text' name='price_from')
+                    span ₸
+                p до
+                label
+                    input.onlyNumbers(type='text' name='price_to')
+                    span ₸
+        
+        .btn Фильтр
+
+        .sorting
+            p Сортировать по
+            .item Продажам
+            .item Просмотрам
+            .item Новым
+            .item Старым
+            .item.active А-Я
+
+        .list
+            .item
+                .checkbox
+                    label
+                        input(type='checkbox')
+                        i.material-icons.on check_box_outline
+                        i.material-icons.off check_box_outline_blank
+                        span Выбрать всё
+            .item.product
+                .check
+                    .checkbox
+                        label
+                            input(type='checkbox')
+                            i.material-icons.on check_box_outline
+                            i.material-icons.off check_box_outline_blank
+                            span
+
+                .title
+                    a(href='#') iPhone X, 256Gb, Space gray
+
+                .amount
+                    .label Кол-во:
+                    .value 3
+                
+                .sale
+                    .label Скидка
+                    .value 30 %
+
+                .price
+                    .label Цена:
+                    .num 377 467
+
+            .eye.active
+                i.material-icons remove_red_eye
+            .edit
+                i.material-icons edit
+            .delete
+                i.material-icons delete
+
+    
+    script.
+        u('.onlyNumbers').on('keydown', (e) => {
+            if (!('0123456789'.indexOf(e.key) >= 0
+                || e.code === 'Backspace'
+                || e.code === 'Enter'
+                || e.code === 'ArrowLeft'
+                || e.code === 'ArrowRight'))
+                e.preventDefault();
+        });

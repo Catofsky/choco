@@ -17,26 +17,24 @@ html(lang='en')
         include _header
         -
             var menu = [
-                { title: 'Главная', icon: 'view_list', href: '#' },
-                { title: 'Заказы', icon: 'store', href: '#' },
-                { title: 'Подписчики', icon: 'view_list', href: '#', count: 12 },
-                { title: 'Сотрудники', icon: 'favorite', href: '#' },
-                { title: 'Магазин', icon: 'share', href: '#' },
-                { title: 'Товары', icon: 'store', href: '#' },
-                { title: 'Услуги', icon: 'view_list', href: '#' },
-                { title: 'Акции', icon: 'people', href: '#' }
+                { title: 'Главная', icon: 'home', href: '#' },
+                { title: 'Заказы', icon: 'turned_in', href: '#', count: 12 },
+                { title: 'Сотрудники', icon: 'people', href: '#' },
+                { title: 'Магазин', icon: 'store', href: '#' },
+                { title: 'Товары', icon: 'shoping', href: '#' }
             ]
 
-        .side_menu
-            .menu
-                ul
+        .main_block
+            .side_menu
+                .menu
                     each item in menu
-                        li
-                            a(href=item.href)
-                                i.material-icons._toggle_view_list= item.icon
-                                span= item.title
-                            - if (item.count) 
+                        a(href=item.href)
+                            i.material-icons= item.icon
+                            span= item.title
+                            - if (item.count)
                                 .num= item.count
- 
-        block content
+    
+            .content
+                block content
+        
         include _footer.pug
