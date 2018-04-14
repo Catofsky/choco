@@ -59,15 +59,15 @@ gulp.task('html', [ 'reload' ], function () {
 gulp.task('sass', function () {
 	return gulp.src(config.src + '/sass/**/*.sass')
 		.pipe(sass().on('error', sass.logError))
-		.pipe(gulp.dest(config.src + '/css'));
+		.pipe(gulp.dest(config.dist + '/css'))
+		.pipe(sync.stream());
 });
 
 gulp.task('css_compress', [ 'sass' ], function () {
 	return gulp.src(config.src + '/css/**/*.css')
 		.pipe(nano())
 		.pipe(ren({ suffix: '.min' }))
-		.pipe(gulp.dest(config.dist + '/css'))
-    	.pipe(sync.stream());
+		.pipe(gulp.dest(config.dist + '/css'));
 });
 
 gulp.task('sync', function () {
@@ -75,7 +75,7 @@ gulp.task('sync', function () {
 });
 
 gulp.task('watch', function () {
-	gulp.watch(config.src + '/sass/**/*.sass', [ 'css_compress' ]);
+	gulp.watch(config.src + '/sass/**/*.sass', [ 'sass' ]);
 	gulp.watch(config.src + '/view/**/*.pug', [ 'pug' ]);
   	gulp.watch(config.src + '/view/**/*.html', [ 'pug' ]);
 	gulp.watch(config.src + '/js/**/*.js', [ 'js_compress' ]);
@@ -83,7 +83,7 @@ gulp.task('watch', function () {
 
 	gulp.watch(config.src + '/parts/**/*.coffee', [ 'coffee_parts' ]);
   	gulp.watch(config.src + '/parts/**/*.pug', [ 'pug' ]);
-	gulp.watch(config.src + '/parts/**/*.sass', [ 'css_compress' ]);
+	gulp.watch(config.src + '/parts/**/*.sass', [ 'sass' ]);
 });
 
 gulp.task('reload', function () {
@@ -96,5 +96,5 @@ gulp.task('js_compress', [ 'reload' ], function() {
     	.pipe(gulp.dest(config.dist + '/js'));
 });
 
-gulp.task('build', [ 'pug', 'css_compress' ]);
+gulp.task('build', [ 'pug', 'sass' ]);
 gulp.task('default', [ 'sync', 'watch' ]);
