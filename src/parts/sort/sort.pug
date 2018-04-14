@@ -1,0 +1,10 @@
+
+mixin part_sort(...items)
+	.part_sorting_block
+		.part_sorting
+			.part_sort_by= "Сортировать по:"
+			each item in items
+				.part_item= item
+		.sort_block
+			i.material-icons._toggle_view_list view_list
+			i.material-icons._toggle_view_cards view_comfy

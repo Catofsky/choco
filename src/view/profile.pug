@@ -3,63 +3,129 @@ include _header.pug
 
 +part_title_page("Профиль")
 
+mixin item_natification(type,type_name,name_product,price_befor,event,price_now)
+	.item_notifications
+		.type_notifications
+			i(class="material-icons")= type
+			p= type_name
+		.title_notifications
+			a(href="#")= name_product
+		.price_notifications
+			if(type_name == "Изменение цены")
+				p= price_befor
+				if (event == "call_made")
+					i(class="material-icons call_made")= event
+				else if (event == "call_received")
+					i(class="material-icons call_received")= event
+				p= price_now
+			else if (type_name == "Акция")
+				if(price_befor == "новое")
+					p(class="new")= price_befor
+				else if (price_befor == "горячее")
+					p(class="hot")= price_befor
+				p(class="timer")= price_now
+
 .profile_block
-  .site_width
-    .block
-      .avatar(style='background: url("img/user_150x150.jpg")')
-      .info
-        .username Тирион Ланистер
-        .stat
-          .item
-            .num 94
-            .text Заказов
-          .item
-            .num 12 623
-            .text Кешбэк
-          .item
-            .num 89 048
-            .text Вы сэкономили
-          .item
-            .num 1 000 000
-            .text Баланс
-          .item
-            .num 1 520
-            .text Бонус
+	.site_width
+		.block
+			.avatar(style='background: url("img/user_150x150.jpg")')
+			.info
+				.username Тирион Ланистер
+				.stat
+					.item
+						.num 94
+						.text Заказов
+					.item
+						.num 12 623
+						.text Кешбэк
+					.item
+						.num 89 048
+						.text Вы сэкономили
+					.item
+						.num 1 000 000
+						.text Баланс
+					.item
+						.num 1 520
+						.text Бонус
 
+		+part_sort("Новым","Старым","а-я")
 
-    .content_block
-      .side_block
-        .menu
-          .item.active
-            i.material-icons dehaze
-            .text Главная
-          .item
-            i.material-icons turned_in
-            .text Мои заказы
-          .item
-            i.material-icons local_play
-            .text Мои купоны
-          .item
-            i.material-icons favorite
-            .text Избранное
-          .item
-            i.material-icons people
-            .text Подписки
-            .num 7
-          .item
-            i.material-icons notifications
-            .text Уведомления
-            .num 4
-          .item
-            i.material-icons mail
-            .text Сообщения
-            .num 12
-          .item
-            i.material-icons settings
-            .text Настройки
+		.content_block
+			.side_block
+				.menu
+					.item
+						i.material-icons dehaze
+						.text Главная
+					.item
+						i.material-icons turned_in
+						.text Мои заказы
+					.item
+						i.material-icons local_play
+						.text Мои купоны
+					.item
+						i.material-icons favorite
+						.text Избранное
+					.item
+						i.material-icons people
+						.text Подписки
+						.num 7
+					.item
+						i.material-icons notifications
+						.text Уведомления
+						.num 4
+					.item
+						i.material-icons mail
+						.text Сообщения
+						.num 12
+					.item.active
+						i.material-icons settings
+						.text Настройки
+				+part_profile_statistic_shop([ 
+				{ title: 'Белый ветер', voted: 901 }, 
+				{ title: 'Крендель', voted: 420 },
+				{ title: 'Технодом', voted: 345 }, 
+				{ title: 'Мечта', voted: 469 }, 
+				{ title: 'Айнур', voted: 522 }, 
+				])
 
-      .main_block
-
-
+			.main_block(class="profile")
+				.favorites_block
+					.favorites
+						h1 Последние избранные
+						p Смотреть все
+					-
+						var product = {
+							href: '/profile.html',
+							sale: 50,
+							rating: 4.9,
+							img: 'img/products/1.jpg',
+							title: 'Apple iPhone S 64Gb Space Gray',
+							old_price: '1 330 000',
+							price: '230 000',
+							desc: 'Тип: классический<br>\
+								ОС: iOS 11<br>\
+								Диагональ: 4.7"<br>\
+								ОЗУ: 2048 Мб<br>\
+								Встроенная память: 64 Гб',
+							store: 'Белый ветер'
+						}
+					.block_products
+						- for (var i = 0; i < 4; i++)
+							+part_product_card(product,"favorite")
+				.last_published
+					h1 Последние опубликованные
+					p Смотреть все
+				.last_favorites
+					- for (var i = 0; i < 4; i++)
+						+part_product_card(product,"favorite")
+				.notifications
+					h1 Уведомления
+					p Смотреть все
+				.list_notifications
+					+item_natification("trending_down","Изменение цены","Смартфон Apple iPhone X, 256Gb, white","377 990","call_received","350 980")
+					+item_natification("trending_down","Акция","Белый ветер: Пятничная распродажа в Белом ветре!","горячее","","06:21:30")
+					+item_natification("trending_down","Акция","Крендель: Приведи друга, и получи второй Латте бесплатно!","новое","","96:59:30")
+					+item_natification("trending_down","Изменение цены","Смартфон Apple iPhone X, 256Gb, silver","377 990","call_made","350 980")
+					+item_natification("trending_down","Акция","Мечта: Ночная распродажа. -20% на ряд товаров","","","43:21:30")
 
 include _footer.pug

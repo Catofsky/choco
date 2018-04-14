@@ -1,0 +1,32 @@
+mixin part_profile_statistic_shop(shop)
+	.choice_bar
+		h1 Голосование
+		each item in shop 
+			.shop_content
+				-var id = item.voted;
+				input(type="radio" name="contact" id=id)
+				label(for=id)= item.title
+
+	-var arrayVoted = [], arrayPercentVoted = [], max = 0;
+	-for (var i = 0; i < shop.length; i++) {
+	-arrayVoted[i] = shop[i].voted;	
+	-}
+	-for (var i = 0; i < arrayVoted.length; i++) {
+	-if (arrayVoted[i] > max) {
+	-	max = arrayVoted[i]; 
+	-	}		
+	-}
+	- for (var i = 0; i < arrayVoted.length; i++) {
+	- arrayPercentVoted[i] = ((arrayVoted[i] / max) * 100);
+	- }
+
+
+	.part_profile_statistic_shop
+		h1 Голосование
+		each item, i in shop
+			.shop_content
+				.block_title
+					p= item.title
+					p= item.voted
+				.inner(style='width: ' + arrayPercentVoted[i] + '%')
+

@@ -1,0 +1,23 @@
+mixin part_input_date()
+	.profile_main
+		.name_setting Дата рождения:
+		select.input_setting.input_triple
+			-var i = 1, date = new Date().getFullYear();
+			while i <= 31
+				option= i++
+		select.input_setting.input_triple
+			option Январь
+			option Февраль
+			option Март
+			option Апрель
+			option Май
+			option Июнь
+			option Июль
+			option Август
+			option Сентябрь
+			option Октябрь
+			option Ноябрь
+			option Декабрь
+		select.input_setting.input_triple
+			while date >= 1950
+				option= date--

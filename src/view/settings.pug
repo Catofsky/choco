@@ -26,7 +26,6 @@ include _header.pug
             .num 1 520
             .text Бонус
 
-
     .content_block
       .side_block
         .menu
@@ -57,6 +56,13 @@ include _header.pug
           .item.active
             i.material-icons settings
             .text Настройки
+        +part_profile_statistic_shop([ 
+        { title: 'Белый ветер', voted: 901 }, 
+        { title: 'Крендель', voted: 420 },
+        { title: 'Технодом', voted: 345 }, 
+        { title: 'Мечта', voted: 469 }, 
+        { title: 'Айнур', voted: 522 }, 
+        ])
 
       .main_block
         .title_settings 
@@ -68,31 +74,13 @@ include _header.pug
           .profile_main
             .name_setting Фамилия:
             input.input_setting(placeholder="Ланистер")
-          .profile_main
-            .name_setting Дата рождения:
-            select.input_setting.input_triple
-              option 1
-            select.input_setting.input_triple
-              option Январь
-              option Февраль
-              option Март
-              option Апрель
-              option Май
-              option Июнь
-              option Июль
-              option Август
-              option Сентябрь
-              option Октябрь
-              option Ноябрь
-              option Декабрь
-            select.input_setting.input_triple
-              option 2018
+          +part_input_date()
           .profile_main
             .name_setting Ваш пол:
-            input.input_setting.input_double(type="checkbox")
-            label Мужчина
-            input.input_setting.input_double(type="checkbox")
-            label Женщина
+            input.input_setting.input_double(type="radio" id="man" name="gender" value="Мужчина")
+            label(for="man") Мужчина
+            input.input_setting.input_double(type="radio" id="woman" name="gender" value="Мужчина")
+            label(for="woman") Женщина 
           .profile_main
             .name_setting Логин:
             input.input_setting(placeholder="Tirion_228")

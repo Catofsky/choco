@@ -1,0 +1,123 @@
+include _parts.pug
+include _header.pug
+
++part_title_page("Профиль")
+
+mixin item_dialogue(image,title,number_oreder,shop_name,option,status,time_date,time)
+	.block_coupon
+		.block_image
+			img(src=image)
+		.block_content
+			.description_coupon
+				.title
+					a(href="#")
+						h1=title
+				.content
+					.item
+						p Номер заказа:
+						p= "№" + number_oreder 
+					.item
+						p Магазин:
+						div
+							i(class="material-icons") store_mall_directory
+							a(href="№")= shop_name
+					.item
+						p Вариант:
+						p= option
+					.item
+						p Статус:
+						div
+							i(class="material-icons done")= status
+							p Завершено
+					.item
+						p Время:
+						div
+							i(class="material-icons") assignment_turned_in
+							p= time_date
+							i(class="material-icons") access_time
+							p= time
+			.interaction_coupon
+				.block_use_coupon
+					a(href="#")
+						i(class="material-icons active") favorite
+					a(href="#")
+						i(class="material-icons") share
+					a(href="#")
+						i(class="material-icons") star
+					a(href="#")
+						i(class="material-icons") email
+					a(href="#")
+						i(class="material-icons") refresh
+					a(href="#")
+						i(class="material-icons") delete
+
+.profile_block
+	.site_width
+		.block
+			.avatar(style='background: url("img/user_150x150.jpg")')
+			.info
+				.username Тирион Ланистер
+				.stat
+					.item
+						.num 94
+						.text Заказов
+					.item
+						.num 12 623
+						.text Кешбэк
+					.item
+						.num 89 048
+						.text Вы сэкономили
+					.item
+						.num 1 000 000
+						.text Баланс
+					.item
+						.num 1 520
+						.text Бонус
+
+		+part_sort("Новым","Старым","а-я")
+
+		.content_block
+			.side_block
+				.menu
+					.item
+						i.material-icons dehaze
+						.text Главная
+					.item
+						i.material-icons turned_in
+						.text Мои заказы
+					.item
+						i.material-icons local_play
+						.text Мои купоны
+					.item
+						i.material-icons favorite
+						.text Избранное
+					.item
+						i.material-icons people
+						.text Подписки
+						.num 7
+					.item
+						i.material-icons notifications
+						.text Уведомления
+						.num 4
+					.item
+						i.material-icons mail
+						.text Сообщения
+						.num 12
+					.item.active
+						i.material-icons settings
+						.text Настройки
+				+part_profile_statistic_shop([ 
+				{ title: 'Белый ветер', voted: 901 }, 
+				{ title: 'Крендель', voted: 420 },
+				{ title: 'Технодом', voted: 345 }, 
+				{ title: 'Мечта', voted: 469 }, 
+				{ title: 'Айнур', voted: 522 }, 
+				])
+
+			.main_block
+				+part_search("искать в купонах")
+				+item_dialogue("/img/coupons/etual.png","Салон крастоы Этуаль: Купон на скидку","016759","Этуаль","нет","check_box","12/07/18","11:32")
+				+item_dialogue("/img/coupons/etual.png","Салон крастоы Этуаль: Купон на скидку","016759","Этуаль","нет","check_box","12/07/18","11:32")
+				+item_dialogue("/img/coupons/etual.png","Салон крастоы Этуаль: Купон на скидку","016759","Этуаль","нет","check_box","12/07/18","11:32")
+
+include _footer.pug

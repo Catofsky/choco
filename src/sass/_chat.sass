@@ -1,0 +1,93 @@
+.main_chat
+	.block_chat
+		height: 460px
+		margin: 0px 10px
+		padding: 0px 10px
+		border: 1px solid $gray_border
+		border-left-style: none
+		border-bottom-style: none
+		border-right-style: none
+		.shop_message
+			padding: 15px 0px
+			display: flex
+			.logo
+				width: 50px
+				height: 50px
+				background: #acacac
+				border-radius: 50%
+				margin-right: 16px
+				img
+					width: 50px
+					height: 50px
+					border-radius: 50%
+			.descriptions
+				.title
+					display: flex
+					margin-bottom: 10px
+					a
+						color: #54a8d2
+						margin-right: 18px
+					p
+						margin-top: 3px
+						font-size: 12px
+				.text
+					p
+		.person_massage
+			padding: 15px 0px
+			display: flex
+			flex-direction: row-reverse
+			.logo
+				width: 50px
+				height: 50px
+				background: #acacac
+				border-radius: 50%
+				margin-left: 16px
+				img
+					width: 50px
+					height: 50px
+					border-radius: 50%
+			.descriptions
+				.title
+					display: flex
+					flex-direction: row-reverse
+					margin-bottom: 10px
+					a
+						color: #54a8d2
+						margin-left: 18px
+					p
+						margin-top: 3px
+						font-size: 12px
+				.text
+					display: flex
+					flex-direction: row-reverse
+					p
+	.block_input_chat
+		padding: 15px 20px
+		border: 1px solid $gray_border
+		border-left-style: none
+		border-right-style: none
+		textarea
+			width: 886px
+			height: 101px
+			border-radius: 5px
+			padding-top: 17px
+			padding-left: 12px
+			outline: none
+			resize: none
+		button
+			margin-top: 15px
+			background: $main_orange
+			border: 1px solid $main_orange
+			height: 27px
+			width: 92px
+			color: #fff
+			border-radius: 20px
+			font-size: 13px 
+			padding-bottom: 3px
+			outline: none
+			&:hover
+				cursor: pointer
+				background: $super_orange
+			&:active
+				outline: none
+				background: $main_bright_orange
