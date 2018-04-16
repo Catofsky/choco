@@ -17,7 +17,7 @@ const config = {
     	bare: false
   	},
   	pug: {
-    	pretty: false
+    	pretty: true
   	},
   	sync: {
 		server: {

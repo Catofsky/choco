@@ -2874,3 +2874,21 @@ footer {
       font-size: 26px; }
       .part_sorting_block .sort_block i:hover {
         color: #999; }
+
+.part_pagination {
+  margin: 24px; }
+  .part_pagination a {
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    color: #434343;
+    text-align: center;
+    margin-right: 12px;
+    display: inline-block; }
+    .part_pagination a:hover {
+      color: #ff6e41; }
+    .part_pagination a.on {
+      background: #ff6e41;
+      border-radius: 50%;
+      color: #fff;
+      font-weight: bold; }

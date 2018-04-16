@@ -1,8 +1,136 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>Chocokiller Store</title><link rel="stylesheet" href="css/dashboard/dash.min.css"><link rel="stylesheet" href="font/material-icons.css"><script src="js/umbrella.min.js"></script><script>window.parts = {};</script></head><body><header><div class="logo"></div><div class="top"><div class="search"><i class="material-icons">search</i><input type="search" name="search" placeholder="Я ищу..."><select name="search_cat"><option>всё</option></select><input type="button" value="Найти"></div><div class="store_select"><select name="store_select"><option>Белый ветер</option></select></div><div class="user"><div class="name"><p>Eldan</p></div><div class="avatar" style="background-image: url('img/user.jpg')"></div></div></div></header><div class="main_block"><div class="side_menu"><div class="menu"><a href="#"><i class="material-icons">home</i><span>Главная</span></a><a href="#"><i class="material-icons">turned_in</i><span>Заказы</span><div class="num">12</div></a><a href="#"><i class="material-icons">people</i><span>Сотрудники</span></a><a href="#"><i class="material-icons">store</i><span>Магазин</span></a><a href="#"><i class="material-icons">shoping</i><span>Товары</span></a></div></div><div class="content"><div class="content_title">Товары</div><div class="wrap"><input class="btn" type="button" value="Добавить товар"><div class="filter"><div class="date"><i class="material-icons">date_range</i><select name="filter_date"><option>Всё время</option><option>За месяц</option><option>За неделю</option><option>За день</option></select><div class="tri">▼</div></div><div class="active"><i class="material-icons">public</i><select name="filter_active"><option>Все товары</option><option>Активные</option><option>Скрытые</option></select><div class="tri">▼</div></div><div class="price"><p>По цене от</p><label><input class="onlyNumbers" type="text" name="price_from"><span>₸</span></label><p>до</p><label><input class="onlyNumbers" type="text" name="price_to"><span>₸</span></label></div></div><div class="btn">Фильтр</div><div class="sorting"><p>Сортировать по</p><div class="item">Продажам</div><div class="item">Просмотрам</div><div class="item">Новым</div><div class="item">Старым</div><div class="item active">А-Я</div></div><div class="list"><div class="item"><div class="checkbox"><label><input type="checkbox"><i class="material-icons on">check_box_outline</i><i class="material-icons off">check_box_outline_blank</i><span>Выбрать всё</span></label></div></div><div class="item product"><div class="check"><div class="checkbox"><label><input type="checkbox"><i class="material-icons on">check_box_outline</i><i class="material-icons off">check_box_outline_blank</i><span></span></label></div></div><div class="title"><a href="#">iPhone X, 256Gb, Space gray</a></div><div class="amount"><div class="label">Кол-во:</div><div class="value">3</div></div><div class="sale"><div class="label">Скидка</div><div class="value">30 %</div></div><div class="price"><div class="label">Цена:</div><div class="num">377 467</div></div></div><div class="eye active"><i class="material-icons">remove_red_eye</i></div><div class="edit"><i class="material-icons">edit</i></div><div class="delete"><i class="material-icons">delete</i></div></div></div><script>u('.onlyNumbers').on('keydown', (e) => {
-    if (!('0123456789'.indexOf(e.key) >= 0
-        || e.code === 'Backspace'
-        || e.code === 'Enter'
-        || e.code === 'ArrowLeft'
-        || e.code === 'ArrowRight'))
-        e.preventDefault();
-});</script></div></div><footer></footer></body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chocokiller Store</title>
+    <link rel="stylesheet" href="css/dash/dash.css">
+    <link rel="stylesheet" href="font/material-icons.css">
+    <script src="js/umbrella.min.js"></script>
+    <script>window.parts = {};</script>
+  </head>
+  <body>
+    <header>
+      <div class="logo"></div>
+      <div class="top">
+        <div class="search"><i class="material-icons">search</i>
+          <input type="search" name="search" placeholder="Я ищу...">
+          <select name="search_cat">
+            <option>всё</option>
+          </select>
+          <input type="button" value="Найти">
+        </div>
+        <div class="store_select">
+          <select name="store_select">
+            <option>Белый ветер</option>
+          </select>
+        </div>
+        <div class="user">
+          <div class="name">
+            <p>Eldan</p>
+          </div>
+          <div class="avatar" style="background-image: url('img/user.jpg')"></div>
+        </div>
+      </div>
+    </header>
+    <div class="main_block">
+      <div class="side_menu">
+        <div class="menu"><a href="#"><i class="material-icons">home</i><span>Главная</span></a><a href="#"><i class="material-icons">turned_in</i><span>Заказы</span>
+            <div class="num">12</div></a><a href="#"><i class="material-icons">people</i><span>Сотрудники</span></a><a href="#"><i class="material-icons">store</i><span>Магазин</span></a><a href="#"><i class="material-icons">shoping</i><span>Товары</span></a>
+        </div>
+      </div>
+      <div class="content">
+        <div class="content_title">Товары</div>
+        <div class="wrap">
+          <input class="btn" type="button" value="Добавить товар">
+          <div class="filter">
+            <div class="date"><i class="material-icons">date_range</i>
+              <select name="filter_date">
+                <option>Всё время</option>
+                <option>За месяц</option>
+                <option>За неделю</option>
+                <option>За день</option>
+              </select>
+              <div class="tri">▼</div>
+            </div>
+            <div class="active"><i class="material-icons">public</i>
+              <select name="filter_active">
+                <option>Все товары</option>
+                <option>Активные</option>
+                <option>Скрытые</option>
+              </select>
+              <div class="tri">▼</div>
+            </div>
+            <div class="price">
+              <p>По цене от</p>
+              <label>
+                <input class="onlyNumbers" type="text" name="price_from"><span>₸</span>
+              </label>
+              <p>до</p>
+              <label>
+                <input class="onlyNumbers" type="text" name="price_to"><span>₸</span>
+              </label>
+            </div>
+          </div>
+          <div class="btn">Фильтр</div>
+          <div class="sorting">
+            <p>Сортировать по</p>
+            <div class="item">Продажам</div>
+            <div class="item">Просмотрам</div>
+            <div class="item">Новым</div>
+            <div class="item">Старым</div>
+            <div class="item active">А-Я</div>
+          </div>
+          <div class="list">
+            <div class="item">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"><i class="material-icons on">check_box_outline</i><i class="material-icons off">check_box_outline_blank</i><span>Выбрать всё</span>
+                </label>
+              </div>
+            </div>
+            <div class="item product">
+              <div class="check">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox"><i class="material-icons on">check_box_outline</i><i class="material-icons off">check_box_outline_blank</i><span></span>
+                  </label>
+                </div>
+              </div>
+              <div class="title"><a href="#">iPhone X, 256Gb, Space gray</a></div>
+              <div class="amount">
+                <div class="label">Кол-во:</div>
+                <div class="value">3</div>
+              </div>
+              <div class="sale">
+                <div class="label">Скидка</div>
+                <div class="value">30 %</div>
+              </div>
+              <div class="price">
+                <div class="label">Цена:</div>
+                <div class="num">377 467</div>
+              </div>
+            </div>
+            <div class="eye active"><i class="material-icons">remove_red_eye</i></div>
+            <div class="edit"><i class="material-icons">edit</i></div>
+            <div class="delete"><i class="material-icons">delete</i></div>
+          </div>
+          <div class="part_pagination"><a class="on" href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a><a href="#">6</a><a href="#">7</a><a href="#">8</a><a href="#">9</a>
+          </div>
+        </div>
+        <script>
+          u('.onlyNumbers').on('keydown', (e) => {
+              if (!('0123456789'.indexOf(e.key) >= 0
+                  || e.code === 'Backspace'
+                  || e.code === 'Enter'
+                  || e.code === 'ArrowLeft'
+                  || e.code === 'ArrowRight'))
+                  e.preventDefault();
+          });
+        </script>
+      </div>
+    </div>
+    <footer></footer>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+
+mixin part_pagination(params)
+	- var from = params.from || 1
+	- var to = params.to || 1
+	- var on = params.on || 1
+
+	- if (from > to) throw new Error('Pagination: "from" cannot be above than "to"!');
+
+	.part_pagination
+		- for (var i = from; i <= to; i++)
+			- if (i === on)
+				a.on(href='#')= i
+			- else
+				a(href='#')= i
