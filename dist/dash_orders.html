@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chocokiller Store</title>
+    <link rel="stylesheet" href="css/dash/dash.css">
+    <link rel="stylesheet" href="font/material-icons.css">
+    <script src="js/umbrella.min.js"></script>
+    <script>window.parts = {};</script>
+  </head>
+  <body>
+    <header>
+      <div class="logo"></div>
+      <div class="top">
+        <div class="search"><i class="material-icons">search</i>
+          <input type="search" name="search" placeholder="Я ищу...">
+          <select name="search_cat">
+            <option>всё</option>
+          </select>
+          <input type="button" value="Найти">
+        </div>
+        <div class="store_select">
+          <select name="store_select">
+            <option>Белый ветер</option>
+          </select>
+        </div>
+        <div class="user">
+          <div class="name">
+            <p>Eldan</p>
+          </div>
+          <div class="avatar" style="background-image: url('img/user.jpg')"></div>
+        </div>
+      </div>
+    </header>
+    <div class="main_block">
+      <div class="side_menu">
+        <div class="menu"><a href="#"><i class="material-icons">home</i><span>Главная</span></a><a href="#"><i class="material-icons">turned_in</i><span>Заказы</span>
+            <div class="num">12</div></a><a href="#"><i class="material-icons">people</i><span>Сотрудники</span></a><a href="#"><i class="material-icons">store</i><span>Магазин</span></a><a href="#"><i class="material-icons">shoping</i><span>Товары</span></a>
+        </div>
+      </div>
+      <div class="content">
+        <div class="content_title">Заказы</div>
+        <div class="wrap">
+          <div class="sort_content"><i class="material-icons">date_range</i>
+            <select class="all">
+              <option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;всё</option>
+            </select>
+            <select class="state">
+              <option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Активно</option>
+            </select>
+            <input class="input_search" placeholder="название или номер товара">
+            <div class="tg1">₸</div>
+            <input class="input_from" placeholder="от">
+            <div class="tg2">₸ </div>
+            <input class="input_to" placeholder="до">
+          </div>
+          <div class="oreder_slider">
+                    <div class="block_order">
+                      <div class="checkbox">
+                        <input type="checkbox" id="chk">
+                        <label for="chk"></label>
+                      </div>
+                      <div class="block_image"><img src="/img/slide/1.png"></div>
+                      <div class="block_content">
+                        <div class="description_order">
+                          <div class="title"><a href="#">
+                              <h1>IPhone X, 256Gb, Space Gray</h1></a></div>
+                          <div class="content">
+                            <div class="item">
+                              <p>Заказчик:</p><a href="#">Серсея Ланистер</a>
+                            </div>
+                            <div class="item">
+                              <p>Статус:</p>
+                              <div><i class="material-icons done">assignment_turned_in</i>
+                                <p>Выполнено</p>
+                              </div>
+                            </div>
+                            <div class="item">
+                              <p>Дата:</p>
+                              <div><i class="material-icons">assignment_turned_in</i>
+                                <p>25/06/18</p><i class="material-icons">access_time</i>
+                                <p>12:45</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="description_right">
+                          <div class="additionally">
+                            <div class="number">
+                              <div class="item">
+                                <p>Номер заказа:</p>
+                                <p>№354186</p>
+                              </div>
+                              <div class="item">
+                                <p>Телефон:</p>
+                                <p>+7 775 152345</p>
+                              </div>
+                            </div>
+                            <div class="quantity">
+                              <div class="item">
+                                <p>Кол-во:</p>
+                                <p>1шт.</p>
+                              </div>
+                            </div>
+                            <div class="price">
+                              <div class="item">
+                                <p>Цена:</p>
+                                <p>377 990 ₸</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="confirmation"><i class="material-icons active">check_circle</i><i class="material-icons">cancel</i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="block_order">
+                      <div class="checkbox">
+                        <input type="checkbox" id="chk">
+                        <label for="chk"></label>
+                      </div>
+                      <div class="block_image"><img src="/img/slide/1.png"></div>
+                      <div class="block_content">
+                        <div class="description_order">
+                          <div class="title"><a href="#">
+                              <h1>IPhone X, 256Gb, Space Gray</h1></a></div>
+                          <div class="content">
+                            <div class="item">
+                              <p>Заказчик:</p><a href="#">Серсея Ланистер</a>
+                            </div>
+                            <div class="item">
+                              <p>Статус:</p>
+                              <div><i class="material-icons cancel">cancel</i>
+                                <p>Не выполнено</p>
+                              </div>
+                            </div>
+                            <div class="item">
+                              <p>Дата:</p>
+                              <div><i class="material-icons">assignment_turned_in</i>
+                                <p>25/06/18</p><i class="material-icons">access_time</i>
+                                <p>12:45</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="description_right">
+                          <div class="additionally">
+                            <div class="number">
+                              <div class="item">
+                                <p>Номер заказа:</p>
+                                <p>№354186</p>
+                              </div>
+                              <div class="item">
+                                <p>Телефон:</p>
+                                <p>+7 775 152345</p>
+                              </div>
+                            </div>
+                            <div class="quantity">
+                              <div class="item">
+                                <p>Кол-во:</p>
+                                <p>1шт.</p>
+                              </div>
+                            </div>
+                            <div class="price">
+                              <div class="item">
+                                <p>Цена:</p>
+                                <p>377 990 ₸</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="confirmation"><i class="material-icons">check_circle</i><i class="material-icons active">cancel</i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="block_order">
+                      <div class="checkbox">
+                        <input type="checkbox" id="chk">
+                        <label for="chk"></label>
+                      </div>
+                      <div class="block_image"><img src="/img/slide/1.png"></div>
+                      <div class="block_content">
+                        <div class="description_order">
+                          <div class="title"><a href="#">
+                              <h1>IPhone X, 256Gb, Space Gray</h1></a></div>
+                          <div class="content">
+                            <div class="item">
+                              <p>Заказчик:</p><a href="#">Серсея Ланистер</a>
+                            </div>
+                            <div class="item">
+                              <p>Статус:</p>
+                              <div><i class="material-icons time">av_timer</i>
+                                <p>Выполняется</p>
+                              </div>
+                            </div>
+                            <div class="item">
+                              <p>Дата:</p>
+                              <div><i class="material-icons">assignment_turned_in</i>
+                                <p>25/06/18</p><i class="material-icons">access_time</i>
+                                <p>12:45</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="description_right">
+                          <div class="additionally">
+                            <div class="number">
+                              <div class="item">
+                                <p>Номер заказа:</p>
+                                <p>№354186</p>
+                              </div>
+                              <div class="item">
+                                <p>Телефон:</p>
+                                <p>+7 775 152345</p>
+                              </div>
+                            </div>
+                            <div class="quantity">
+                              <div class="item">
+                                <p>Кол-во:</p>
+                                <p>1шт.</p>
+                              </div>
+                            </div>
+                            <div class="price">
+                              <div class="item">
+                                <p>Цена:</p>
+                                <p>377 990 ₸</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="confirmation"><i class="material-icons">check_circle</i><i class="material-icons">cancel</i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+          </div>
+          <div class="part_pagination"><a class="on" href="#">1</a><a href="#">2</a><a href="#">3</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer></footer>
+  </body>
+</html>

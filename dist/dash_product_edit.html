@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chocokiller Store</title>
+    <link rel="stylesheet" href="css/dash/dash.css">
+    <link rel="stylesheet" href="font/material-icons.css">
+    <script src="js/umbrella.min.js"></script>
+    <script>window.parts = {};</script>
+  </head>
+  <body>
+    <header>
+      <div class="logo"></div>
+      <div class="top">
+        <div class="search"><i class="material-icons">search</i>
+          <input type="search" name="search" placeholder="Я ищу...">
+          <select name="search_cat">
+            <option>всё</option>
+          </select>
+          <input type="button" value="Найти">
+        </div>
+        <div class="store_select">
+          <select name="store_select">
+            <option>Белый ветер</option>
+          </select>
+        </div>
+        <div class="user">
+          <div class="name">
+            <p>Eldan</p>
+          </div>
+          <div class="avatar" style="background-image: url('img/user.jpg')"></div>
+        </div>
+      </div>
+    </header>
+    <div class="main_block">
+      <div class="side_menu">
+        <div class="menu"><a href="#"><i class="material-icons">home</i><span>Главная</span></a><a href="#"><i class="material-icons">turned_in</i><span>Заказы</span>
+            <div class="num">12</div></a><a href="#"><i class="material-icons">people</i><span>Сотрудники</span></a><a href="#"><i class="material-icons">store</i><span>Магазин</span></a><a href="#"><i class="material-icons">shoping</i><span>Товары</span></a>
+        </div>
+      </div>
+      <div class="content">
+        <div class="content_title">Добавление товара</div>
+        <div class="wrap">
+          <form action="" method="post">
+            <div class="input">
+              <div class="label">
+                <p>Заголовок:</p>
+              </div>
+              <div class="item">
+                <input type="text" name="title">
+              </div>
+            </div>
+            <div class="input">
+              <div class="label">
+                <p>Категория:</p>
+              </div>
+              <div class="item">
+                <div class="tri">▼</div>
+                <select name="category">
+                  <option>Электроника</option>
+                  <option>Одежда</option>
+                </select>
+              </div>
+            </div>
+            <div class="input" style="display: flex">
+              <div class="label">
+                <p>Описание:</p>
+              </div>
+              <div class="item">
+                <textarea name="description"></textarea>
+              </div>
+            </div>
+            <div class="input">
+              <div class="label">
+                <p>Срок товара:</p>
+              </div>
+              <div class="item">                   
+                <input class="input_setting input_limited" type="radio" id="not_limited" name="gender">
+                <label for="not_limited">Неограничен</label>
+                <input class="input_setting input_limited" type="radio" id="limited" name="gender">
+                <label for="limited">Ограничен</label>
+              </div>
+            </div>
+            <div class="input">
+              <div class="label">
+                <p>Срок товара на сайте:</p>
+              </div>
+              <div class="item">
+                <div class="date">
+                  <div class="before">
+                    <p>от</p>
+                    <input class="input_mask" type="text" placeholder="01.20.18" maxlength="8">
+                    <script>
+                      var input = document.querySelector('.input_mask');
+                      input.addEventListener('keydown', function (e) {
+                      var v = this.value;
+                      
+                      if (e.keyCode !== 8) {
+                      
+                      if (
+                      (e.keyCode < 48 || e.keyCode > 57) && (e.keyCode < 37 || e.keyCode > 40)) e.preventDefault();
+                      
+                      if (/^\d\d$/.test(v) || /^\d\d\.\d\d$/.test(v)) {
+                      this.value = v + '.';
+                      }
+                      }
+                      else if (/^\d\d\.\d$/.test(v) || /^\d\d\.\d\d\.\d$/.test(v)) {
+                      this.value = v.slice(0, -1);
+                      }
+                      });
+                      
+                    </script><i class="material-icons">event_available</i>
+                  </div>
+                  <div class="after">
+                    <p>до</p>
+                    <input class="input_mask" type="text" placeholder="01.20.18" maxlength="8">
+                    <script>
+                      var input = document.querySelector('.input_mask');
+                      input.addEventListener('keydown', function (e) {
+                      var v = this.value;
+                      
+                      if (e.keyCode !== 8) {
+                      
+                      if (
+                      (e.keyCode < 48 || e.keyCode > 57) && (e.keyCode < 37 || e.keyCode > 40)) e.preventDefault();
+                      
+                      if (/^\d\d$/.test(v) || /^\d\d\.\d\d$/.test(v)) {
+                      this.value = v + '.';
+                      }
+                      }
+                      else if (/^\d\d\.\d$/.test(v) || /^\d\d\.\d\d\.\d$/.test(v)) {
+                      this.value = v.slice(0, -1);
+                      }
+                      });
+                    </script><i class="material-icons">event_busy</i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="input">
+              <div class="label">
+                <p>Изображения:</p>
+              </div>
+              <div class="item">
+                <div class="image_container">
+                  <div class="empty"><i class="material-icons">add_circle</i></div>
+                </div>
+              </div>
+            </div>
+            <div class="input">
+              <div class="label">
+                <p>Срок товара:</p>
+              </div>
+              <div class="item">                   
+                <input class="input_setting input_options" type="radio" id="not_options" name="option_product">
+                <label class="options_product" for="not_options">У товара нет вариантов</label>
+                <input class="input_setting input_options" type="radio" id="options" name="option_product" attr="data-scroll">
+                <label class="options_product" for="options">У товара есть варианты</label>
+              </div>
+            </div>
+            <div class="input">
+              <div class="label">
+                <p>Скидка:</p>
+              </div>
+              <div class="item">
+                <div class="range_container">
+                  <div class="bord"></div>
+                  <input class="range" type="range" max="99" min="1" value="50" oninput="out.value=(range.value)">
+                  <div class="progress"></div>
+                  <div class="round">                   </div>
+                </div>
+                <div class="percent_content">
+                  <input class="onlyNumbers" type="text" id="out" name="title" value="50"><span class="percent">%</span>
+                </div>
+              </div>
+            </div>
+            <div class="input" style="display: flex">
+              <div class="label">
+                <p>Варианты:</p>
+              </div>
+              <div class="item">
+                <div class="variant">
+                  <div class="image_container">
+                    <div class="empty"><i class="material-icons">add_circle</i></div>
+                  </div>
+                  <div class="meta">
+                    <p>Название</p>
+                    <input type="text" name="variant_name">
+                    <div class="meta_item"><span>Кол-во</span>
+                      <input class="onlyNumbers" type="text" name="variant_amount">
+                    </div>
+                    <div class="meta_item"><span>Цена без скидки</span>
+                      <input class="onlyNumbers" type="text" name="variant_amount">
+                    </div>
+                    <div class="meta_item"><span>Цена со скидкой</span>
+                      <input class="onlyNumbers" type="text" name="variant_amount">
+                    </div>
+                  </div>
+                </div>
+                <div class="save_content">
+                  <input class="btn white" type="button" value="Опубликовать">
+                  <input class="btn" type="button" value="Сохранить без публикации">
+                </div><a class="preview" href="#">предпросмотр</a>
+              </div>
+            </div>
+          </form>
+        </div>
+        <script>
+          u('.onlyNumbers').on('keydown', (e) => {
+              if (!('0123456789'.indexOf(e.key) >= 0
+                  || e.code === 'Backspace'
+                  || e.code === 'Enter'
+                  || e.code === 'ArrowLeft'
+                  || e.code === 'ArrowRight'))
+                  e.preventDefault();
+          });
+          
+        </script>
+        <script>
+          var range = document.querySelector('.range');
+          range.addEventListener('input', function () {
+          var v = this.value;
+          
+          progress = document.querySelector('.range_container .progress');
+          progress.style.background ='linear-gradient(to right, #ff6e41, #ff6e41 ' + v + '%, white ' + v + '%, white)';
+          
+          round = document.querySelector('.range_container .round');
+          round.style.left = 'calc(' + v + '% - 15px)';
+          });
+        </script>
+      </div>
+    </div>
+    <footer></footer>
+  </body>
+</html>

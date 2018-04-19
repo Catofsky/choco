@@ -6,7 +6,7 @@
 
     .input
         margin: 24px
-
+        
         .label, .item
             display: inline-block
         
@@ -48,6 +48,7 @@
                 box-sizing: border-box
                 padding: 24px
                 resize: vertical
+                outline: none 
 
             input
                 width: 100%
@@ -56,6 +57,7 @@
                 border: $border_color solid 1px
                 box-sizing: border-box
                 padding: 0 24px
+                outline: none 
 
             input[type=file]
                 border-radius: 0
@@ -71,7 +73,118 @@
                 -webkit-appearance: none
                 -moz-appearance: none
                 appearance: none
-            
+                outline: none 
+
+            input[type="radio"]
+                display: none
+                -webkit-appearance: none;
+                width: 168px
+                height: 28px 
+                border-radius: 50px
+                border: 1px solid $border_color
+                text-align: center 
+                padding-top: 4px
+                padding-bottom: 8px
+                color: $border_color
+                outline: none 
+
+                &+label
+                    width: 168px
+                    height: 16px 
+                    border-radius: 50px
+                    border: 1px solid $border_color
+                    text-align: center
+                    padding: 7px 49px 8px 47px
+                    color: $border_color
+
+                    &:last-child
+                        margin-left: 20px
+                        padding: 7px 49px 8px 47px
+
+                    &.input_limited
+                        width: 168px
+
+                        &:last-child
+                            margin-left: 20px
+
+                &:checked+label
+                    border: 1px solid $dash_color
+                    color: $border_color
+
+            input[type="radio"].input_options
+                display: none
+                width: 188px
+                -webkit-appearance: none;
+                border-radius: 50px
+                border: 1px solid $border_color
+                text-align: center 
+                padding: 7px 10px 8px 10px
+                color: $border_color
+                outline: none
+
+                &+.options_product
+                    height: 16px 
+                    border-radius: 50px
+                    border: 1px solid $border_color
+                    text-align: center
+                    padding: 3px 10px 4px 10px
+                    color: $border_color
+
+                    &:last-child
+                        margin-left: 20px
+                        padding: 3px 10px 4px 10px
+
+                    &.input_options
+
+                        &:last-child
+                            margin-left: 20px
+
+                &:checked+.options_product
+                    border: 1px solid $dash_color
+                    color: $border_color
+
+
+            .date 
+                display: flex
+                .before
+                    display: flex
+                    margin-right: 80px
+                    p
+                        width: 17px
+                        margin-right: 14px
+                    input
+                        width: 98px
+                        height: 26px
+                        border: 1px solid $dash_menu_font
+                        margin-left: 10px
+                        padding: 0px
+                        text-align: center
+                        &::-webkit-inner-spin-button,
+                        &::-webkit-outer-spin-button
+                            -webkit-appearance: none
+                            margin: 0
+                    i.material-icons
+                        color: $dash_menu_icon
+
+                .after
+                    display: flex
+                    p
+                        width: 17px
+                        margin-right: 14px
+                    input
+                        width: 98px
+                        height: 26px
+                        border: 1px solid $dash_menu_font
+                        margin-right: 10px
+                        padding-left: 5px
+                        text-align: center
+                        &::-webkit-inner-spin-button,
+                        &::-webkit-outer-spin-button
+                            -webkit-appearance: none
+                            margin: 0
+                    i.material-icons
+                        color: $dash_menu_icon
+
             .tri
                 display: inline
                 position: absolute
@@ -125,3 +238,63 @@
             .onlyNumbers
                 width: 120px
                 text-align: center
+
+            .percent_content
+                width: 100%
+                input
+                    margin-left: 140px
+                .percent
+                    position: absolute
+                    left: 200px
+                    bottom: 6px
+
+            .range_container
+                position: relative
+                width: 400px
+                border-radius: 5px
+                margin-bottom: 25px
+                .bord
+                    width: 400px
+                    height: 10px
+                    margin-bottom: 0px
+                    padding: 0px
+                    position: absolute
+                    border-radius: 5px
+                    border: 1px solid $border_color 
+                .range
+                    width: 400px
+                    height: 10px
+                    margin: 0px
+                    padding: 0px
+                    position: absolute
+                    border-radius: 5px
+                    border: 1px solid $border_color
+                    &::-webkit-slider-thumb
+                        -webkit-appearance: none
+                .progress
+                    width: 400px
+                    height: 10px
+                    margin-top: 1px
+                    position: absolute
+                    pointer-events: none
+                    background: linear-gradient(to right, $dash_color, $dash_color 50%, white 50%, white)
+                    border-radius: 5px
+
+                .round
+                    width: 20px
+                    height: 20px
+                    border-radius: 50%
+                    box-shadow: 0 0 1px rgba(0, 0, 0, .5)
+                    background: white
+                    border: 1px solid $border_color
+                    position: absolute
+                    pointer-events: none
+                    left: calc(50% - 15px)
+                    bottom: -17px
+
+            .save_content
+                display: flex
+            a.preview
+                color: #54a8d2
+                float: right
+                margin-right: 100px

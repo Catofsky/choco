@@ -1,0 +1,173 @@
+.sort_content
+	padding: 0px 28px
+	display: flex
+	margin: 18px 0px 20px 0px
+	i.material-icons
+		margin-right: 6px
+		color: $dash_menu_font
+		font-size: 18px
+	select
+		margin-right: 20px
+		border: 1px solid $border_color
+		border-radius: 10px
+		height: 18px
+		text-align: center
+		width: 118px
+		outline: none
+
+	input
+		margin-right: 20px
+		border: 1px solid $border_color
+		border-radius: 10px
+		height: 18px
+		padding-left: 12px
+		outline: none
+
+		&:last-child
+			margin-right: 0px
+	.input_search
+		width: calc(348px - 12px)
+	.input_from
+		width: 98px
+	.input_to
+		width: 98px
+	.tg1
+		position: absolute
+		margin-left: 760px
+		color: $sad_gray
+	.tg2
+		position: absolute
+		margin-left: 895px
+		color: $sad_gray
+
+.oreder_slider
+	.block_order
+		height: 140px
+		margin: 0px 10px 0px 10px 
+		padding: 16px 0px 0px 0px 
+		border: 1px solid $border_color
+		border-left-style: none
+		border-bottom-style: none
+		border-right-style: none
+		display: flex
+		justify-content: space-between
+		&:last-child
+			border: 1px solid $border_color
+			border-left-style: none
+			border-right-style: none
+		&.block_order
+			display: flex
+			justify-content: flex-start
+			.checkbox
+				width: 24px
+				display: flex
+				justify-content: center
+				padding: 48px 5px 0px 0px
+				input
+					cursor: pointer
+
+				label
+					width: 14px
+					height: 14px
+					border-radius: 3px
+					border: 2px solid $border_color
+					background: url('../img/radio/done.svg') $main_orange no-repeat
+					
+			.block_image
+				height: 107px
+				width: 140px
+				margin-right: 15px
+				img
+					height: 107px
+					width: 140px
+			.block_content
+				display: flex
+				.description_order
+					.title
+						h1
+							color: #54a8d2
+					.content
+						.item
+							display: flex
+							justify-content: flex-start
+							width: 318px 
+							height: 16px
+							margin-bottom: 20px
+							i.material-icons
+								color: $border_color
+								margin-right: 5px
+								&.done
+									color: #2db573
+								&.cancel
+									color: #e14539
+								&.time
+									color: #eea815
+							p
+								width: 59px			
+								margin: 3px 13px 0px 0px
+							p:last-child
+								margin-right: 35px
+								margin-bottom: 0px
+							a
+								margin: 3px 35px 0px 0px
+								color: #6bb4d8
+							div
+								display: flex
+								justify-content: flex-start
+								width: 172px
+				.description_right
+					margin-top: 30px
+					width: 480px
+					display: flex
+					flex-direction: column
+					.additionally
+						display: flex
+						justify-content: space-between
+						height: 60px
+						.number
+							.item
+								display: flex
+								justify-content: space-between
+								width: 230px 
+								height: 16px
+								margin-bottom: 20px
+								p
+									width: 101px
+									margin: 3px 13px 0px 0px
+						.quantity
+							.item
+								display: flex
+								align-items: center
+								flex-direction: column
+								justify-content: space-between
+								width: 100px
+								height: 55px
+								margin-bottom: 20px
+								p
+									text-align: center
+						.price
+							.item							
+								display: flex
+								flex-direction: column
+								justify-content: space-between
+								align-items: flex-start
+								width: 120px
+								height: 16px
+								margin-bottom: 20px
+								p:last-child
+									font-size: 24px
+
+					.confirmation
+						display: flex
+						justify-content: flex-end
+						i.material-icons
+							font-size: 28px
+							color: $dash_menu_font
+							margin-right: 20px
+							&:last-child
+								margin-right: 0px
+
+							&.active
+								color: #2db573
+								&:last-child
+									color: #e14539
