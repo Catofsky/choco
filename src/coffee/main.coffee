@@ -8,3 +8,4 @@ fib = (n) ->
 
 
 println fib x for x in [1..10]
+println 'Hello World!'
