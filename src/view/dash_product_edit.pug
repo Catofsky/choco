@@ -1,0 +1,178 @@
+extends dash/_layout.pug
+
+block title
+    title Chocokiller Store
+
+block content
+
+    .content_title Добавление товара
+
+    .wrap
+
+        form(action='' method='post')
+
+            .input
+                .label
+                    p Заголовок:
+                .item
+                    input(type='text' name='title')
+
+            .input
+                .label
+                    p Категория:
+                .item
+                    .tri ▼
+                    select(name='category')
+                        option Электроника
+                        option Одежда
+
+            .input(style='display: flex')
+                .label
+                    p Описание:
+                .item
+                    textarea(name='description')
+
+            .input
+                .label
+                    p Срок товара:
+                .item                    
+                    input.input_setting.input_limited(type="radio" id="not_limited" name="gender")
+                    label(for="not_limited") Неограничен
+                    input.input_setting.input_limited(type="radio" id="limited" name="gender")
+                    label(for="limited") Ограничен
+
+            .input
+                .label
+                    p Срок товара на сайте:
+                .item
+                    .date
+                        .before
+                            p от
+                            input(class="input_mask" type="text" placeholder="01.20.18" maxlength="8")
+                            script.
+                                var input = document.querySelector('.input_mask');
+                                input.addEventListener('keydown', function (e) {
+                                var v = this.value;
+
+                                if (e.keyCode !== 8) {
+
+                                if (
+                                (e.keyCode < 48 || e.keyCode > 57) && (e.keyCode < 37 || e.keyCode > 40)) e.preventDefault();
+
+                                if (/^\d\d$/.test(v) || /^\d\d\.\d\d$/.test(v)) {
+                                this.value = v + '.';
+                                }
+                                }
+                                else if (/^\d\d\.\d$/.test(v) || /^\d\d\.\d\d\.\d$/.test(v)) {
+                                this.value = v.slice(0, -1);
+                                }
+                                });
+
+                            i(class="material-icons") event_available
+                        .after
+                            p до
+                            input(class="input_mask" type="text" placeholder="01.20.18" maxlength="8")
+                            script.
+                                var input = document.querySelector('.input_mask');
+                                input.addEventListener('keydown', function (e) {
+                                var v = this.value;
+
+                                if (e.keyCode !== 8) {
+
+                                if (
+                                (e.keyCode < 48 || e.keyCode > 57) && (e.keyCode < 37 || e.keyCode > 40)) e.preventDefault();
+
+                                if (/^\d\d$/.test(v) || /^\d\d\.\d\d$/.test(v)) {
+                                this.value = v + '.';
+                                }
+                                }
+                                else if (/^\d\d\.\d$/.test(v) || /^\d\d\.\d\d\.\d$/.test(v)) {
+                                this.value = v.slice(0, -1);
+                                }
+                                });
+                            i(class="material-icons") event_busy
+
+
+            .input
+                .label
+                    p Изображения:
+                .item
+                    .image_container
+                        .empty
+                            i.material-icons add_circle
+
+            .input
+                .label
+                    p Срок товара:
+                .item                    
+                    input.input_setting.input_options(type="radio" id="not_options" name="option_product")
+                    label(for="not_options" class="options_product") У товара нет вариантов
+                    input.input_setting.input_options(type="radio" id="options" name="option_product" attr="data-scroll")
+                    label(for="options" class="options_product") У товара есть варианты
+            
+            .input
+                .label
+                    p Скидка:
+                .item
+                    .range_container
+                        .bord
+                        input(class="range" type="range" max="99" min="1" value="50" oninput="out.value=(range.value)")
+                        .progress
+                        .round                    
+                    .percent_content
+                        input.onlyNumbers(type='text' id="out" name='title' value='50')
+                        span.percent %
+                    
+     
+
+            .input(style='display: flex')
+                .label
+                    p Варианты:
+                .item
+                    .variant
+                        .image_container
+                            .empty
+                                i.material-icons add_circle
+
+                        .meta
+                            p Название
+                            input(type='text' name='variant_name')
+
+                            .meta_item
+                                span Кол-во
+                                input.onlyNumbers(type='text' name='variant_amount')
+                            
+                            .meta_item
+                                span Цена без скидки
+                                input.onlyNumbers(type='text' name='variant_amount')
+                            
+                            .meta_item
+                                span Цена со скидкой
+                                input.onlyNumbers(type='text' name='variant_amount')
+                    .save_content
+                        input.btn.white(type='button' value='Опубликовать')
+                        input.btn(type='button' value='Сохранить без публикации')
+                    a.preview(href="#") предпросмотр
+
+
+    script.
+        u('.onlyNumbers').on('keydown', (e) => {
+            if (!('0123456789'.indexOf(e.key) >= 0
+                || e.code === 'Backspace'
+                || e.code === 'Enter'
+                || e.code === 'ArrowLeft'
+                || e.code === 'ArrowRight'))
+                e.preventDefault();
+        });
+
+    script.
+        var range = document.querySelector('.range');
+        range.addEventListener('input', function () {
+        var v = this.value;
+
+        progress = document.querySelector('.range_container .progress');
+        progress.style.background ='linear-gradient(to right, #ff6e41, #ff6e41 ' + v + '%, white ' + v + '%, white)';
+
+        round = document.querySelector('.range_container .round');
+        round.style.left = 'calc(' + v + '% - 15px)';
+        });

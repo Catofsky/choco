@@ -1,0 +1,93 @@
+extends dash/_layout.pug
+
+block title
+    title Chocokiller Store
+
+block content
+
+    mixin item_dialogue(image,title,customer,status_text,time_date,time,number_oreder,phone,amount,price)
+        .block_order
+            .checkbox
+                input(type="checkbox" id="chk")
+                label(for="chk")
+            .block_image
+                img(src=image)
+            .block_content
+                .description_order
+                    .title
+                        a(href="#")
+                            h1=title
+                    .content
+                        .item
+                            p Заказчик:
+                            a(href="#")= customer 
+                        .item
+                            p Статус:
+                            div
+                                if (status_text == "Выполнено")
+                                    i(class="material-icons done") assignment_turned_in
+                                else if (status_text == "Не выполнено")
+                                    i(class="material-icons cancel") cancel
+                                else if (status_text == "Выполняется")
+                                    i(class="material-icons time") av_timer
+                                p= status_text
+                        .item
+                            p Дата:
+                            div
+                                i(class="material-icons") assignment_turned_in
+                                p= time_date
+                                i(class="material-icons") access_time
+                                p= time
+                .description_right
+                    .additionally
+                        .number
+                            .item
+                                p Номер заказа:
+                                p= "№" + number_oreder 
+                            .item
+                                p Телефон:
+                                p= phone 
+                        .quantity
+                            .item
+                                p Кол-во:
+                                p= amount + "шт."
+                        .price
+                            .item
+                                p Цена:
+                                p= price + " ₸"
+                    .confirmation
+                        if (status_text == "Выполнено")
+                            i(class="material-icons active") check_circle
+                        else if (status_text == "Не выполнено")
+                            i(class="material-icons") check_circle
+                        else if (status_text == "Выполняется")
+                            i(class="material-icons") check_circle
+
+                        if (status_text == "Выполнено")
+                            i(class="material-icons") cancel
+                        else if (status_text == "Не выполнено")
+                            i(class="material-icons active") cancel
+                        else if (status_text == "Выполняется")
+                            i(class="material-icons") cancel
+                        
+
+    .content_title Заказы
+
+    .wrap
+        .sort_content
+            i(class="material-icons") date_range
+            select.all
+                option &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;всё
+            select.state
+                option &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Активно
+            input.input_search(placeholder="название или номер товара")
+            .tg1 ₸
+            input.input_from(placeholder="от")
+            .tg2 ₸ 
+            input.input_to(placeholder="до")
+                
+            +item_dialogue("/img/slide/1.png","IPhone X, 256Gb, Space Gray","Серсея Ланистер","Выполнено","25/06/18","12:45","354186","+7 775 152345","1","377 990")
+            +item_dialogue("/img/slide/1.png","IPhone X, 256Gb, Space Gray","Серсея Ланистер","Не выполнено","25/06/18","12:45","354186","+7 775 152345","1","377 990")
+            +item_dialogue("/img/slide/1.png","IPhone X, 256Gb, Space Gray","Серсея Ланистер","Выполняется","25/06/18","12:45","354186","+7 775 152345","1","377 990")
+            .content_page
+                +part('pagination', { from: 1, to: 3, on: 1 })
