@@ -1,0 +1,150 @@
+.wrap
+    .statistic
+        display: flex
+        align-items: stretch
+
+    .main
+        width: 700px
+
+        .block
+            margin: 24px 0
+
+        .top
+            display: flex
+
+            & > div
+                width: 50%
+            
+            .list
+
+            .title
+                margin: 0 24px
+            
+            .item
+                div
+                    display: inline-block
+                    height: 34px
+                    line-height: 34px
+
+                .num
+                    color: #808080
+                    width: 24px
+
+                .name
+                    color: #54a8d2
+                    cursor: pointer
+
+                    &:hover
+                        text-decoration: underline
+
+                .sum
+                    color: #404040
+                    float: right
+
+        .title
+            color: #404040
+            font-size: 18px
+            line-height: 40px
+            height: 40px
+            width: 200px
+            display: inline-block
+
+        .graph
+            margin: 24px 0
+            height: 400px
+        
+        .period
+            display: inline-block
+            height: 34px
+            border: $gray_border solid 1px
+            box-sizing: border-box
+            border-radius: 17px
+
+            .item
+                display: inline-block
+                height: 34px
+                line-height: 34px
+                padding: 0 24px
+                cursor: pointer
+                position: relative
+
+                &:not(:first-child):after
+                    content: ''
+                    width: 1px
+                    background: $gray_border
+                    height: 17px
+                    position: absolute
+                    top: 8px
+                    left: 0
+
+                &.active
+                    color: $main_orange
+
+
+    .side
+        width: 300px
+
+        .title
+            color: #404040
+            font-size: 18px
+            text-align: center
+            height: 64px
+            line-height: 64px
+
+    .widget
+        width: 300px
+
+    .canvas
+        padding: 0 60px
+        width: 180px
+        height: 180px
+    
+    .legend
+        margin: 24px
+
+        .item
+            font-size: 13px
+            color: $sad_gray
+            line-height: 24px
+            height: 24px
+            padding-left: 44px
+            position: relative
+
+            &:after
+                content: ''
+                position: absolute
+                left: 20px
+                top: 6px
+                width: 12px
+                height: 12px
+            
+            &:nth-child(1):after
+                background: #9cdce6
+            
+            &:nth-child(2):after
+                background: #c8e817
+
+            &:nth-child(3):after
+                background: #f159bd
+            
+            &:nth-child(4):after
+                background: #f2875a
+            
+            &:nth-child(5):after
+                background: #5a69f2
+            
+            &:nth-child(6):after
+                background: #ab5af2
+            
+            &:nth-child(7):after
+                background: #f25757
+            
+            &:nth-child(8):after
+                background: #fcd949
+            
+            &:nth-child(9):after
+                background: #49fc91
+
+                
+            
+            

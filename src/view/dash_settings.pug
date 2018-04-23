@@ -1,0 +1,27 @@
+extends dash/_layout.pug
+
+block title
+    title Chocokiller Store
+
+block content
+
+    .content_title Создание магазина
+
+    .wrap
+
+        form(action='' method='post')
+
+            .input
+                .label
+                    p Заголовок
+                .item
+                    input(type='text' name='title' required)
+
+            .input(style='display: flex')
+                .label
+                    p Описание
+                .item
+                    textarea(name='description')
+
+
+        input.btn(type='button' value='Сохранить')
