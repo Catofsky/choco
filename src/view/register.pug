@@ -7,23 +7,32 @@ include _header.pug
     .site_width
         .title Форма регистрации
         form(method='POST' action='/register')
-            +part('text_input', { title: 'Имя', name: 'fname', placeholder: 'Тирион' })
-            +part('text_input', { title: 'Фамилия', name: 'lname', placeholder: 'Ланистер' })
+            +part('text_input', { title: 'Имя:', name: 'fname', placeholder: 'Тирион' })
+            +part('text_input', { title: 'Фамилия:', name: 'lname', placeholder: 'Ланистер' })
             
             label
-                span Ваш пол
+                span Ваш пол:
                 .block
                     +part('radiobutton', { title: 'Мужской', name: 'gender', checked: true })
                     +part('radiobutton', { title: 'Женский', name: 'gender' })
 
-            +part('text_input', { title: 'Логин', name: 'username' })
-            +part('text_input', { title: 'Телефон', name: 'phone', placeholder: '+7 123 456789' })
-            +part('text_input', { title: 'Почта', name: 'email', placeholder: 'mail@gmail.com', type: 'email' })
-            +part('text_input', { title: 'Пароль', name: 'password', type: 'password' })
-            +part('text_input', { title: 'Повторите пароль', name: 'repeat', type: 'password' })
+            +part('text_input', { title: 'Логин:', name: 'username' })
+            +part('text_input', { title: 'Телефон:', name: 'phone', placeholder: '+7 123 456789' })
+            +part('text_input', { title: 'Почта:', name: 'email', placeholder: 'mail@gmail.com', type: 'email' })
+            +part('text_input', { title: 'Пароль:', name: 'password', type: 'password' })
+            +part('text_input', { title: 'Повторите пароль:', name: 'repeat', type: 'password' })
 
             +part('checkbox', { title: 'Принимаю пользовательское соглашение', name: 'accept' })
             input.btn(type='submit' value='Регистрация')
+
+style.
+    .part_checkbox label span {
+        right: 0px !important;
+        position: relative !important;
+        top: -8px !important;
+
+    }
+
 
 
 include _footer.pug

@@ -1184,7 +1184,10 @@ footer {
       .main_wrapper .sorting .item:not(:last-child) {
         border-right: #d9d9d9 solid 1px; }
   .main_wrapper .rating_more {
-    margin: 0 24px; }
+    margin: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    width: 165px; }
 
 .store_banner {
   height: 125px;
@@ -1781,8 +1784,7 @@ footer {
       border: #d9d9d9 1px solid;
       appearance: none;
       -moz-appearance: none;
-      -webkit-appearance: none;
-      color: #d9d9d9; }
+      -webkit-appearance: none; }
       .profile_main_settings .profile_main .input_setting.input_triple:not(:first-child) {
         margin-left: 20px; }
       .profile_main_settings .profile_main .input_setting.input_triple:nth-child(2) {
@@ -1803,8 +1805,7 @@ footer {
       border: 1px solid #d9d9d9;
       text-align: center;
       padding-top: 4px;
-      padding-bottom: 8px;
-      color: #d9d9d9; }
+      padding-bottom: 8px; }
       .profile_main_settings .profile_main .input_setting.input_double[type="radio"] + label {
         width: 190px;
         height: 16px;
@@ -1812,8 +1813,7 @@ footer {
         border: 1px solid #d9d9d9;
         text-align: center;
         padding-top: 4px;
-        padding-bottom: 8px;
-        color: #d9d9d9; }
+        padding-bottom: 8px; }
         .profile_main_settings .profile_main .input_setting.input_double[type="radio"] + label:hover {
           border: 1px solid #ff6e41; }
         .profile_main_settings .profile_main .input_setting.input_double[type="radio"] + label:last-child {
@@ -1824,6 +1824,7 @@ footer {
             margin-left: 20px; }
       .profile_main_settings .profile_main .input_setting.input_double[type="radio"]:checked + label {
         background: #ff6e41;
+        border: 1px solid #ff6e41;
         color: #fff; }
       .profile_main_settings .profile_main .input_setting.input_double[type="radio"] input::-webkit-input-placeholder {
         color: #d9d9d9; }

@@ -35,8 +35,8 @@ block content
             .input
                 .label
                     p Срок товара:
-                .item                    
-                    input.input_setting.input_limited(type="radio" id="not_limited" name="gender")
+                .item
+                    input.input_setting.input_limited(checked=true type="radio" id="not_limited" name="gender")
                     label(for="not_limited") Неограничен
                     input.input_setting.input_limited(type="radio" id="limited" name="gender")
                     label(for="limited") Ограничен
@@ -105,7 +105,7 @@ block content
                 .label
                     p Срок товара:
                 .item                    
-                    input.input_setting.input_options(type="radio" id="not_options" name="option_product")
+                    input.input_setting.input_options(checked=true type="radio" id="not_options" name="option_product")
                     label(for="not_options" class="options_product") У товара нет вариантов
                     input.input_setting.input_options(type="radio" id="options" name="option_product" attr="data-scroll")
                     label(for="options" class="options_product") У товара есть варианты

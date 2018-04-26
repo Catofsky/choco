@@ -51,7 +51,7 @@ include _header.pug
           .item А-Я
 
         .rating_more
-          span.text Рейтинг более
+          +part('checkbox', { title: "Рейтинг более" })
           +part('rating', 4)
 
         .view_switch
