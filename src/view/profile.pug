@@ -3,10 +3,13 @@ include _header.pug
 
 +part_title_page("Профиль")
 
-mixin item_natification(type,type_name,name_product,price_befor,event,price_now)
+mixin item_natification(type_name,name_product,price_befor,event,price_now)
 	.item_notifications
 		.type_notifications
-			i(class="material-icons")= type
+			if (type_name == "Изменение цены")
+				i(class="material-icons") trending_down
+			else if (type_name == "Акция")
+				i(class="material-icons") local_offer
 			p= type_name
 		.title_notifications
 			a(href="#")= name_product
@@ -48,7 +51,7 @@ mixin item_natification(type,type_name,name_product,price_befor,event,price_now)
 						.num 1 520
 						.text Бонус
 
-		+part_sort("Новым","Старым","а-я")
+		+part_sort("новым","старым","а-я")
 
 		.content_block
 			.side_block
@@ -122,10 +125,10 @@ mixin item_natification(type,type_name,name_product,price_befor,event,price_now)
 					h1 Уведомления
 					p Смотреть все
 				.list_notifications
-					+item_natification("trending_down","Изменение цены","Смартфон Apple iPhone X, 256Gb, white","377 990","call_received","350 980")
-					+item_natification("trending_down","Акция","Белый ветер: Пятничная распродажа в Белом ветре!","горячее","","06:21:30")
-					+item_natification("trending_down","Акция","Крендель: Приведи друга, и получи второй Латте бесплатно!","новое","","96:59:30")
-					+item_natification("trending_down","Изменение цены","Смартфон Apple iPhone X, 256Gb, silver","377 990","call_made","350 980")
-					+item_natification("trending_down","Акция","Мечта: Ночная распродажа. -20% на ряд товаров","","","43:21:30")
+					+item_natification("Изменение цены","Смартфон Apple iPhone X, 256Gb, white","377 990","call_received","350 980")
+					+item_natification("Акция","Белый ветер: Пятничная распродажа в Белом ветре!","горячее","","06:21:30")
+					+item_natification("Акция","Крендель: Приведи друга, и получи второй Латте бесплатно!","новое","","96:59:30")
+					+item_natification("Изменение цены","Смартфон Apple iPhone X, 256Gb, silver","377 990","call_made","350 980")
+					+item_natification("Акция","Мечта: Ночная распродажа. -20% на ряд товаров","","","43:21:30")
 
 include _footer.pug
