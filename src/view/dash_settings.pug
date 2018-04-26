@@ -1,0 +1,99 @@
+extends dash/_layout.pug
+
+block title
+    title Chocokiller Store
+
+block content
+
+    .content_title Настройки
+
+    .wrap
+
+        form(action='' method='post')
+
+            .input
+                .label
+                    p Название
+                .item
+                    input(type='text' name='title' required)
+            
+            .input
+                .label
+                    p Деятельность
+                .item
+                    select(name='activity')
+                        each option in ['Продажа товаров', 'Услуги', 'Ещё услуги']
+                            option= option
+            
+            .input
+                .label
+                    p Дата основания
+                .item.date
+                    select.day
+                        - for (var i = 1; i <= 30; i++)
+                            option= i
+
+                    select.month
+                        option Январь
+                        option Февраль
+                        option Март
+                        option Апрель
+                        option Май
+
+                    select.year
+                        - for (var i = 1990; i <= 2018; i++)
+                            option= i
+
+
+        //- input.btn(type='button' value='Сохранить')
+
+
+    .content_title Контакты
+
+    .wrap
+
+        form(action='' method='post')
+
+            .input
+                .label
+                    p Телефоны
+                .item
+                    .wrap
+                        input(type='text' name='phone[]')
+                        .add(data-name='phone') +
+
+                    .wrap.mg
+                        input(type='text' name='phone[]')
+                        .rm x
+
+                    .wrap.mg
+                        input(type='text' name='phone[]')
+                        .rm x
+            
+            .input
+                .label
+                    p E-mail
+                .item
+                    .wrap
+                        input(type='text' name='email[]')
+                        .add(data-name='email') +
+
+
+        input.btn(type='button' value='Сохранить')
+
+    script.
+        u('.input .add')
+            .on('click', function () {
+                var name = this.dataset.name;
+                var s = '<div class="wrap mg"><input type="text" name="' + name + '[]">' +
+                '<div class="rm">x</div></div>';
+                u(this).closest('.item').append(s);
+                u(this).closest('.item').find('.rm').on('click', function () {
+                    u(this).parent().remove();
+                });
+            });
+        
+        u('.input .rm')
+            .on('click', function () {
+                u(this).parent().remove();
+            });

@@ -19,12 +19,14 @@ html(lang='en')
     body
         include _header
         -
+            var storeUrl = '/store';
             var menu = [
-                { title: 'Главная', icon: 'home', href: '#' },
-                { title: 'Заказы', icon: 'turned_in', href: '#', count: 12 },
-                { title: 'Сотрудники', icon: 'people', href: '#' },
-                { title: 'Магазин', icon: 'store', href: '#' },
-                { title: 'Товары', icon: 'shoping', href: '#' }
+                { title: 'Главная', icon: 'home', href: storeUrl },
+                { title: 'Заказы', icon: 'turned_in', href: storeUrl + '/orders', count: 12 },
+                { title: 'Сотрудники', icon: 'people', href: storeUrl + '/members' },
+                //- { title: 'Магазин', icon: 'store', href: '#' },
+                { title: 'Товары', icon: 'shoping', href: storeUrl + '/products' },
+                { title: 'Настройки', icon: 'settings', href: storeUrl + '/settings' }
             ]
 
         .main_block

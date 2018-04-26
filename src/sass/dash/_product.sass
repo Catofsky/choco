@@ -6,6 +6,34 @@
 
     .input
         margin: 24px
+        position: relative
+        display: flex
+        align-items: stretch
+
+        .mg
+            margin-top: 12px
+
+        .add, .rm
+            width: 20px
+            height: 20px
+            box-sizing: border-box
+            border: $gray_border solid 2px
+            border-radius: 50%
+            position: absolute
+            top: 4px
+            right: -34px
+            color: $gray_border
+            text-align: center
+            line-height: 14px
+            font-weight: bold
+            cursor: pointer
+
+            &:hover
+                color: darken($gray_border, 10%)
+                border: darken($gray_border, 10%) solid 2px
+
+        .rm:hover
+            background: #fcc
         
         .label, .item
             display: inline-block
@@ -16,10 +44,28 @@
             p
                 text-align: right
                 margin: 0 24px
+                line-height: 30px
 
         .item
             width: 500px
             position: relative
+
+            .wrap
+                position: relative
+                width: 500px
+
+            &.date
+                select
+                    display: inline-block
+                    width: 100px
+                    text-align: center
+
+                .month
+                    width: 200px
+                    margin-left: 46px
+                
+                .year
+                    margin-left: 46px
 
             span
                 margin: 0 12px
@@ -57,7 +103,10 @@
                 border: $border_color solid 1px
                 box-sizing: border-box
                 padding: 0 24px
-                outline: none 
+                outline: none
+                
+                // &:not(last-child)
+                //     margin-bottom: 12px
 
             input[type=file]
                 border-radius: 0

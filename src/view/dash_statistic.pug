@@ -1,0 +1,133 @@
+
+extends dash/_layout.pug
+
+
+append scripts
+    script(src='js/moment.js')
+    script(src='js/chart.min.js')
+
+
+block title
+    title Chocokiller Store
+
+
+block content
+
+    -
+        var widgets = {
+            sells: {
+                title: 'Продажи по категориям',
+                labels: ['Смартфоны', 'Компьютеры', 'Телевизоры'],
+                data: [60, 30, 10]
+            },
+            buyer_age: {
+                title: 'Возраст покупателя',
+                labels: ['До 18-ти лет', 'От 18-ти до 30-ти лет', 'От 30-ти и выше'],
+                data: [20, 60, 20]
+            },
+            gender: {
+                title: 'Пол покупателя',
+                labels: ['Женщины', 'Мужчины'],
+                data: [70, 30]
+            }
+        };
+
+    .content_title Статистика
+
+    .wrap
+        .statistic
+            .main
+                .block
+                    .title Заказы
+                    .period
+                        .item.active За день
+                        .item За неделю
+                        .item За месяц
+                        .item За год
+
+                    .graph
+                        canvas#graph
+                
+
+                .block
+                    .top
+                        div
+                            .title Топ покупателей
+                            .list
+                                - for (var i = 1; i <= 10; i++)
+                                    .item
+                                        .num= i
+                                        a.name(href='#') Джон Сноуден
+                                        .sum 200 000
+
+                        div
+                            .title Топ продаж
+                            .list
+                                - for (var i = 1; i <= 10; i++)
+                                    .item
+                                        .num= i
+                                        a.name(href='#') Джон Сноуден
+                                        .sum 200 000
+
+
+            .side
+                - for (var key in widgets)
+                    .widget
+                        .title= widgets[key].title
+                        .canvas
+                            canvas(id=key)
+                        
+                        .legend
+                            - for (var i = 0; i < widgets[key].labels.length; i++)
+                                .item= widgets[key].labels[i] + ' ' + widgets[key].data[i] + '%'
+
+
+        script.
+            
+            new Chart(document.getElementById('graph').getContext('2d'), {
+                type: 'line',
+                data: {
+                    labels: ['ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ', 'ВС'],
+                    datasets: [{
+                        label: 'Заказы',
+                        borderColor: '#ff6e41',
+                        data: [2, 4, 3, 5, 8, 12, 9]
+                    }]
+                },
+                options: {}
+            });
+
+
+            var bgColors = [
+                '#9cdce6',
+                '#c8e817',
+                '#f159bd',
+                '#f2875a',
+                '#5a69f2',
+                '#ab5af2',
+                '#f25757',
+                '#fcd949',
+                '#49fc91',
+            ];
+
+            var widgets = !{JSON.stringify(widgets)};
+
+            for (var k in widgets) {
+                new Chart(document.getElementById(k).getContext('2d'), {
+                    type: 'doughnut',
+                    data: {
+                        labels: widgets[k].labels,
+                        datasets: [{
+                            data: widgets[k].data,
+                            backgroundColor: bgColors
+                        }]
+                    },
+                    options: {
+                        legend: {
+                            display: false
+                        },
+                        responsive: true,
+                        maintainAspectRatio: false
+                    }
+                });
+            }

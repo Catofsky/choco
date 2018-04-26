@@ -32,9 +32,9 @@ header {
   header .store_select {
     display: inline;
     height: 30px;
-    margin-left: 90px; }
+    margin-left: 70px; }
     header .store_select select {
-      width: 200px;
+      width: 180px;
       height: 30px;
       box-sizing: border-box;
       border-radius: 16px;
@@ -355,17 +355,54 @@ header {
   margin-top: 48px; }
 
 .main_block .input {
-  margin: 24px; }
+  margin: 24px;
+  position: relative;
+  display: flex;
+  align-items: stretch; }
+  .main_block .input .mg {
+    margin-top: 12px; }
+  .main_block .input .add, .main_block .input .rm {
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+    border: #d9d9d9 solid 2px;
+    border-radius: 50%;
+    position: absolute;
+    top: 4px;
+    right: -34px;
+    color: #d9d9d9;
+    text-align: center;
+    line-height: 14px;
+    font-weight: bold;
+    cursor: pointer; }
+    .main_block .input .add:hover, .main_block .input .rm:hover {
+      color: silver;
+      border: silver solid 2px; }
+  .main_block .input .rm:hover {
+    background: #fcc; }
   .main_block .input .label, .main_block .input .item {
     display: inline-block; }
   .main_block .input .label {
     width: 260px; }
     .main_block .input .label p {
       text-align: right;
-      margin: 0 24px; }
+      margin: 0 24px;
+      line-height: 30px; }
   .main_block .input .item {
     width: 500px;
     position: relative; }
+    .main_block .input .item .wrap {
+      position: relative;
+      width: 500px; }
+    .main_block .input .item.date select {
+      display: inline-block;
+      width: 100px;
+      text-align: center; }
+    .main_block .input .item.date .month {
+      width: 200px;
+      margin-left: 46px; }
+    .main_block .input .item.date .year {
+      margin-left: 46px; }
     .main_block .input .item span {
       margin: 0 12px; }
     .main_block .input .item .image_container {
@@ -936,6 +973,121 @@ header {
               color: #2db573; }
               .block_dash_promotions.block_dash_promotions .block_content .description_right .confirmation i.material-icons.active:last-child {
                 color: #e14539; }
+
+.wrap .statistic {
+  display: flex;
+  align-items: stretch; }
+
+.wrap .main {
+  width: 700px; }
+  .wrap .main .block {
+    margin: 24px 0; }
+  .wrap .main .top {
+    display: flex; }
+    .wrap .main .top > div {
+      width: 50%; }
+    .wrap .main .top .title {
+      margin: 0 24px; }
+    .wrap .main .top .item div {
+      display: inline-block;
+      height: 34px;
+      line-height: 34px; }
+    .wrap .main .top .item .num {
+      color: #808080;
+      width: 24px; }
+    .wrap .main .top .item .name {
+      color: #54a8d2;
+      cursor: pointer; }
+      .wrap .main .top .item .name:hover {
+        text-decoration: underline; }
+    .wrap .main .top .item .sum {
+      color: #404040;
+      float: right; }
+  .wrap .main .title {
+    color: #404040;
+    font-size: 18px;
+    line-height: 40px;
+    height: 40px;
+    width: 200px;
+    display: inline-block; }
+  .wrap .main .graph {
+    margin: 24px 0;
+    height: 400px; }
+  .wrap .main .period {
+    display: inline-block;
+    height: 34px;
+    border: #d9d9d9 solid 1px;
+    box-sizing: border-box;
+    border-radius: 17px; }
+    .wrap .main .period .item {
+      display: inline-block;
+      height: 34px;
+      line-height: 34px;
+      padding: 0 24px;
+      cursor: pointer;
+      position: relative; }
+      .wrap .main .period .item:not(:first-child):after {
+        content: '';
+        width: 1px;
+        background: #d9d9d9;
+        height: 17px;
+        position: absolute;
+        top: 8px;
+        left: 0; }
+      .wrap .main .period .item.active {
+        color: #ff6e41; }
+
+.wrap .side {
+  width: 300px; }
+  .wrap .side .title {
+    color: #404040;
+    font-size: 18px;
+    text-align: center;
+    height: 64px;
+    line-height: 64px; }
+
+.wrap .widget {
+  width: 300px; }
+
+.wrap .canvas {
+  padding: 0 60px;
+  width: 180px;
+  height: 180px; }
+
+.wrap .legend {
+  margin: 24px; }
+  .wrap .legend .item {
+    font-size: 13px;
+    color: #808080;
+    line-height: 24px;
+    height: 24px;
+    padding-left: 44px;
+    position: relative; }
+    .wrap .legend .item:after {
+      content: '';
+      position: absolute;
+      left: 20px;
+      top: 6px;
+      width: 12px;
+      height: 12px; }
+    .wrap .legend .item:nth-child(1):after {
+      background: #9cdce6; }
+    .wrap .legend .item:nth-child(2):after {
+      background: #c8e817; }
+    .wrap .legend .item:nth-child(3):after {
+      background: #f159bd; }
+    .wrap .legend .item:nth-child(4):after {
+      background: #f2875a; }
+    .wrap .legend .item:nth-child(5):after {
+      background: #5a69f2; }
+    .wrap .legend .item:nth-child(6):after {
+      background: #ab5af2; }
+    .wrap .legend .item:nth-child(7):after {
+      background: #f25757; }
+    .wrap .legend .item:nth-child(8):after {
+      background: #fcd949; }
+    .wrap .legend .item:nth-child(9):after {
+      background: #49fc91; }
 
 .part_btn {
   height: 30px;
