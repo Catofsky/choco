@@ -1,0 +1,76 @@
+extends dash/_layout.pug
+
+block title
+    title Chocokiller Store
+
+block content
+
+    mixin item_dash_promotions(image,title,customer,status_text,time_date,time,number_oreder,phone,amount,price,id)
+        .block_dash_promotions
+            .checkbox
+                input(type="checkbox" id="chk" + id)
+                label(for="chk" + id)
+            .block_image
+                img(src=image)
+            .block_content
+                .description_dash_promotions
+                    .title
+                        a(href="#")
+                            h1=title
+                    .content
+                        .item
+                            p Заказчик:
+                            a(href="#")= customer 
+                        .item
+                            p Статус:
+                            div
+                                i(class="material-icons done") assignment_turned_in
+                                p= status_text
+                        .item
+                            p Дата:
+                            div
+                                i(class="material-icons") event_available
+                                p= time_date
+                                i(class="material-icons") access_time
+                                p= time
+                .description_right
+                    .additionally
+                        .content_statistic
+                            .item
+                                p Участников:
+                                p 486
+                            .item
+                                p В избранном:
+                                p 1232
+                            .item
+                                p Просмотров:
+                                p 3217
+                        .content_edit
+                            a(href="#")
+                                i(class="material-icons") border_color
+                            a(href="#")
+                                i(class="material-icons") delete
+                                
+
+    .content_title Заказы
+
+    .wrap
+        input.btn.white(type='button' value='ДОБАВИТЬ УСЛУГУ')
+        .sort_content
+            i(class="material-icons") date_range
+            select.all
+                option &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;всё
+            select.state
+                option &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Активно
+            input.input_search(placeholder="название или номер товара")
+            .tg1 ₸
+            input.input_from(placeholder="от")
+            .tg2 ₸ 
+            input.input_to(placeholder="до")
+        +part_sort("Дешевле","Дороже","Заказы","Новинки","Рейтинг","а-я")
+                
+        +item_dash_promotions("/img/slide/1.png","IPhone X, 256Gb, Space Gray","Серсея Ланистер","Активно","25/06/18","12:45","354186","+7 775 152345","1","377 990" ,"1")
+        +item_dash_promotions("/img/slide/1.png","IPhone X, 256Gb, Space Gray","Серсея Ланистер","Активно","25/06/18","12:45","354186","+7 775 152345","1","377 990","2")
+        +item_dash_promotions("/img/slide/1.png","IPhone X, 256Gb, Space Gray","Серсея Ланистер","Активно","25/06/18","12:45","354186","+7 775 152345","1","377 990","3")
+        .content_page
+            +part('pagination', { from: 1, to: 3, on: 1 })

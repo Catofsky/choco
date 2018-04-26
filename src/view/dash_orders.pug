@@ -5,15 +5,15 @@ block title
 
 block content
 
-    mixin item_dialogue(image,title,customer,status_text,time_date,time,number_oreder,phone,amount,price)
-        .block_order
+    mixin item_dash_orders(image,title,customer,status_text,time_date,time,number_oreder,phone,amount,price,id)
+        .block_dash_orders
             .checkbox
-                input(type="checkbox" id="chk")
-                label(for="chk")
+                input(type="checkbox" id="chk" + id)
+                label(for="chk" + id)
             .block_image
                 img(src=image)
             .block_content
-                .description_order
+                .description_dash_orders
                     .title
                         a(href="#")
                             h1=title
@@ -34,7 +34,7 @@ block content
                         .item
                             p Дата:
                             div
-                                i(class="material-icons") assignment_turned_in
+                                i(class="material-icons") event_available
                                 p= time_date
                                 i(class="material-icons") access_time
                                 p= time
@@ -85,9 +85,10 @@ block content
             input.input_from(placeholder="от")
             .tg2 ₸ 
             input.input_to(placeholder="до")
-                
-            +item_dialogue("/img/slide/1.png","IPhone X, 256Gb, Space Gray","Серсея Ланистер","Выполнено","25/06/18","12:45","354186","+7 775 152345","1","377 990")
-            +item_dialogue("/img/slide/1.png","IPhone X, 256Gb, Space Gray","Серсея Ланистер","Не выполнено","25/06/18","12:45","354186","+7 775 152345","1","377 990")
-            +item_dialogue("/img/slide/1.png","IPhone X, 256Gb, Space Gray","Серсея Ланистер","Выполняется","25/06/18","12:45","354186","+7 775 152345","1","377 990")
-            .content_page
-                +part('pagination', { from: 1, to: 3, on: 1 })
+        +part_sort("Дешевле","Дороже","Заказы","Новинки","Рейтинг","а-я")
+
+        +item_dash_orders("/img/slide/1.png","IPhone X, 256Gb, Space Gray","Серсея Ланистер","Выполнено","25/06/18","12:45","354186","+7 775 152345","1","377 990","1")
+        +item_dash_orders("/img/slide/1.png","IPhone X, 256Gb, Space Gray","Серсея Ланистер","Не выполнено","25/06/18","12:45","354186","+7 775 152345","1","377 990","2")
+        +item_dash_orders("/img/slide/1.png","IPhone X, 256Gb, Space Gray","Серсея Ланистер","Выполняется","25/06/18","12:45","354186","+7 775 152345","1","377 990","3")
+        .content_page
+            +part('pagination', { from: 1, to: 3, on: 1 })

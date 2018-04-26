@@ -40,7 +40,12 @@
 		margin-left: 895px
 		color: $sad_gray
 
-.block_dash_orders
+	.part_sorting_block
+		border-up-style: none
+
+
+
+.block_dash_promotions
 	height: 140px
 	margin: 0px 10px 0px 10px 
 	padding: 16px 0px 0px 0px 
@@ -54,7 +59,7 @@
 		border: 1px solid $border_color
 		border-left-style: none
 		border-right-style: none
-	&.block_dash_orders
+	&.block_dash_promotions
 		display: flex
 		justify-content: flex-start
 		.checkbox
@@ -83,7 +88,7 @@
 				border-radius: 3px
 				border: 2px solid $border_color
 				background-size: cover
-				
+
 		.block_image
 			height: 107px
 			width: 140px
@@ -93,7 +98,7 @@
 				width: 140px
 		.block_content
 			display: flex
-			.description_dash_orders
+			.description_dash_promotions
 				.title
 					h1
 						color: #54a8d2
@@ -101,7 +106,7 @@
 					.item
 						display: flex
 						justify-content: flex-start
-						width: 318px 
+						width: 280px 
 						height: 16px
 						margin-bottom: 20px
 						i.material-icons
@@ -127,7 +132,7 @@
 							justify-content: flex-start
 							width: 172px
 			.description_right
-				margin-top: 30px
+				margin-top: 20px
 				width: 480px
 				display: flex
 				flex-direction: column
@@ -135,39 +140,22 @@
 					display: flex
 					justify-content: space-between
 					height: 60px
-					.number
+					.content_statistic
 						.item
 							display: flex
-							justify-content: space-between
-							width: 230px 
+							justify-content: flex-start
+							width: 240px
 							height: 16px
 							margin-bottom: 20px
 							p
-								width: 101px
-								margin: 3px 13px 0px 0px
-					.quantity
-						.item
-							display: flex
-							align-items: center
-							flex-direction: column
-							justify-content: space-between
-							width: 100px
-							height: 55px
-							margin-bottom: 20px
-							p
-								text-align: center
-					.price
-						.item							
-							display: flex
-							flex-direction: column
-							justify-content: space-between
-							align-items: flex-start
-							width: 120px
-							height: 16px
-							margin-bottom: 20px
-							p:last-child
-								font-size: 24px
-
+								width: 98px
+								margin: 3px 20px 0px 0px
+					.content_edit
+						i.material-icons
+							margin-top: 65px
+							font-size: 28px
+							color: $dash_menu_font
+							margin-left: 20px
 				.confirmation
 					display: flex
 					justify-content: flex-end
