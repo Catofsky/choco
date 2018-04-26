@@ -41,28 +41,161 @@
         </div>
       </div>
       <div class="content">
-        <div class="content_title">Создание магазина</div>
+        <div class="content_title">Настройки</div>
         <div class="wrap">
           <form action="" method="post">
             <div class="input">
               <div class="label">
-                <p>Заголовок</p>
+                <p>Название</p>
               </div>
               <div class="item">
                 <input type="text" name="title" required>
               </div>
             </div>
-            <div class="input" style="display: flex">
+            <div class="input">
               <div class="label">
-                <p>Описание</p>
+                <p>Деятельность</p>
               </div>
               <div class="item">
-                <textarea name="description"></textarea>
+                <select name="activity">
+                  <option>Продажа товаров</option>
+                  <option>Услуги</option>
+                  <option>Ещё услуги</option>
+                </select>
+              </div>
+            </div>
+            <div class="input">
+              <div class="label">
+                <p>Дата основания</p>
+              </div>
+              <div class="item date">
+                <select class="day">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                  <option>10</option>
+                  <option>11</option>
+                  <option>12</option>
+                  <option>13</option>
+                  <option>14</option>
+                  <option>15</option>
+                  <option>16</option>
+                  <option>17</option>
+                  <option>18</option>
+                  <option>19</option>
+                  <option>20</option>
+                  <option>21</option>
+                  <option>22</option>
+                  <option>23</option>
+                  <option>24</option>
+                  <option>25</option>
+                  <option>26</option>
+                  <option>27</option>
+                  <option>28</option>
+                  <option>29</option>
+                  <option>30</option>
+                </select>
+                <select class="month">
+                  <option>Январь</option>
+                  <option>Февраль</option>
+                  <option>Март</option>
+                  <option>Апрель</option>
+                  <option>Май</option>
+                </select>
+                <select class="year">
+                  <option>1990</option>
+                  <option>1991</option>
+                  <option>1992</option>
+                  <option>1993</option>
+                  <option>1994</option>
+                  <option>1995</option>
+                  <option>1996</option>
+                  <option>1997</option>
+                  <option>1998</option>
+                  <option>1999</option>
+                  <option>2000</option>
+                  <option>2001</option>
+                  <option>2002</option>
+                  <option>2003</option>
+                  <option>2004</option>
+                  <option>2005</option>
+                  <option>2006</option>
+                  <option>2007</option>
+                  <option>2008</option>
+                  <option>2009</option>
+                  <option>2010</option>
+                  <option>2011</option>
+                  <option>2012</option>
+                  <option>2013</option>
+                  <option>2014</option>
+                  <option>2015</option>
+                  <option>2016</option>
+                  <option>2017</option>
+                  <option>2018</option>
+                </select>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="content_title">Контакты</div>
+        <div class="wrap">
+          <form action="" method="post">
+            <div class="input">
+              <div class="label">
+                <p>Телефоны</p>
+              </div>
+              <div class="item">
+                <div class="wrap">
+                  <input type="text" name="phone[]">
+                  <div class="add" data-name="phone">+</div>
+                </div>
+                <div class="wrap mg">
+                  <input type="text" name="phone[]">
+                  <div class="rm">x</div>
+                </div>
+                <div class="wrap mg">
+                  <input type="text" name="phone[]">
+                  <div class="rm">x</div>
+                </div>
+              </div>
+            </div>
+            <div class="input">
+              <div class="label">
+                <p>E-mail</p>
+              </div>
+              <div class="item">
+                <div class="wrap">
+                  <input type="text" name="email[]">
+                  <div class="add" data-name="email">+</div>
+                </div>
               </div>
             </div>
           </form>
           <input class="btn" type="button" value="Сохранить">
         </div>
+        <script>
+          u('.input .add')
+              .on('click', function () {
+                  var name = this.dataset.name;
+                  var s = '<div class="wrap mg"><input type="text" name="' + name + '[]">' +
+                  '<div class="rm">x</div></div>';
+                  u(this).closest('.item').append(s);
+                  u(this).closest('.item').find('.rm').on('click', function () {
+                      u(this).parent().remove();
+                  });
+              });
+          
+          u('.input .rm')
+              .on('click', function () {
+                  u(this).parent().remove();
+              });
+        </script>
       </div>
     </div>
     <footer></footer>

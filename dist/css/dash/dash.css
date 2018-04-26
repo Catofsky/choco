@@ -355,17 +355,54 @@ header {
   margin-top: 48px; }
 
 .main_block .input {
-  margin: 24px; }
+  margin: 24px;
+  position: relative;
+  display: flex;
+  align-items: stretch; }
+  .main_block .input .mg {
+    margin-top: 12px; }
+  .main_block .input .add, .main_block .input .rm {
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+    border: #d9d9d9 solid 2px;
+    border-radius: 50%;
+    position: absolute;
+    top: 4px;
+    right: -34px;
+    color: #d9d9d9;
+    text-align: center;
+    line-height: 14px;
+    font-weight: bold;
+    cursor: pointer; }
+    .main_block .input .add:hover, .main_block .input .rm:hover {
+      color: silver;
+      border: silver solid 2px; }
+  .main_block .input .rm:hover {
+    background: #fcc; }
   .main_block .input .label, .main_block .input .item {
     display: inline-block; }
   .main_block .input .label {
     width: 260px; }
     .main_block .input .label p {
       text-align: right;
-      margin: 0 24px; }
+      margin: 0 24px;
+      line-height: 30px; }
   .main_block .input .item {
     width: 500px;
     position: relative; }
+    .main_block .input .item .wrap {
+      position: relative;
+      width: 500px; }
+    .main_block .input .item.date select {
+      display: inline-block;
+      width: 100px;
+      text-align: center; }
+    .main_block .input .item.date .month {
+      width: 200px;
+      margin-left: 46px; }
+    .main_block .input .item.date .year {
+      margin-left: 46px; }
     .main_block .input .item span {
       margin: 0 12px; }
     .main_block .input .item .image_container {
