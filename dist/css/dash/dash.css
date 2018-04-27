@@ -375,6 +375,8 @@ header {
     line-height: 14px;
     font-weight: bold;
     cursor: pointer; }
+    .main_block .input .add i.material-icons, .main_block .input .rm i.material-icons {
+      font-size: 16px; }
     .main_block .input .add:hover, .main_block .input .rm:hover {
       color: silver;
       border: silver solid 2px; }
@@ -617,6 +619,9 @@ header {
         cursor: pointer; }
         .main_block .input .item .range_container .range::-webkit-slider-thumb {
           -webkit-appearance: none; }
+        .main_block .input .item .range_container .range::-moz-range-thumb {
+          -webkit-appearance: none;
+          border: none; }
       .main_block .input .item .range_container .progress {
         width: 400px;
         height: 10px;
@@ -651,15 +656,12 @@ header {
       display: flex;
       flex-direction: row-reverse;
       justify-content: flex-start;
-      position: absolute;
       width: 500px;
-      margin-left: -150px; }
+      margin-left: -150px;
+      margin-bottom: 15px; }
     .main_block .input .item a.preview {
       color: #54a8d2;
-      float: right;
-      margin-left: 200px;
-      margin-top: 60px;
-      position: absolute; }
+      margin-left: 200px; }
     .main_block .input .item .publish {
       height: 40px;
       width: 200px;
@@ -703,10 +705,12 @@ header {
     margin-right: 20px;
     border: 1px solid #bebebe;
     border-radius: 10px;
-    height: 18px;
-    text-align: center;
     width: 118px;
     outline: none; }
+  .sort_content .all {
+    padding-left: 38px; }
+  .sort_content .state {
+    padding-left: 25px; }
   .sort_content input {
     margin-right: 20px;
     border: 1px solid #bebebe;
@@ -781,7 +785,9 @@ header {
         width: 140px; }
     .block_dash_orders.block_dash_orders .block_content {
       display: flex; }
-      .block_dash_orders.block_dash_orders .block_content .description_dash_orders .title h1 {
+      .block_dash_orders.block_dash_orders .block_content .description_dash_orders .title p {
+        font-family: "Ubuntu";
+        font-weight: bold;
         color: #54a8d2; }
       .block_dash_orders.block_dash_orders .block_content .description_dash_orders .content .item {
         display: flex;
@@ -810,7 +816,9 @@ header {
         .block_dash_orders.block_dash_orders .block_content .description_dash_orders .content .item div {
           display: flex;
           justify-content: flex-start;
-          width: 172px; }
+          width: 182px; }
+          .block_dash_orders.block_dash_orders .block_content .description_dash_orders .content .item div p {
+            width: 120px; }
       .block_dash_orders.block_dash_orders .block_content .description_right {
         margin-top: 30px;
         width: 480px;
@@ -959,8 +967,10 @@ header {
         width: 140px; }
     .block_dash_promotions.block_dash_promotions .block_content {
       display: flex; }
-      .block_dash_promotions.block_dash_promotions .block_content .description_dash_promotions .title h1 {
-        color: #54a8d2; }
+      .block_dash_promotions.block_dash_promotions .block_content .description_dash_promotions .title p {
+        color: #54a8d2;
+        font-family: "Ubuntu";
+        font-weight: bold; }
       .block_dash_promotions.block_dash_promotions .block_content .description_dash_promotions .content .item {
         display: flex;
         justify-content: flex-start;

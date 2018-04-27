@@ -191,3 +191,17 @@ block content
         round = document.querySelector('.range_container .round');
         round.style.left = 'calc(' + v + '% - 15px)';
         });
+
+    script.
+        u('.onlyNumbers').on("change", function(){
+            var value = this.value;
+            if(value > 99) {
+                value = 99;
+            } else if (value < 1) {
+                value = 1;
+            }
+            progress = document.querySelector('.range_container .progress');
+            progress.style.background ='linear-gradient(to right, #ff6e41, #ff6e41 ' + value + '%, white ' + value + '%, white)';
+            round = document.querySelector('.range_container .round');
+            round.style.left = 'calc(' + value + '% - 15px)';
+        });

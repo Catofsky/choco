@@ -153,15 +153,15 @@
               <div class="item">
                 <div class="wrap">
                   <input type="text" name="phone[]">
-                  <div class="add" data-name="phone">+</div>
+                  <div class="add" data-name="phone"><i class="material-icons">add</i></div>
                 </div>
                 <div class="wrap mg">
                   <input type="text" name="phone[]">
-                  <div class="rm">x</div>
+                  <div class="rm"><i class="material-icons">clear</i></div>
                 </div>
                 <div class="wrap mg">
                   <input type="text" name="phone[]">
-                  <div class="rm">x</div>
+                  <div class="rm"><i class="material-icons">clear</i></div>
                 </div>
               </div>
             </div>
@@ -172,7 +172,7 @@
               <div class="item">
                 <div class="wrap">
                   <input type="text" name="email[]">
-                  <div class="add" data-name="email">+</div>
+                  <div class="add" data-name="email"> <i class="material-icons">add</i></div>
                 </div>
               </div>
             </div>
@@ -184,7 +184,7 @@
               .on('click', function () {
                   var name = this.dataset.name;
                   var s = '<div class="wrap mg"><input type="text" name="' + name + '[]">' +
-                  '<div class="rm">x</div></div>';
+                  '<div class="rm"><i class="material-icons">clear</i></div></div>';
                   u(this).closest('.item').append(s);
                   u(this).closest('.item').find('.rm').on('click', function () {
                       u(this).parent().remove();
