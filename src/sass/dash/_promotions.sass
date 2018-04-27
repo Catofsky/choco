@@ -43,7 +43,9 @@
 	.part_sorting_block
 		border-up-style: none
 
-
+.select_all
+	position: absolute
+	margin-top: -40px
 
 .block_dash_promotions
 	height: 140px
@@ -78,9 +80,9 @@
 					border: 2px solid $border_color
 					background-size: cover
 				&:checked+label
-					background-size: cover
 					border: 2px solid $main_orange
-					background: url('../img/radio/done.svg') $main_orange no-repeat
+					background: url('/../img/radio/done.svg') $main_orange no-repeat
+					background-size: cover
 
 			label
 				width: 14px

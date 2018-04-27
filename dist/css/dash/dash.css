@@ -905,6 +905,10 @@ header {
   .sort_content .part_sorting_block {
     border-up-style: none; }
 
+.select_all {
+  position: absolute;
+  margin-top: -40px; }
+
 .block_dash_promotions {
   height: 140px;
   margin: 0px 10px 0px 10px;
@@ -937,9 +941,9 @@ header {
           border: 2px solid #bebebe;
           background-size: cover; }
         .block_dash_promotions.block_dash_promotions .checkbox input[type=checkbox]:checked + label {
-          background-size: cover;
           border: 2px solid #ff6e41;
-          background: url("../img/radio/done.svg") #ff6e41 no-repeat; }
+          background: url("/../img/radio/done.svg") #ff6e41 no-repeat;
+          background-size: cover; }
       .block_dash_promotions.block_dash_promotions .checkbox label {
         width: 14px;
         height: 14px;
@@ -1762,7 +1766,7 @@ header {
   border-right-style: none;
   padding: 11px 0px;
   height: 32px;
-  padding-left: 260px; }
+  padding-left: 160px; }
   .part_sorting_block .part_sorting {
     height: 32px;
     display: inline-flex;
