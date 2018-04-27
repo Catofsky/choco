@@ -763,9 +763,9 @@ header {
           border: 2px solid #bebebe;
           background-size: cover; }
         .block_dash_orders.block_dash_orders .checkbox input[type=checkbox]:checked + label {
-          background-size: cover;
           border: 2px solid #ff6e41;
-          background: url("../img/radio/done.svg") #ff6e41 no-repeat; }
+          background: url("/../img/radio/done.svg") #ff6e41 no-repeat;
+          background-size: cover; }
       .block_dash_orders.block_dash_orders .checkbox label {
         width: 14px;
         height: 14px;
