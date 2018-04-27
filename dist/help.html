@@ -78,8 +78,8 @@
 </div>
 <div id="wrap_help">
   <div class="column_help_left"> 
-    <div class="item_help_l">
-      <div class="content_help"><i class="material-icons">&#xE8D0</i><a href="#">Популярные вопросы</a></div><i class="material-icons material-icons-active select-icon-hide">&#xE315</i>
+    <div class="item_help_l help_select_active">
+      <div class="content_help"><i class="material-icons">&#xE8D0</i><a href="#">Популярные вопросы</a></div><i class="material-icons material-icons-active">&#xE315</i>
     </div>
     <div class="item_help_l">
       <div class="content_help"><i class="material-icons">&#xE064</i><a href="#">Видео</a></div><i class="material-icons material-icons-active select-icon-hide">&#xE315</i>
@@ -163,11 +163,6 @@
     		u(this).children(".material-icons").html("&#xE5C5");
     		u(this).children("h1").replace("<a>"+u(this).children("h1").text()+"</a>");
     	}
-    });
-    u('.item_help_l').on('click', function () {
-    	u(this).toggleClass("help_select_active");
-    	u(this).children("i").toggleClass("select-icon-hide");
-    	u(this).children(".content_help").toggleClass("help_select_active"); 
     });
     
   </script>

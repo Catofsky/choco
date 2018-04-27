@@ -122,8 +122,23 @@ block content
                     .percent_content
                         input.onlyNumbers(type='text' id="out" name='title' value='50')
                         span.percent %
-                    
-     
+
+                
+            .input(style='display: flex')
+                .label
+                    p Цена без скидки:
+                .item
+                    .no_discount
+                        input(type='text' value="10000")
+                        p Со скидкой:
+                        input(type='text' value="7000")
+
+            .input(style='display: flex')
+                .label
+                    p Колличество:
+                .item
+                    .no_discount
+                        input(type='text' value="120")
 
             .input(style='display: flex')
                 .label
@@ -150,8 +165,8 @@ block content
                                 span Цена со скидкой
                                 input.onlyNumbers(type='text' name='variant_amount')
                     .save_content
-                        input.btn.white(type='button' value='Опубликовать')
-                        input.btn(type='button' value='Сохранить без публикации')
+                        input.publish(type='button' value='Опубликовать')
+                        input.no_publish.white(type='button' value='Сохранить без публикации')
                     a.preview(href="#") предпросмотр
 
 

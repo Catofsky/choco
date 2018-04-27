@@ -6,7 +6,7 @@ include _header.pug
 #register_block
     .site_width
         .title Форма регистрации
-        form(method='POST' action='/register')
+        form(method='POST' action='/register' class="form")
             +part('text_input', { title: 'Имя:', name: 'fname', placeholder: 'Тирион' })
             +part('text_input', { title: 'Фамилия:', name: 'lname', placeholder: 'Ланистер' })
             
@@ -30,7 +30,6 @@ style.
         right: 0px !important;
         position: relative !important;
         top: -8px !important;
-
     }
 
 

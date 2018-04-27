@@ -13,11 +13,11 @@ mixin item_help_right(title, ...text)
 
 #wrap_help
 	.column_help_left 
-		.item_help_l
+		.item_help_l.help_select_active
 			.content_help
 				i.material-icons &#xE8D0
 				a(href="#") Популярные вопросы
-			i.material-icons.material-icons-active.select-icon-hide &#xE315
+			i.material-icons.material-icons-active &#xE315
 		.item_help_l
 			.content_help
 				i.material-icons &#xE064
@@ -88,11 +88,6 @@ mixin item_help_right(title, ...text)
 				u(this).children(".material-icons").html("&#xE5C5");
 				u(this).children("h1").replace("<a>"+u(this).children("h1").text()+"</a>");
 			}
-		});
-		u('.item_help_l').on('click', function () {
-			u(this).toggleClass("help_select_active");
-			u(this).children("i").toggleClass("select-icon-hide");
-			u(this).children(".content_help").toggleClass("help_select_active"); 
 		});
 
 include _footer.pug
