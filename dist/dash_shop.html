@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chocokiller Shop</title>
+    <link rel="stylesheet" href="css/dash/dash.css">
+    <link rel="stylesheet" href="font/material-icons.css">
+    <script src="js/umbrella.min.js"></script>
+    <script>window.parts = {};</script>
+  </head>
+  <body>
+    <header>
+      <div class="logo"></div>
+      <div class="top">
+        <div class="search"><i class="material-icons">search</i>
+          <input type="search" name="search" placeholder="Я ищу...">
+          <select name="search_cat">
+            <option>всё</option>
+          </select>
+          <input type="button" value="Найти">
+        </div>
+        <div class="store_select">
+          <select name="store_select">
+            <option>Белый ветер</option>
+          </select>
+        </div>
+        <div class="user">
+          <div class="name">
+            <p>Eldan</p>
+          </div>
+          <div class="avatar" style="background-image: url('img/user.jpg')"></div>
+        </div>
+      </div>
+    </header>
+    <div class="main_block">
+      <div class="side_menu">
+        <div class="menu"><a href="/store"><i class="material-icons">home</i><span>Главная</span></a><a href="/store/orders"><i class="material-icons">turned_in</i><span>Заказы</span>
+            <div class="num">12</div></a><a href="/store/members"><i class="material-icons">people</i><span>Сотрудники</span></a><a href="/store/products"><i class="material-icons">shoping</i><span>Товары</span></a><a href="/store/settings"><i class="material-icons">settings</i><span>Настройки</span></a>
+        </div>
+      </div>
+      <div class="content">
+        <div class="content_title">Магазин</div>
+        <div class="wrap main_shop">
+          <div class="logo_content">
+            <div class="logo"><img src="/img/store_avatar_100x100.jpg"></div>
+            <div class="title">
+              <p>Белый ветер</p>
+              <p>Магазин электроники</p>
+            </div>
+          </div>
+          <div class="communications"><a href="#">
+              <div class="reviews"><i class="material-icons">textsms</i>
+                <p>Отзывы</p>
+              </div></a><a href="#">
+              <div class="mail"><i class="material-icons">email</i>
+                <p>Почта</p>
+              </div></a></div>
+        </div>
+        <div class="horizontally_menu">
+          <div class="item contacts">
+            <p>Контакты</p>
+          </div>
+          <div class="item about">
+            <p>О магазине</p>
+          </div>
+          <div class="item our active">
+            <p>Наши компании</p>
+          </div>
+          <div class="item pair">
+            <p>Партнеры</p>
+          </div>
+        </div>
+        <div class="wrap contact_hide">
+          <div class="contact">
+            <textarea class="text_contact" placeholder="Укажите адресс компании"></textarea>
+          </div>
+        </div>
+        <div class="wrap about_hide">
+          <div class="contact">
+            <textarea class="text_contact" placeholder="Напишите о магазине"></textarea>
+          </div>
+        </div>
+        <div class="wrap">
+          <div class="choice_shop">
+            <input placeholder="Ссылка на магазин"><i class="material-icons">add_circle_outline</i>
+            <input type="button" value="Выбор из своих магазинов">
+          </div>
+        </div>
+        <div class="wrap">
+          <div class="settings_shop">
+            <div class="category"><i class="material-icons">format_list_numbered</i>
+              <p>Категории</p>
+              <input type="button" value="изменить">
+            </div>
+            <div class="news"><i class="material-icons">subject</i>
+              <p>Новости</p>
+              <input type="button" value="добавить">
+            </div>
+            <div class="video"><i class="material-icons">play_circle_outline</i>
+              <p>Видео</p>
+              <input type="button" value="добавить">
+            </div>
+          </div>
+        </div>
+        <div class="wrap three_block">
+          <div class="item">
+            <li> <span>Электроника</span>
+              <ul>
+                <li> <span>Смартфоны</span>
+                  <ul>
+                    <li> <span>Производитель</span>
+                      <ul>
+                        <li>Apple</li>
+                        <li>Samsung</li>
+                        <li>Huawei</li>
+                        <li>Xiaomi</li>
+                      </ul>
+                    </li>
+                    <li><span>Операционная система</span>
+                      <ul>
+                        <li>iOS</li>
+                        <li>Android</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li> <span class="down">Телефоны</span></li>
+                <li> <span class="down">Телевизоры</span></li>
+                <li> <span class="down">Ноутбуки</span></li>
+              </ul>
+            </li>
+            <li><span>Мебель</span>
+              <ul>
+                <li>Компьютерные столы</li>
+              </ul>
+            </li>
+          </div>
+          <div class="item">
+            <div class="event_item"><a href="#">Открытие нового магазина в ТЦ Батырмол</a></div>
+            <div class="event_item"><a href="#">Наурыз вместе с Белым Ветром</a></div>
+            <div class="event_item"><a href="#">Акция на ваш День рождения!</a></div>
+          </div>
+          <div class="item"></div>
+        </div>
+        <script>
+          u(".contacts").on("click", function() {
+          	u(".about_hide").first().style.display = 'none';
+          	u(".contact_hide").first().style.display = 'block';
+          	if(u(".item").hasClass("active")) {
+          		u(".item").removeClass("active");
+          		u(".contacts").addClass("active");
+          		u(".choice_shop").children("input[type=button]").first().style.display = 'none';
+          	}
+          });
+          u(".about").on("click", function() {
+          	u(".about_hide").first().style.display = 'block';
+          	u(".contact_hide").first().style.display = 'none';
+          	if(u(".item").hasClass("active")) {
+          		u(".item").removeClass("active");
+          		u(".about").addClass("active");
+          		u(".choice_shop").children("input[type=button]").first().style.display = 'none';
+          	}
+          });
+          u(".our").on("click", function() {
+          	u(".about_hide").first().style.display = 'none';
+          	u(".contact_hide").first().style.display = 'none';
+          	if(u(".item").hasClass("active")) {
+          		u(".item").removeClass("active");
+          		u(".our").addClass("active");
+          		u(".choice_shop").children("input[type=button]").first().style.display = 'block';
+          	}
+          });
+          u(".pair").on("click", function() {
+          	u(".about_hide").first().style.display = 'none';
+          	u(".contact_hide").first().style.display = 'none';
+          	if(u(".item").hasClass("active")) {
+          		u(".item").removeClass("active");
+          		u(".pair").addClass("active");
+          		u(".choice_shop").children("input[type=button]").first().style.display = 'none';
+          	}
+          });
+        </script>
+      </div>
+    </div>
+    <footer></footer>
+  </body>
+</html>

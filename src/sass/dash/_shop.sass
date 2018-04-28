@@ -1,0 +1,309 @@
+.wrap.main_shop
+	display: flex
+	justify-content: space-between
+	.logo_content
+		width: 260px
+		height: 80px
+		padding: 20px 0px
+		display: flex
+		justify-content: flex-start
+		.logo
+			img
+				height: 80px
+				width: 80px
+				border-radius: 50%
+		.title
+			display: flex
+			flex-direction: column
+			padding-top: 5px
+			p
+				padding-left: 15px
+			p:first-child
+				font-size: 16px
+				font-family: "Ubuntu"
+				font-weight: bold
+				padding-bottom: 5px
+
+	.communications
+		width: 250px
+		height: 30px
+		display: flex
+		justify-content: space-between
+		padding-top: 28px
+		a
+			.reviews
+				display: flex
+				i.material-icons
+					font-size: 28px
+					color: $gray_border
+					margin-right: 5px
+				&:after
+					position: absolute
+					margin-left: 18px
+					margin-top: -3px
+					width: 10px
+					height: 12px
+					font-size: 10px
+					padding-left: 4px
+					padding-top: 2px
+					border-radius: 50%
+					background: $main_orange
+					color: #fff
+					content: "3"
+				p
+					margin-top: 3px
+		a
+			.mail
+				display: flex
+				i.material-icons
+					font-size: 28px 
+					color: $gray_border
+					margin-right: 5px
+				&:after
+					position: absolute
+					margin-left: 18px
+					margin-top: -3px
+					width: 10px
+					height: 12px
+					font-size: 10px
+					padding-left: 4px
+					padding-top: 2px
+					border-radius: 50%
+					background: $main_orange
+					color: #fff
+					content: "7"
+				p
+					margin-top: 3px
+
+.horizontally_menu
+	display: flex
+	justify-content: center
+	height: 20px
+	padding: 20px 0px
+	.item
+		width: 182px
+		height: 20px
+		text-align: center
+		border: 1px solid $gray_border
+		border-bottom-style: none
+		border-top-style: none
+		&:first-child
+			border: 1px solid $gray_border
+			border-left-style: none
+			border-bottom-style: none
+			border-top-style: none
+		&:last-child
+			border: 1px solid $gray_border
+			border-right-style: none
+			border-bottom-style: none
+			border-top-style: none
+		&+.active
+			border: 1px solid $main_orange
+			border-right-style: none
+			border-left-style: none
+			border-top-style: none
+			padding-bottom: 14px
+		&.contacts.active
+			border: 1px solid $main_orange
+			border-right-style: none
+			border-left-style: none
+			border-top-style: none
+			padding-bottom: 14px
+		&.aboute.active
+			border: 1px solid $main_orange
+			border-right-style: none
+			border-left-style: none
+			border-top-style: none
+			padding-bottom: 14px
+		&.our.active
+			border: 1px solid $main_orange
+			border-right-style: none
+			border-left-style: none
+			border-top-style: none
+			padding-bottom: 14px
+		&.pair.active
+			border: 1px solid $main_orange
+			border-right-style: none
+			border-left-style: none
+			border-top-style: none
+			padding-bottom: 14px
+		p
+			cursor: pointer
+
+.wrap
+	.contact
+		margin: 20px 0px
+		textarea.text_contact
+			height: 105px
+			width: 100%
+			border-radius: 15px
+			padding: 20px 0px 0px 15px
+			resize: none
+			outline: none
+
+.contact_hide
+	display: none
+.about_hide
+	display: none
+
+.wrap
+	.choice_shop
+		height: 30px
+		padding: 5px 0px
+		display: flex
+		margin-top: 20px
+		input
+			width: 286px
+			height: 28px
+			border: 1px solid $gray_border
+			border-radius: 30px
+			outline: none
+			padding-left: 12px
+			&:first-child
+				margin-right: 10px
+			&[type="button"]
+				width: 238px
+				background: #fff
+				border: 1px solid $gray_border
+				cursor: pointer
+				&:hover
+					border: 1px solid $main_orange
+				&:active
+					background: $main_orange
+					border: $main_orange
+					color: #fff
+		i.material-icons
+			font-size: 24px
+			color: $gray_border
+			cursor: pointer
+			margin-top: 4px
+			margin-right: 45px
+
+.wrap
+	.settings_shop
+		display: flex
+		margin: 30px 0px
+		padding-left: 30px
+		.category
+			display: flex
+			i.material-icons
+				font-size: 24px
+				color: $gray_border
+				margin-right: 15px
+			p
+				margin-top: 2px
+				margin-right: 50px
+			input[type="button"]
+				width: 98px
+				height: 18px
+				border: 1px solid $gray_border
+				border-radius: 15px
+				background: #fff
+				padding-bottom: 3px
+				margin-top: 3px
+				font-size: 14px
+				margin-right: 80px
+				outline: none
+				cursor: pointer
+				&:hover
+					border: 1px solid $main_orange
+				&:active
+					background: $main_orange
+					border: $main_orange
+					color: #fff
+		.news
+			display: flex
+			i.material-icons
+				font-size: 24px
+				color: $gray_border
+				margin-right: 15px
+			p
+				margin-top: 2px
+				margin-right: 50px
+			input[type="button"]
+				width: 98px
+				height: 18px
+				border: 1px solid $gray_border
+				border-radius: 15px
+				background: #fff
+				padding-bottom: 4px
+				margin-top: 3px
+				font-size: 14px
+				margin-right: 80px
+				outline: none
+				cursor: pointer
+				&:hover
+					border: 1px solid $main_orange
+				&:active
+					background: $main_orange
+					border: $main_orange
+					color: #fff
+		.video
+			display: flex
+			i.material-icons
+				font-size: 24px
+				color: $gray_border
+				margin-right: 15px
+			p
+				margin-top: 2px
+				margin-right: 50px
+			input[type="button"]
+				width: 98px
+				height: 18px
+				border: 1px solid $gray_border
+				border-radius: 15px
+				background: #fff
+				padding-bottom: 4px
+				margin-top: 3px
+				font-size: 14px
+				outline: none
+				cursor: pointer
+				&:hover
+					border: 1px solid $main_orange
+				&:active
+					background: $main_orange
+					border: $main_orange
+					color: #fff
+
+.wrap.three_block
+	display: flex
+	.item
+		background: $main_bg
+		width: 320px
+		margin: 0px 20px
+	.item:nth-child(1)
+		padding: 20px 0px 20px 20px		
+		li
+			cursor: pointer
+			list-style-type: none
+		span
+			position: relative
+		span:after
+			width: 15px
+			height: 15px
+			content: url("/img/up.png")
+			position: absolute
+			right: -14px
+			top: -1px
+		span.down:after
+			content: url("/img/down.png")
+		ul
+			border-left: 1px solid $gray_border
+			margin-left: 8px
+			padding-left: 20px
+			list-style-image: url("/img/ulLine.jpg")
+			li
+				cursor: pointer
+				list-style-type: none
+
+	.item:nth-child(2)
+		padding: 0px 20px
+		.event_item
+			border: 1px solid $gray_border
+			border-right-style: none
+			border-left-style: none
+			border-top-style: none
+			padding: 20px 0px 25px 0px
+			a
+				color: #54a8d2
+				text-decoration: underline
