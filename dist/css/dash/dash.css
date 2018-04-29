@@ -1454,6 +1454,78 @@ header {
         color: #54a8d2;
         text-decoration: underline; }
 
+.wrap .date {
+  display: flex;
+  margin-top: 20px; }
+  .wrap .date i.material-icons {
+    color: #d9d9d9;
+    margin-right: 10px; }
+  .wrap .date select {
+    width: 108px;
+    height: 18px;
+    border-radius: 15px;
+    border: 1px solid #d9d9d9;
+    margin-right: 20px; }
+  .wrap .date input {
+    width: 332px;
+    height: 18px;
+    padding-left: 10px;
+    border-radius: 15px;
+    border: 1px solid #d9d9d9; }
+
+.wrap .brim {
+  display: flex;
+  justify-content: flex-start;
+  margin: 28px 0px; }
+  .wrap .brim .item p {
+    font-size: 18px; }
+  .wrap .brim .item:first-child {
+    margin-left: 70px;
+    margin-right: 270px; }
+  .wrap .brim .item:nth-child(2) {
+    margin-right: 90px; }
+  .wrap .brim .item:nth-child(3) {
+    margin-right: 170px; }
+
+.wrap .subscribers_content {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  border: 1px solid #d9d9d9;
+  border-right-style: none;
+  border-left-style: none;
+  font-size: 16px; }
+  .wrap .subscribers_content:first-child {
+    border-right-style: none;
+    border-left-style: none;
+    border-bottom-style: none; }
+  .wrap .subscribers_content:last-child {
+    border-right-style: none;
+    border-left-style: none;
+    border-top-style: none; }
+  .wrap .subscribers_content .logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px; }
+    .wrap .subscribers_content .logo img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%; }
+  .wrap .subscribers_content .item {
+    margin-right: 135px; }
+    .wrap .subscribers_content .item.name {
+      margin-right: 240px; }
+    .wrap .subscribers_content .item:nth-child(4) {
+      margin-right: 145px; }
+    .wrap .subscribers_content .item:nth-child(5) {
+      margin-right: 40px; }
+    .wrap .subscribers_content .item:last-child {
+      cursor: pointer;
+      margin-right: 0px; }
+      .wrap .subscribers_content .item:last-child i.material-icons:hover {
+        color: #ff6e41; }
+
 .part_btn {
   height: 30px;
   display: inline-block;
@@ -2073,7 +2145,6 @@ header {
 .part_sorting_block {
   background: #fff;
   position: relative;
-  border: 1px solid #d9d9d9;
   border-left-style: none;
   border-bottom-style: none;
   border-right-style: none;

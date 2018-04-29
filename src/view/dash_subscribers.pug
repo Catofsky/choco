@@ -8,5 +8,65 @@ block content
 		.content_title Подписичики
 
 		.wrap
-			i.material-icons
-				
+			.date
+				i.material-icons date_range
+				select
+					option За сегодня
+				input(placeholder="имя логин")
+			+part_sort("новые","полу","кол-во заказов","а-я")
+		.wrap
+			.brim
+				.item
+					p Имя
+				.item
+					p Кол-во заказов
+				.item
+					p Логин
+				.item
+					p Телефон
+
+		.wrap
+			.subscribers_content
+				.logo
+					img(src="/img/user.jpg")
+				.item.name
+					p Тирион Ланистер
+				.item
+					p 53
+				.item
+					p Tirion_449
+				.item
+					p +7 775 123456
+				.item
+					i.material-icons more_vert
+
+			.subscribers_content
+				.logo
+					img(src="/img/user.jpg")
+				.item.name
+					p Тирион Ланистер
+				.item
+					p 53
+				.item
+					p Tirion_449
+				.item
+					p +7 775 123456
+				.item
+					i.material-icons more_vert
+
+			.subscribers_content
+				.logo
+					img(src="/img/user.jpg")
+				.item.name
+					p Тирион Ланистер
+				.item
+					p 53
+				.item
+					p Tirion_449
+				.item
+					p +7 775 123456
+				.item
+					i.material-icons more_vert
+
+		script.
+			u(".sort_block").first().style.display = 'none';
