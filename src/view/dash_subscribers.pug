@@ -5,6 +5,37 @@ block title
 
 block content
 
+		mixin subscribers(image, name, value, login, number)
+			.subscribers_content
+				.logo
+					img(src=image)
+				.item.name
+					p= name
+				.item
+					p= value
+				.item
+					p= login
+				.item
+					p= number
+				.item.options_hide
+					i.material-icons more_vert
+					.options.hide
+						.title
+							p Подписчик
+						button.ban(type='button') Заблокировать
+						.content
+							p Роли в магазине:
+							.item
+								p Администратор
+								+part('checkbox', {})
+							.item
+								p Продавец
+								+part('checkbox', {})
+							.item
+								p Редактор
+								+part('checkbox', {})
+						button.offer(type='button') Предложить
+
 		.content_title Подписичики
 
 		.wrap
@@ -13,6 +44,8 @@ block content
 				select
 					option За сегодня
 				input(placeholder="имя логин")
+			.hides
+
 			+part_sort("новые","полу","кол-во заказов","а-я")
 		.wrap
 			.brim
@@ -26,47 +59,16 @@ block content
 					p Телефон
 
 		.wrap
-			.subscribers_content
-				.logo
-					img(src="/img/user.jpg")
-				.item.name
-					p Тирион Ланистер
-				.item
-					p 53
-				.item
-					p Tirion_449
-				.item
-					p +7 775 123456
-				.item
-					i.material-icons more_vert
-
-			.subscribers_content
-				.logo
-					img(src="/img/user.jpg")
-				.item.name
-					p Тирион Ланистер
-				.item
-					p 53
-				.item
-					p Tirion_449
-				.item
-					p +7 775 123456
-				.item
-					i.material-icons more_vert
-
-			.subscribers_content
-				.logo
-					img(src="/img/user.jpg")
-				.item.name
-					p Тирион Ланистер
-				.item
-					p 53
-				.item
-					p Tirion_449
-				.item
-					p +7 775 123456
-				.item
-					i.material-icons more_vert
+			+subscribers("/img/user.jpg" ,"Тирион Ланистер", "53", "Tirion_449", "+7 775 123456")
+			+subscribers("/img/user.jpg" ,"Тирион Ланистер", "53", "Tirion_449", "+7 775 123456")
+			+subscribers("/img/user.jpg" ,"Тирион Ланистер", "53", "Tirion_449", "+7 775 123456")
 
 		script.
-			u(".sort_block").first().style.display = 'none';
+			var check = 0;
+			u('.options_hide').on("click", function(){				
+				u(this).children(".options").toggleClass("hide");
+			});
+			u('.options').children("button").on("click", function(){
+				u(".options").toggleClass("toggleClass");
+			});
+

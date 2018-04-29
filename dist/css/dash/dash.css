@@ -1473,6 +1473,14 @@ header {
     border-radius: 15px;
     border: 1px solid #d9d9d9; }
 
+.wrap .hides {
+  width: 140px;
+  height: 50px;
+  background: #fff;
+  position: absolute;
+  z-index: 99;
+  margin-left: 880px; }
+
 .wrap .brim {
   display: flex;
   justify-content: flex-start;
@@ -1525,6 +1533,66 @@ header {
       margin-right: 0px; }
       .wrap .subscribers_content .item:last-child i.material-icons:hover {
         color: #ff6e41; }
+    .wrap .subscribers_content .item .options {
+      width: 180px;
+      height: 214px;
+      position: absolute;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      margin: -40px 0px 0px -30px;
+      background: #fff;
+      z-index: 20; }
+      .wrap .subscribers_content .item .options.hide {
+        display: none; }
+      .wrap .subscribers_content .item .options .title {
+        width: 164px;
+        height: 24px;
+        background: #f5f5f5;
+        border-radius: 15px 15px 0 0;
+        padding-top: 5px;
+        padding-left: 16px; }
+        .wrap .subscribers_content .item .options .title p {
+          font-size: 16px; }
+      .wrap .subscribers_content .item .options button {
+        margin: 0px 5px; }
+      .wrap .subscribers_content .item .options button.ban {
+        width: 168px;
+        height: 22px;
+        margin-top: 10px;
+        border-radius: 15px;
+        border: 1px solid #36474f;
+        color: #fff;
+        background: #36474f;
+        cursor: pointer;
+        padding: 0px 5px;
+        outline: none; }
+      .wrap .subscribers_content .item .options .content {
+        margin: 8px 10px 0px 10px;
+        padding: 12px 0px 0px 0px;
+        border: 1px solid #d9d9d9;
+        border-right-style: none;
+        border-left-style: none;
+        border-bottom-style: none; }
+        .wrap .subscribers_content .item .options .content p {
+          padding-bottom: 4px; }
+        .wrap .subscribers_content .item .options .content .item {
+          width: 135px;
+          height: 20px;
+          display: flex;
+          justify-content: space-between;
+          padding-bottom: 5px; }
+          .wrap .subscribers_content .item .options .content .item:last-child {
+            padding-bottom: 12px; }
+      .wrap .subscribers_content .item .options button.offer {
+        width: 168px;
+        height: 22px;
+        border-radius: 15px;
+        border: 1px solid #ff6e41;
+        color: #fff;
+        background: #ff6e41;
+        cursor: pointer;
+        padding: 0px 5px;
+        outline: none; }
 
 .part_btn {
   height: 30px;

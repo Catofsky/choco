@@ -19,6 +19,13 @@
 			padding-left: 10px
 			border-radius: 15px
 			border: 1px solid $gray_border
+	.hides
+		width: 140px
+		height: 50px
+		background: #fff 
+		position: absolute
+		z-index: 99
+		margin-left: 880px
 
 .wrap
 	.brim
@@ -77,3 +84,64 @@
 				margin-right: 0px
 				i.material-icons:hover
 					color: $main_orange
+			.options
+				width: 180px
+				height: 214px
+				position: absolute
+				border-radius: 15px
+				box-shadow: 0 10px 30px rgba(0,0,0,0.4)
+				margin: -40px 0px 0px -30px
+				background: #fff
+				z-index: 20
+				&.hide
+					display: none
+				.title
+					width: 164px
+					height: 24px
+					background: $main_bg
+					border-radius: 15px 15px 0 0
+					padding-top: 5px
+					padding-left: 16px
+					p
+						font-size: 16px
+				button
+					margin: 0px 5px
+				button.ban
+					width: 168px
+					height: 22px
+					margin-top: 10px
+					border-radius: 15px
+					border: 1px solid $footer
+					color: #fff
+					background: $footer
+					cursor: pointer
+					padding: 0px 5px
+					outline: none
+				.content
+					margin: 8px 10px 0px 10px
+					padding: 12px 0px 0px 0px
+					border: 1px solid $gray_border
+					border-right-style: none
+					border-left-style: none
+					border-bottom-style: none
+					p
+						padding-bottom: 4px
+					.item
+						width: 135px
+						height: 20px
+						display: flex
+						justify-content: space-between
+						padding-bottom: 5px
+						&:last-child
+							padding-bottom: 12px
+						p
+				button.offer
+					width: 168px
+					height: 22px
+					border-radius: 15px
+					border: 1px solid $main_orange
+					color: #fff
+					background: $main_orange
+					cursor: pointer
+					padding: 0px 5px
+					outline: none
