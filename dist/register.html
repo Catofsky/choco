@@ -1,5 +1,4 @@
-
-<script>u()</script><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
@@ -8,6 +7,7 @@
   <title>Chocokiller</title>
   <link rel="stylesheet" href="css/style.css"/>
   <link rel="stylesheet" href="font/material-icons.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:700" rel="stylesheet"/>
   <script src="js/umbrella.min.js"></script>
   <script>window.parts = {};</script>
 </head><body>
@@ -25,7 +25,7 @@
           <div class="list">Категории</div>
           <div class="btn">Найти</div>
         </div>
-        <div class="menu"><a href="#"><i class="material-icons">favorite</i>Желания</a><a class="cart" href="#"><i class="material-icons">shopping_cart</i><span>12</span>Корзина</a></div>
+        <div class="menu"><a href="#"><i class="material-icons">favorite</i>Избранное</a><a class="cart" href="#"><i class="material-icons">shopping_cart</i><span>12</span>Корзина</a></div>
         <div class="profile">
           <div class="balance">120 000</div>
           <div class="username">Tirion</div>
@@ -75,18 +75,18 @@
 <div id="register_block">
   <div class="site_width">
     <div class="title">Форма регистрации</div>
-    <form method="POST" action="/register">
+    <form class="form" method="POST" action="/register">
       <div class="part_text_input">
-        <label><span>Имя</span>
+        <label><span>Имя:</span>
           <input type="text" name="fname" placeholder="Тирион"/>
         </label>
       </div>
       <div class="part_text_input">
-        <label><span>Фамилия</span>
+        <label><span>Фамилия:</span>
           <input type="text" name="lname" placeholder="Ланистер"/>
         </label>
       </div>
-      <label><span>Ваш пол</span>
+      <label><span>Ваш пол:</span>
         <div class="block">
           <div class="part_radiobutton">
             <label>
@@ -101,27 +101,27 @@
         </div>
       </label>
       <div class="part_text_input">
-        <label><span>Логин</span>
+        <label><span>Логин:</span>
           <input type="text" name="username"/>
         </label>
       </div>
       <div class="part_text_input">
-        <label><span>Телефон</span>
+        <label><span>Телефон:</span>
           <input type="text" name="phone" placeholder="+7 123 456789"/>
         </label>
       </div>
       <div class="part_text_input">
-        <label><span>Почта</span>
+        <label><span>Почта:</span>
           <input type="email" name="email" placeholder="mail@gmail.com"/>
         </label>
       </div>
       <div class="part_text_input">
-        <label><span>Пароль</span>
+        <label><span>Пароль:</span>
           <input type="password" name="password"/>
         </label>
       </div>
       <div class="part_text_input">
-        <label><span>Повторите пароль</span>
+        <label><span>Повторите пароль:</span>
           <input type="password" name="repeat"/>
         </label>
       </div>
@@ -134,6 +134,16 @@
     </form>
   </div>
 </div>
+<style>
+  .part_checkbox label span {
+      right: 0px !important;
+      position: relative !important;
+      top: -8px !important;
+  }
+  
+  
+  
+</style>
 <footer>
   <div class="wrapper">
     <div class="inner">

@@ -1,0 +1,150 @@
+.wrap
+	.date
+		display: flex
+		margin-top: 20px
+		i.material-icons
+			margin-right: 10px
+			margin-top: -3px
+			font-size: 24px
+			cursor: pointer
+		select
+			width: 108px
+			height: 18px
+			border-radius: 15px
+			border: 1px solid $gray_border
+			margin-right: 20px
+			option
+
+		input
+			width: 332px
+			height: 18px
+			padding-left: 10px
+			border-radius: 15px
+			border: 1px solid $gray_border
+	.hides
+		width: 140px
+		height: 50px
+		background: #fff 
+		position: absolute
+		z-index: 99
+		margin-left: 880px
+
+.wrap
+	.brim_employees
+		display: flex
+		justify-content: flex-start
+		margin: 28px 0px
+		.item
+			p
+				font-size: 18px
+			&:first-child
+				margin-left: 70px
+				margin-right: 315px
+			&:nth-child(2)
+				margin-right: 125px
+			&:nth-child(3)
+				margin-right: 170px
+
+
+
+.wrap
+	.subscribers_content
+		display: flex 
+		align-items: center
+		height: 80px
+		border: 1px solid $gray_border
+		border-right-style: none
+		border-left-style: none
+		font-size: 16px
+		&:first-child
+			border-right-style: none
+			border-left-style: none
+			border-bottom-style: none
+		&:last-child
+			border-right-style: none
+			border-left-style: none
+			border-top-style: none
+		.logo
+			width: 50px
+			height: 50px
+			border-radius: 50%
+			margin-right: 20px
+			img
+				width: 50px
+				height: 50px
+				border-radius: 50%
+		.item
+			display: flex
+			&.name
+				margin-right: 210px
+			&:nth-child(3)
+				display: flex
+				flex-direction: column
+				p
+					margin: 4px 0px
+			&:nth-child(4)
+				margin-right: 145px
+			&:nth-child(5)
+				margin-right: 40px
+			&:last-child
+				cursor: pointer
+				margin-right: 0px
+				i.material-icons
+					color: $gray_border
+				i.material-icons:hover
+					color: $main_orange
+			.options_employees 
+				width: 180px
+				height: 150px
+				position: absolute
+				border-radius: 15px
+				box-shadow: 0 10px 30px rgba(0,0,0,0.4)
+				margin: -40px 0px 0px -30px
+				background: #fff
+				z-index: 20
+				&.hide
+					display: none
+				.title
+					width: 164px
+					height: 24px
+					background: $main_bg
+					border-radius: 15px 15px 0 0
+					padding-top: 5px
+					padding-left: 16px
+					display: flex
+					p
+						font-size: 16px
+						margin-right: 90px
+					i.material-icons
+						margin-top: -3px
+				button
+					margin: 0px 5px
+				.content
+					margin: 8px 10px 0px 10px
+					padding: 12px 0px 0px 0px
+					border: 1px solid $gray_border
+					border-right-style: none
+					border-left-style: none
+					border-bottom-style: none
+					p
+						padding-bottom: 4px
+					.item
+						width: 160px
+						height: 20px
+						display: flex
+						justify-content: space-between
+						padding-bottom: 5px
+						&:last-child
+							padding-bottom: 24px
+						p
+
+				button.delete_offer
+					width: 168px
+					height: 22px
+					border-radius: 15px
+					border: 1px solid $footer
+					color: #fff
+					background: $footer
+					cursor: pointer
+					padding: 0px 5px
+					outline: none

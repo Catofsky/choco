@@ -1,10 +1,11 @@
 mixin part_profile_statistic_shop(shop)
 	.choice_bar
 		h1 Голосование
+		-var num = 1;
 		each item in shop 
 			.shop_content
-				-var id = item.voted;
-				input(type="radio" name="contact" id=id)
+				-var id = "voted_" + num++;
+				input(type="radio" name="vote" id=id)
 				label(for=id)= item.title
 
 	-var arrayVoted = [], arrayPercentVoted = [], max = 0;
@@ -21,7 +22,7 @@ mixin part_profile_statistic_shop(shop)
 	- }
 
 
-	.part_profile_statistic_shop
+	.part_profile_statistic_shop(style="display: none")
 		h1 Голосование
 		each item, i in shop
 			.shop_content
@@ -29,3 +30,9 @@ mixin part_profile_statistic_shop(shop)
 					p= item.title
 					p= item.voted
 				.inner(style='width: ' + arrayPercentVoted[i] + '%')
+
+	script.
+		u("input[name=vote]").on("change",function(){
+			u(".part_profile_statistic_shop").first().style.display = 'block';
+			u(".choice_bar").first().style.display = 'none';
+		});

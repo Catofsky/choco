@@ -11,7 +11,7 @@ mixin item_dialogue(image,title,number_oreder,shop_name,option,status,time_date,
 			.description_order
 				.title
 					a(href="#")
-						h1=title
+						p=title
 				.content
 					.item
 						p Номер заказа:
@@ -89,14 +89,14 @@ mixin item_dialogue(image,title,number_oreder,shop_name,option,status,time_date,
 						.text Бонус
 
 		+part_sort("дешевле","дороже","новым","старым","а-я")
-
+		
 		.content_block
 			.side_block
 				.menu
-					.item
+					.item.active
 						i.material-icons dehaze
 						.text Главная
-					.item.active
+					.item
 						i.material-icons turned_in
 						.text Мои заказы
 					.item

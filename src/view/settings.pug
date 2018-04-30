@@ -77,7 +77,7 @@ include _header.pug
           +part_input_date()
           .profile_main
             .name_setting Ваш пол:
-            input.input_setting.input_double(type="radio" id="man" name="gender" value="Мужчина")
+            input.input_setting.input_double(checked=true type="radio" id="man" name="gender" value="Мужчина")
             label(for="man") Мужчина
             input.input_setting.input_double(type="radio" id="woman" name="gender" value="Мужчина")
             label(for="woman") Женщина 

@@ -1,5 +1,4 @@
-
-<script>u()</script><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
@@ -8,6 +7,7 @@
   <title>Chocokiller</title>
   <link rel="stylesheet" href="css/style.css"/>
   <link rel="stylesheet" href="font/material-icons.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:700" rel="stylesheet"/>
   <script src="js/umbrella.min.js"></script>
   <script>window.parts = {};</script>
 </head><body>
@@ -25,7 +25,7 @@
           <div class="list">Категории</div>
           <div class="btn">Найти</div>
         </div>
-        <div class="menu"><a href="#"><i class="material-icons">favorite</i>Желания</a><a class="cart" href="#"><i class="material-icons">shopping_cart</i><span>12</span>Корзина</a></div>
+        <div class="menu"><a href="#"><i class="material-icons">favorite</i>Избранное</a><a class="cart" href="#"><i class="material-icons">shopping_cart</i><span>12</span>Корзина</a></div>
         <div class="profile">
           <div class="balance">120 000</div>
           <div class="username">Tirion</div>
@@ -110,8 +110,8 @@
     <div class="part_sorting_block">
       <div class="part_sorting">
         <div class="part_sort_by">Сортировать по:</div>
-        <div class="part_item">Новым</div>
-        <div class="part_item">Старым</div>
+        <div class="part_item active">новым</div>
+        <div class="part_item">старым</div>
         <div class="part_item">а-я</div>
       </div>
       <div class="sort_block">
@@ -152,27 +152,27 @@
         <div class="choice_bar">
           <h1>Голосование</h1>
           <div class="shop_content">
-            <input type="radio" name="contact" id="901"/>
-            <label for="901">Белый ветер</label>
+            <input type="radio" name="vote" id="voted_1"/>
+            <label for="voted_1">Белый ветер</label>
           </div>
           <div class="shop_content">
-            <input type="radio" name="contact" id="420"/>
-            <label for="420">Крендель</label>
+            <input type="radio" name="vote" id="voted_2"/>
+            <label for="voted_2">Крендель</label>
           </div>
           <div class="shop_content">
-            <input type="radio" name="contact" id="345"/>
-            <label for="345">Технодом</label>
+            <input type="radio" name="vote" id="voted_3"/>
+            <label for="voted_3">Технодом</label>
           </div>
           <div class="shop_content">
-            <input type="radio" name="contact" id="469"/>
-            <label for="469">Мечта</label>
+            <input type="radio" name="vote" id="voted_4"/>
+            <label for="voted_4">Мечта</label>
           </div>
           <div class="shop_content">
-            <input type="radio" name="contact" id="522"/>
-            <label for="522">Айнур</label>
+            <input type="radio" name="vote" id="voted_5"/>
+            <label for="voted_5">Айнур</label>
           </div>
         </div>
-        <div class="part_profile_statistic_shop">
+        <div class="part_profile_statistic_shop" style="display: none">
           <h1>Голосование</h1>
           <div class="shop_content">
             <div class="block_title">
@@ -210,6 +210,12 @@
             <div class="inner" style="width: 57.93562708102109%"></div>
           </div>
         </div>
+        <script>
+          u("input[name=vote]").on("change",function(){
+          	u(".part_profile_statistic_shop").first().style.display = 'block';
+          	u(".choice_bar").first().style.display = 'none';
+          });
+        </script>
       </div>
       <div class="main_block">
         <div class="search_block">
@@ -223,7 +229,7 @@
           <div class="block_content">
             <div class="description_coupon">
               <div class="title"><a href="#">
-                  <h1>Салон крастоы Этуаль: Купон на скидку</h1></a></div>
+                  <p>Салон крастоы Этуаль: Купон на скидку</p></a></div>
               <div class="content">
                 <div class="item">
                   <p>Номер заказа:</p>
@@ -262,7 +268,7 @@
           <div class="block_content">
             <div class="description_coupon">
               <div class="title"><a href="#">
-                  <h1>Салон крастоы Этуаль: Купон на скидку</h1></a></div>
+                  <p>Салон крастоы Этуаль: Купон на скидку</p></a></div>
               <div class="content">
                 <div class="item">
                   <p>Номер заказа:</p>
@@ -301,7 +307,7 @@
           <div class="block_content">
             <div class="description_coupon">
               <div class="title"><a href="#">
-                  <h1>Салон крастоы Этуаль: Купон на скидку</h1></a></div>
+                  <p>Салон крастоы Этуаль: Купон на скидку</p></a></div>
               <div class="content">
                 <div class="item">
                   <p>Номер заказа:</p>

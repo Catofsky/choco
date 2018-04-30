@@ -173,6 +173,11 @@ include _header.pug
                 Стекло очень легко царапается, потому лучше покупать чехол сразу вместе с телефоном.
 
               .date 18 июня 2018 14:21
+              .like
+                p 123
+                i(class="material-icons") thumb_up
+                p 52
+                i(class="material-icons") thumb_down
 
           .comment
             .rating
@@ -194,6 +199,11 @@ include _header.pug
               .read_more Читать дальше
 
               .date 18 июня 2018 14:21
+              .like
+                p 123
+                i(class="material-icons") thumb_up
+                p 52
+                i(class="material-icons") thumb_down
 
           .comment.answer
             .avatar_container
@@ -207,7 +217,8 @@ include _header.pug
                 Трепета и дрожи в коленках нет, перемешанного с предыханием, был уже опыт использования разных устройств от Apple. Просто все удобно и приятно использовать.
                 За текущую цену среднестатистическому
 
-              .date 18 июня 2018 14:21
+              .date 
+                p 18 июня 2018 14:21                
 
           .comment
             .rating
@@ -225,9 +236,23 @@ include _header.pug
                 Теперь продаю телефон.
 
               .date 18 июня 2018 14:21
+              .like
+                p 123
+                i(class="material-icons") thumb_up
+                p 52
+                i(class="material-icons") thumb_down
 
         .leave_comment
           .title Пожалуйста, оцените этот товар
+          .rate
+            .one 1
+            .two 2
+            .three 3
+            .four 4
+            .five 5
+
+        .leave_comment
+          .title Оцените Белый ветер
           .rate
             .one 1
             .two 2

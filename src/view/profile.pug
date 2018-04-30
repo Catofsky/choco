@@ -56,7 +56,7 @@ mixin item_natification(type_name,name_product,price_befor,event,price_now)
 		.content_block
 			.side_block
 				.menu
-					.item
+					.item.active
 						i.material-icons dehaze
 						.text Главная
 					.item
@@ -80,7 +80,7 @@ mixin item_natification(type_name,name_product,price_befor,event,price_now)
 						i.material-icons mail
 						.text Сообщения
 						.num 12
-					.item.active
+					.item
 						i.material-icons settings
 						.text Настройки
 				+part_profile_statistic_shop([ 
@@ -114,13 +114,13 @@ mixin item_natification(type_name,name_product,price_befor,event,price_now)
 						}
 					.block_products
 						- for (var i = 0; i < 4; i++)
-							+part_product_card(product,"favorite")
+							+part_product_card(product)
 				.last_published
 					h1 Последние опубликованные
 					p Смотреть все
 				.last_favorites
 					- for (var i = 0; i < 4; i++)
-						+part_product_card(product,"favorite")
+						+part_product_card(product)
 				.notifications
 					h1 Уведомления
 					p Смотреть все
@@ -130,5 +130,12 @@ mixin item_natification(type_name,name_product,price_befor,event,price_now)
 					+item_natification("Акция","Крендель: Приведи друга, и получи второй Латте бесплатно!","новое","","96:59:30")
 					+item_natification("Изменение цены","Смартфон Apple iPhone X, 256Gb, silver","377 990","call_made","350 980")
 					+item_natification("Акция","Мечта: Ночная распродажа. -20% на ряд товаров","","","43:21:30")
+					
++part_coffee('product_card')
+script.
+		parts.product_card({
+		items: u('.part_product_card'),
+		hearts: u('.part_product_card .material-icons.heart')
+	});
 
 include _footer.pug

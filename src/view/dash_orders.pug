@@ -16,7 +16,7 @@ block content
                 .description_dash_orders
                     .title
                         a(href="#")
-                            h1=title
+                            p=title
                     .content
                         .item
                             p Заказчик:
@@ -77,15 +77,16 @@ block content
         .sort_content
             i(class="material-icons") date_range
             select.all
-                option &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;всё
+                option всё
             select.state
-                option &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Активно
+                option Активно
             input.input_search(placeholder="название или номер товара")
             .tg1 ₸
             input.input_from(placeholder="от")
             .tg2 ₸ 
             input.input_to(placeholder="до")
-        +part_sort("Дешевле","Дороже","Заказы","Новинки","Рейтинг","а-я")
+        +part_sort("новые","старые","статус","цена")
+
 
         +item_dash_orders("/img/slide/1.png","IPhone X, 256Gb, Space Gray","Серсея Ланистер","Выполнено","25/06/18","12:45","354186","+7 775 152345","1","377 990","1")
         +item_dash_orders("/img/slide/1.png","IPhone X, 256Gb, Space Gray","Серсея Ланистер","Не выполнено","25/06/18","12:45","354186","+7 775 152345","1","377 990","2")

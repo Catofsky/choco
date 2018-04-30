@@ -48,12 +48,12 @@ mixin person_massage(image,name,time,message)
 						.num 1 520
 						.text Бонус
 
-		+part_sort("Новым","Старым","а-я")
+		+part_sort("новым","старым","а-я")
 
 		.content_block
 			.side_block
 				.menu
-					.item
+					.item.active
 						i.material-icons dehaze
 						.text Главная
 					.item
@@ -77,7 +77,7 @@ mixin person_massage(image,name,time,message)
 						i.material-icons mail
 						.text Сообщения
 						.num 12
-					.item.active
+					.item
 						i.material-icons settings
 						.text Настройки
 				+part_profile_statistic_shop([ 

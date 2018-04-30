@@ -60,15 +60,18 @@ block content
                 .item
                     .wrap
                         input(type='text' name='phone[]')
-                        .add(data-name='phone') +
+                        .add(data-name='phone')
+                            i(class="material-icons") add
 
                     .wrap.mg
                         input(type='text' name='phone[]')
-                        .rm x
+                        .rm
+                            i(class="material-icons") clear
 
                     .wrap.mg
                         input(type='text' name='phone[]')
-                        .rm x
+                        .rm
+                            i(class="material-icons") clear
             
             .input
                 .label
@@ -76,7 +79,8 @@ block content
                 .item
                     .wrap
                         input(type='text' name='email[]')
-                        .add(data-name='email') +
+                        .add(data-name='email') 
+                            i(class="material-icons") add
 
 
         input.btn(type='button' value='Сохранить')
@@ -86,7 +90,7 @@ block content
             .on('click', function () {
                 var name = this.dataset.name;
                 var s = '<div class="wrap mg"><input type="text" name="' + name + '[]">' +
-                '<div class="rm">x</div></div>';
+                '<div class="rm"><i class="material-icons">clear</i></div></div>';
                 u(this).closest('.item').append(s);
                 u(this).closest('.item').find('.rm').on('click', function () {
                     u(this).parent().remove();

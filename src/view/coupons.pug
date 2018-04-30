@@ -11,7 +11,7 @@ mixin item_dialogue(image,title,number_oreder,shop_name,option,status,time_date,
 			.description_coupon
 				.title
 					a(href="#")
-						h1=title
+						p=title
 				.content
 					.item
 						p Номер заказа:
@@ -74,7 +74,7 @@ mixin item_dialogue(image,title,number_oreder,shop_name,option,status,time_date,
 						.num 1 520
 						.text Бонус
 
-		+part_sort("Новым","Старым","а-я")
+		+part_sort("новым","старым","а-я")
 
 		.content_block
 			.side_block

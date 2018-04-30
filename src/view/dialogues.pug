@@ -44,7 +44,7 @@ mixin item_dialogue(logo,name,text,time,num,active)
 		.content_block
 			.side_block
 				.menu
-					.item
+					.item.active
 						i.material-icons dehaze
 						.text Главная
 					.item
@@ -68,7 +68,7 @@ mixin item_dialogue(logo,name,text,time,num,active)
 						i.material-icons mail
 						.text Сообщения
 						.num 12
-					.item.active
+					.item
 						i.material-icons settings
 						.text Настройки
 				+part_profile_statistic_shop([ 

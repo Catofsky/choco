@@ -1,8 +1,8 @@
 
-mixin part_product_card(args, favorite)
+mixin part_product_card(args)
   .part_product_card
     .wrapper
-      i.material-icons.heart= favorite
+      i.material-icons.heart favorite_border
       i.material-icons.share share
       .sale - #{args.sale} %
       .rating= args.rating

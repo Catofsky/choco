@@ -1,5 +1,4 @@
-
-<script>u()</script><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -77,8 +76,8 @@
               <div class="label">
                 <p>Срок товара:</p>
               </div>
-              <div class="item">                   
-                <input class="input_setting input_limited" type="radio" id="not_limited" name="gender">
+              <div class="item">
+                <input class="input_setting input_limited" checked type="radio" id="not_limited" name="gender">
                 <label for="not_limited">Неограничен</label>
                 <input class="input_setting input_limited" type="radio" id="limited" name="gender">
                 <label for="limited">Ограничен</label>
@@ -155,7 +154,7 @@
                 <p>Срок товара:</p>
               </div>
               <div class="item">                   
-                <input class="input_setting input_options" type="radio" id="not_options" name="option_product">
+                <input class="input_setting input_options" checked type="radio" id="not_options" name="option_product">
                 <label class="options_product" for="not_options">У товара нет вариантов</label>
                 <input class="input_setting input_options" type="radio" id="options" name="option_product" attr="data-scroll">
                 <label class="options_product" for="options">У товара есть варианты</label>
@@ -174,6 +173,28 @@
                 </div>
                 <div class="percent_content">
                   <input class="onlyNumbers" type="text" id="out" name="title" value="50"><span class="percent">%</span>
+                </div>
+              </div>
+            </div>
+            <div class="input" style="display: flex">
+              <div class="label">
+                <p>Цена без скидки:</p>
+              </div>
+              <div class="item">
+                <div class="no_discount">
+                  <input type="text" value="10000">
+                  <p>Со скидкой:</p>
+                  <input type="text" value="7000">
+                </div>
+              </div>
+            </div>
+            <div class="input" style="display: flex">
+              <div class="label">
+                <p>Колличество:</p>
+              </div>
+              <div class="item">
+                <div class="no_discount">
+                  <input type="text" value="120">
                 </div>
               </div>
             </div>
@@ -201,8 +222,8 @@
                   </div>
                 </div>
                 <div class="save_content">
-                  <input class="btn white" type="button" value="Опубликовать">
-                  <input class="btn" type="button" value="Сохранить без публикации">
+                  <input class="publish" type="button" value="Опубликовать">
+                  <input class="no_publish white" type="button" value="Сохранить без публикации">
                 </div><a class="preview" href="#">предпросмотр</a>
               </div>
             </div>
@@ -229,6 +250,21 @@
           
           round = document.querySelector('.range_container .round');
           round.style.left = 'calc(' + v + '% - 15px)';
+          });
+          
+        </script>
+        <script>
+          u('.onlyNumbers').on("change", function(){
+              var value = this.value;
+              if(value > 99) {
+                  value = 99;
+              } else if (value < 1) {
+                  value = 1;
+              }
+              progress = document.querySelector('.range_container .progress');
+              progress.style.background ='linear-gradient(to right, #ff6e41, #ff6e41 ' + value + '%, white ' + value + '%, white)';
+              round = document.querySelector('.range_container .round');
+              round.style.left = 'calc(' + value + '% - 15px)';
           });
         </script>
       </div>
