@@ -1,0 +1,72 @@
+extends dash/_layout.pug
+
+block title
+		title Chocokiller Shop
+
+block content
+
+		mixin employees(image, name, value1, value2, login, number)
+			.subscribers_content
+				.logo
+					img(src=image)
+				.item.name
+					p= name
+				.item
+					p= value1
+					p= value2
+				.item
+					p= login
+				.item
+					p= number
+				.item.options_hide_employees
+					i.material-icons more_vert
+					.options_employees.hide
+						.title
+							p Роли
+							i.material-icons control_point
+						.content
+							.item
+								p Продавец
+								i.material-icons cancel
+							.item
+								p Редактор
+								i.material-icons cancel
+						button.delete_offer(type='button') Удалить сотрудника
+
+		.content_title Сотрудники
+
+		.wrap
+			.date
+				i.material-icons date_range
+				select
+					option За сегодня
+				input(placeholder="имя логин")
+			.hides
+
+			+part_sort("новые","полу","кол-во заказов","а-я")
+		.wrap
+			.brim_employees
+				.item
+					p Имя
+				.item
+					p Роли
+				.item
+					p Логин
+				.item
+					p Телефон
+
+		.wrap
+			+employees("/img/user.jpg" ,"Тирион Ланистер", "Продавец","", "Tirion_449", "+7 775 123456")
+			+employees("/img/user.jpg" ,"Тирион Ланистер", "Продавец","Редактор", "Tirion_449", "+7 775 123456")
+			+employees("/img/user.jpg" ,"Тирион Ланистер", "Продавец","", "Tirion_449", "+7 775 123456")
+
+		script.
+			var check = 0;
+			u('.options_hide_employees').on("click", function(){				
+				u(this).children(".options_employees").toggleClass("hide");
+			});
+			u('.options_employees').children("button").on("click", function(){
+				u(".options_employees").toggleClass("toggleClass");
+			});
+
+
