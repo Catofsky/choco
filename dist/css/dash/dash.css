@@ -1583,6 +1583,10 @@ header {
           display: flex;
           justify-content: space-between;
           padding-bottom: 5px; }
+          .wrap .subscribers_content .item .options .content .item:nth-child(3) {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row; }
           .wrap .subscribers_content .item .options .content .item:last-child {
             padding-bottom: 12px; }
       .wrap .subscribers_content .item .options button.offer {
@@ -1739,8 +1743,7 @@ header {
         outline: none; }
 
 .wrap .date select {
-  height: 20px;
-  padding-left: 18px; }
+  height: 20px; }
 
 .wrap .properties_stats {
   margin-top: 20px;
