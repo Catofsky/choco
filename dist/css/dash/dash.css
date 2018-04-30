@@ -1464,7 +1464,7 @@ header {
     cursor: pointer; }
   .wrap .date select {
     width: 108px;
-    height: 18px;
+    height: 20px;
     border-radius: 15px;
     border: 1px solid #d9d9d9;
     margin-right: 20px; }
@@ -1737,6 +1737,90 @@ header {
         cursor: pointer;
         padding: 0px 5px;
         outline: none; }
+
+.wrap .date select {
+  height: 20px;
+  padding-left: 18px; }
+
+.wrap .properties_stats {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between; }
+  .wrap .properties_stats .item {
+    width: 145px;
+    height: 145px;
+    background: #4f89f5;
+    border-radius: 4px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3); }
+    .wrap .properties_stats .item i.material-icons {
+      color: #fff;
+      position: absolute;
+      margin-left: 115px;
+      margin-top: 5px; }
+    .wrap .properties_stats .item p {
+      color: #fff; }
+    .wrap .properties_stats .item .num {
+      margin-top: 60px;
+      font-size: 27px;
+      text-align: center; }
+    .wrap .properties_stats .item p:last-child {
+      margin-top: 5px;
+      text-align: center; }
+
+.wrap .ord {
+  margin-top: 45px;
+  display: flex;
+  justify-content: space-between; }
+  .wrap .ord .last_orders {
+    background: #ebf3fb;
+    border-radius: 4px;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
+    width: 700px;
+    height: 270px;
+    padding: 20px 20px;
+    margin-right: 20px; }
+    .wrap .ord .last_orders p:first-child {
+      color: #a4a6a9;
+      margin-bottom: 20px; }
+    .wrap .ord .last_orders a {
+      color: #5276c1; }
+    .wrap .ord .last_orders .item {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 10px; }
+      .wrap .ord .last_orders .item .logo {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: #ccc;
+        margin-right: 15px; }
+        .wrap .ord .last_orders .item .logo img {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%; }
+      .wrap .ord .last_orders .item p:nth-child(2) {
+        margin-right: 55px; }
+      .wrap .ord .last_orders .item a {
+        width: 400px; }
+  .wrap .ord .report {
+    background: #ebf3fb;
+    border-radius: 4px;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    height: 270px;
+    padding: 20px 20px; }
+    .wrap .ord .report p {
+      color: #a4a6a9;
+      margin-bottom: 20px; }
+    .wrap .ord .report .item {
+      display: flex;
+      justify-content: space-between; }
+      .wrap .ord .report .item p {
+        color: #434343;
+        font-size: 15px; }
+      .wrap .ord .report .item p:last-child {
+        font-size: 18px; }
 
 .part_btn {
   height: 30px;

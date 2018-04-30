@@ -1,0 +1,73 @@
+extends dash/_layout.pug
+
+block title
+		title Chocokiller Shop
+
+block content
+
+		.content_title Подписичики
+
+		.wrap
+			.date
+				select
+					option За день
+		.wrap
+			.properties_stats
+				.item
+					i.material-icons shopping_cart
+					p.num 34
+					p Товара продано сегодня
+				.item
+					i.material-icons local_play
+					p.num 24
+					p Купона взяли сегодня
+				.item
+					i.material-icons person
+					p.num 5
+					p Подписались сегодня
+				.item
+					i.material-icons attach_money
+					p.num 680K
+					p Прибыль сегодня
+		.wrap
+			.ord
+				.last_orders
+					p Последние заказы
+					.item
+						.logo
+							img(src="/img/user.jpg")
+						p Kotovsky
+						a(href="#") Iphone X, 256, Space gray
+						p сегодня 10:30
+					.item
+						.logo
+							img(src="/img/user.jpg")
+						p Kotovsky
+						a(href="#") Samsung Galaxy s9, 256gb
+						p сегодня 13:42
+					.item
+						.logo
+							img(src="/img/user.jpg")
+						p Kotovsky
+						a(href="#") Apple Watch
+						p сегодня 14:21
+					.item
+						.logo
+							img(src="/img/user.jpg")
+						p Kotovsky
+						a(href="#") Playstation 4 pro
+						p сегодня 18:03
+				.report
+					p Отчет
+					.item
+						p Продажа
+						P 530 140₸
+					.item
+						p Баланс
+						P 240 000₸
+					.item
+						p Магазины
+						P 4 351 120₸
+					.item
+						p Счет
+						P 18 140 648₸
