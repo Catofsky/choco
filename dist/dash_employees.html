@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Chocokiller Shop</title>
-    <link rel="stylesheet" href="css/dashboard/dash.css">
+    <link rel="stylesheet" href="css/dash/dash.css">
     <link rel="stylesheet" href="font/material-icons.css">
     <script src="js/umbrella.min.js"></script>
     <script>window.parts = {};</script>
@@ -41,7 +41,7 @@
         </div>
       </div>
       <div class="content">
-        <div class="content_title">Подписчики</div>
+        <div class="content_title">Сотрудники</div>
         <div class="wrap">
           <div class="date"><i class="material-icons">date_range</i>
             <select>
@@ -64,18 +64,18 @@
           </div>
         </div>
         <div class="wrap">
-          <div class="brim">
+          <div class="brim_employees">
             <div class="item">
               <p>Имя</p>
             </div>
             <div class="item">
-              <p>Кол-во заказов</p>
+              <p>Роли</p>
             </div>
             <div class="item">
               <p>Логин</p>
             </div>
             <div class="item">
-              <p>Телефон </p>
+              <p>Телефон</p>
             </div>
           </div>
         </div>
@@ -86,7 +86,8 @@
                       <p>Тирион Ланистер</p>
                     </div>
                     <div class="item">
-                      <p>53</p>
+                      <p>Продавец</p>
+                      <p></p>
                     </div>
                     <div class="item">
                       <p>Tirion_449</p>
@@ -94,40 +95,20 @@
                     <div class="item">
                       <p>+7 775 123456</p>
                     </div>
-                    <div class="item options_hide"><i class="material-icons">more_vert</i>
-                      <div class="options hide">
+                    <div class="item options_hide_employees"><i class="material-icons">more_vert</i>
+                      <div class="options_employees hide">
                         <div class="title">
-                          <p>Подписчик</p>
+                          <p>Роли</p><i class="material-icons">control_point</i>
                         </div>
-                        <button class="ban" type="button">Заблокировать</button>
                         <div class="content">
-                          <p>Роли в магазине:</p>
                           <div class="item">
-                            <p>Администратор</p>
-                            <div class="part_checkbox">
-                              <label>
-                                <input type="checkbox" name=""/><i class="material-icons on">check_box_outline</i><i class="material-icons off">check_box_outline_blank</i><span></span>
-                              </label>
-                            </div>
+                            <p>Продавец</p><i class="material-icons">cancel</i>
                           </div>
                           <div class="item">
-                            <p>Продавец</p>
-                            <div class="part_checkbox">
-                              <label>
-                                <input type="checkbox" name=""/><i class="material-icons on">check_box_outline</i><i class="material-icons off">check_box_outline_blank</i><span></span>
-                              </label>
-                            </div>
-                          </div>
-                          <div class="item">
-                            <p>Редактор</p>
-                            <div class="part_checkbox">
-                              <label>
-                                <input type="checkbox" name=""/><i class="material-icons on">check_box_outline</i><i class="material-icons off">check_box_outline_blank</i><span></span>
-                              </label>
-                            </div>
+                            <p>Редактор</p><i class="material-icons">cancel</i>
                           </div>
                         </div>
-                        <button class="offer" type="button">Предложить</button>
+                        <button class="delete_offer" type="button">Удалить сотрудника</button>
                       </div>
                     </div>
                   </div>
@@ -137,7 +118,8 @@
                       <p>Тирион Ланистер</p>
                     </div>
                     <div class="item">
-                      <p>53</p>
+                      <p>Продавец</p>
+                      <p>Редактор</p>
                     </div>
                     <div class="item">
                       <p>Tirion_449</p>
@@ -145,40 +127,20 @@
                     <div class="item">
                       <p>+7 775 123456</p>
                     </div>
-                    <div class="item options_hide"><i class="material-icons">more_vert</i>
-                      <div class="options hide">
+                    <div class="item options_hide_employees"><i class="material-icons">more_vert</i>
+                      <div class="options_employees hide">
                         <div class="title">
-                          <p>Подписчик</p>
+                          <p>Роли</p><i class="material-icons">control_point</i>
                         </div>
-                        <button class="ban" type="button">Заблокировать</button>
                         <div class="content">
-                          <p>Роли в магазине:</p>
                           <div class="item">
-                            <p>Администратор</p>
-                            <div class="part_checkbox">
-                              <label>
-                                <input type="checkbox" name=""/><i class="material-icons on">check_box_outline</i><i class="material-icons off">check_box_outline_blank</i><span></span>
-                              </label>
-                            </div>
+                            <p>Продавец</p><i class="material-icons">cancel</i>
                           </div>
                           <div class="item">
-                            <p>Продавец</p>
-                            <div class="part_checkbox">
-                              <label>
-                                <input type="checkbox" name=""/><i class="material-icons on">check_box_outline</i><i class="material-icons off">check_box_outline_blank</i><span></span>
-                              </label>
-                            </div>
-                          </div>
-                          <div class="item">
-                            <p>Редактор</p>
-                            <div class="part_checkbox">
-                              <label>
-                                <input type="checkbox" name=""/><i class="material-icons on">check_box_outline</i><i class="material-icons off">check_box_outline_blank</i><span></span>
-                              </label>
-                            </div>
+                            <p>Редактор</p><i class="material-icons">cancel</i>
                           </div>
                         </div>
-                        <button class="offer" type="button">Предложить</button>
+                        <button class="delete_offer" type="button">Удалить сотрудника</button>
                       </div>
                     </div>
                   </div>
@@ -188,7 +150,8 @@
                       <p>Тирион Ланистер</p>
                     </div>
                     <div class="item">
-                      <p>53</p>
+                      <p>Продавец</p>
+                      <p></p>
                     </div>
                     <div class="item">
                       <p>Tirion_449</p>
@@ -196,51 +159,31 @@
                     <div class="item">
                       <p>+7 775 123456</p>
                     </div>
-                    <div class="item options_hide"><i class="material-icons">more_vert</i>
-                      <div class="options hide">
+                    <div class="item options_hide_employees"><i class="material-icons">more_vert</i>
+                      <div class="options_employees hide">
                         <div class="title">
-                          <p>Подписчик</p>
+                          <p>Роли</p><i class="material-icons">control_point</i>
                         </div>
-                        <button class="ban" type="button">Заблокировать</button>
                         <div class="content">
-                          <p>Роли в магазине:</p>
                           <div class="item">
-                            <p>Администратор</p>
-                            <div class="part_checkbox">
-                              <label>
-                                <input type="checkbox" name=""/><i class="material-icons on">check_box_outline</i><i class="material-icons off">check_box_outline_blank</i><span></span>
-                              </label>
-                            </div>
+                            <p>Продавец</p><i class="material-icons">cancel</i>
                           </div>
                           <div class="item">
-                            <p>Продавец</p>
-                            <div class="part_checkbox">
-                              <label>
-                                <input type="checkbox" name=""/><i class="material-icons on">check_box_outline</i><i class="material-icons off">check_box_outline_blank</i><span></span>
-                              </label>
-                            </div>
-                          </div>
-                          <div class="item">
-                            <p>Редактор</p>
-                            <div class="part_checkbox">
-                              <label>
-                                <input type="checkbox" name=""/><i class="material-icons on">check_box_outline</i><i class="material-icons off">check_box_outline_blank</i><span></span>
-                              </label>
-                            </div>
+                            <p>Редактор</p><i class="material-icons">cancel</i>
                           </div>
                         </div>
-                        <button class="offer" type="button">Предложить</button>
+                        <button class="delete_offer" type="button">Удалить сотрудника</button>
                       </div>
                     </div>
                   </div>
         </div>
         <script>
           var check = 0;
-          u('.options_hide').on("click", function(){				
-          	u(this).children(".options").toggleClass("hide");
+          u('.options_hide_employees').on("click", function(){				
+          	u(this).children(".options_employees").toggleClass("hide");
           });
-          u('.options').children("button").on("click", function(){
-          	u(".options").toggleClass("toggleClass");
+          u('.options_employees').children("button").on("click", function(){
+          	u(".options_employees").toggleClass("toggleClass");
           });
         </script>
       </div>

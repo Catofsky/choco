@@ -9,7 +9,7 @@
 			cursor: pointer
 		select
 			width: 108px
-			height: 20px
+			height: 18px
 			border-radius: 15px
 			border: 1px solid $gray_border
 			margin-right: 20px
@@ -30,7 +30,7 @@
 		margin-left: 880px
 
 .wrap
-	.brim
+	.brim_employees
 		display: flex
 		justify-content: flex-start
 		margin: 28px 0px
@@ -39,9 +39,9 @@
 				font-size: 18px
 			&:first-child
 				margin-left: 70px
-				margin-right: 270px
+				margin-right: 315px
 			&:nth-child(2)
-				margin-right: 90px
+				margin-right: 125px
 			&:nth-child(3)
 				margin-right: 170px
 
@@ -74,21 +74,28 @@
 				height: 50px
 				border-radius: 50%
 		.item
-			margin-right: 135px
+			display: flex
 			&.name
-				margin-right: 240px
+				margin-right: 210px
+			&:nth-child(3)
+				display: flex
+				flex-direction: column
+				p
+					margin: 4px 0px
 			&:nth-child(4)
 				margin-right: 145px
-			&:nth-child(5)		
+			&:nth-child(5)
 				margin-right: 40px
 			&:last-child
 				cursor: pointer
 				margin-right: 0px
+				i.material-icons
+					color: $gray_border
 				i.material-icons:hover
 					color: $main_orange
-			.options
+			.options_employees 
 				width: 180px
-				height: 214px
+				height: 150px
 				position: absolute
 				border-radius: 15px
 				box-shadow: 0 10px 30px rgba(0,0,0,0.4)
@@ -104,21 +111,14 @@
 					border-radius: 15px 15px 0 0
 					padding-top: 5px
 					padding-left: 16px
+					display: flex
 					p
 						font-size: 16px
+						margin-right: 90px
+					i.material-icons
+						margin-top: -3px
 				button
 					margin: 0px 5px
-				button.ban
-					width: 168px
-					height: 22px
-					margin-top: 10px
-					border-radius: 15px
-					border: 1px solid $footer
-					color: #fff
-					background: $footer
-					cursor: pointer
-					padding: 0px 5px
-					outline: none
 				.content
 					margin: 8px 10px 0px 10px
 					padding: 12px 0px 0px 0px
@@ -129,24 +129,22 @@
 					p
 						padding-bottom: 4px
 					.item
-						width: 135px
+						width: 160px
 						height: 20px
 						display: flex
 						justify-content: space-between
 						padding-bottom: 5px
-						&:nth-child(3)
-							display: flex
-							justify-content: space-between
-							flex-direction: row
 						&:last-child
-							padding-bottom: 12px
-				button.offer
+							padding-bottom: 24px
+						p
+
+				button.delete_offer
 					width: 168px
 					height: 22px
 					border-radius: 15px
-					border: 1px solid $main_orange
+					border: 1px solid $footer
 					color: #fff
-					background: $main_orange
+					background: $footer
 					cursor: pointer
 					padding: 0px 5px
 					outline: none
