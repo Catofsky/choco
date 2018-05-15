@@ -182,7 +182,6 @@ header .full_profile.active {
       margin-right: 18px; }
     header .full_profile.active .item a {
       width: 100px;
-      color: #cccccc;
       margin-right: 35px; }
     header .full_profile.active .item .seeing {
       display: none; }
@@ -1284,6 +1283,76 @@ footer {
     background: #96dab9; }
     #other .leave_comment .five:hover, #other .leave_comment .five.active {
       background: #2db573; }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+#popup {
+  display: block;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute; }
+  #popup.fade_out {
+    -webkit-animation: fadeIn .25s reverse;
+    animation: fadeIn .25s reverse; }
+  #popup.active {
+    visibility: visible;
+    -webkit-animation: fadeIn .25s;
+    animation: fadeIn .25s; }
+  #popup .bg {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; }
+  #popup .container {
+    width: 220px;
+    background: #fff;
+    border-radius: 4px;
+    position: fixed;
+    z-index: 1001;
+    top: calc(50% - 300px);
+    left: calc(50% - 110px);
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.5); }
+    #popup .container .user {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin: 24px auto; }
+    #popup .container .title {
+      margin-bottom: 24px; }
+      #popup .container .title p {
+        text-align: center;
+        font-size: 16px;
+        color: #404040; }
+    #popup .container .product_image {
+      width: 220px;
+      height: 220px;
+      cursor: pointer; }
+    #popup .container .product_title {
+      margin: 24px 0;
+      padding: 0 24px;
+      box-sizing: border-box;
+      text-align: center; }
+      #popup .container .product_title a {
+        color: #54a8d2;
+        font-size: 16px; }
+        #popup .container .product_title a:hover {
+          text-decoration: underline; }
+    #popup .container .btn_wrapper {
+      padding: 0 0 24px 0;
+      margin: 0 auto;
+      width: 200px; }
+    #popup .container .btn {
+      font-size: 12px;
+      display: block; }
 
 .main_wrapper {
   margin: 24px 0; }
