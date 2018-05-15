@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chocokiller Shop</title>
+    <link rel="stylesheet" href="/css/dash/dash.css">
+    <link rel="stylesheet" href="/font/material-icons.css">
+    <script src="/js/umbrella.min.js"></script>
+    <script>window.parts = {};</script>
+  </head>
+  <body>
+    <header>
+      <div class="logo" onclick="location.href=&quot;/index.html&quot;"></div>
+      <div class="top">
+        <div class="search"><i class="material-icons">search</i>
+          <input type="search" name="search" placeholder="Я ищу...">
+          <select name="search_cat">
+            <option>всё</option>
+          </select>
+          <input type="button" value="Найти">
+        </div>
+        <div class="store_select">
+          <select name="store_select">
+            <option>Магазин</option>
+          </select>
+        </div>
+        <div class="user">
+          <div class="name">
+            <p>Eldan</p>
+          </div>
+          <div class="avatar" style="background-image: url('/img/user.jpg')"></div>
+        </div>
+      </div>
+    </header>
+    <div class="main_block">
+      <div class="side_menu">
+        <div class="menu"><a href="/dash_main.html"><i class="material-icons">home</i><span>Главная</span></a><a href="/dash_orders.html"><i class="material-icons">turned_in</i><span>Заказы</span>
+            <div class="num">12</div></a><a href="/dash_employees.html"><i class="material-icons">people</i><span>Сотрудники</span></a><a href="/dash_subscribers.html"><i class="material-icons">perm_contact_calendar</i><span>Подписчики</span></a><a href="/dash_shop.html"><i class="material-icons">store</i><span>Магазин</span></a><a href="/dash_promotions.html"><i class="material-icons">loyalty</i><span>Акции</span></a><a href="/dash_index.html"><i class="material-icons">shoping</i><span>Товары</span></a><a href="/dash_settings.html"><i class="material-icons">settings</i><span>Настройки</span></a>
+        </div>
+      </div>
+      <div class="content">
+        <div class="content_title">Подписчики</div>
+        <div class="wrap">
+          <div class="date"><i class="material-icons">date_range</i>
+            <select>
+              <option>За сегодня</option>
+            </select>
+            <input placeholder="имя логин">
+          </div>
+          <div class="hides"></div>
+          <div class="part_sorting_block">
+            <div class="part_sorting">
+              <div class="part_sort_by">Сортировать по:</div>
+              <div class="part_item active">новые</div>
+              <div class="part_item">полу</div>
+              <div class="part_item">кол-во заказов</div>
+              <div class="part_item">а-я</div>
+            </div>
+            <div class="sort_block">
+              <p>Вид:</p><i class="material-icons _toggle_view_list">view_list</i><i class="material-icons _toggle_view_cards">view_comfy</i>
+            </div>
+          </div>
+        </div>
+        <div class="wrap">
+          <div class="brim">
+            <div class="item">
+              <p>Имя</p>
+            </div>
+            <div class="item">
+              <p>Кол-во заказов</p>
+            </div>
+            <div class="item">
+              <p>Логин</p>
+            </div>
+            <div class="item">
+              <p>Телефон </p>
+            </div>
+          </div>
+        </div>
+        <div class="wrap">
+                  <div class="subscribers_content">
+                    <div class="logo"><img src="/img/user.jpg"></div>
+                    <div class="item name">
+                      <p>Тирион Ланистер</p>
+                    </div>
+                    <div class="item">
+                      <p>53</p>
+                    </div>
+                    <div class="item">
+                      <p>Tirion_449</p>
+                    </div>
+                    <div class="item">
+                      <p>+7 775 123456</p>
+                    </div>
+                    <div class="item options_hide"><i class="material-icons">more_vert</i>
+                      <div class="options hide">
+                        <div class="title">
+                          <p>Подписчик</p>
+                        </div>
+                        <button class="ban" type="button">Заблокировать</button>
+                        <div class="content">
+                          <p>Роли в магазине:</p>
+                          <div class="item">
+                            <p>Администратор</p>
+                            <div class="part_checkbox">
+                              <label>
+                                <input type="checkbox" name=""/><i class="material-icons on">check_box_outline</i><i class="material-icons off">check_box_outline_blank</i><span></span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <p>Продавец</p>
+                            <div class="part_checkbox">
+                              <label>
+                                <input type="checkbox" name=""/><i class="material-icons on">check_box_outline</i><i class="material-icons off">check_box_outline_blank</i><span></span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <p>Редактор</p>
+                            <div class="part_checkbox">
+                              <label>
+                                <input type="checkbox" name=""/><i class="material-icons on">check_box_outline</i><i class="material-icons off">check_box_outline_blank</i><span></span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="offer" type="button">Предложить</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="subscribers_content">
+                    <div class="logo"><img src="/img/user.jpg"></div>
+                    <div class="item name">
+                      <p>Тирион Ланистер</p>
+                    </div>
+                    <div class="item">
+                      <p>53</p>
+                    </div>
+                    <div class="item">
+                      <p>Tirion_449</p>
+                    </div>
+                    <div class="item">
+                      <p>+7 775 123456</p>
+                    </div>
+                    <div class="item options_hide"><i class="material-icons">more_vert</i>
+                      <div class="options hide">
+                        <div class="title">
+                          <p>Подписчик</p>
+                        </div>
+                        <button class="ban" type="button">Заблокировать</button>
+                        <div class="content">
+                          <p>Роли в магазине:</p>
+                          <div class="item">
+                            <p>Администратор</p>
+                            <div class="part_checkbox">
+                              <label>
+                                <input type="checkbox" name=""/><i class="material-icons on">check_box_outline</i><i class="material-icons off">check_box_outline_blank</i><span></span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <p>Продавец</p>
+                            <div class="part_checkbox">
+                              <label>
+                                <input type="checkbox" name=""/><i class="material-icons on">check_box_outline</i><i class="material-icons off">check_box_outline_blank</i><span></span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <p>Редактор</p>
+                            <div class="part_checkbox">
+                              <label>
+                                <input type="checkbox" name=""/><i class="material-icons on">check_box_outline</i><i class="material-icons off">check_box_outline_blank</i><span></span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="offer" type="button">Предложить</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="subscribers_content">
+                    <div class="logo"><img src="/img/user.jpg"></div>
+                    <div class="item name">
+                      <p>Тирион Ланистер</p>
+                    </div>
+                    <div class="item">
+                      <p>53</p>
+                    </div>
+                    <div class="item">
+                      <p>Tirion_449</p>
+                    </div>
+                    <div class="item">
+                      <p>+7 775 123456</p>
+                    </div>
+                    <div class="item options_hide"><i class="material-icons">more_vert</i>
+                      <div class="options hide">
+                        <div class="title">
+                          <p>Подписчик</p>
+                        </div>
+                        <button class="ban" type="button">Заблокировать</button>
+                        <div class="content">
+                          <p>Роли в магазине:</p>
+                          <div class="item">
+                            <p>Администратор</p>
+                            <div class="part_checkbox">
+                              <label>
+                                <input type="checkbox" name=""/><i class="material-icons on">check_box_outline</i><i class="material-icons off">check_box_outline_blank</i><span></span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <p>Продавец</p>
+                            <div class="part_checkbox">
+                              <label>
+                                <input type="checkbox" name=""/><i class="material-icons on">check_box_outline</i><i class="material-icons off">check_box_outline_blank</i><span></span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <p>Редактор</p>
+                            <div class="part_checkbox">
+                              <label>
+                                <input type="checkbox" name=""/><i class="material-icons on">check_box_outline</i><i class="material-icons off">check_box_outline_blank</i><span></span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="offer" type="button">Предложить</button>
+                      </div>
+                    </div>
+                  </div>
+        </div>
+        <script>
+          var check = 0;
+          u('.options_hide').on("click", function(){				
+          	u(this).children(".options").toggleClass("hide");
+          });
+          u('.options').children("button").on("click", function(){
+          	u(".options").toggleClass("toggleClass");
+          });
+        </script>
+      </div>
+    </div>
+    <footer></footer>
+  </body>
+</html>

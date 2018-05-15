@@ -1,35 +1,206 @@
-
-<script>u()</script><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
   <title>Chocokiller</title>
-  <link rel="stylesheet" href="css/style.css"/>
-  <link rel="stylesheet" href="font/material-icons.css"/>
-  <script src="js/umbrella.min.js"></script>
+  <link rel="stylesheet" href="/css/style.css"/>
+  <link rel="stylesheet" href="/font/material-icons.css"/>
+  <link href="//fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"/>
+  <script src="/js/umbrella.min.js"></script>
   <script>window.parts = {};</script>
 </head><body>
 <header>
   <div class="top">
-    <div class="site_width"><a href="#">Открыть магазин</a><a href="#">Помощь</a></div>
+    <div class="site_width"><a href="#">Открыть магазин</a><a href="/help.html">Помощь</a></div>
   </div>
   <div id="header_keeper"></div>
   <div id="header_fix">
     <div class="center">
       <div class="site_width">
-        <div class="site_logo"></div>
+        <div class="site_logo" onclick="location.href='/index.html'"></div>
         <div class="search"><i class="material-icons">search</i>
           <input type="text" placeholder="Я ищу..."/>
           <div class="list">Категории</div>
           <div class="btn">Найти</div>
         </div>
-        <div class="menu"><a href="#"><i class="material-icons">favorite</i>Желания</a><a class="cart" href="#"><i class="material-icons">shopping_cart</i><span>12</span>Корзина</a></div>
-        <div class="profile">
+        <div class="menu"><a class="favorite" href="#" onmouseover="hover_favorite()"><i class="material-icons">favorite</i>Избранное</a><a class="cart" href="#" onmouseover="hover_cart()"><i class="material-icons">shopping_cart</i><span>12</span>Корзина</a>
+          <div class="full_cart" onmouseleave="leave_cart()">
+            <div class="content">
+              <div class="item"><a>Смартфон iPhone X 256gb, Space gray</a>
+                <div class="pre_price">
+                  <p>кол-во:</p>
+                  <p>сумма:</p>
+                </div>
+                <div class="price">
+                  <p>1 x 377 990₸</p>
+                  <p>377 990₸</p>
+                </div>
+              </div>
+              <div class="item"><a>Смартфон iPhone X 256gb, Space gray</a>
+                <div class="pre_price">
+                  <p>кол-во:</p>
+                  <p>сумма:</p>
+                </div>
+                <div class="price">
+                  <p>1 x 377 990₸</p>
+                  <p>377 990₸</p>
+                </div>
+              </div>
+              <div class="item"><a>Смартфон iPhone X 256gb, Space gray</a>
+                <div class="pre_price">
+                  <p>кол-во:</p>
+                  <p>сумма:</p>
+                </div>
+                <div class="price">
+                  <p>1 x 377 990₸</p>
+                  <p>377 990₸</p>
+                </div>
+              </div>
+              <div class="item"><a>Смартфон iPhone X 256gb, Space gray</a>
+                <div class="pre_price">
+                  <p>кол-во:</p>
+                  <p>сумма:</p>
+                </div>
+                <div class="price">
+                  <p>1 x 377 990₸</p>
+                  <p>377 990₸</p>
+                </div>
+              </div>
+              <div class="item"><a>Смартфон iPhone X 256gb, Space gray</a>
+                <div class="pre_price">
+                  <p>кол-во:</p>
+                  <p>сумма:</p>
+                </div>
+                <div class="price">
+                  <p>1 x 377 990₸</p>
+                  <p>377 990₸</p>
+                </div>
+              </div>
+              <div class="item"><a>Смартфон iPhone X 256gb, Space gray</a>
+                <div class="pre_price">
+                  <p>кол-во:</p>
+                  <p>сумма:</p>
+                </div>
+                <div class="price">
+                  <p>1 x 377 990₸</p>
+                  <p>377 990₸</p>
+                </div>
+              </div>
+              <div class="item"><a>Смартфон iPhone X 256gb, Space gray</a>
+                <div class="pre_price">
+                  <p>кол-во:</p>
+                  <p>сумма:</p>
+                </div>
+                <div class="price">
+                  <p>1 x 377 990₸</p>
+                  <p>377 990₸</p>
+                </div>
+              </div>
+            </div>
+            <div class="go_over">
+              <div class="go_over_s">
+                <p>кол-во: </p>
+                <P>7</P>
+                <p>ИТОГО: </p>
+                <P>2 645 930₸</P>
+              </div>
+              <div class="go_over_a"><a href="#">перейти в корзину</a></div>
+              <div class="btns_cart">
+                <button>ОФОРМИТЬ ЗАКАЗ</button>
+              </div>
+            </div>
+          </div>
+          <div class="full_favorite" onmouseleave="leave_favorite()">
+            <div class="content">
+              <div class="item"><a>Смартфон iPhone X 256gb, Space gray</a>
+                <div class="price">
+                  <p>цена со скидкой:</p>
+                  <p>377 990₸</p>
+                </div>
+              </div>
+              <div class="item"><a>Смартфон iPhone X 256gb, Space gray</a>
+                <div class="price">
+                  <p>цена со скидкой:</p>
+                  <p>377 990₸</p>
+                </div>
+              </div>
+              <div class="item"><a>Смартфон iPhone X 256gb, Space gray</a>
+                <div class="price">
+                  <p>цена со скидкой:</p>
+                  <p>377 990₸</p>
+                </div>
+              </div>
+              <div class="item"><a>Смартфон iPhone X 256gb, Space gray</a>
+                <div class="price">
+                  <p>цена со скидкой:</p>
+                  <p>377 990₸</p>
+                </div>
+              </div>
+              <div class="item"><a>Смартфон iPhone X 256gb, Space gray</a>
+                <div class="price">
+                  <p>цена со скидкой:</p>
+                  <p>377 990₸</p>
+                </div>
+              </div>
+              <div class="item"><a>Смартфон iPhone X 256gb, Space gray</a>
+                <div class="price">
+                  <p>цена со скидкой:</p>
+                  <p>377 990₸</p>
+                </div>
+              </div>
+              <div class="item"><a>Смартфон iPhone X 256gb, Space gray</a>
+                <div class="price">
+                  <p>цена со скидкой:</p>
+                  <p>377 990₸</p>
+                </div>
+              </div>
+            </div>
+            <div class="go_over">
+              <p>кол-во: 7</p>
+              <div class="btns">
+                <button>ПЕРЕЙТИ В ИЗБРАННОЕ</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="profile" onmouseover="hover_menu()">
           <div class="balance">120 000</div>
           <div class="username">Tirion</div>
-          <div class="user_avatar"></div>
+          <div class="user_avatar" style="background-image: url(/img/user.jpg)"></div>
+        </div>
+        <div class="full_profile" onmouseleave="leave_menu()">
+          <div class="item"><i class="material-icons">account_circle</i><a href="#">Профиль</a>
+            <div class="seeing"> 
+              <p> </p>
+            </div>
+          </div>
+          <div class="item"><i class="material-icons">bookmark</i><a href="#">Мои заказы</a>
+            <div class="seeing view">
+              <p>4</p>
+            </div>
+          </div>
+          <div class="item"><i class="material-icons">local_activity</i><a href="#">Мои купоны</a>
+            <div class="seeing"> 
+              <p> </p>
+            </div>
+          </div>
+          <div class="item"><i class="material-icons">notifications_active</i><a href="#">Уведомления</a>
+            <div class="seeing view">
+              <p>12</p>
+            </div>
+          </div>
+          <div class="item"><i class="material-icons">email</i><a href="#">Сообщения</a>
+            <div class="seeing view">
+              <p>7</p>
+            </div>
+          </div>
+          <div class="item"><i class="material-icons">settings</i><a href="#">Настройки</a>
+            <div class="seeing"> 
+              <p> </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -71,6 +242,27 @@
       </div>
     </div>
   </div>
+  <script>
+    function hover_menu() {
+      u(".full_profile").addClass("active");
+    }
+    function hover_favorite() {
+      u(".full_favorite").addClass("active");
+    }
+    function hover_cart() {
+      u(".full_cart").addClass("active");
+    }
+    
+    function leave_menu() {
+      u(".full_profile").removeClass("active");
+    }
+    function leave_favorite() {
+      u(".full_favorite").removeClass("active");
+    }
+    function leave_cart() {
+      u(".full_cart").removeClass("active");
+    }
+  </script>
 </header>
 <div class="page_title">
   <div class="site_width">
@@ -80,7 +272,7 @@
 <div class="profile_block">
   <div class="site_width">
     <div class="block">
-      <div class="avatar" style="background: url(&quot;img/user_150x150.jpg&quot;)"></div>
+      <div class="avatar" style="background: url(&quot;/img/user_150x150.jpg&quot;)"></div>
       <div class="info">
         <div class="username">Тирион Ланистер</div>
         <div class="stat">
@@ -110,7 +302,7 @@
     <div class="part_sorting_block">
       <div class="part_sorting">
         <div class="part_sort_by">Сортировать по:</div>
-        <div class="part_item">новым</div>
+        <div class="part_item active">новым</div>
         <div class="part_item">старым</div>
         <div class="part_item">а-я</div>
       </div>
@@ -121,58 +313,58 @@
     <div class="content_block">
       <div class="side_block">
         <div class="menu">
-          <div class="item"><i class="material-icons">dehaze</i>
+          <div class="item active" onlick="location.href='/profile.html'"><i class="material-icons">dehaze</i>
             <div class="text">Главная</div>
           </div>
-          <div class="item"><i class="material-icons">turned_in</i>
+          <div class="item" onlick="location.href='/orders.html'"><i class="material-icons">turned_in</i>
             <div class="text">Мои заказы</div>
           </div>
-          <div class="item"><i class="material-icons">local_play</i>
+          <div class="item" onlick="location.href='/coupons.html'"><i class="material-icons">local_play</i>
             <div class="text">Мои купоны</div>
           </div>
-          <div class="item"><i class="material-icons">favorite</i>
+          <div class="item" onlick="location.href='/profile.html'"><i class="material-icons">favorite</i>
             <div class="text">Избранное</div>
           </div>
-          <div class="item"><i class="material-icons">people</i>
+          <div class="item" onlick="location.href='/profile.html'"><i class="material-icons">people</i>
             <div class="text">Подписки</div>
             <div class="num">7</div>
           </div>
-          <div class="item"><i class="material-icons">notifications</i>
+          <div class="item" onlick="location.href='/profile.html'"><i class="material-icons">notifications</i>
             <div class="text">Уведомления</div>
             <div class="num">4</div>
           </div>
-          <div class="item"><i class="material-icons">mail</i>
+          <div class="item" onlick="location.href='/dialogues.html'"><i class="material-icons">mail</i>
             <div class="text">Сообщения</div>
             <div class="num">12</div>
           </div>
-          <div class="item active"><i class="material-icons">settings</i>
+          <div class="item" onlick="location.href='/settings.html'"><i class="material-icons">settings</i>
             <div class="text">Настройки</div>
           </div>
         </div>
         <div class="choice_bar">
           <h1>Голосование</h1>
           <div class="shop_content">
-            <input type="radio" name="contact" id="901"/>
-            <label for="901">Белый ветер</label>
+            <input type="radio" name="vote" id="voted_1"/>
+            <label for="voted_1">Белый ветер</label>
           </div>
           <div class="shop_content">
-            <input type="radio" name="contact" id="420"/>
-            <label for="420">Крендель</label>
+            <input type="radio" name="vote" id="voted_2"/>
+            <label for="voted_2">Крендель</label>
           </div>
           <div class="shop_content">
-            <input type="radio" name="contact" id="345"/>
-            <label for="345">Технодом</label>
+            <input type="radio" name="vote" id="voted_3"/>
+            <label for="voted_3">Технодом</label>
           </div>
           <div class="shop_content">
-            <input type="radio" name="contact" id="469"/>
-            <label for="469">Мечта</label>
+            <input type="radio" name="vote" id="voted_4"/>
+            <label for="voted_4">Мечта</label>
           </div>
           <div class="shop_content">
-            <input type="radio" name="contact" id="522"/>
-            <label for="522">Айнур</label>
+            <input type="radio" name="vote" id="voted_5"/>
+            <label for="voted_5">Айнур</label>
           </div>
         </div>
-        <div class="part_profile_statistic_shop">
+        <div class="part_profile_statistic_shop" style="display: none">
           <h1>Голосование</h1>
           <div class="shop_content">
             <div class="block_title">
@@ -210,6 +402,12 @@
             <div class="inner" style="width: 57.93562708102109%"></div>
           </div>
         </div>
+        <script>
+          u("input[name=vote]").on("change",function(){
+          	u(".part_profile_statistic_shop").first().style.display = 'block';
+          	u(".choice_bar").first().style.display = 'none';
+          });
+        </script>
       </div>
       <div class="main_block profile">
         <div class="favorites_block">
@@ -219,9 +417,9 @@
           </div>
           <div class="block_products">
             <div class="part_product_card">
-              <div class="wrapper"><i class="material-icons heart">favorite</i><i class="material-icons share">share</i>
+              <div class="wrapper"><i class="material-icons heart">favorite_border</i><i class="material-icons share">share</i>
                 <div class="sale">- 50 %</div>
-                <div class="rating">4.9</div><img src="img/products/1.jpg"/>
+                <div class="rating">4.9</div><img src="/img/products/1.jpg"/>
                 <div class="title" onclick="location.href = &quot;/profile.html&quot;;">Apple iPhone S 64Gb Space Gray</div>
                 <div class="old_price">1 330 000</div>
                 <div class="price">230 000</div>
@@ -232,9 +430,9 @@
               </div>
             </div>
             <div class="part_product_card">
-              <div class="wrapper"><i class="material-icons heart">favorite</i><i class="material-icons share">share</i>
+              <div class="wrapper"><i class="material-icons heart">favorite_border</i><i class="material-icons share">share</i>
                 <div class="sale">- 50 %</div>
-                <div class="rating">4.9</div><img src="img/products/1.jpg"/>
+                <div class="rating">4.9</div><img src="/img/products/1.jpg"/>
                 <div class="title" onclick="location.href = &quot;/profile.html&quot;;">Apple iPhone S 64Gb Space Gray</div>
                 <div class="old_price">1 330 000</div>
                 <div class="price">230 000</div>
@@ -245,9 +443,9 @@
               </div>
             </div>
             <div class="part_product_card">
-              <div class="wrapper"><i class="material-icons heart">favorite</i><i class="material-icons share">share</i>
+              <div class="wrapper"><i class="material-icons heart">favorite_border</i><i class="material-icons share">share</i>
                 <div class="sale">- 50 %</div>
-                <div class="rating">4.9</div><img src="img/products/1.jpg"/>
+                <div class="rating">4.9</div><img src="/img/products/1.jpg"/>
                 <div class="title" onclick="location.href = &quot;/profile.html&quot;;">Apple iPhone S 64Gb Space Gray</div>
                 <div class="old_price">1 330 000</div>
                 <div class="price">230 000</div>
@@ -258,9 +456,9 @@
               </div>
             </div>
             <div class="part_product_card">
-              <div class="wrapper"><i class="material-icons heart">favorite</i><i class="material-icons share">share</i>
+              <div class="wrapper"><i class="material-icons heart">favorite_border</i><i class="material-icons share">share</i>
                 <div class="sale">- 50 %</div>
-                <div class="rating">4.9</div><img src="img/products/1.jpg"/>
+                <div class="rating">4.9</div><img src="/img/products/1.jpg"/>
                 <div class="title" onclick="location.href = &quot;/profile.html&quot;;">Apple iPhone S 64Gb Space Gray</div>
                 <div class="old_price">1 330 000</div>
                 <div class="price">230 000</div>
@@ -278,9 +476,9 @@
         </div>
         <div class="last_favorites">
           <div class="part_product_card">
-            <div class="wrapper"><i class="material-icons heart">favorite</i><i class="material-icons share">share</i>
+            <div class="wrapper"><i class="material-icons heart">favorite_border</i><i class="material-icons share">share</i>
               <div class="sale">- 50 %</div>
-              <div class="rating">4.9</div><img src="img/products/1.jpg"/>
+              <div class="rating">4.9</div><img src="/img/products/1.jpg"/>
               <div class="title" onclick="location.href = &quot;/profile.html&quot;;">Apple iPhone S 64Gb Space Gray</div>
               <div class="old_price">1 330 000</div>
               <div class="price">230 000</div>
@@ -291,9 +489,9 @@
             </div>
           </div>
           <div class="part_product_card">
-            <div class="wrapper"><i class="material-icons heart">favorite</i><i class="material-icons share">share</i>
+            <div class="wrapper"><i class="material-icons heart">favorite_border</i><i class="material-icons share">share</i>
               <div class="sale">- 50 %</div>
-              <div class="rating">4.9</div><img src="img/products/1.jpg"/>
+              <div class="rating">4.9</div><img src="/img/products/1.jpg"/>
               <div class="title" onclick="location.href = &quot;/profile.html&quot;;">Apple iPhone S 64Gb Space Gray</div>
               <div class="old_price">1 330 000</div>
               <div class="price">230 000</div>
@@ -304,9 +502,9 @@
             </div>
           </div>
           <div class="part_product_card">
-            <div class="wrapper"><i class="material-icons heart">favorite</i><i class="material-icons share">share</i>
+            <div class="wrapper"><i class="material-icons heart">favorite_border</i><i class="material-icons share">share</i>
               <div class="sale">- 50 %</div>
-              <div class="rating">4.9</div><img src="img/products/1.jpg"/>
+              <div class="rating">4.9</div><img src="/img/products/1.jpg"/>
               <div class="title" onclick="location.href = &quot;/profile.html&quot;;">Apple iPhone S 64Gb Space Gray</div>
               <div class="old_price">1 330 000</div>
               <div class="price">230 000</div>
@@ -317,9 +515,9 @@
             </div>
           </div>
           <div class="part_product_card">
-            <div class="wrapper"><i class="material-icons heart">favorite</i><i class="material-icons share">share</i>
+            <div class="wrapper"><i class="material-icons heart">favorite_border</i><i class="material-icons share">share</i>
               <div class="sale">- 50 %</div>
-              <div class="rating">4.9</div><img src="img/products/1.jpg"/>
+              <div class="rating">4.9</div><img src="/img/products/1.jpg"/>
               <div class="title" onclick="location.href = &quot;/profile.html&quot;;">Apple iPhone S 64Gb Space Gray</div>
               <div class="old_price">1 330 000</div>
               <div class="price">230 000</div>
@@ -389,6 +587,14 @@
     </div>
   </div>
 </div>
+<script src="/coffee/parts/product_card/product_card.js"></script>
+<script>
+  	parts.product_card({
+  	items: u('.part_product_card'),
+  	hearts: u('.part_product_card .material-icons.heart')
+  });
+  
+</script>
 <footer>
   <div class="wrapper">
     <div class="inner">
@@ -403,12 +609,12 @@
     <div class="inner contacts">
       <div class="phone">+7 707 2707027</div>
       <div class="email">chocokiller@gmail.com</div>
-      <div class="soc"><a href="#" style="background-image: url(&quot;img/soc/vk.png&quot;)"></a><a href="#" style="background-image: url(&quot;img/soc/wa.png&quot;)"></a><a href="#" style="background-image: url(&quot;img/soc/insta.png&quot;)"></a><a href="#" style="background-image: url(&quot;img/soc/yt.png&quot;)"></a><a href="#" style="background-image: url(&quot;img/soc/tg.png&quot;)"></a></div>
+      <div class="soc"><a href="#" style="background-image: url(&quot;/img/soc/vk.png&quot;)"></a><a href="#" style="background-image: url(&quot;/img/soc/wa.png&quot;)"></a><a href="#" style="background-image: url(&quot;/img/soc/insta.png&quot;)"></a><a href="#" style="background-image: url(&quot;/img/soc/yt.png&quot;)"></a><a href="#" style="background-image: url(&quot;/img/soc/tg.png&quot;)"></a></div>
     </div>
   </div>
   <div class="bottom">
     <div class="inner">© Chocokiller 2018</div>
   </div>
 </footer>
-<script src="js/common.min.js"></script></body>
+<script src="/js/common.min.js"></script></body>
 </html>

@@ -5,9 +5,10 @@
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
     meta(http-equiv='X-UA-Compatible' content='ie=edge')
     title Chocokiller
-    link(rel='stylesheet' href='css/style.css')
-    link(rel='stylesheet' href='font/material-icons.css')
-    script(src='js/umbrella.min.js')
+    link(rel='stylesheet' href='/css/style.css')
+    link(rel='stylesheet' href='/font/material-icons.css')
+    link(href="//fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet")
+    script(src='/js/umbrella.min.js')
     script window.parts = {};
 
 <body>
@@ -16,13 +17,13 @@
     .top
       .site_width
         a(href='#') Открыть магазин
-        a(href='#') Помощь
+        a(href='/help.html') Помощь
 
     #header_keeper
     #header_fix
       .center
         .site_width
-          .site_logo
+          .site_logo(onclick="location.href='/index.html'")
           .search
             i.material-icons search
             input(type='text' placeholder='Я ищу...')
@@ -30,19 +31,162 @@
             .btn Найти
 
           .menu
-            a(href='#')
+            a.favorite(href='#' onmouseover="hover_favorite()")
               i.material-icons favorite
-              | Желания
+              | Избранное
             
-            a.cart(href='#')
+            a.cart(href='#' onmouseover="hover_cart()")
               i.material-icons shopping_cart
               span 12
               | Корзина
 
-          .profile
+            .full_cart(onmouseleave="leave_cart()")
+              .content
+                .item
+                  a Смартфон iPhone X 256gb, Space gray
+                  .pre_price
+                    p кол-во:
+                    p сумма:
+                  .price
+                    p 1 x 377 990₸
+                    p 377 990₸
+                .item
+                  a Смартфон iPhone X 256gb, Space gray
+                  .pre_price
+                    p кол-во:
+                    p сумма:
+                  .price
+                    p 1 x 377 990₸
+                    p 377 990₸
+                .item
+                  a Смартфон iPhone X 256gb, Space gray
+                  .pre_price
+                    p кол-во:
+                    p сумма:
+                  .price
+                    p 1 x 377 990₸
+                    p 377 990₸
+                .item
+                  a Смартфон iPhone X 256gb, Space gray
+                  .pre_price
+                    p кол-во:
+                    p сумма:
+                  .price
+                    p 1 x 377 990₸
+                    p 377 990₸
+                .item
+                  a Смартфон iPhone X 256gb, Space gray
+                  .pre_price
+                    p кол-во:
+                    p сумма:
+                  .price
+                    p 1 x 377 990₸
+                    p 377 990₸
+                .item
+                  a Смартфон iPhone X 256gb, Space gray
+                  .pre_price
+                    p кол-во:
+                    p сумма:
+                  .price
+                    p 1 x 377 990₸
+                    p 377 990₸
+                .item
+                  a Смартфон iPhone X 256gb, Space gray
+                  .pre_price
+                    p кол-во:
+                    p сумма:
+                  .price
+                    p 1 x 377 990₸
+                    p 377 990₸
+              .go_over
+                .go_over_s
+                  p кол-во: 
+                  P 7
+                  p ИТОГО: 
+                  P 2 645 930₸
+                .go_over_a
+                  a(href="#") перейти в корзину
+                .btns_cart
+                  button ОФОРМИТЬ ЗАКАЗ
+
+            .full_favorite(onmouseleave="leave_favorite()")
+              .content
+                .item
+                  a Смартфон iPhone X 256gb, Space gray
+                  .price
+                    p цена со скидкой:
+                    p 377 990₸
+                .item
+                  a Смартфон iPhone X 256gb, Space gray
+                  .price
+                    p цена со скидкой:
+                    p 377 990₸
+                .item
+                  a Смартфон iPhone X 256gb, Space gray
+                  .price
+                    p цена со скидкой:
+                    p 377 990₸
+                .item
+                  a Смартфон iPhone X 256gb, Space gray
+                  .price
+                    p цена со скидкой:
+                    p 377 990₸
+                .item
+                  a Смартфон iPhone X 256gb, Space gray
+                  .price
+                    p цена со скидкой:
+                    p 377 990₸
+                .item
+                  a Смартфон iPhone X 256gb, Space gray
+                  .price
+                    p цена со скидкой:
+                    p 377 990₸
+                .item
+                  a Смартфон iPhone X 256gb, Space gray
+                  .price
+                    p цена со скидкой:
+                    p 377 990₸
+              .go_over
+                p кол-во: 7
+                .btns
+                  button ПЕРЕЙТИ В ИЗБРАННОЕ
+
+          .profile(onmouseover="hover_menu()")
             .balance 120 000
             .username Tirion
-            .user_avatar
+            .user_avatar(style="background-image: url(/img/user.jpg)")
+
+          .full_profile(onmouseleave="leave_menu()")
+            .item
+              i.material-icons account_circle
+              a(href="#") Профиль
+              .seeing 
+                p 
+            .item
+              i.material-icons bookmark
+              a(href="#") Мои заказы
+              .seeing.view
+                p 4
+            .item
+              i.material-icons local_activity
+              a(href="#") Мои купоны
+              .seeing 
+                p 
+            .item
+              i.material-icons notifications_active
+              a(href="#") Уведомления
+              .seeing.view
+                p 12
+            .item
+              i.material-icons email
+              a(href="#") Сообщения
+              .seeing.view
+                p 7
+            .item
+              i.material-icons settings
+              a(href="#") Настройки
+              .seeing 
+                p 
 
       .bottom
         .site_width
@@ -61,3 +205,24 @@
                 a.item(href='#') Футболки
                 a.item(href='#') Майки
                 a.item(href='#') Блузки
+    
+    script.
+      function hover_menu() {
+        u(".full_profile").addClass("active");
+      }
+      function hover_favorite() {
+        u(".full_favorite").addClass("active");
+      }
+      function hover_cart() {
+        u(".full_cart").addClass("active");
+      }
+
+      function leave_menu() {
+        u(".full_profile").removeClass("active");
+      }
+      function leave_favorite() {
+        u(".full_favorite").removeClass("active");
+      }
+      function leave_cart() {
+        u(".full_cart").removeClass("active");
+      }

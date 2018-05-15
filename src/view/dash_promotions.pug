@@ -16,7 +16,7 @@ block content
                 .description_dash_promotions
                     .title
                         a(href="#")
-                            h1=title
+                            p=title
                     .content
                         .item
                             p Заказчик:
@@ -52,7 +52,7 @@ block content
                                 i(class="material-icons") delete
                                 
 
-    .content_title Заказы
+    .content_title Акции
 
     .wrap
         input.btn.white(type='button' value='ДОБАВИТЬ УСЛУГУ')
@@ -67,10 +67,28 @@ block content
             input.input_from(placeholder="от")
             .tg2 ₸ 
             input.input_to(placeholder="до")
-        +part_sort("Дешевле","Дороже","Заказы","Новинки","Рейтинг","а-я")
+        +part_sort("участникам","просмотрам","новым","старым","а-я")
                 
+        .select_all
+            +part('checkbox', { title: "Выделить все" })
+
         +item_dash_promotions("/img/slide/1.png","IPhone X, 256Gb, Space Gray","Серсея Ланистер","Активно","25/06/18","12:45","354186","+7 775 152345","1","377 990" ,"1")
         +item_dash_promotions("/img/slide/1.png","IPhone X, 256Gb, Space Gray","Серсея Ланистер","Активно","25/06/18","12:45","354186","+7 775 152345","1","377 990","2")
         +item_dash_promotions("/img/slide/1.png","IPhone X, 256Gb, Space Gray","Серсея Ланистер","Активно","25/06/18","12:45","354186","+7 775 152345","1","377 990","3")
         .content_page
             +part('pagination', { from: 1, to: 3, on: 1 })
+    
+    script.
+        u(".part_checkbox").on("click", function(){
+            var check = u(".part_checkbox").children("label").children("input").first().checked;
+            if(check) {
+                for (var i = 1; i <= 3; i++) {
+                    u("#chk" + i).first().checked = true;
+                }   
+            } else {
+                for (var i = 1; i <= 3; i++) {
+                    u("#chk" + i).first().checked = false;
+                }         
+            }
+
+        });

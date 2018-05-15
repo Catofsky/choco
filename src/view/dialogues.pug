@@ -4,7 +4,7 @@ include _header.pug
 +part_title_page("Профиль")
 
 mixin item_dialogue(logo,name,text,time,num,active)
-	.item_dialogue(class=active)
+	.item_dialogue(class=active onlick="location.href='/chat.html'")
 		.content_logo
 			.logo
 				if(logo)
@@ -21,7 +21,7 @@ mixin item_dialogue(logo,name,text,time,num,active)
 .profile_block
 	.site_width
 		.block
-			.avatar(style='background: url("img/user_150x150.jpg")')
+			.avatar(style='background: url("/img/user_150x150.jpg")')
 			.info
 				.username Тирион Ланистер
 				.stat
@@ -44,7 +44,7 @@ mixin item_dialogue(logo,name,text,time,num,active)
 		.content_block
 			.side_block
 				.menu
-					.item
+					.item.active
 						i.material-icons dehaze
 						.text Главная
 					.item
@@ -68,7 +68,7 @@ mixin item_dialogue(logo,name,text,time,num,active)
 						i.material-icons mail
 						.text Сообщения
 						.num 12
-					.item.active
+					.item
 						i.material-icons settings
 						.text Настройки
 				+part_profile_statistic_shop([ 
@@ -82,9 +82,9 @@ mixin item_dialogue(logo,name,text,time,num,active)
 			.main_block
 				+part_search("искать в диалогах") 
 				+item_dialogue("","Этуаль","Спасибооо за внимание", "Сегодня 22:38", "2","active")
-				+item_dialogue("img/dialogue/monkey.png","Белый ветер","Спасибооо за внимание", "Сегодня 22:38")
-				+item_dialogue("img/dialogue/monkey.png","Белый ветер","Спасибооо за внимание", "Сегодня 22:38")
-				+item_dialogue("img/dialogue/monkey.png","Белый ветер","Спасибооо за внимание", "Сегодня 22:38")
+				+item_dialogue("/img/dialogue/monkey.png","Белый ветер","Спасибооо за внимание", "Сегодня 22:38")
+				+item_dialogue("/img/dialogue/monkey.png","Белый ветер","Спасибооо за внимание", "Сегодня 22:38")
+				+item_dialogue("/img/dialogue/monkey.png","Белый ветер","Спасибооо за внимание", "Сегодня 22:38")
 
 
 

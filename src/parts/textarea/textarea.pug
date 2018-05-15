@@ -1,0 +1,8 @@
+
+mixin part_textarea(params)
+	- var tp = params.type || 'text'
+	- params.value = params.value || ''
+	.part_textarea
+		label
+			span= params.title
+			textarea(name=params.name)= params.value

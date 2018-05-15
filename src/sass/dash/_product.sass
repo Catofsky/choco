@@ -28,6 +28,9 @@
             font-weight: bold
             cursor: pointer
 
+            i.material-icons
+                font-size: 16px
+
             &:hover
                 color: darken($gray_border, 10%)
                 border: darken($gray_border, 10%) solid 2px
@@ -322,6 +325,9 @@
                     cursor: pointer
                     &::-webkit-slider-thumb
                         -webkit-appearance: none
+                    &::-moz-range-thumb
+                        -webkit-appearance: none 
+                        border: none                  
                 .progress
                     width: 400px
                     height: 10px
@@ -343,9 +349,57 @@
                     left: calc(50% - 15px)
                     bottom: -17px
 
+            .no_discount
+                display: flex
+                input
+                  width: 118px
+                  height: 26px
+                  text-align: center
+                  &:first-child
+                      margin-right: 55px
+                p
+                  margin-right: 20px
+                  margin-top: 5px
+
             .save_content
                 display: flex
+                flex-direction: row-reverse
+                justify-content: flex-start
+                width: 500px
+                margin-left: -150px
+                margin-bottom: 15px
             a.preview
                 color: #54a8d2
-                float: right
-                margin-right: 100px
+                margin-left: 200px
+
+            .publish
+                height: 40px
+                width: 200px
+                display: inline-block
+                border-radius: 30px
+                background: $main_orange
+                border: 1px solid $main_orange
+                color: #fff
+                font-size: 15px
+                line-height: 30px
+                padding-left: 14px
+                padding-right: 14px
+                text-transform: uppercase
+                text-align: center
+                cursor: pointer
+
+            .no_publish
+                height: 32px
+                width: 248px
+                border-radius: 15px
+                background: #fff
+                border: 1px solid $border_color
+                color: $border_color
+                font-size: 15px
+                line-height: 30px
+                padding-left: 14px
+                padding-right: 14px
+                text-transform: uppercase
+                text-align: center
+                cursor: pointer
+                margin-right: 15px

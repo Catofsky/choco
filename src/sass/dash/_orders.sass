@@ -10,11 +10,13 @@
 		margin-right: 20px
 		border: 1px solid $border_color
 		border-radius: 10px
-		height: 18px
-		text-align: center
 		width: 118px
 		outline: none
 
+	.all
+		padding-left: 38px
+	.state
+		padding-left: 25px
 	input
 		margin-right: 20px
 		border: 1px solid $border_color
@@ -73,9 +75,10 @@
 					border: 2px solid $border_color
 					background-size: cover
 				&:checked+label
-					background-size: cover
 					border: 2px solid $main_orange
-					background: url('../img/radio/done.svg') $main_orange no-repeat
+					background: url('/../img/radio/done.svg') $main_orange no-repeat
+					background-size: cover
+
 
 			label
 				width: 14px
@@ -95,7 +98,9 @@
 			display: flex
 			.description_dash_orders
 				.title
-					h1
+					p
+						font-family: "Ubuntu"
+						font-weight: bold
 						color: #54a8d2
 				.content
 					.item
@@ -125,7 +130,9 @@
 						div
 							display: flex
 							justify-content: flex-start
-							width: 172px
+							width: 182px
+							& p
+								width: 120px
 			.description_right
 				margin-top: 30px
 				width: 480px

@@ -3,7 +3,7 @@ include _header.pug
 
 #main
   .site_width
-    .banner(style='background-image: url("img/banner.jpg")')
+    .banner(style='background-image: url("/img/banner.jpg")')
     .fast_register
       .title Впервый раз на Chocokiller ?
       form(action='#')
@@ -28,7 +28,7 @@ include _header.pug
           href: '/product.html',
           sale: 50,
           rating: 4.9,
-          img: 'img/products/1.jpg',
+          img: '/img/products/1.jpg',
           title: 'Apple iPhone S 64Gb Space Gray',
           old_price: '1 330 000',
           price: '230 000',
@@ -43,11 +43,11 @@ include _header.pug
       - for (var i = 0; i < tabs.length; i++)
         - var cl = i === 0 ? 'product_container _tab_content active' : 'product_container _tab_content';
         div(class=cl data-tab=i)
-          - product.img = i % 2 === 0 ? 'img/products/1.jpg' : 'img/products/2.jpg';
+          - product.img = i % 2 === 0 ? '/img/products/1.jpg' : '/img/products/2.jpg';
           - for (var j = 0; j < 10; j++)
             +part('product_card', product)
 
-  - product.img = 'img/products/1.jpg';
+  - product.img = '/img/products/1.jpg';
   .marker
     .site_width
       .cat_title
@@ -102,7 +102,7 @@ include _header.pug
       -
         var review = {
           title: 'Eldan',
-          avatar: 'img/user.jpg',
+          avatar: '/img/user.jpg',
           text: 'Задача организации, в особенности же сложившаяся структура организации требуют определения и уточнения соответствующий условий активизации',
           product: {
             sale: '10',
@@ -118,7 +118,7 @@ include _header.pug
             +part('review_card', review)
 
 
-script(src='coffee/tabs.js')
+script(src='/coffee/tabs.js')
 script.
   uTabs({
     tabs: u('._tabs'),

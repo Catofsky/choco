@@ -1,19 +1,18 @@
-
-<script>u()</script><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Chocokiller Store</title>
-    <link rel="stylesheet" href="css/dash/dash.css">
-    <link rel="stylesheet" href="font/material-icons.css">
-    <script src="js/umbrella.min.js"></script>
+    <link rel="stylesheet" href="/css/dash/dash.css">
+    <link rel="stylesheet" href="/font/material-icons.css">
+    <script src="/js/umbrella.min.js"></script>
     <script>window.parts = {};</script>
   </head>
   <body>
     <header>
-      <div class="logo"></div>
+      <div class="logo" onclick="location.href=&quot;/index.html&quot;"></div>
       <div class="top">
         <div class="search"><i class="material-icons">search</i>
           <input type="search" name="search" placeholder="Я ищу...">
@@ -24,25 +23,25 @@
         </div>
         <div class="store_select">
           <select name="store_select">
-            <option>Белый ветер</option>
+            <option>Магазин</option>
           </select>
         </div>
         <div class="user">
           <div class="name">
             <p>Eldan</p>
           </div>
-          <div class="avatar" style="background-image: url('img/user.jpg')"></div>
+          <div class="avatar" style="background-image: url('/img/user.jpg')"></div>
         </div>
       </div>
     </header>
     <div class="main_block">
       <div class="side_menu">
-        <div class="menu"><a href="#"><i class="material-icons">home</i><span>Главная</span></a><a href="#"><i class="material-icons">turned_in</i><span>Заказы</span>
-            <div class="num">12</div></a><a href="#"><i class="material-icons">people</i><span>Сотрудники</span></a><a href="#"><i class="material-icons">store</i><span>Магазин</span></a><a href="#"><i class="material-icons">shoping</i><span>Товары</span></a>
+        <div class="menu"><a href="/dash_main.html"><i class="material-icons">home</i><span>Главная</span></a><a href="/dash_orders.html"><i class="material-icons">turned_in</i><span>Заказы</span>
+            <div class="num">12</div></a><a href="/dash_employees.html"><i class="material-icons">people</i><span>Сотрудники</span></a><a href="/dash_subscribers.html"><i class="material-icons">perm_contact_calendar</i><span>Подписчики</span></a><a href="/dash_shop.html"><i class="material-icons">store</i><span>Магазин</span></a><a href="/dash_promotions.html"><i class="material-icons">loyalty</i><span>Акции</span></a><a href="/dash_index.html"><i class="material-icons">shoping</i><span>Товары</span></a><a href="/dash_settings.html"><i class="material-icons">settings</i><span>Настройки</span></a>
         </div>
       </div>
       <div class="content">
-        <div class="content_title">Заказы</div>
+        <div class="content_title">Акции</div>
         <div class="wrap">
           <input class="btn white" type="button" value="ДОБАВИТЬ УСЛУГУ">
           <div class="sort_content"><i class="material-icons">date_range</i>
@@ -61,15 +60,21 @@
           <div class="part_sorting_block">
             <div class="part_sorting">
               <div class="part_sort_by">Сортировать по:</div>
-              <div class="part_item">Дешевле</div>
-              <div class="part_item">Дороже</div>
-              <div class="part_item">Заказы</div>
-              <div class="part_item">Новинки</div>
-              <div class="part_item">Рейтинг</div>
+              <div class="part_item active">участникам</div>
+              <div class="part_item">просмотрам</div>
+              <div class="part_item">новым</div>
+              <div class="part_item">старым</div>
               <div class="part_item">а-я</div>
             </div>
             <div class="sort_block">
               <p>Вид:</p><i class="material-icons _toggle_view_list">view_list</i><i class="material-icons _toggle_view_cards">view_comfy</i>
+            </div>
+          </div>
+          <div class="select_all">
+            <div class="part_checkbox">
+              <label>
+                <input type="checkbox" name=""/><i class="material-icons on">check_box_outline</i><i class="material-icons off">check_box_outline_blank</i><span>Выделить все</span>
+              </label>
             </div>
           </div>
                   <div class="block_dash_promotions">
@@ -81,7 +86,7 @@
                     <div class="block_content">
                       <div class="description_dash_promotions">
                         <div class="title"><a href="#">
-                            <h1>IPhone X, 256Gb, Space Gray</h1></a></div>
+                            <p>IPhone X, 256Gb, Space Gray</p></a></div>
                         <div class="content">
                           <div class="item">
                             <p>Заказчик:</p><a href="#">Серсея Ланистер</a>
@@ -131,7 +136,7 @@
                     <div class="block_content">
                       <div class="description_dash_promotions">
                         <div class="title"><a href="#">
-                            <h1>IPhone X, 256Gb, Space Gray</h1></a></div>
+                            <p>IPhone X, 256Gb, Space Gray</p></a></div>
                         <div class="content">
                           <div class="item">
                             <p>Заказчик:</p><a href="#">Серсея Ланистер</a>
@@ -181,7 +186,7 @@
                     <div class="block_content">
                       <div class="description_dash_promotions">
                         <div class="title"><a href="#">
-                            <h1>IPhone X, 256Gb, Space Gray</h1></a></div>
+                            <p>IPhone X, 256Gb, Space Gray</p></a></div>
                         <div class="content">
                           <div class="item">
                             <p>Заказчик:</p><a href="#">Серсея Ланистер</a>
@@ -227,6 +232,21 @@
             </div>
           </div>
         </div>
+        <script>
+          u(".part_checkbox").on("click", function(){
+              var check = u(".part_checkbox").children("label").children("input").first().checked;
+              if(check) {
+                  for (var i = 1; i <= 3; i++) {
+                      u("#chk" + i).first().checked = true;
+                  }   
+              } else {
+                  for (var i = 1; i <= 3; i++) {
+                      u("#chk" + i).first().checked = false;
+                  }         
+              }
+          
+          });
+        </script>
       </div>
     </div>
     <footer></footer>

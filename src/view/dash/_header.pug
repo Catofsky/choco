@@ -1,11 +1,11 @@
 -
     var user = {
         username: 'Eldan',
-        avatar: 'img/user.jpg'
+        avatar: '/img/user.jpg'
     }
 
 header
-    .logo
+    .logo(onclick='location.href="/index.html"')
     .top
         .search
             i.material-icons search
@@ -16,7 +16,7 @@ header
 
         .store_select
             select(name='store_select')
-                option Белый ветер
+                option Магазин
 
         .user
             .name

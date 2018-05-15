@@ -1,19 +1,18 @@
-
-<script>u()</script><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Chocokiller Store</title>
-    <link rel="stylesheet" href="css/dash/dash.css">
-    <link rel="stylesheet" href="font/material-icons.css">
-    <script src="js/umbrella.min.js"></script>
+    <link rel="stylesheet" href="/css/dash/dash.css">
+    <link rel="stylesheet" href="/font/material-icons.css">
+    <script src="/js/umbrella.min.js"></script>
     <script>window.parts = {};</script>
   </head>
   <body>
     <header>
-      <div class="logo"></div>
+      <div class="logo" onclick="location.href=&quot;/index.html&quot;"></div>
       <div class="top">
         <div class="search"><i class="material-icons">search</i>
           <input type="search" name="search" placeholder="Я ищу...">
@@ -24,21 +23,21 @@
         </div>
         <div class="store_select">
           <select name="store_select">
-            <option>Белый ветер</option>
+            <option>Магазин</option>
           </select>
         </div>
         <div class="user">
           <div class="name">
             <p>Eldan</p>
           </div>
-          <div class="avatar" style="background-image: url('img/user.jpg')"></div>
+          <div class="avatar" style="background-image: url('/img/user.jpg')"></div>
         </div>
       </div>
     </header>
     <div class="main_block">
       <div class="side_menu">
-        <div class="menu"><a href="/store"><i class="material-icons">home</i><span>Главная</span></a><a href="/store/orders"><i class="material-icons">turned_in</i><span>Заказы</span>
-            <div class="num">12</div></a><a href="/store/members"><i class="material-icons">people</i><span>Сотрудники</span></a><a href="/store/products"><i class="material-icons">shoping</i><span>Товары</span></a><a href="/store/settings"><i class="material-icons">settings</i><span>Настройки</span></a>
+        <div class="menu"><a href="/dash_main.html"><i class="material-icons">home</i><span>Главная</span></a><a href="/dash_orders.html"><i class="material-icons">turned_in</i><span>Заказы</span>
+            <div class="num">12</div></a><a href="/dash_employees.html"><i class="material-icons">people</i><span>Сотрудники</span></a><a href="/dash_subscribers.html"><i class="material-icons">perm_contact_calendar</i><span>Подписчики</span></a><a href="/dash_shop.html"><i class="material-icons">store</i><span>Магазин</span></a><a href="/dash_promotions.html"><i class="material-icons">loyalty</i><span>Акции</span></a><a href="/dash_index.html"><i class="material-icons">shoping</i><span>Товары</span></a><a href="/dash_settings.html"><i class="material-icons">settings</i><span>Настройки</span></a>
         </div>
       </div>
       <div class="content">
@@ -46,20 +45,57 @@
         <div class="wrap">
           <div class="sort_content"><i class="material-icons">date_range</i>
             <select class="all">
-              <option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;всё</option>
+              <option>всё</option>
             </select>
             <select class="state">
-              <option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Активно</option>
+              <option>Активно</option>
             </select>
             <input class="input_search" placeholder="название или номер товара">
             <div class="tg1">₸</div>
             <input class="input_from" placeholder="от">
             <div class="tg2">₸ </div>
             <input class="input_to" placeholder="до">
-                    <div class="block_order">
-                      <div class="checkbox">
-                        <input type="checkbox" id="chk">
-                        <label for="chk"></label>
+          </div>
+          <div class="part_sorting_block">
+            <div class="part_sorting">
+              <div class="part_sort_by">Сортировать по:</div>
+              <div class="part_item active">новые</div>
+              <div class="part_item">старые</div>
+              <div class="part_item">статус</div>
+              <div class="part_item">цена</div>
+            </div>
+            <div class="sort_block">
+              <p>Вид:</p><i class="material-icons _toggle_view_list">view_list</i><i class="material-icons _toggle_view_cards">view_comfy</i>
+            </div>
+          </div>
+                  <div class="block_dash_orders">
+                    <div class="checkbox">
+                      <input type="checkbox" id="chk1">
+                      <label for="chk1"></label>
+                    </div>
+                    <div class="block_image"><img src="/img/slide/1.png"></div>
+                    <div class="block_content">
+                      <div class="description_dash_orders">
+                        <div class="title"><a href="#">
+                            <p>IPhone X, 256Gb, Space Gray</p></a></div>
+                        <div class="content">
+                          <div class="item">
+                            <p>Заказчик:</p><a href="#">Серсея Ланистер</a>
+                          </div>
+                          <div class="item">
+                            <p>Статус:</p>
+                            <div><i class="material-icons done">assignment_turned_in</i>
+                              <p>Выполнено</p>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <p>Дата:</p>
+                            <div><i class="material-icons">event_available</i>
+                              <p>25/06/18</p><i class="material-icons">access_time</i>
+                              <p>12:45</p>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                       <div class="description_right">
                         <div class="additionally">
@@ -100,7 +136,7 @@
                     <div class="block_content">
                       <div class="description_dash_orders">
                         <div class="title"><a href="#">
-                            <h1>IPhone X, 256Gb, Space Gray</h1></a></div>
+                            <p>IPhone X, 256Gb, Space Gray</p></a></div>
                         <div class="content">
                           <div class="item">
                             <p>Заказчик:</p><a href="#">Серсея Ланистер</a>
@@ -159,7 +195,7 @@
                     <div class="block_content">
                       <div class="description_dash_orders">
                         <div class="title"><a href="#">
-                            <h1>IPhone X, 256Gb, Space Gray</h1></a></div>
+                            <p>IPhone X, 256Gb, Space Gray</p></a></div>
                         <div class="content">
                           <div class="item">
                             <p>Заказчик:</p><a href="#">Серсея Ланистер</a>
@@ -208,9 +244,9 @@
                         </div>
                       </div>
                     </div>
-            <div class="content_page">
-              <div class="part_pagination"><a class="on" href="#">1</a><a href="#">2</a><a href="#">3</a>
-              </div>
+                  </div>
+          <div class="content_page">
+            <div class="part_pagination"><a class="on" href="#">1</a><a href="#">2</a><a href="#">3</a>
             </div>
           </div>
         </div>

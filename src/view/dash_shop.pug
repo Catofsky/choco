@@ -1,0 +1,142 @@
+extends dash/_layout.pug
+
+block title
+		title Chocokiller Shop
+
+block content
+
+		.content_title Магазин
+
+		.wrap.main_shop
+			.logo_content
+					.logo
+							img(src="/img/store_avatar_100x100.jpg")
+					.title
+						p Белый ветер
+						p Магазин электроники
+
+			.communications
+				a(href="#")
+					.reviews
+							i(class="material-icons") textsms
+							p Отзывы
+				a(href="#")
+					.mail
+							i(class="material-icons") email
+							p Почта
+
+		.horizontally_menu
+			.item.contacts
+					p Контакты
+			.item.about
+					p О магазине
+			.item.our.active
+					p Наши компании
+			.item.pair
+					p Партнеры
+	
+		.wrap.contact_hide
+			.contact
+				textarea.text_contact(placeholder="Укажите адресс компании")
+
+		.wrap.about_hide
+			.contact
+				textarea.text_contact(placeholder="Напишите о магазине")
+
+		.wrap
+			.choice_shop
+				input(placeholder="Ссылка на магазин")
+				i(class="material-icons") add_circle_outline
+				input(type="button" value="Выбор из своих магазинов")
+
+		.wrap
+			.settings_shop
+					.category
+							i(class="material-icons") format_list_numbered
+							p Категории
+							input(type="button" value="изменить")
+					.news
+							i(class="material-icons") subject
+							p Новости
+							input(type="button" value="добавить")
+					.video
+							i(class="material-icons") play_circle_outline
+							p Видео
+							input(type="button" value="добавить")
+
+		.wrap.three_block
+			.item
+				li 
+					span Электроника
+					ul
+						li 
+							span Смартфоны
+							ul
+								li 
+									span Производитель
+									ul
+										li Apple
+										li Samsung
+										li Huawei
+										li Xiaomi
+								li
+									span Операционная система
+									ul
+										li iOS
+										li Android
+						li 
+							span.down Телефоны
+						li 
+							span.down Телевизоры
+						li 
+							span.down Ноутбуки
+				li
+					span Мебель
+					ul
+						li Компьютерные столы
+			.item
+				.event_item
+					a(href="#") Открытие нового магазина в ТЦ Батырмол
+				.event_item
+					a(href="#") Наурыз вместе с Белым Ветром
+				.event_item
+					a(href="#") Акция на ваш День рождения!
+			.item
+
+		script.
+			u(".contacts").on("click", function() {
+				u(".about_hide").first().style.display = 'none';
+				u(".contact_hide").first().style.display = 'block';
+				if(u(".item").hasClass("active")) {
+					u(".item").removeClass("active");
+					u(".contacts").addClass("active");
+					u(".choice_shop").children("input[type=button]").first().style.display = 'none';
+				}
+			});
+			u(".about").on("click", function() {
+				u(".about_hide").first().style.display = 'block';
+				u(".contact_hide").first().style.display = 'none';
+				if(u(".item").hasClass("active")) {
+					u(".item").removeClass("active");
+					u(".about").addClass("active");
+					u(".choice_shop").children("input[type=button]").first().style.display = 'none';
+				}
+			});
+			u(".our").on("click", function() {
+				u(".about_hide").first().style.display = 'none';
+				u(".contact_hide").first().style.display = 'none';
+				if(u(".item").hasClass("active")) {
+					u(".item").removeClass("active");
+					u(".our").addClass("active");
+					u(".choice_shop").children("input[type=button]").first().style.display = 'block';
+				}
+			});
+			u(".pair").on("click", function() {
+				u(".about_hide").first().style.display = 'none';
+				u(".contact_hide").first().style.display = 'none';
+				if(u(".item").hasClass("active")) {
+					u(".item").removeClass("active");
+					u(".pair").addClass("active");
+					u(".choice_shop").children("input[type=button]").first().style.display = 'none';
+				}
+			});

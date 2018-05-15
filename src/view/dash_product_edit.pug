@@ -35,8 +35,8 @@ block content
             .input
                 .label
                     p Срок товара:
-                .item                    
-                    input.input_setting.input_limited(type="radio" id="not_limited" name="gender")
+                .item
+                    input.input_setting.input_limited(checked=true type="radio" id="not_limited" name="gender")
                     label(for="not_limited") Неограничен
                     input.input_setting.input_limited(type="radio" id="limited" name="gender")
                     label(for="limited") Ограничен
@@ -105,7 +105,7 @@ block content
                 .label
                     p Срок товара:
                 .item                    
-                    input.input_setting.input_options(type="radio" id="not_options" name="option_product")
+                    input.input_setting.input_options(checked=true type="radio" id="not_options" name="option_product")
                     label(for="not_options" class="options_product") У товара нет вариантов
                     input.input_setting.input_options(type="radio" id="options" name="option_product" attr="data-scroll")
                     label(for="options" class="options_product") У товара есть варианты
@@ -122,8 +122,23 @@ block content
                     .percent_content
                         input.onlyNumbers(type='text' id="out" name='title' value='50')
                         span.percent %
-                    
-     
+
+                
+            .input(style='display: flex')
+                .label
+                    p Цена без скидки:
+                .item
+                    .no_discount
+                        input(type='text' value="10000")
+                        p Со скидкой:
+                        input(type='text' value="7000")
+
+            .input(style='display: flex')
+                .label
+                    p Колличество:
+                .item
+                    .no_discount
+                        input(type='text' value="120")
 
             .input(style='display: flex')
                 .label
@@ -150,8 +165,8 @@ block content
                                 span Цена со скидкой
                                 input.onlyNumbers(type='text' name='variant_amount')
                     .save_content
-                        input.btn.white(type='button' value='Опубликовать')
-                        input.btn(type='button' value='Сохранить без публикации')
+                        input.publish(type='button' value='Опубликовать')
+                        input.no_publish.white(type='button' value='Сохранить без публикации')
                     a.preview(href="#") предпросмотр
 
 
@@ -175,4 +190,18 @@ block content
 
         round = document.querySelector('.range_container .round');
         round.style.left = 'calc(' + v + '% - 15px)';
+        });
+
+    script.
+        u('.onlyNumbers').on("change", function(){
+            var value = this.value;
+            if(value > 99) {
+                value = 99;
+            } else if (value < 1) {
+                value = 1;
+            }
+            progress = document.querySelector('.range_container .progress');
+            progress.style.background ='linear-gradient(to right, #ff6e41, #ff6e41 ' + value + '%, white ' + value + '%, white)';
+            round = document.querySelector('.range_container .round');
+            round.style.left = 'calc(' + value + '% - 15px)';
         });
