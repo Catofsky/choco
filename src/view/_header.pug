@@ -5,10 +5,10 @@
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
     meta(http-equiv='X-UA-Compatible' content='ie=edge')
     title Chocokiller
-    link(rel='stylesheet' href='css/style.css')
-    link(rel='stylesheet' href='font/material-icons.css')
-    link(href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet")
-    script(src='js/umbrella.min.js')
+    link(rel='stylesheet' href='/css/style.css')
+    link(rel='stylesheet' href='/font/material-icons.css')
+    link(href="//fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet")
+    script(src='/js/umbrella.min.js')
     script window.parts = {};
 
 <body>
@@ -17,13 +17,13 @@
     .top
       .site_width
         a(href='#') Открыть магазин
-        a(href='#') Помощь
+        a(href='/help.html') Помощь
 
     #header_keeper
     #header_fix
       .center
         .site_width
-          .site_logo
+          .site_logo(onclick="location.href='/index.html'")
           .search
             i.material-icons search
             input(type='text' placeholder='Я ищу...')
@@ -40,7 +40,7 @@
               span 12
               | Корзина
 
-            .full_cart
+            .full_cart(onmouseleave="leave_cart()")
               .content
                 .item
                   a Смартфон iPhone X 256gb, Space gray
@@ -109,7 +109,7 @@
                 .btns_cart
                   button ОФОРМИТЬ ЗАКАЗ
 
-            .full_favorite
+            .full_favorite(onmouseleave="leave_favorite()")
               .content
                 .item
                   a Смартфон iPhone X 256gb, Space gray
@@ -154,9 +154,9 @@
           .profile(onmouseover="hover_menu()")
             .balance 120 000
             .username Tirion
-            .user_avatar
+            .user_avatar(style="background-image: url(/img/user.jpg)")
 
-          .full_profile
+          .full_profile(onmouseleave="leave_menu()")
             .item
               i.material-icons account_circle
               a(href="#") Профиль
@@ -208,11 +208,21 @@
     
     script.
       function hover_menu() {
-        u(".full_profile").toggleClass("active");
+        u(".full_profile").addClass("active");
       }
       function hover_favorite() {
-        u(".full_favorite").toggleClass("active");
+        u(".full_favorite").addClass("active");
       }
       function hover_cart() {
-        u(".full_cart").toggleClass("active");
+        u(".full_cart").addClass("active");
+      }
+
+      function leave_menu() {
+        u(".full_profile").removeClass("active");
+      }
+      function leave_favorite() {
+        u(".full_favorite").removeClass("active");
+      }
+      function leave_cart() {
+        u(".full_cart").removeClass("active");
       }

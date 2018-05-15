@@ -61,8 +61,8 @@ include _header.pug
             .data_item
               .label Вариант
               .variants._variants
-                .variant(style='background-image: url(img/vars/1.jpg)')
-                .variant(style='background-image: url(img/vars/2.jpg)')
+                .variant(style='background-image: url(/img/vars/1.jpg)')
+                .variant(style='background-image: url(/img/vars/2.jpg)')
                   
             .data_item
               .label Количество
@@ -72,10 +72,10 @@ include _header.pug
                 span.add._add +
             
         .store_info
-          .store_avatar(style='background-image: url(img/store_avatar.jpg)')
+          .store_avatar(style='background-image: url(/img/store_avatar.jpg)')
           .rating 4.8
           .name_wrapper
-            .name Белый ветер
+            .name(onclick="location.herf='/store'") Белый ветер
             .type Магазин электроники
             
           .subs 2 560 подписчиков
@@ -95,11 +95,16 @@ include _header.pug
           .btn.btn_white
             i.material-icons favorite_outline
             span В избранное
-            
+
         .share
           .btn.btn_white
-            i.material-icons share
-            span Поделиться
+            i.material-icons card_giftcard
+            span Подарить
+            
+        //- .share
+        //-   .btn.btn_white
+        //-     i.material-icons share
+        //-     span Поделиться
         
 #other
   .site_width
@@ -164,7 +169,7 @@ include _header.pug
               .score.five 5
 
             .avatar_container
-              .avatar(style='background-image: url(img/avatar.jpg)')
+              .avatar(style='background-image: url(/img/avatar.jpg)')
 
             .text_contatiner
               .name Серсея Ланистер
@@ -185,7 +190,7 @@ include _header.pug
               .score.four 4
 
             .avatar_container
-              .avatar(style='background-image: url(img/avatar.jpg)')
+              .avatar(style='background-image: url(/img/avatar.jpg)')
 
             .text_contatiner
               .name Дейенерис Таргариен
@@ -207,7 +212,7 @@ include _header.pug
 
           .comment.answer
             .avatar_container
-              .avatar(style='background-image: url(img/avatar.jpg)')
+              .avatar(style='background-image: url(/img/avatar.jpg)')
 
             .text_contatiner
               .name Белый ветер
@@ -226,7 +231,7 @@ include _header.pug
               .score.one 1
 
             .avatar_container
-              .avatar(style='background-image: url(img/avatar.jpg)')
+              .avatar(style='background-image: url(/img/avatar.jpg)')
 
             .text_contatiner
               .name Джон Сноу
@@ -265,7 +270,7 @@ include _header.pug
 
       +part('rating_statistic', [30, 20, 3, 30, 10])
 
-script(src='js/slider.min.js')
+script(src='/js/slider.min.js')
 script.
   uSlider({
     preview: u('._preview'),
@@ -276,26 +281,26 @@ script.
     magnifier: u('._magnifier')
   });
   
-script(src='coffee/tabs.js')
+script(src='/coffee/tabs.js')
 script.
   uTabs({
     tabs: u('._tabs'),
     container: u('._tabs_container')
   });
   
-script(src='coffee/timer.js')
+script(src='/coffee/timer.js')
 script.
   uTimer({
     timer: u('._timer')
   });
   
-script(src='coffee/variants.js')
+script(src='/coffee/variants.js')
 script.
   uVariants({
     variants: u('._variants')
   });
   
-script(src='coffee/counter.js')
+script(src='/coffee/counter.js')
 script.
   uCounter({
     count: u('._count'),
@@ -304,19 +309,19 @@ script.
     sub: u('._sub')
   });
   
-script(src='coffee/magnifier.js')
+script(src='/coffee/magnifier.js')
 script.
   uMagnifier({
     magnifier: u('._magnifier')
   });
   
-script(src='coffee/favorite.js')
+script(src='/coffee/favorite.js')
 script.
   uFavorite({
     favorite: u('._favorite')
   });
 
-script(src='coffee/comment.js')
+script(src='/coffee/comment.js')
 script.
   uComment({
     rating: u('.leave_comment .rate'),

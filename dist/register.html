@@ -5,28 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
   <title>Chocokiller</title>
-  <link rel="stylesheet" href="css/style.css"/>
-  <link rel="stylesheet" href="font/material-icons.css"/>
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"/>
-  <script src="js/umbrella.min.js"></script>
+  <link rel="stylesheet" href="/css/style.css"/>
+  <link rel="stylesheet" href="/font/material-icons.css"/>
+  <link href="//fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"/>
+  <script src="/js/umbrella.min.js"></script>
   <script>window.parts = {};</script>
 </head><body>
 <header>
   <div class="top">
-    <div class="site_width"><a href="#">Открыть магазин</a><a href="#">Помощь</a></div>
+    <div class="site_width"><a href="#">Открыть магазин</a><a href="/help.html">Помощь</a></div>
   </div>
   <div id="header_keeper"></div>
   <div id="header_fix">
     <div class="center">
       <div class="site_width">
-        <div class="site_logo"></div>
+        <div class="site_logo" onclick="location.href='/index.html'"></div>
         <div class="search"><i class="material-icons">search</i>
           <input type="text" placeholder="Я ищу..."/>
           <div class="list">Категории</div>
           <div class="btn">Найти</div>
         </div>
         <div class="menu"><a class="favorite" href="#" onmouseover="hover_favorite()"><i class="material-icons">favorite</i>Избранное</a><a class="cart" href="#" onmouseover="hover_cart()"><i class="material-icons">shopping_cart</i><span>12</span>Корзина</a>
-          <div class="full_cart">
+          <div class="full_cart" onmouseleave="leave_cart()">
             <div class="content">
               <div class="item"><a>Смартфон iPhone X 256gb, Space gray</a>
                 <div class="pre_price">
@@ -112,7 +112,7 @@
               </div>
             </div>
           </div>
-          <div class="full_favorite">
+          <div class="full_favorite" onmouseleave="leave_favorite()">
             <div class="content">
               <div class="item"><a>Смартфон iPhone X 256gb, Space gray</a>
                 <div class="price">
@@ -168,9 +168,9 @@
         <div class="profile" onmouseover="hover_menu()">
           <div class="balance">120 000</div>
           <div class="username">Tirion</div>
-          <div class="user_avatar"></div>
+          <div class="user_avatar" style="background-image: url(/img/user.jpg)"></div>
         </div>
-        <div class="full_profile">
+        <div class="full_profile" onmouseleave="leave_menu()">
           <div class="item"><i class="material-icons">account_circle</i><a href="#">Профиль</a>
             <div class="seeing"> 
               <p> </p>
@@ -244,13 +244,23 @@
   </div>
   <script>
     function hover_menu() {
-      u(".full_profile").toggleClass("active");
+      u(".full_profile").addClass("active");
     }
     function hover_favorite() {
-      u(".full_favorite").toggleClass("active");
+      u(".full_favorite").addClass("active");
     }
     function hover_cart() {
-      u(".full_cart").toggleClass("active");
+      u(".full_cart").addClass("active");
+    }
+    
+    function leave_menu() {
+      u(".full_profile").removeClass("active");
+    }
+    function leave_favorite() {
+      u(".full_favorite").removeClass("active");
+    }
+    function leave_cart() {
+      u(".full_cart").removeClass("active");
     }
   </script>
 </header>
@@ -340,12 +350,12 @@
     <div class="inner contacts">
       <div class="phone">+7 707 2707027</div>
       <div class="email">chocokiller@gmail.com</div>
-      <div class="soc"><a href="#" style="background-image: url(&quot;img/soc/vk.png&quot;)"></a><a href="#" style="background-image: url(&quot;img/soc/wa.png&quot;)"></a><a href="#" style="background-image: url(&quot;img/soc/insta.png&quot;)"></a><a href="#" style="background-image: url(&quot;img/soc/yt.png&quot;)"></a><a href="#" style="background-image: url(&quot;img/soc/tg.png&quot;)"></a></div>
+      <div class="soc"><a href="#" style="background-image: url(&quot;/img/soc/vk.png&quot;)"></a><a href="#" style="background-image: url(&quot;/img/soc/wa.png&quot;)"></a><a href="#" style="background-image: url(&quot;/img/soc/insta.png&quot;)"></a><a href="#" style="background-image: url(&quot;/img/soc/yt.png&quot;)"></a><a href="#" style="background-image: url(&quot;/img/soc/tg.png&quot;)"></a></div>
     </div>
   </div>
   <div class="bottom">
     <div class="inner">© Chocokiller 2018</div>
   </div>
 </footer>
-<script src="js/common.min.js"></script></body>
+<script src="/js/common.min.js"></script></body>
 </html>

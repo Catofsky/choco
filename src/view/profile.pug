@@ -31,7 +31,7 @@ mixin item_natification(type_name,name_product,price_befor,event,price_now)
 .profile_block
 	.site_width
 		.block
-			.avatar(style='background: url("img/user_150x150.jpg")')
+			.avatar(style='background: url("/img/user_150x150.jpg")')
 			.info
 				.username Тирион Ланистер
 				.stat
@@ -56,31 +56,31 @@ mixin item_natification(type_name,name_product,price_befor,event,price_now)
 		.content_block
 			.side_block
 				.menu
-					.item.active
+					.item.active(onlick="location.href='/profile.html'")
 						i.material-icons dehaze
 						.text Главная
-					.item
+					.item(onlick="location.href='/orders.html'")
 						i.material-icons turned_in
 						.text Мои заказы
-					.item
+					.item(onlick="location.href='/coupons.html'")
 						i.material-icons local_play
 						.text Мои купоны
-					.item
+					.item(onlick="location.href='/profile.html'")
 						i.material-icons favorite
 						.text Избранное
-					.item
+					.item(onlick="location.href='/profile.html'")
 						i.material-icons people
 						.text Подписки
 						.num 7
-					.item
+					.item(onlick="location.href='/profile.html'")
 						i.material-icons notifications
 						.text Уведомления
 						.num 4
-					.item
+					.item(onlick="location.href='/dialogues.html'")
 						i.material-icons mail
 						.text Сообщения
 						.num 12
-					.item
+					.item(onlick="location.href='/settings.html'")
 						i.material-icons settings
 						.text Настройки
 				+part_profile_statistic_shop([ 
@@ -101,7 +101,7 @@ mixin item_natification(type_name,name_product,price_befor,event,price_now)
 							href: '/profile.html',
 							sale: 50,
 							rating: 4.9,
-							img: 'img/products/1.jpg',
+							img: '/img/products/1.jpg',
 							title: 'Apple iPhone S 64Gb Space Gray',
 							old_price: '1 330 000',
 							price: '230 000',

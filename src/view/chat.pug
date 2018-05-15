@@ -28,7 +28,7 @@ mixin person_massage(image,name,time,message)
 .profile_block
 	.site_width
 		.block
-			.avatar(style='background: url("img/user_150x150.jpg")')
+			.avatar(style='background: url("/img/user_150x150.jpg")')
 			.info
 				.username Тирион Ланистер
 				.stat
@@ -92,9 +92,9 @@ mixin person_massage(image,name,time,message)
 				+part_search("искать в сообщениях")
 				.main_chat
 					.block_chat
-						+shop_message("img/dialogue/monkey.png","Белый ветер","20 марта 12:45","Вы можете получить сво товар в ближайшем магазине.")
-						+person_massage("img/user.jpg","Тирион Ланистер","21 марта 23:30","Спасибо за ответ.")
-						+shop_message("img/dialogue/monkey.png","Белый ветер","22 марта 12:24","Всегда пожалуйста,обращайтесь.")
+						+shop_message("/img/dialogue/monkey.png","Белый ветер","20 марта 12:45","Вы можете получить сво товар в ближайшем магазине.")
+						+person_massage("/img/user.jpg","Тирион Ланистер","21 марта 23:30","Спасибо за ответ.")
+						+shop_message("/img/dialogue/monkey.png","Белый ветер","22 марта 12:24","Всегда пожалуйста,обращайтесь.")
 					.block_input_chat
 						textarea(placeholder="Написать сообщение")
 						button отправить

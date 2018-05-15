@@ -221,7 +221,6 @@ header .user_avatar {
   width: 40px;
   height: 40px;
   border-radius: 20px;
-  background-image: url("../img/user.jpg");
   cursor: pointer; }
   header .user_avatar:hover {
     color: #ff6e41; }
@@ -2635,7 +2634,7 @@ footer {
         animation: heart .15s ease; }
     .part_product_card .wrapper .share {
       left: 8px;
-      top: 34px; }
+      top: 32px; }
     .part_product_card .wrapper .sale {
       width: 64px;
       height: 28px;

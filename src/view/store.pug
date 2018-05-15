@@ -9,12 +9,12 @@ include _header.pug
 ])
 
 .site_width
-  .store_banner(style='background-image: url("img/banner.jpg")')
+  .store_banner(style='background-image: url("/img/banner.jpg")')
 
   .header_block
     .store_top
       .store_info
-        .avatar(style='background-image: url("img/store_avatar_100x100.jpg")')
+        .avatar(style='background-image: url("/img/store_avatar_100x100.jpg")')
         .title_info
           .title Этуаль
           .type Салон красоты
@@ -98,10 +98,10 @@ include _header.pug
         .title Наши компании
         .stores_container
           .item
-            .avatar(style='background-image: url("img/store_avatar.jpg")')
+            .avatar(style='background-image: url("/img/store_avatar.jpg")')
             .store_title Белый ветер
           .item
-            .avatar(style='background-image: url("img/store_avatar.jpg")')
+            .avatar(style='background-image: url("/img/store_avatar.jpg")')
             .store_title Белый ветер
           
 
@@ -129,7 +129,7 @@ include _header.pug
           href: '/product.html',
           sale: 50,
           rating: 4.9,
-          img: 'img/products/2.jpg',
+          img: '/img/products/2.jpg',
           title: 'Apple iPhone S 64Gb Space Gray',
           old_price: '1 330 000',
           price: '230 000',
@@ -147,7 +147,7 @@ include _header.pug
             - for (var i = 0; i < 8; i++)
               +part('product_card', product)
 
-        - product.img = 'img/products/1.jpg';
+        - product.img = '/img/products/1.jpg';
 
         .tab_content._tab_content(data-tab='2')
           .product_container
@@ -155,7 +155,7 @@ include _header.pug
               +part('product_card', product)
 
             
-        - product.img = 'img/products/2.jpg';
+        - product.img = '/img/products/2.jpg';
 
         .tab_content._tab_content(data-tab='3')
           .product_container
@@ -163,7 +163,7 @@ include _header.pug
               +part('product_card', product)
 
 
-script(src='coffee/tabs.js')
+script(src='/coffee/tabs.js')
 script.
   uTabs({
     tabs: u('._tabs'),
@@ -177,13 +177,13 @@ script.
     hearts: u('.part_product_card .material-icons.heart')
   });
 
-script(src='coffee/favorite.js')
+script(src='/coffee/favorite.js')
 script.
   uFavorite({
     favorite: u('._favorite')
   });
 
-script(src='coffee/toggle_view.js')
+script(src='/coffee/toggle_view.js')
 script.
   uToggleView({
     list: u('._toggle_view_list'),

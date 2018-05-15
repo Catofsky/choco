@@ -10,10 +10,10 @@ html(lang='en')
         block title
             title Chocokiller
 
-        link(rel='stylesheet' href='css/dashboard/dash.css')
-        link(rel='stylesheet' href='font/material-icons.css')
+        link(rel='stylesheet' href='/css/dash/dash.css')
+        link(rel='stylesheet' href='/font/material-icons.css')
         block scripts
-            script(src='js/umbrella.min.js')
+            script(src='/js/umbrella.min.js')
             script window.parts = {};
 
     body
@@ -21,12 +21,14 @@ html(lang='en')
         -
             var storeUrl = '/store';
             var menu = [
-                { title: 'Главная', icon: 'home', href: storeUrl },
-                { title: 'Заказы', icon: 'turned_in', href: storeUrl + '/orders', count: 12 },
-                { title: 'Сотрудники', icon: 'people', href: storeUrl + '/members' },
-                //- { title: 'Магазин', icon: 'store', href: '#' },
-                { title: 'Товары', icon: 'shoping', href: storeUrl + '/products' },
-                { title: 'Настройки', icon: 'settings', href: storeUrl + '/settings' }
+                { title: 'Главная', icon: 'home', href: '/dash_main.html' },
+                { title: 'Заказы', icon: 'turned_in', href: '/dash_orders.html', count: 12 },
+                { title: 'Сотрудники', icon: 'people', href: '/dash_employees.html' },
+                { title: 'Подписчики', icon: 'perm_contact_calendar', href: '/dash_subscribers.html' },
+                { title: 'Магазин', icon: 'store', href: '/dash_shop.html' },
+                { title: 'Акции', icon: 'loyalty', href: '/dash_promotions.html' },
+                { title: 'Товары', icon: 'shoping', href: '/dash_index.html' },
+                { title: 'Настройки', icon: 'settings', href: '/dash_settings.html' }
             ]
 
         .main_block

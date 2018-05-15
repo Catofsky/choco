@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Chocokiller Store</title>
-    <link rel="stylesheet" href="css/dashboard/dash.css">
-    <link rel="stylesheet" href="font/material-icons.css">
-    <script src="js/umbrella.min.js"></script>
+    <link rel="stylesheet" href="/css/dash/dash.css">
+    <link rel="stylesheet" href="/font/material-icons.css">
+    <script src="/js/umbrella.min.js"></script>
     <script>window.parts = {};</script>
   </head>
   <body>
     <header>
-      <div class="logo"></div>
+      <div class="logo" onclick="location.href=&quot;/index.html&quot;"></div>
       <div class="top">
         <div class="search"><i class="material-icons">search</i>
           <input type="search" name="search" placeholder="Я ищу...">
@@ -23,21 +23,21 @@
         </div>
         <div class="store_select">
           <select name="store_select">
-            <option>Белый ветер</option>
+            <option>Магазин</option>
           </select>
         </div>
         <div class="user">
           <div class="name">
             <p>Eldan</p>
           </div>
-          <div class="avatar" style="background-image: url('img/user.jpg')"></div>
+          <div class="avatar" style="background-image: url('/img/user.jpg')"></div>
         </div>
       </div>
     </header>
     <div class="main_block">
       <div class="side_menu">
-        <div class="menu"><a href="/store"><i class="material-icons">home</i><span>Главная</span></a><a href="/store/orders"><i class="material-icons">turned_in</i><span>Заказы</span>
-            <div class="num">12</div></a><a href="/store/members"><i class="material-icons">people</i><span>Сотрудники</span></a><a href="/store/products"><i class="material-icons">shoping</i><span>Товары</span></a><a href="/store/settings"><i class="material-icons">settings</i><span>Настройки</span></a>
+        <div class="menu"><a href="/dash_main.html"><i class="material-icons">home</i><span>Главная</span></a><a href="/dash_orders.html"><i class="material-icons">turned_in</i><span>Заказы</span>
+            <div class="num">12</div></a><a href="/dash_employees.html"><i class="material-icons">people</i><span>Сотрудники</span></a><a href="/dash_subscribers.html"><i class="material-icons">perm_contact_calendar</i><span>Подписчики</span></a><a href="/dash_shop.html"><i class="material-icons">store</i><span>Магазин</span></a><a href="/dash_promotions.html"><i class="material-icons">loyalty</i><span>Акции</span></a><a href="/dash_index.html"><i class="material-icons">shoping</i><span>Товары</span></a><a href="/dash_settings.html"><i class="material-icons">settings</i><span>Настройки</span></a>
         </div>
       </div>
       <div class="content">
